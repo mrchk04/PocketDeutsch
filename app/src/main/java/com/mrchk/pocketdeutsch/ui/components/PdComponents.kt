@@ -52,7 +52,7 @@ fun ShowcaseScreen() {
         PdTitleTopBar(
             title = "Заголовок",
             onBackClick = {},
-            onSettingsClick = {}
+            onRightButtonClick = {},
         )
         Spacer(modifier = Modifier.height(16.dp))
         PdExerciseTopBar(
@@ -368,11 +368,12 @@ fun ShowcaseScreen() {
             PdPhraseChip(text = "Vielen Dank für...", onClick = { noteText += "Vielen Dank für " })
         }
 
-        PdNotepadInput(
-            text = noteText,
-            onValueChange = { noteText = it },
-            wordCount = wordCount
-        )
+//        PdNotepadInput(
+//            value = noteText,
+//            onValueChange = { noteText = it },
+//            wordCount = wordCount,
+//            onExpandClick = {},
+//        )
 
         // --- 5. Bottom Bar ---
         Text(

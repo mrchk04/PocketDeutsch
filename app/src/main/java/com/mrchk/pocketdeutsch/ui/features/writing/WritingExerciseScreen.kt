@@ -1,0 +1,175 @@
+package com.mrchk.pocketdeutsch.ui.features.writing
+
+import androidx.compose.animation.Crossfade
+import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.ime
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.mrchk.pocketdeutsch.R
+import com.mrchk.pocketdeutsch.ui.components.PdButton
+import com.mrchk.pocketdeutsch.ui.components.PdChecklistItem
+import com.mrchk.pocketdeutsch.ui.components.PdNotepadInput
+import com.mrchk.pocketdeutsch.ui.components.PdPhraseChip
+import com.mrchk.pocketdeutsch.ui.components.PdPinnedCard
+import com.mrchk.pocketdeutsch.ui.components.PdTitleTopBar
+import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
+
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
+@Composable
+fun WritingExerciseScreen(
+    viewModel: WritingViewModel = viewModel(),
+    onNavigateBack: () -> Unit
+) {
+    val state by viewModel.state.collectAsState()
+
+    Crossfade(targetState = state.result, label = "ScreenTransition") { result ->
+        if (result != null) {
+            EvaluationResultScreen(
+                result = result,
+                originalText = state.textInput,
+                selectedCorrection = state.selectedCorrection,
+                onCorrectionClick = viewModel::onCorrectionSelected,
+                onCloseClick = { viewModel.resetEvaluation() }
+            )
+        } else {
+            WritingContent(
+                state = state,
+                onTextChanged = viewModel::onTextChanged,
+                onCheckToggle = viewModel::onChecklistItemToggled,
+                onHintClick = viewModel::onRedemittelClicked,
+                onSubmit = viewModel::submitForEvaluation,
+                onBackClick = onNavigateBack
+            )
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun WritingContent(
+    state: WritingUiState,
+    onTextChanged: (String) -> Unit,
+    onCheckToggle: (String, Boolean) -> Unit,
+    onHintClick: (String) -> Unit,
+    onSubmit: () -> Unit,
+    onBackClick: () -> Unit
+) {
+    val imeVisible = WindowInsets.ime.getBottom(LocalDensity.current) > 0
+
+    Scaffold(
+        topBar = {
+            PdTitleTopBar(
+                title = state.task?.title ?: "Schreiben",
+                onBackClick = onBackClick,
+                onRightButtonClick = {},
+                rightButtonIcon = R.drawable.ic_lightbulb_bold,
+                rightButtonIconColor = PocketTheme.colors.warning,
+            )
+        },
+        bottomBar = {
+            if (!imeVisible) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(PocketTheme.colors.surface)
+                        .padding(16.dp)
+                ) {
+                    PdButton(
+                        text = if (state.isLoading) "Завантаження..." else "Надіслати",
+                        enabled = !state.isLoading && state.textInput.isNotBlank(),
+                        onClick = onSubmit,
+                    )
+                }
+            }
+        },
+        containerColor = PocketTheme.colors.paper,
+        contentWindowInsets = WindowInsets(0),
+        modifier = Modifier.imePadding()
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .padding(innerPadding)
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+                .padding(vertical = 20.dp, horizontal = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(24.dp)
+        ) {
+            state.task?.let { task ->
+                PdPinnedCard {
+                    Text("Aufgabe:", style = PocketTheme.typography.titleLarge)
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(task.promptText, style = PocketTheme.typography.bodyMedium)
+                }
+            }
+
+            if (state.checklist.isNotEmpty()) {
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(
+                        text = "Напишіть згідно з цими пунктами:",
+                        style = PocketTheme.typography.labelSmall,
+                        color = PocketTheme.colors.gray500,
+                    )
+
+                    state.checklist.forEach { item ->
+                        PdChecklistItem(
+                            text = item.text,
+                            isChecked = item.isChecked,
+                            onCheckedChange = { isChecked -> onCheckToggle(item.id, isChecked) }
+                        )
+                    }
+                }
+            }
+
+            if (!state.task?.hints.isNullOrEmpty()) {
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(
+                        text = "REDEMITTEL (TAP TO ADD):",
+                        style = PocketTheme.typography.labelSmall,
+                        color = PocketTheme.colors.gray500,
+                    )
+                    Row(
+                        modifier = Modifier.horizontalScroll(rememberScrollState()),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        state.task!!.hints.forEach { hint ->
+                            PdPhraseChip(
+                                text = hint.trim(),
+                                onClick = { onHintClick(hint) }
+                            )
+                        }
+                    }
+                }
+            }
+
+            PdNotepadInput(
+                text = state.textInput,
+                onValueChange = onTextChanged,
+                wordCount = state.wordCount,
+                onExpandClick = {}
+            )
+        }
+    }
+}

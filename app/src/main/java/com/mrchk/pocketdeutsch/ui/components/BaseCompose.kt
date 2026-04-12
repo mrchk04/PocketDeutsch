@@ -16,9 +16,13 @@ import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.relocation.BringIntoViewRequester
+import androidx.compose.foundation.relocation.bringIntoViewRequester
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -51,6 +55,7 @@ import com.mrchk.pocketdeutsch.R
 import com.mrchk.pocketdeutsch.ui.theme.*
 import com.mrchk.pocketdeutsch.utils.parseHighlightedText
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 
 // ==========================================
@@ -146,7 +151,7 @@ fun Modifier.pdClickable(
     onClick: () -> Unit,
     baseShadowOffset: Dp = 4.dp,
     cornerRadius: Dp = 16.dp,
-    backgroundColor: Color = Color.White
+    backgroundColor: Color = Color.White,
 ) = composed {
     var isPressed by remember { mutableStateOf(false) }
 
@@ -252,7 +257,7 @@ data class PressAnimationState(
 fun PdCheckbox(
     checked: Boolean,
     onCheckedChange: ((Boolean) -> Unit)?,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     // Плавна зміна кольору фону
     val bgColor by animateColorAsState(
@@ -296,7 +301,7 @@ fun PdCheckbox(
 fun PdRadioButton(
     selected: Boolean,
     onClick: (() -> Unit)?,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     // Анімуємо масштаб внутрішньої крапки від 0 (невидима) до 1 (повний розмір)
     val dotScale by animateFloatAsState(
@@ -374,6 +379,7 @@ fun PdButton(
     backgroundColor: Color = Primary,
     iconRes: Int? = null,
     isSecondary: Boolean = false,
+    enabled: Boolean = true,
 ) {
     /*val interactionSource = remember { MutableInteractionSource() }
     val isPressed by interactionSource.collectIsPressedAsState()
@@ -439,14 +445,18 @@ fun PdIconButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     backgroundColor: Color = Surface,
+    iconColor: Color = Ink,
+    buttonSize: Dp = 48.dp,
+    iconSize: Dp = 24.dp,
+    cornerRadius: Dp = 12.dp,
 ) {
     val (pressState, interactionSource) = rememberPressAnimation(shadowDp = 2.dp)
     Box(
         modifier = modifier
-            .size(48.dp)
+            .size(buttonSize)
             .offset(x = pressState.translation, y = pressState.translation)
             .pdStyle(
-                cornerRadius = 12.dp,
+                cornerRadius = cornerRadius,
                 shadowOffset = pressState.shadowOffset,
                 backgroundColor = backgroundColor
             )
@@ -462,7 +472,8 @@ fun PdIconButton(
         Icon(
             painter = painterResource(id = iconRes),
             contentDescription = null,
-            modifier = Modifier.size(24.dp)
+            modifier = Modifier.size(iconSize),
+            tint = iconColor,
         )
     }
 }
@@ -513,7 +524,7 @@ fun PdProgressBar(
 fun PdContentCard(
     modifier: Modifier = Modifier,
     backgroundColor: Color = PocketTheme.colors.surface,
-    content: @Composable ColumnScope.() -> Unit
+    content: @Composable ColumnScope.() -> Unit,
 ) {
     Box(
         modifier = modifier
@@ -536,12 +547,17 @@ fun PdCallout(
     modifier: Modifier = Modifier,
     lineColor: Color = PocketTheme.colors.primary,
     backgroundColor: Color = PocketTheme.colors.surface.copy(alpha = 0.5f), // Світлий фон
-    content: @Composable BoxScope.() -> Unit
+    content: @Composable BoxScope.() -> Unit,
 ) {
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(topEnd = 8.dp, bottomEnd = 8.dp)) // Заокруглюємо тільки праві кути
+            .clip(
+                RoundedCornerShape(
+                    topEnd = 8.dp,
+                    bottomEnd = 8.dp
+                )
+            ) // Заокруглюємо тільки праві кути
             .background(backgroundColor)
             .drawBehind {
                 // Малюємо лінію зліва
@@ -561,7 +577,7 @@ fun PdCallout(
 fun PdExampleItem(
     germanText: String,
     ukrainianText: String,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     Column(
         modifier = modifier
@@ -593,7 +609,7 @@ fun PdCheckboxRow(
     text: String,
     checked: Boolean,
     onCheckedChange: (Boolean) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -625,7 +641,7 @@ fun PdRadioButtonRow(
     text: String,
     selected: Boolean,
     onClick: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -689,7 +705,10 @@ fun PdHomeTopBar(
 fun PdTitleTopBar(
     title: String,
     onBackClick: () -> Unit,
-    onSettingsClick: () -> Unit,
+    onRightButtonClick: () -> Unit,
+    leftButtonIcon: Int = R.drawable.ic_arrow_left_bold,
+    rightButtonIcon: Int? = R.drawable.ic_gear_six_bold,
+    rightButtonIconColor: Color = PocketTheme.colors.ink,
 ) {
     TopBarContainer(isDashed = true) {
         Box(
@@ -697,16 +716,19 @@ fun PdTitleTopBar(
             contentAlignment = Alignment.Center,
         ) {
             PdIconButton(
-                iconRes = R.drawable.ic_arrow_left_bold,
+                iconRes = leftButtonIcon,
                 onClick = onBackClick,
                 modifier = Modifier.align(Alignment.CenterStart)
             )
             Text(title, style = PocketTheme.typography.titleLarge, color = Ink)
-            PdIconButton(
-                iconRes = R.drawable.ic_gear_six_bold,
-                onClick = onSettingsClick,
-                modifier = Modifier.align(Alignment.CenterEnd)
-            )
+            if (rightButtonIcon != null) {
+                PdIconButton(
+                    iconRes = rightButtonIcon,
+                    onClick = onRightButtonClick,
+                    modifier = Modifier.align(Alignment.CenterEnd),
+                    iconColor = rightButtonIconColor
+                )
+            }
         }
     }
 }
@@ -715,7 +737,7 @@ fun PdTitleTopBar(
 fun PdExerciseTopBar(
     progress: Float,
     progressText: String,
-    onBackClick: () -> Unit
+    onBackClick: () -> Unit,
 ) {
     TopBarContainer(isDashed = true) {
         Box(modifier = Modifier.width(56.dp), contentAlignment = Alignment.CenterStart) {
@@ -754,7 +776,11 @@ fun PdCourseCard(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .pdStyle(cornerRadius = 24.dp, shadowOffset = 4.dp, backgroundColor = Surface)
+            .pdStyle(
+                cornerRadius = 24.dp,
+                shadowOffset = 4.dp,
+                backgroundColor = Surface
+            )
     ) {
         // Header
         Row(
@@ -805,7 +831,8 @@ fun PdCourseCard(
             PdProgressBar(
                 progress = progress,
                 size = PdProgressSize.Small,
-                modifier = Modifier.padding(bottom = 24.dp))
+                modifier = Modifier.padding(bottom = 24.dp)
+            )
 
             PdButton(
                 text = buttonText,
@@ -901,9 +928,8 @@ fun PdBottomBar(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .height(112.dp) // додатковий простір для виступаючої кнопки
+            .height(112.dp)
     ) {
-        // Основний бар
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -999,11 +1025,11 @@ fun PdBottomBar(
 @Composable
 fun PdStickyNote(
     modifier: Modifier = Modifier,
-    content: @Composable ColumnScope.() -> Unit
+    content: @Composable ColumnScope.() -> Unit,
 ) {
     Box(
         modifier = modifier
-            .padding(vertical = 12.dp, horizontal = 16.dp)
+            .padding(vertical = 12.dp)
             .rotate(-1f),
         contentAlignment = Alignment.TopCenter
     ) {
@@ -1032,12 +1058,12 @@ fun PdPinnedCard(
     modifier: Modifier = Modifier,
     backgroundColor: Color = PocketTheme.colors.tertiary,
     pinColor: Color = PocketTheme.colors.error,
-    content: @Composable ColumnScope.() -> Unit
+    content: @Composable ColumnScope.() -> Unit,
 ) {
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .padding(top = 16.dp, bottom = 8.dp, start = 16.dp, end = 16.dp)
+            .padding(top = 16.dp, bottom = 8.dp)
             .graphicsLayer { rotationZ = -1f },
         contentAlignment = Alignment.TopCenter
     ) {
@@ -1068,7 +1094,7 @@ fun PdChecklistItem(
     text: String,
     isChecked: Boolean,
     onCheckedChange: (Boolean) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     val bgColor by animateColorAsState(
         targetValue = if (isChecked) PocketTheme.colors.success else PocketTheme.colors.surface,
@@ -1079,7 +1105,6 @@ fun PdChecklistItem(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp)
             .pdClickable(
                 onClick = { onCheckedChange(!isChecked) },
                 baseShadowOffset = 0.dp,
@@ -1111,7 +1136,7 @@ fun PdChecklistItem(
 fun PdPhraseChip(
     text: String,
     onClick: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     Box(
         modifier = modifier
@@ -1137,25 +1162,29 @@ fun PdNotepadInput(
     text: String,
     onValueChange: (String) -> Unit,
     wordCount: Int,
+    onExpandClick: () -> Unit,
     maxWords: Int = 40,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
+
+    val scrollState = rememberScrollState()
+    val bringIntoViewRequester = remember { BringIntoViewRequester() }
+    val coroutineScope = rememberCoroutineScope()
+
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp)
             .pdStyle(
                 cornerRadius = 24.dp,
                 shadowOffset = 4.dp,
                 backgroundColor = PocketTheme.colors.surface
             )
     ) {
-        // Шапка блокнота (Жовта)
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .background(PocketTheme.colors.warning)
-                .drawBehind { // Нижня лінія шапки
+                .drawBehind {
                     drawLine(
                         color = Color.Black,
                         start = Offset(0f, size.height),
@@ -1167,9 +1196,12 @@ fun PdNotepadInput(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text("Deine Antwort", style = PocketTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold))
+            Text(
+                "Deine Antwort",
+                style = PocketTheme.typography.labelSmall/*.copy(fontWeight = FontWeight.Bold)*/
+            )
 
-            val isValid = wordCount >= 5 // Наприклад, мінімум 5 слів
+            val isValid = wordCount >= 25
             Text(
                 text = "$wordCount / $maxWords Wörter",
                 style = PocketTheme.typography.labelSmall,
@@ -1181,23 +1213,35 @@ fun PdNotepadInput(
                     .border(1.dp, PocketTheme.colors.ink, RoundedCornerShape(4.dp))
                     .padding(horizontal = 8.dp, vertical = 2.dp)
             )
+            Spacer(modifier = Modifier.width(8.dp))
+            PdIconButton(
+                iconRes = R.drawable.ic_arrows_out_bold,
+                onClick = onExpandClick,
+                buttonSize = 32.dp,
+                iconSize = 18.dp,
+                cornerRadius = 8.dp,
+                modifier = Modifier.padding(start = 8.dp)
+            )
         }
 
-        val lineHeightDp = 32.dp
+        val lineHeightDp = 28.dp
 
         BasicTextField(
             value = text,
             onValueChange = onValueChange,
-            textStyle = PocketTheme.typography.bodyLarge.copy(
-                lineHeight = 32.sp,
+            textStyle = PocketTheme.typography.bodyMedium.copy(
+                lineHeight = 28.sp,
                 color = PocketTheme.colors.ink
             ),
             modifier = Modifier
                 .fillMaxWidth()
-                .height(200.dp)
+                .heightIn(min = 200.dp, max = 400.dp)
+                .verticalScroll(scrollState)
+                .bringIntoViewRequester(bringIntoViewRequester)
                 .drawBehind {
                     val lineHeightPx = lineHeightDp.toPx()
-                    var y = lineHeightPx
+                    val topPaddingPx = 8.dp.toPx()
+                    var y = lineHeightPx + topPaddingPx
                     while (y < size.height) {
                         drawLine(
                             color = Color.LightGray,
@@ -1209,6 +1253,22 @@ fun PdNotepadInput(
                     }
                 }
                 .padding(16.dp),
+//            onTextLayout = { layoutResult ->
+//                // скролимо до курсора після кожної зміни тексту
+//                val cursorRect = layoutResult.getCursorRect(text.length)
+//                coroutineScope.launch {
+//                    bringIntoViewRequester.bringIntoView(cursorRect)
+//                }
+//            }
+            onTextLayout = { layoutResult ->
+                val cursorRect = layoutResult.getCursorRect(text.length)
+                val expandedRect = cursorRect.copy(
+                    bottom = cursorRect.bottom + 48f
+                )
+                coroutineScope.launch {
+                    bringIntoViewRequester.bringIntoView(expandedRect)
+                }
+            }
         )
     }
 }

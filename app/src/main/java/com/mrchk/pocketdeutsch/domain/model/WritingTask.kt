@@ -1,24 +1,26 @@
 package com.mrchk.pocketdeutsch.domain.model
 
-// Enum для рівнів складності (допоможе ШІ розуміти, наскільки суворо оцінювати)
+import kotlinx.serialization.Serializable
+
+@Serializable
 enum class ProficiencyLevel {
     A1, A2, B1, B2, C1, C2
 }
 
-// Головна модель вправи
+@Serializable
 data class WritingTask(
     val id: String,
     val level: ProficiencyLevel,
-    val title: String, // Наприклад: "E-Mail an Marianne"
-    val promptText: String, // Сам текст листа від Маріанни
-    val minWords: Int, // Ліміт слів (напр., 30 для A1, 80 для B1)
-    val requiredPoints: List<TaskRequirement>, // Наш чекліст
-    val hints: List<String> = emptyList() // Redemittel (пустий список для складних рівнів)
+    val title: String,
+    val promptText: String,
+    val minWords: Int,
+    val requiredPoints: List<TaskRequirement>,
+    val hints: List<String> = emptyList()
 )
 
-// Пункт чекліста (Leitpunkt)
+@Serializable
 data class TaskRequirement(
     val id: String,
-    val text: String, // "welche Ausflüge Sie mit Marianne machen wollen"
-    val isChecked: Boolean = false // Стан для UI
+    val text: String,
+    val isChecked: Boolean = false
 )

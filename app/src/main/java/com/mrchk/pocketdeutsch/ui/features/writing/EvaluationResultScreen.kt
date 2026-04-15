@@ -1,5 +1,6 @@
 package com.mrchk.pocketdeutsch.ui.features.writing
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -16,10 +17,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.SpanStyle
@@ -129,21 +127,79 @@ fun GradedNotepad(
         buildAnnotatedString {
             append(originalText)
 
+//            corrections.forEachIndexed { index, correction ->
+//
+//                val targetText = correction.originalIncorrectText.trim()
+//
+//                val realStartIndex = originalText.indexOf(targetText)
+//
+//                val finalStart = if (realStartIndex != -1) realStartIndex else correction.startIndex
+//                val finalEnd = if (realStartIndex != -1) realStartIndex + targetText.length else correction.endIndex
+//
+//                val safeStart = finalStart.coerceIn(0, originalText.length)
+//                val safeEnd = finalEnd.coerceIn(safeStart, originalText.length)
+//
+//                if (safeStart != safeEnd) {
+//                    addStyle(
+//                        style = SpanStyle(
+//                            background = highlightBgColor,
+//                            color = highlightTextColor
+//                        ),
+//                        start = correction.startIndex,
+//                        end = correction.endIndex
+//                    )
+//                    addStringAnnotation(
+//                        tag = "CORRECTION",
+//                        annotation = index.toString(),
+//                        start = correction.startIndex,
+//                        end = correction.endIndex
+//                    )
+//                }
+//            }
             corrections.forEachIndexed { index, correction ->
-                addStyle(
-                    style = SpanStyle(
-                        background = highlightBgColor,
-                        color = highlightTextColor
-                    ),
-                    start = correction.startIndex,
-                    end = correction.endIndex
-                )
-                addStringAnnotation(
-                    tag = "CORRECTION",
-                    annotation = index.toString(),
-                    start = correction.startIndex,
-                    end = correction.endIndex
-                )
+                // Прибираємо пробіли на початку і в кінці
+                val targetText = correction.originalIncorrectText.trim()
+
+                // 🔥 РОЗУМНИЙ ПОШУК: Шукаємо слово не з початку тексту,
+                // а трохи раніше того місця, на яке вказує ШІ (щоб уникнути дублікатів)
+                val searchStartPoint = maxOf(0, correction.startIndex - 15)
+                val realStartIndex = originalText.indexOf(targetText, startIndex = searchStartPoint)
+
+                val finalStart = if (realStartIndex != -1) realStartIndex else correction.startIndex
+                val finalEnd = if (realStartIndex != -1) realStartIndex + targetText.length else correction.endIndex
+
+                val safeStart = finalStart.coerceIn(0, originalText.length)
+                val safeEnd = finalEnd.coerceIn(safeStart, originalText.length)
+
+                // 🕵️‍♀️ НАШІ ЛОГИ ДЛЯ ДЕТЕКТИВНОГО РОЗСЛІДУВАННЯ
+                Log.d("NotepadDebug", "====== ПОМИЛКА #$index ======")
+                Log.d("NotepadDebug", "Шукаємо текст: '$targetText'")
+                Log.d("NotepadDebug", "Індекси від Gemini: ${correction.startIndex} -> ${correction.endIndex}")
+                Log.d("NotepadDebug", "Чи знайшов indexOf: $realStartIndex")
+                Log.d("NotepadDebug", "Фінальні індекси для малювання: $safeStart -> $safeEnd")
+
+                if (safeStart < safeEnd) {
+                    val highlightedText = originalText.substring(safeStart, safeEnd)
+                    Log.d("NotepadDebug", "Реально виділено на екрані: '$highlightedText'")
+                }
+                Log.d("NotepadDebug", "==========================")
+
+                if (safeStart != safeEnd) {
+                    addStyle(
+                        style = SpanStyle(
+                            background = highlightBgColor,
+                            color = highlightTextColor
+                        ),
+                        start = safeStart,
+                        end = safeEnd
+                    )
+                    addStringAnnotation(
+                        tag = "CORRECTION",
+                        annotation = index.toString(),
+                        start = safeStart,
+                        end = safeEnd
+                    )
+                }
             }
         }
     }
@@ -163,8 +219,11 @@ fun GradedNotepad(
             onClick = { offset ->
                 annotatedText.getStringAnnotations(tag = "CORRECTION", start = offset, end = offset)
                     .firstOrNull()?.let { annotation ->
-                        val clickedCorrectionIndex = annotation.item.toInt()
-                        onCorrectionClick(corrections[clickedCorrectionIndex])
+                        // Дістаємо номер помилки і передаємо її наверх
+                        val correctionIndex = annotation.item.toIntOrNull()
+                        if (correctionIndex != null && correctionIndex in corrections.indices) {
+                            onCorrectionClick(corrections[correctionIndex])
+                        }
                     }
             }
         )

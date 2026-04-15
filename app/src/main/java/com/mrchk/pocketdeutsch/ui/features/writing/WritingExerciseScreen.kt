@@ -27,6 +27,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.mrchk.pocketdeutsch.R
 import com.mrchk.pocketdeutsch.ui.components.PdButton
@@ -40,7 +41,7 @@ import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
 fun WritingExerciseScreen(
-    viewModel: WritingViewModel = viewModel(),
+    viewModel: WritingViewModel = hiltViewModel(),
     onNavigateBack: () -> Unit
 ) {
     val state by viewModel.state.collectAsState()

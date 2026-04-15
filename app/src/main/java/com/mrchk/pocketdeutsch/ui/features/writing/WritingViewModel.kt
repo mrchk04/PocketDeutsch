@@ -1,68 +1,79 @@
 package com.mrchk.pocketdeutsch.ui.features.writing
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mrchk.pocketdeutsch.domain.model.AiEvaluationResult
-import com.mrchk.pocketdeutsch.domain.model.ChecklistEvaluation
 import com.mrchk.pocketdeutsch.domain.model.ProficiencyLevel
 import com.mrchk.pocketdeutsch.domain.model.TaskRequirement
 import com.mrchk.pocketdeutsch.domain.model.TextCorrection
 import com.mrchk.pocketdeutsch.domain.model.WritingTask
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.serialization.json.Json
+import com.mrchk.pocketdeutsch.data.repository.GeminiRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
-class WritingViewModel : ViewModel() {
+@HiltViewModel
+class WritingViewModel @Inject constructor(
+    private val geminiRepository: GeminiRepository
+): ViewModel() {
 
     private val _state = MutableStateFlow(WritingUiState())
     val state = _state.asStateFlow()
+
+    private val jsonParser = Json { ignoreUnknownKeys = true }
 
     init {
         loadMockTask()
     }
 
-    fun onTextChanged(newText: String){
+    fun onTextChanged(newText: String) {
         _state.update { it.copy(textInput = newText) }
     }
 
-    fun onChecklistItemToggled(itemId: String, isChecked: Boolean){
-        _state.update{ currentState ->
-            val updatedChecklist = currentState.checklist.map {item ->
+    fun onChecklistItemToggled(itemId: String, isChecked: Boolean) {
+        _state.update { currentState ->
+            val updatedChecklist = currentState.checklist.map { item ->
                 if (item.id == itemId) item.copy(isChecked = isChecked) else item
             }
             currentState.copy(checklist = updatedChecklist)
         }
     }
 
-    fun onRedemittelClicked(phrase: String){
+    fun onRedemittelClicked(phrase: String) {
         _state.update { it.copy(textInput = it.textInput + phrase) }
     }
 
-    fun submitForEvaluation(){
-        if(_state.value.textInput.isBlank()) return
+    fun submitForEvaluation() {
+        val currentState = _state.value
+        val studentText = currentState.textInput
+        val task = currentState.task ?: return
+
+        if (studentText.isBlank()) return
 
         viewModelScope.launch {
             _state.update { it.copy(isLoading = true) }
 
-            delay(3000)
+            try {
+                val evaluationResult = withContext(Dispatchers.IO) {
+                    geminiRepository.evaluateText(task, studentText)
+                }
 
-            val mockResult = AiEvaluationResult(
-                score = 85,
-                overallFeedback = "Super gemacht! Ти добре впоралася із завданням, але зверни увагу на порядок слів у підрядних реченнях.",
-                checklistEvaluations = listOf(
-                    ChecklistEvaluation("1", true, "Чудово описано ідеї для екскурсій."),
-                    ChecklistEvaluation("2", false, "Ти забула згадати про одяг.")
-                ),
-                textCorrections = emptyList()
-            )
+                _state.update {
+                    it.copy(
+                        isLoading = false,
+                        result = evaluationResult
+                    )
+                }
 
-            _state.update {
-                it.copy(
-                    isLoading = false,
-                    result = mockResult
-                )
+            } catch (e: Exception) {
+                Log.e("WritingViewModel", "Помилка ШІ: ${e.message}", e)
+                _state.update { it.copy(isLoading = false) }
             }
         }
     }

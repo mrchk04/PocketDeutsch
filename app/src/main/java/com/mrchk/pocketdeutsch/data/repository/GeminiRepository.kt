@@ -6,11 +6,16 @@ import com.mrchk.pocketdeutsch.BuildConfig
 import kotlinx.serialization.json.Json
 import com.google.ai.client.generativeai.type.content
 import com.google.ai.client.generativeai.type.generationConfig
+import com.mrchk.pocketdeutsch.data.local.WrittenTaskDao
+import com.mrchk.pocketdeutsch.data.local.WrittenTaskResultEntity
 import com.mrchk.pocketdeutsch.domain.model.AiEvaluationResult
 import com.mrchk.pocketdeutsch.domain.model.WritingTask
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GeminiRepository @Inject constructor() {
+class GeminiRepository @Inject constructor(
+    private val writtenTaskDao: WrittenTaskDao,
+) {
 
     private val jsonParser = Json { ignoreUnknownKeys = true }
 
@@ -67,5 +72,29 @@ class GeminiRepository @Inject constructor() {
         val responseText = response.text ?: throw Exception("Отримано порожню відповідь від ШІ")
 
         return jsonParser.decodeFromString<AiEvaluationResult>(responseText)
+    }
+
+    suspend fun saveResult(
+        exerciseId: String,
+        originalText: String,
+        evaluation: AiEvaluationResult,
+    ) {
+        val entity = WrittenTaskResultEntity(
+            exerciseId = exerciseId,
+            originalText = originalText,
+            overallScore = evaluation.score,
+            grammarScore = evaluation.grammarScore,
+            vocabularyScore = evaluation.vocabularyScore,
+            contentScore = evaluation.contentScore,
+            overallFeedback = evaluation.overallFeedback,
+            corrections = evaluation.textCorrections,
+            checklistEvaluations = evaluation.checklistEvaluations,
+            pendingSync = true,
+        )
+        writtenTaskDao.insertTaskResult(entity)
+    }
+
+    fun getHistoryForExercise(exerciseId: String): Flow<List<WrittenTaskResultEntity>> {
+        return writtenTaskDao.getResultsForExercise(exerciseId)
     }
 }

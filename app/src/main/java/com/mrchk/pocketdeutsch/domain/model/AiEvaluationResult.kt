@@ -5,6 +5,9 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class AiEvaluationResult(
     val score: Int,
+    val grammarScore: Int = 0,
+    val vocabularyScore: Int = 0,
+    val contentScore: Int = 0,
     val overallFeedback: String,
     val checklistEvaluations: List<ChecklistEvaluation>,
     val textCorrections: List<TextCorrection>

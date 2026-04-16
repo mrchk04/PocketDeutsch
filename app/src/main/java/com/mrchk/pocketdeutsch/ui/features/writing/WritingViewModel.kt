@@ -3,6 +3,7 @@ package com.mrchk.pocketdeutsch.ui.features.writing
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.mrchk.pocketdeutsch.data.local.WrittenTaskResultEntity
 import com.mrchk.pocketdeutsch.domain.model.ProficiencyLevel
 import com.mrchk.pocketdeutsch.domain.model.TaskRequirement
 import com.mrchk.pocketdeutsch.domain.model.TextCorrection
@@ -15,18 +16,20 @@ import kotlinx.serialization.json.Json
 import com.mrchk.pocketdeutsch.data.repository.GeminiRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
 class WritingViewModel @Inject constructor(
-    private val geminiRepository: GeminiRepository
-): ViewModel() {
+    private val geminiRepository: GeminiRepository,
+) : ViewModel() {
 
     private val _state = MutableStateFlow(WritingUiState())
     val state = _state.asStateFlow()
 
-    private val jsonParser = Json { ignoreUnknownKeys = true }
+    private val _history = MutableStateFlow<List<WrittenTaskResultEntity>>(emptyList())
+    val history: StateFlow<List<WrittenTaskResultEntity>> = _history.asStateFlow()
 
     init {
         loadMockTask()
@@ -63,6 +66,12 @@ class WritingViewModel @Inject constructor(
                 val evaluationResult = withContext(Dispatchers.IO) {
                     geminiRepository.evaluateText(task, studentText)
                 }
+
+                geminiRepository.saveResult(
+                    exerciseId = task.id,
+                    originalText = studentText,
+                    evaluation = evaluationResult
+                )
 
                 _state.update {
                     it.copy(

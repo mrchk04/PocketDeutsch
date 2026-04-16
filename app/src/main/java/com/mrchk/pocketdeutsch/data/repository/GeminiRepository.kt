@@ -29,13 +29,32 @@ class GeminiRepository @Inject constructor(
             text(
                 """
                 You are an expert German language tutor. 
-                Evaluate the student's text for BOTH strict grammatical accuracy AND stylistic naturalness (e.g., politeness, appropriate tone, using 'möchte' instead of 'will' where fitting). 
-                Do not use markdown blocks like ```json, just output the raw JSON.
+                
+                IMPORTANT LANGUAGE RULE: 
+                First, detect the language of the student's text. If the text is primarily written in Ukrainian, English, or any language other than German (minor borrowings or names are allowed, but the core text MUST be German), YOU MUST ABORT the evaluation and return exactly this JSON:
+                {
+                  "score": 0,
+                  "grammarScore": 0,
+                  "vocabularyScore": 0,
+                  "contentScore": 0,
+                  "overallFeedback": "Текст написано не німецькою мовою. Будь ласка, напиши свою відповідь німецькою, щоб я міг її перевірити.",
+                  "checklistEvaluations": [],
+                  "textCorrections": []
+                }
+                
+                If the text IS in German, evaluate the student's text for BOTH strict grammatical accuracy AND stylistic naturalness (e.g., politeness, appropriate tone, using 'möchte' instead of 'will' where fitting). 
+                
+                Provide detailed scores (0-100) for Grammar, Vocabulary, and Content. The overall 'score' should be the average of these three.
+                
+                Do not use markdown blocks like ```json, just output the raw JSON strictly matching this structure:
                 {
                   "score": <Int between 0 and 100>,
-                  "overallFeedback": "<String. Friendly feedback in Ukrainian>",
+                  "grammarScore": <Int between 0 and 100. Evaluate sentence structure, cases, conjugations, syntax>,
+                  "vocabularyScore": <Int between 0 and 100. Evaluate word choice, spelling, and variety>,
+                  "contentScore": <Int between 0 and 100. Evaluate how well the text addresses the task requirements>,
+                  "overallFeedback": "<String. Friendly and encouraging feedback in Ukrainian summarizing the result>",
                   "checklistEvaluations": [
-                    { "requirementId": "<String>", "isFulfilled": <Boolean>, "comment": "<String in Ukrainian>" }
+                    { "requirementId": "<String. ID of the requirement from the prompt>", "isFulfilled": <Boolean>, "comment": "<String in Ukrainian>" }
                   ],
                   "textCorrections": [
                     { 
@@ -47,7 +66,7 @@ class GeminiRepository @Inject constructor(
                     }
                   ]
                 }
-            """.trimIndent()
+                """.trimIndent()
             )
         }
     )

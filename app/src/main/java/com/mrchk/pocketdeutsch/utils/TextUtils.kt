@@ -13,16 +13,13 @@ import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
 fun parseHighlightedText(
     text: String,
     highlightColor: Color = PocketTheme.colors.primary,
-    // Напівпрозорий фон, як у твоєму css: rgba(165, 148, 249, 0.2)
     highlightBgColor: Color = PocketTheme.colors.primary.copy(alpha = 0.2f)
 ): AnnotatedString {
     return buildAnnotatedString {
-        // Розбиваємо текст по зірочках
-        // Наприклад: "Ich *lerne* Deutsch" -> ["Ich ", "lerne", " Deutsch"]
+
         val parts = text.split("*")
 
         parts.forEachIndexed { index, part ->
-            // Усі непарні індекси (1, 3, 5...) — це текст, який був МІЖ зірочками
             if (index % 2 == 1) {
                 withStyle(
                     style = SpanStyle(
@@ -31,10 +28,9 @@ fun parseHighlightedText(
                         background = highlightBgColor
                     )
                 ) {
-                    append(part) // Додаємо підсвічений шматок
+                    append(part)
                 }
             } else {
-                // Парні індекси — це звичайний текст
                 append(part)
             }
         }

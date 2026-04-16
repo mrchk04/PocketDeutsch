@@ -36,7 +36,12 @@ class WritingViewModel @Inject constructor(
     }
 
     fun onTextChanged(newText: String) {
-        _state.update { it.copy(textInput = newText) }
+        _state.update {
+            it.copy(
+                textInput = newText,
+                errorMessage = null,
+            )
+        }
     }
 
     fun onChecklistItemToggled(itemId: String, isChecked: Boolean) {
@@ -57,10 +62,23 @@ class WritingViewModel @Inject constructor(
         val studentText = currentState.textInput
         val task = currentState.task ?: return
 
-        if (studentText.isBlank()) return
+        if (studentText.isBlank()) {
+            _state.update { it.copy(errorMessage = "Текст не може бути порожнім") }
+            return
+        }
+
+        if (!studentText.any { it.isLetter() }) {
+            _state.update { it.copy(errorMessage = "Текст повинен містити слова") }
+            return
+        }
+
+        if (currentState.wordCount < 3) {
+            _state.update { it.copy(errorMessage = "Напиши хоча б 3 слова") }
+            return
+        }
 
         viewModelScope.launch {
-            _state.update { it.copy(isLoading = true) }
+            _state.update { it.copy(errorMessage = null, isLoading = true) }
 
             try {
                 val evaluationResult = withContext(Dispatchers.IO) {
@@ -97,6 +115,18 @@ class WritingViewModel @Inject constructor(
 
     fun clearSelectedCorrection() {
         _state.update { it.copy(selectedCorrection = null) }
+    }
+
+    fun loadHistory(exerciseId: String) {
+        viewModelScope.launch {
+            geminiRepository.getHistoryForExercise(exerciseId).collect { savedResults ->
+                _history.value = savedResults
+            }
+        }
+    }
+
+    fun clearError() {
+        _state.update { it.copy(errorMessage = null) }
     }
 
     private fun loadMockTask() {

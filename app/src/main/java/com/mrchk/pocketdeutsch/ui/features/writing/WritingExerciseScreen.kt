@@ -2,6 +2,7 @@ package com.mrchk.pocketdeutsch.ui.features.writing
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -20,12 +21,21 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Snackbar
+import androidx.compose.material3.SnackbarDuration
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -62,7 +72,8 @@ fun WritingExerciseScreen(
                 onCheckToggle = viewModel::onChecklistItemToggled,
                 onHintClick = viewModel::onRedemittelClicked,
                 onSubmit = viewModel::submitForEvaluation,
-                onBackClick = onNavigateBack
+                onBackClick = onNavigateBack,
+                onErrorDismiss = viewModel::clearError,
             )
         }
     }
@@ -76,9 +87,22 @@ fun WritingContent(
     onCheckToggle: (String, Boolean) -> Unit,
     onHintClick: (String) -> Unit,
     onSubmit: () -> Unit,
-    onBackClick: () -> Unit
+    onBackClick: () -> Unit,
+    onErrorDismiss: () -> Unit,
 ) {
     val imeVisible = WindowInsets.ime.getBottom(LocalDensity.current) > 0
+
+    val snackbarHostState = remember { SnackbarHostState() }
+
+    LaunchedEffect(state.errorMessage) {
+        state.errorMessage?.let { message ->
+            snackbarHostState.showSnackbar(
+                message = message,
+                duration = SnackbarDuration.Short
+            )
+            onErrorDismiss()
+        }
+    }
 
     Scaffold(
         topBar = {
@@ -102,6 +126,25 @@ fun WritingContent(
                         text = if (state.isLoading) "Завантаження..." else "Надіслати",
                         enabled = !state.isLoading && state.textInput.isNotBlank(),
                         onClick = onSubmit,
+                    )
+                }
+            }
+        },
+        snackbarHost = {
+            SnackbarHost(hostState = snackbarHostState) { data ->
+                Box(
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .background(PocketTheme.colors.warning)
+                        .border(2.dp, PocketTheme.colors.ink)
+                        .padding(vertical = 12.dp, horizontal = 16.dp),
+                    contentAlignment = Alignment.Center,
+                ){
+                    Text(
+                        text = data.visuals.message,
+                        color = PocketTheme.colors.ink,
+                        style = PocketTheme.typography.labelMedium,
+                        textAlign = TextAlign.Center
                     )
                 }
             }

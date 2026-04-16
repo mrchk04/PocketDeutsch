@@ -9,6 +9,7 @@ data class WritingUiState(
     val task: WritingTask? = null,
     val checklist: List<TaskRequirement> = emptyList(),
     val textInput: String = "",
+    val errorMessage: String? = null,
     val isLoading: Boolean = false,
     val result: AiEvaluationResult? = null,
     val selectedCorrection: TextCorrection? = null

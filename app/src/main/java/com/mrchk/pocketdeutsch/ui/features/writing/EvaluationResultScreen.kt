@@ -94,7 +94,7 @@ fun AiFeedbackCard(score: Int, feedback: String) {
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Text(
-                text = "Результат перевірки", // Або "AI-Аналіз", "Твій результат"
+                text = "Результат перевірки",
                 style = PocketTheme.typography.titleMedium
             )
             Text(
@@ -127,41 +127,9 @@ fun GradedNotepad(
         buildAnnotatedString {
             append(originalText)
 
-//            corrections.forEachIndexed { index, correction ->
-//
-//                val targetText = correction.originalIncorrectText.trim()
-//
-//                val realStartIndex = originalText.indexOf(targetText)
-//
-//                val finalStart = if (realStartIndex != -1) realStartIndex else correction.startIndex
-//                val finalEnd = if (realStartIndex != -1) realStartIndex + targetText.length else correction.endIndex
-//
-//                val safeStart = finalStart.coerceIn(0, originalText.length)
-//                val safeEnd = finalEnd.coerceIn(safeStart, originalText.length)
-//
-//                if (safeStart != safeEnd) {
-//                    addStyle(
-//                        style = SpanStyle(
-//                            background = highlightBgColor,
-//                            color = highlightTextColor
-//                        ),
-//                        start = correction.startIndex,
-//                        end = correction.endIndex
-//                    )
-//                    addStringAnnotation(
-//                        tag = "CORRECTION",
-//                        annotation = index.toString(),
-//                        start = correction.startIndex,
-//                        end = correction.endIndex
-//                    )
-//                }
-//            }
             corrections.forEachIndexed { index, correction ->
-                // Прибираємо пробіли на початку і в кінці
                 val targetText = correction.originalIncorrectText.trim()
 
-                // 🔥 РОЗУМНИЙ ПОШУК: Шукаємо слово не з початку тексту,
-                // а трохи раніше того місця, на яке вказує ШІ (щоб уникнути дублікатів)
                 val searchStartPoint = maxOf(0, correction.startIndex - 15)
                 val realStartIndex = originalText.indexOf(targetText, startIndex = searchStartPoint)
 
@@ -171,18 +139,10 @@ fun GradedNotepad(
                 val safeStart = finalStart.coerceIn(0, originalText.length)
                 val safeEnd = finalEnd.coerceIn(safeStart, originalText.length)
 
-                // 🕵️‍♀️ НАШІ ЛОГИ ДЛЯ ДЕТЕКТИВНОГО РОЗСЛІДУВАННЯ
-                Log.d("NotepadDebug", "====== ПОМИЛКА #$index ======")
-                Log.d("NotepadDebug", "Шукаємо текст: '$targetText'")
-                Log.d("NotepadDebug", "Індекси від Gemini: ${correction.startIndex} -> ${correction.endIndex}")
-                Log.d("NotepadDebug", "Чи знайшов indexOf: $realStartIndex")
-                Log.d("NotepadDebug", "Фінальні індекси для малювання: $safeStart -> $safeEnd")
 
                 if (safeStart < safeEnd) {
                     val highlightedText = originalText.substring(safeStart, safeEnd)
-                    Log.d("NotepadDebug", "Реально виділено на екрані: '$highlightedText'")
                 }
-                Log.d("NotepadDebug", "==========================")
 
                 if (safeStart != safeEnd) {
                     addStyle(
@@ -203,6 +163,8 @@ fun GradedNotepad(
             }
         }
     }
+
+    
 
     Box(
         modifier = Modifier

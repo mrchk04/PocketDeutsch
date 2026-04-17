@@ -17,4 +17,7 @@ interface WrittenTaskDao {
 
     @Query("SELECT * FROM written_task_result WHERE pendingSync = 1")
     suspend fun getPendingSyncResults(): List<WrittenTaskResultEntity>
+
+    @Query("SELECT * FROM written_task_result WHERE timestamp = :timestamp")
+    suspend fun getResultByTimestamp(timestamp: Long): WrittenTaskResultEntity?
 }

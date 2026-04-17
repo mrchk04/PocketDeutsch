@@ -490,7 +490,7 @@ fun PdProgressBar(
     size: PdProgressSize = PdProgressSize.Small,
     progressColor: Color = Success,
 ) {
-    val stripeColor = Success.copy(alpha = 0.8f)
+    val stripeColor = progressColor.copy(alpha = 0.8f)
 
     val stripeWidthPx = with(LocalDensity.current) { 12.dp.toPx() }   // ← один раз
 
@@ -1025,6 +1025,7 @@ fun PdBottomBar(
 @Composable
 fun PdStickyNote(
     modifier: Modifier = Modifier,
+    bgColor: Color = PocketTheme.colors.warning,
     content: @Composable ColumnScope.() -> Unit,
 ) {
     Box(
@@ -1036,7 +1037,7 @@ fun PdStickyNote(
         Column(
             modifier = Modifier
                 .padding(top = 8.dp)
-                .background(PocketTheme.colors.warning)
+                .background(bgColor)
                 .border(2.dp, PocketTheme.colors.ink)
                 .padding(16.dp),
             content = content

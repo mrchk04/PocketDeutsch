@@ -21,11 +21,12 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.mrchk.pocketdeutsch.data.local.toUiModel
 import com.mrchk.pocketdeutsch.domain.model.TextCorrection
-import com.mrchk.pocketdeutsch.ui.features.writing.EvaluationResultScreen
-import com.mrchk.pocketdeutsch.ui.features.writing.HistoryScreen
-import com.mrchk.pocketdeutsch.ui.features.writing.HistoryViewModel
-import com.mrchk.pocketdeutsch.ui.features.writing.ResultDetailViewModel
-import com.mrchk.pocketdeutsch.ui.features.writing.WritingExerciseScreen
+import com.mrchk.pocketdeutsch.ui.features.lesson.detail.CoursePathwayScreen
+import com.mrchk.pocketdeutsch.ui.features.lesson.writing.EvaluationResultScreen
+import com.mrchk.pocketdeutsch.ui.features.lesson.writing.HistoryScreen
+import com.mrchk.pocketdeutsch.ui.features.lesson.writing.HistoryViewModel
+import com.mrchk.pocketdeutsch.ui.features.lesson.writing.ResultDetailViewModel
+import com.mrchk.pocketdeutsch.ui.features.lesson.writing.WritingExerciseScreen
 import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
 
 @Composable
@@ -33,7 +34,8 @@ fun NavGraph(navController: NavHostController) {
     NavHost(
         navController = navController,
 //        startDestination = Screen.Home.route,
-        startDestination = Screen.Writing.createRoute("test_task"),
+//        startDestination = Screen.Writing.createRoute("test_task"),
+        startDestination = Screen.LessonDetail.createRoute("les-a2-01")
     ) {
         composable(Screen.Home.route) {
             PlaceholderScreen("Main", PocketTheme.colors.primary)
@@ -99,6 +101,20 @@ fun NavGraph(navController: NavHostController) {
             }
         }
 
+        composable(
+            route = Screen.LessonDetail.route, // "lesson_pathway/{lessonId}"
+            arguments = listOf(navArgument("lessonId") { type = NavType.StringType })
+        ) {
+            CoursePathwayScreen(
+                onBackClick = { navController.popBackStack() },
+                onNodeClick = { nodeId ->
+                    when (nodeId) {
+                        "schreiben" -> navController.navigate(Screen.Writing.createRoute("les-a2-01")) // або динамічний ID
+                        // інші маршрути...
+                    }
+                }
+            )
+        }
 
     }
 }

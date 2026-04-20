@@ -1,0 +1,912 @@
+[
+  {
+    "lessonId": "les-a2-01",
+    "title": "Alltag und Familie",
+    "level": "A2",
+    "topic": "Alltag und Familie",
+    "theory": {
+      "text": "Der Alltag in einer deutschen Familie ist oft gut organisiert. Morgens stehen alle früh auf, frühstücken zusammen und fahren zur Schule oder Arbeit. Mittags essen Kinder manchmal in der Schulkantine, Erwachsene machen Pause im Büro. Nachmittags helfen Kinder im Haushalt oder machen Hausaufgaben. Abends kocht oft eine Person für alle, und danach schaut die Familie vielleicht zusammen fern oder unterhält sich.\n\nFamilien in deutschsprachigen Ländern sind unterschiedlich: Es gibt traditionelle Familien mit Mutter, Vater und Kindern, aber auch Alleinerziehende, Patchwork-Familien oder kinderlose Paare. Typische Haushaltsaufgaben sind: Wäsche waschen, Staubsaugen, Einkaufen, Kochen und Abwaschen. Diese Aufgaben werden heute in vielen Familien aufgeteilt.\n\nWichtige Redemittel: Ich stehe um ... Uhr auf. / Ich muss um ... los. / Ich kümmere mich um die Kinder. / Wir teilen uns die Hausarbeit.",
+      "grammar": {
+        "topic": "Trennbare Verben & Possessivartikel im Dativ",
+        "explanation": "Trennbare Verben: Das Präfix geht im Hauptsatz ans Satzende. Beispiele: aufstehen → Ich stehe um 7 Uhr auf. einkaufen → Meine Mutter kauft jeden Tag ein. anrufen → Er ruft seinen Vater an. aufräumen → Wir räumen das Zimmer auf.\n\nPossessivartikel im Dativ: mein → meinem (m/n), meiner (f), meinen (Pl). Beispiele: Ich helfe meinem Vater. / Sie gibt ihrer Mutter ein Geschenk. / Wir danken unseren Eltern.\n\nReflexive Verben: sich waschen, sich anziehen, sich beeilen. Beispiel: Ich wasche mich morgens. Er beeilt sich immer.",
+        "keyForms": [
+          "aufstehen → steht auf",
+          "einkaufen → kauft ein",
+          "anrufen → ruft an",
+          "sich beeilen → beeilt sich",
+          "Dativ: meinem/meiner/meinen"
+        ]
+      }
+    },
+    "leseverstehen": [
+      {
+        "id": "lv-a2-01-T1",
+        "type": "Zuordnung",
+        "format": "telc_A2_Lesen_Teil1",
+        "instruction": "Lesen Sie die Texte 1–5 und die Anzeigen a–h. Welche Anzeige passt zu welchem Text? Nicht alle Anzeigen werden gebraucht. Schreiben Sie den richtigen Buchstaben in das Feld.",
+        "personas": [
+          { "id": "P1", "name": "Herr Müller", "text": "Ich arbeite von 8 bis 17 Uhr und habe keine Zeit, mittags nach Hause zu fahren. Ich suche etwas, wo ich in der Nähe meines Büros schnell und günstig essen kann." },
+          { "id": "P2", "name": "Frau Novak", "text": "Meine Tochter ist 7 Jahre alt und geht in die 1. Klasse. Ich arbeite bis 16 Uhr und brauche jemanden, der sie nach der Schule betreut und ihr bei den Hausaufgaben hilft." },
+          { "id": "P3", "name": "Familie Becker", "text": "Wir möchten unser altes Sofa loswerden. Es ist in gutem Zustand, aber wir brauchen Platz für neue Möbel. Wir suchen jemanden, der es abholt." },
+          { "id": "P4", "name": "Herr Osei", "text": "Ich komme neu in die Stadt und möchte Deutsch üben. Ich suche Kontakt zu deutschsprachigen Menschen und möchte gemeinsame Aktivitäten machen." },
+          { "id": "P5", "name": "Frau Schmidt", "text": "Ich bin 68 Jahre alt und möchte fit bleiben. Ich suche einen Kurs am Vormittag, der nicht zu anstrengend ist und Spaß macht." }
+        ],
+        "ads": [
+          { "id": "a", "text": "MITTAGSTISCH – Täglich frisch gekocht. 3 Gänge für 8,90 €. Zentrale Lage, 5 Min. vom Bahnhof. Mo–Fr 11:30–14:00 Uhr." },
+          { "id": "b", "text": "Suche Nachhilfelehrer für Mathematik, Klasse 9. Bitte melden: 0664-445566." },
+          { "id": "c", "text": "Zu verschenken: Kühlschrank, 5 Jahre alt, funktioniert einwandfrei. Selbstabholung. Tel. 0699-112233." },
+          { "id": "d", "text": "SPRACHCAFÉ – Jeden Dienstag 18 Uhr im Café Central. Wir sprechen Deutsch, spielen Spiele und lernen uns kennen. Alle willkommen!" },
+          { "id": "e", "text": "Sanftes Yoga für Senioren – Dienstag und Donnerstag 9:00–10:30 Uhr. Kursgebühr: 60 € / Monat. Anmeldung unter: yoga-vital@mail.at" },
+          { "id": "f", "text": "Sofa zu verkaufen – 2-Sitzer, blau, sehr guter Zustand. VB 80 €. Kann auch abgeholt werden. info@beckerhaus.de" },
+          { "id": "g", "text": "Zuverlässige Tagesmutter sucht Kinder ab 3 Jahren. Mo–Fr 7–13 Uhr. Erfahrung, Referenzen vorhanden." },
+          { "id": "h", "text": "Nachmittagsbetreuung für Schulkinder – Hausaufgabenbetreuung, Spiele, Ausflüge. Mo–Fr 12–17 Uhr. Tel. 0650-998877." }
+        ],
+        "answers": { "P1": "a", "P2": "h", "P3": "f", "P4": "d", "P5": "e" }
+      },
+      {
+        "id": "lv-a2-01-T2",
+        "type": "Richtig_Falsch_NichtImText",
+        "format": "telc_A2_Lesen_Teil2",
+        "instruction": "Lesen Sie den Text und entscheiden Sie: Sind die Aussagen richtig (R), falsch (F) oder steht das nicht im Text (N)?",
+        "title": "Ein Brief von Sabine an ihre Freundin",
+        "text": "Liebe Klara,\n\nwie geht es dir? Ich hoffe, du erholtst dich gut von deinem Umzug! Ich schreibe dir, weil sich bei uns zu Hause viel verändert hat.\n\nMein Mann Thomas hat seit drei Monaten eine neue Stelle. Er arbeitet jetzt in einer Firma in der Innenstadt und fährt mit dem Fahrrad hin – das ist gut für die Umwelt und auch für seine Gesundheit! Früher hat er immer das Auto genommen und war oft gestresst wegen des Staus.\n\nIch selbst arbeite noch halbtags im Kindergarten. Das macht mir sehr viel Spaß, weil ich die Kinder mag. Aber abends bin ich manchmal sehr müde. Unser Sohn Lukas ist jetzt 13 und hilft schon ziemlich viel im Haushalt – er kocht einmal pro Woche und räumt immer sein Zimmer auf. Das war früher anders!\n\nNächsten Monat fahren wir in Urlaub. Wir machen eine Woche Ostsee – Thomas freut sich besonders darauf, weil er das Meer liebt. Lukas möchte lieber in die Berge, aber er war dann doch einverstanden.\n\nSchreib mir bald!\nHerzliche Grüße, Sabine",
+        "questions": [
+          {
+            "id": "q1",
+            "statement": "Thomas fährt seit Kurzem mit dem Fahrrad zur Arbeit.",
+            "correct": "R",
+            "explanation": "'Er arbeitet jetzt in einer Firma in der Innenstadt und fährt mit dem Fahrrad hin'"
+          },
+          {
+            "id": "q2",
+            "statement": "Thomas hatte früher Probleme mit dem Stau.",
+            "correct": "R",
+            "explanation": "'war oft gestresst wegen des Staus'"
+          },
+          {
+            "id": "q3",
+            "statement": "Sabine arbeitet Vollzeit im Kindergarten.",
+            "correct": "F",
+            "explanation": "Sie arbeitet halbtags, nicht Vollzeit."
+          },
+          {
+            "id": "q4",
+            "statement": "Lukas kocht jeden Tag für die Familie.",
+            "correct": "F",
+            "explanation": "Er kocht 'einmal pro Woche', nicht täglich."
+          },
+          {
+            "id": "q5",
+            "statement": "Sabines Mann ist schon früher gern ans Meer gefahren.",
+            "correct": "N",
+            "explanation": "Der Text sagt nur, dass Thomas das Meer liebt – über frühere Urlaube steht nichts."
+          },
+          {
+            "id": "q6",
+            "statement": "Lukas wollte ursprünglich nicht an die Ostsee fahren.",
+            "correct": "R",
+            "explanation": "'Lukas möchte lieber in die Berge, aber er war dann doch einverstanden.'"
+          }
+        ]
+      }
+    ],
+    "sprachbausteine": [
+      {
+        "id": "sb-a2-01",
+        "format": "telc_A2_Sprachbausteine",
+        "instruction": "Lesen Sie den Text. Welches Wort (a, b oder c) passt in die Lücke? Markieren Sie Ihre Lösung.",
+        "text": "Mein Alltag beginnt um 6:30 Uhr. Ich (1)___ sofort auf und gehe ins Badezimmer. Ich dusche und ziehe (2)___ an. Dann mache ich Frühstück (3)___ meine ganze Familie. Mein Mann trinkt immer Kaffee, (4)___ meine Kinder trinken Milch. Um 7:45 Uhr bringe ich meine Tochter (5)___ Kindergarten. (6)___ fahre ich mit der U-Bahn zur Arbeit. Ich (7)___ als Krankenpflegerin in einem großen Krankenhaus. Die Arbeit ist manchmal anstrengend, (8)___ ich mag sie sehr. Mittags (9)___ ich mit Kolleginnen in der Kantine. Nachmittags (10)___ ich meine Tochter wieder ab. Zuhause helfe ich (11)___ bei den Hausaufgaben und (12)___ wir gemeinsam. Am Abend (13)___ wir oft zusammen fern oder spielen ein Brettspiel. (14)___ ich ins Bett gehe, räume ich noch (15)___ die Küche auf.",
+        "items": [
+          { "id": 1, "options": { "a": "stehe", "b": "stehen", "c": "stehst" }, "correct": "a", "explanation": "1. Person Singular Präsens: ich stehe" },
+          { "id": 2, "options": { "a": "mich", "b": "mir", "c": "sich" }, "correct": "a", "explanation": "sich anziehen → ich ziehe mich an (Akkusativ)" },
+          { "id": 3, "options": { "a": "von", "b": "für", "c": "mit" }, "correct": "b", "explanation": "Frühstück machen für jemanden" },
+          { "id": 4, "options": { "a": "aber", "b": "denn", "c": "weil" }, "correct": "a", "explanation": "Gegensatz zwischen Kaffee (Mann) und Milch (Kinder)" },
+          { "id": 5, "options": { "a": "ins", "b": "im", "c": "zum" }, "correct": "c", "explanation": "zum Kindergarten (Dativ nach in → z. B. zum = zu dem; typisch mit 'bringen'" },
+          { "id": 6, "options": { "a": "Dann", "b": "Darum", "c": "Obwohl" }, "correct": "a", "explanation": "Zeitliche Reihenfolge: Dann = danach" },
+          { "id": 7, "options": { "a": "arbeiten", "b": "arbeite", "c": "arbeitest" }, "correct": "b", "explanation": "ich arbeite" },
+          { "id": 8, "options": { "a": "also", "b": "aber", "c": "weil" }, "correct": "b", "explanation": "Konzessiver Kontrast: anstrengend aber ich mag sie" },
+          { "id": 9, "options": { "a": "esse", "b": "isst", "c": "essen" }, "correct": "a", "explanation": "ich esse" },
+          { "id": 10, "options": { "a": "nehme", "b": "hole", "c": "bringe" }, "correct": "b", "explanation": "abholen: ich hole... ab (trennbar)" },
+          { "id": 11, "options": { "a": "ihr", "b": "sie", "c": "ihn" }, "correct": "a", "explanation": "helfen + Dativ: ich helfe ihr (Tochter = sie → Dativ: ihr)" },
+          { "id": 12, "options": { "a": "kochen", "b": "koche", "c": "kochen wir" }, "correct": "a", "explanation": "Nach 'und' bei gleichem Subjekt: kochen (Verb 2, koordiniert)" },
+          { "id": 13, "options": { "a": "schauen", "b": "schaut", "c": "schauen" }, "correct": "c", "explanation": "wir schauen (Plural)" },
+          { "id": 14, "options": { "a": "Wenn", "b": "Als", "c": "Ob" }, "correct": "a", "explanation": "wenn = wiederkehrende Handlung in der Gegenwart/Zukunft" },
+          { "id": 15, "options": { "a": "kurz", "b": "gerade", "c": "schon" }, "correct": "a", "explanation": "'noch kurz aufräumen' = typische feste Wendung" }
+        ]
+      },
+      {
+        "id": "sb-a2-01-B",
+        "format": "Lueckentext_Verben",
+        "instruction": "Ergänzen Sie die Verben in der richtigen Form. Achten Sie auf Tempus und Person.",
+        "verbs_given": ["aufwachen", "sich beeilen", "vorbereiten", "helfen", "abholen", "anrufen", "aufräumen"],
+        "items": [
+          { "id": 16, "sentence": "Jeden Morgen ___ ich um 6 Uhr ___.", "correct": ["wache", "auf"], "verb": "aufwachen" },
+          { "id": 17, "sentence": "Die Kinder ___ ___ immer, weil sie den Bus nicht verpassen möchten.", "correct": ["beeilen", "sich"], "verb": "sich beeilen" },
+          { "id": 18, "sentence": "Meine Mutter ___ jeden Abend das Abendessen ___.", "correct": ["bereitet", "vor"], "verb": "vorbereiten" },
+          { "id": 19, "sentence": "Ich ___ meiner Oma oft beim Kochen.", "correct": ["helfe"], "verb": "helfen" },
+          { "id": 20, "sentence": "Mein Vater ___ mich nach dem Training ___.", "correct": ["holt", "ab"], "verb": "abholen" }
+        ]
+      }
+    ],
+    "hoerverstehen": {
+      "placeholder": true,
+      "description": "Hörverstehen A2 – Teil 1 (Ansagen): Fünf kurze Ansagen / Durchsagen (Anrufbeantworter, Radio, Lautsprecher). Aufgabe: Multiple Choice (a/b/c). Jede Ansage wird zweimal gespielt. Teil 2 (Gespräch): Ein Alltagsgespräch (z.B. Elterngespräch in der Schule, Gespräch mit Nachbarin über Haushalt). Aufgabe: Richtig/Falsch. Dauer: ca. 15 Minuten. Audio-Datei: noch nicht verfügbar."
+    },
+    "schriftlicherAusdruck": {
+      "format": "telc_A2_Schreiben",
+      "type": "Mitteilung_oder_Nachricht",
+      "instruction": "Sie bekommen diese Nachricht von Ihrer Freundin Katja:\n\n'Hallo! Ich mache nächste Woche eine kleine Party für meinen Geburtstag – Samstag, 18 Uhr, bei mir zu Hause. Kannst du kommen? Bring bitte etwas zu essen oder trinken mit. Und vielleicht kannst du mir beim Aufräumen helfen? Schreib mir bald! Katja'\n\nSchreiben Sie Katja eine Antwort (40–60 Wörter). Schreiben Sie zu allen drei Punkten:\n– Ob Sie kommen können (und warum / warum nicht)\n– Was Sie mitbringen\n– Ob Sie beim Aufräumen helfen können",
+      "points": 3,
+      "modelAnswer": "Liebe Katja,\nvielen Dank für die Einladung! Ich komme sehr gerne zu deiner Party. Ich bringe einen Kartoffelsalat mit – den mag doch jeder! Beim Aufräumen kann ich leider erst ab 16 Uhr helfen, weil ich vorher noch beim Sport bin. Aber dann bin ich dabei!\nBis Samstag, Anna",
+      "criteria": [
+        { "criterion": "Kommunikative Gestaltung", "description": "Alle drei Inhaltspunkte bearbeitet; passende Anrede und Abschluss", "maxPoints": 3 },
+        { "criterion": "Formale Richtigkeit", "description": "Orthografie, Grammatik, Interpunktion auf A2-Niveau", "maxPoints": 2 },
+        { "criterion": "Wortschatz", "description": "Ausreichend variiert für A2; keine wesentlichen Missverständnisse", "maxPoints": 1 }
+      ],
+      "totalPoints": 6
+    },
+    "wortschatz": [
+      { "word": "aufstehen", "type": "Verb (trennbar)", "translation": "вставати", "example": "Ich stehe um 7 Uhr auf." },
+      { "word": "einkaufen", "type": "Verb (trennbar)", "translation": "робити покупки", "example": "Sie kauft jeden Tag im Supermarkt ein." },
+      { "word": "aufräumen", "type": "Verb (trennbar)", "translation": "прибирати", "example": "Lukas räumt sein Zimmer auf." },
+      { "word": "abholen", "type": "Verb (trennbar)", "translation": "забирати (когось)", "example": "Ich hole meine Tochter vom Kindergarten ab." },
+      { "word": "anrufen", "type": "Verb (trennbar)", "translation": "телефонувати", "example": "Er ruft seine Mutter jeden Abend an." },
+      { "word": "sich beeilen", "type": "Verb (reflexiv, trennbar)", "translation": "поспішати", "example": "Wir müssen uns beeilen!" },
+      { "word": "sich kümmern um + Akk.", "type": "Verb (reflexiv)", "translation": "турбуватися про когось", "example": "Sie kümmert sich um ihre Eltern." },
+      { "word": "der Haushalt", "type": "Nomen (m)", "translation": "домашнє господарство", "example": "Wir teilen uns den Haushalt." },
+      { "word": "die Hausarbeit", "type": "Nomen (f)", "translation": "домашня робота", "example": "Die Hausarbeit macht niemand gern allein." },
+      { "word": "die Kantine", "type": "Nomen (f)", "translation": "їдальня", "example": "Ich esse mittags in der Kantine." },
+      { "word": "das Mittagessen", "type": "Nomen (n)", "translation": "обід", "example": "Das Mittagessen ist um 12 Uhr fertig." },
+      { "word": "die Betreuung", "type": "Nomen (f)", "translation": "догляд / присмотр", "example": "Wir brauchen Betreuung für unsere Kinder." },
+      { "word": "die Alleinerziehende", "type": "Nomen (f)", "translation": "мати/батько-одинак", "example": "Sie ist Alleinerziehende mit zwei Kindern." },
+      { "word": "halbtags", "type": "Adverb", "translation": "на пів-ставки", "example": "Ich arbeite halbtags im Büro." },
+      { "word": "regelmäßig", "type": "Adjektiv/Adverb", "translation": "регулярно", "example": "Er geht regelmäßig zum Sport." },
+      { "word": "zuverlässig", "type": "Adjektiv", "translation": "надійний", "example": "Sie ist eine zuverlässige Mitarbeiterin." },
+      { "word": "gemeinsam", "type": "Adjektiv/Adverb", "translation": "разом, спільно", "example": "Wir frühstücken gemeinsam." },
+      { "word": "der Stau", "type": "Nomen (m)", "translation": "затор / пробка", "example": "Er war im Stau und kam zu spät." },
+      { "word": "die Wäsche", "type": "Nomen (f)", "translation": "прання / білизна", "example": "Ich wasche zweimal pro Woche Wäsche." },
+      { "word": "staubsaugen", "type": "Verb (trennbar)", "translation": "пилососити", "example": "Wer saugt heute Staub?" },
+      { "word": "vorbereiten", "type": "Verb (trennbar)", "translation": "готувати / підготовлювати", "example": "Sie bereitet das Abendessen vor." },
+      { "word": "einverstanden sein", "type": "Ausdruck", "translation": "погоджуватися", "example": "Ich bin damit einverstanden." }
+    ],
+    "simulation": {
+      "durationMinutes": 45,
+      "format": "telc_A2",
+      "sections": [
+        { "name": "Leseverstehen", "durationMinutes": 15, "description": "Teil 1: Zuordnung (5 Personen + 8 Anzeigen). Teil 2: Richtig/Falsch/Nicht im Text zu einem Brief." },
+        { "name": "Sprachbausteine", "durationMinutes": 10, "description": "Lückentext mit 15 Items (Multiple Choice a/b/c) + 5 Verb-Formen einsetzen." },
+        { "name": "Hörverstehen", "durationMinutes": 15, "description": "Platzhalter – 5 Ansagen (MC) + 1 Gespräch (R/F)." },
+        { "name": "Schriftlicher Ausdruck", "durationMinutes": 20, "description": "Antwort auf eine informelle Nachricht, 40–60 Wörter, 3 Inhaltspunkte." }
+      ],
+      "totalPoints": 100,
+      "passingScore": 60
+    }
+  },
+  {
+    "lessonId": "les-a2b1-02",
+    "title": "Reisen und Urlaub",
+    "level": "A2–B1",
+    "topic": "Reisen und Urlaub",
+    "theory": {
+      "text": "Urlaub und Reisen sind ein zentrales Thema im deutschsprachigen Alltag. Deutsche Arbeitnehmer haben im Durchschnitt 28–30 Tage Urlaub pro Jahr. Beliebte Reiseziele sind das Mittelmeer, die Alpen, Skandinavien und zunehmend außereuropäische Länder. Bei der Urlaubsplanung spielen Faktoren wie Budget, Reisedauer, Unterkunft und Aktivitäten eine wichtige Rolle.\n\nBeim Buchen unterscheidet man zwischen Pauschalreisen (alles inklusive) und individuell organisierten Reisen. Typische Unterkunftsarten sind Hotels (1–5 Sterne), Ferienwohnungen, Hostels und Campingplätze. Am Bahnhof oder Flughafen gibt es typische Kommunikationssituationen: Tickets kaufen, nach dem Gleis oder Gate fragen, Verspätungen erfragen.\n\nWichtige Redemittel: Ich würde gerne ... buchen. / Gibt es noch freie Zimmer? / Welches Gleis fährt der Zug ab? / Wir hatten leider eine Panne / Verspätung. / Die Reise hat sich wirklich gelohnt!",
+      "grammar": {
+        "topic": "Perfekt vs. Präteritum & Komparativ/Superlativ",
+        "explanation": "Perfekt für mündliche Berichte über Vergangenes: Ich bin nach Paris geflogen. Wir haben ein Hotel gebucht. Hilfsverb 'sein' bei Bewegungs- und Zustandsverben: fahren → bin gefahren, ankommen → bin angekommen, bleiben → bin geblieben.\n\nPräteritum der Modalverben: ich wollte, musste, konnte, durfte, sollte, mochte. Häufig auch: hatte, war. Beispiel: Wir wollten früher abfahren, aber der Zug hatte Verspätung. Es war sehr schön.\n\nKomparativ und Superlativ: günstig → günstiger → am günstigsten. Das Hotel war teurer als die Ferienwohnung. Die schönste Stadt war Prag. Unregelmäßig: gut → besser → am besten; viel → mehr → am meisten; gern → lieber → am liebsten.",
+        "keyForms": [
+          "sein + gefahren / geflogenen / angekommen / geblieben",
+          "haben + gebucht / gesehen / gemacht / gegessen",
+          "wollte / musste / konnte / hatte / war",
+          "Komparativ: -er + als",
+          "Superlativ: am + -sten"
+        ]
+      }
+    },
+    "leseverstehen": [
+      {
+        "id": "lv-a2b1-02-T1",
+        "type": "Zuordnung_Textabschnitte",
+        "format": "Goethe_B1_Lesen_Teil2",
+        "instruction": "Lesen Sie den Text über verschiedene Urlaubstypen. Welche Überschrift (a–h) passt zu welchem Abschnitt (1–5)? Zwei Überschriften passen nicht.",
+        "headings": [
+          { "id": "a", "text": "Wenn das Wetter alles entscheidet" },
+          { "id": "b", "text": "Mehr erleben für weniger Geld" },
+          { "id": "c", "text": "Urlaub ohne Koffer" },
+          { "id": "d", "text": "Für Abenteuerlustige und Naturfreunde" },
+          { "id": "e", "text": "Bildung und Erholung in einem" },
+          { "id": "f", "text": "Die perfekte Wahl für Familien" },
+          { "id": "g", "text": "Einfach abschalten und nichts tun" },
+          { "id": "h", "text": "Günstig reisen mit Risiko" }
+        ],
+        "paragraphs": [
+          { "id": 1, "text": "Strandurlaub am Mittelmeer ist für viele Deutsche der Klassiker: Ein Hotel direkt am Meer, ein Pool, Sonnenschein und gutes Essen. Man muss sich um nichts kümmern, weil alles organisiert ist. Diese Art des Urlaubs ist besonders bei Familien mit kleinen Kindern beliebt, weil die Kinder den ganzen Tag schwimmen und spielen können, während die Eltern sich endlich entspannen.", "correct": "f" },
+          { "id": 2, "text": "Wer die Welt kennenlernen möchte, ohne ein Vermögen auszugeben, fährt oft mit einem Interrail-Pass. Für einen festen Preis kann man mit dem Zug durch ganz Europa reisen und spontan entscheiden, wo man als Nächstes hinfahren möchte. Man schläft in Hostels oder bei Gastfamilien. So trifft man interessante Menschen aus aller Welt.", "correct": "b" },
+          { "id": 3, "text": "Wanderurlaub in den Alpen oder im Schwarzwald erlebt eine Renaissance. Immer mehr Menschen suchen die Stille der Natur und möchten sich körperlich betätigen. Man übernachtet in kleinen Berghütten oder Pensionen, isst regionale Küche und kommt ohne Smartphone aus. Diese Form des Urlaubs ist gut für Körper und Seele.", "correct": "d" },
+          { "id": 4, "text": "Sprachreisen verbinden das Nützliche mit dem Angenehmen. Man belegt morgens einen Sprachkurs, am Nachmittag unternimmt man Ausflüge in die Umgebung. So lernt man nicht nur die Sprache besser, sondern auch die Kultur des Landes aus erster Hand kennen. Besonders beliebt sind Sprachreisen nach Irland, Malta oder Spanien.", "correct": "e" },
+          { "id": 5, "text": "Last-Minute-Reisen sind eine interessante Option für flexible Menschen ohne feste Pläne. Kurz vor dem Abflug werden nicht verkaufte Plätze im Flugzeug zu sehr günstigen Preisen angeboten. Das Problem: Man weiß oft erst 2–3 Tage vorher, wohin die Reise geht und welches Hotel gebucht ist. Für Spontane ist das ein Vorteil, für Planer eher nicht.", "correct": "h" }
+        ]
+      },
+      {
+        "id": "lv-a2b1-02-T2",
+        "type": "Multiple_Choice",
+        "format": "telc_B1_Lesen_Teil1",
+        "instruction": "Lesen Sie den Text und wählen Sie bei jeder Aufgabe die richtige Antwort (a, b oder c).",
+        "title": "Mit dem Zug durch Europa – ein Erfahrungsbericht",
+        "text": "Letzten Sommer habe ich etwas getan, wovon ich lange geträumt hatte: Ich bin mit dem Interrail-Pass drei Wochen durch Europa gereist. Mein Ziel war es, sieben Länder zu besuchen und dabei so wenig wie möglich zu planen. Das war aufregend – aber auch manchmal stressig.\n\nDie Reise begann in Wien, von wo ich nach Prag, Berlin, Amsterdam, Paris, Barcelona und schließlich nach Rom fuhr. In jeder Stadt blieb ich zwei bis vier Tage, je nachdem, wie mir die Stadt gefiel. Prag war überraschend günstig und hatte eine unglaubliche Atmosphäre – dort hätte ich am liebsten länger bleiben wollen. In Paris hingegen war ich enttäuscht: Die Stadt war teurer als erwartet, und die Touristenmassen am Eiffelturm haben mir die Freude ein wenig verdorben.\n\nDas größte Problem auf der Reise war die Platzreservierung. Nicht alle Züge sind mit dem Interrail-Pass ohne Aufpreis nutzbar, besonders Hochgeschwindigkeitszüge wie der TGV in Frankreich oder der AVE in Spanien. Das hatte ich unterschätzt. Manchmal musste ich zusätzlich 20–40 Euro für eine Reservierung bezahlen.\n\nTrotzdem würde ich diese Reiseart jedem empfehlen, der flexibel ist und gerne mit anderen Reisenden spricht. In den Hostels habe ich Menschen aus aller Welt kennengelernt. Die Reise hat mir gezeigt, wie unterschiedlich Europa ist – und wie viel es noch zu entdecken gibt.",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "Was war das ursprüngliche Ziel der Reise?",
+            "options": { "a": "Einen festen Reiseplan einhalten", "b": "Möglichst wenig zu planen und spontan zu reisen", "c": "Nur die großen Hauptstädte zu sehen" },
+            "correct": "b",
+            "explanation": "'dabei so wenig wie möglich zu planen'"
+          },
+          {
+            "id": "q2",
+            "question": "Warum war der Autor in Paris enttäuscht?",
+            "options": { "a": "Die Unterkünfte waren schlecht", "b": "Es hat die ganze Zeit geregnet", "c": "Die hohen Kosten und der Tourismus haben die Stimmung getrübt" },
+            "correct": "c",
+            "explanation": "'teurer als erwartet' und 'Touristenmassen haben mir die Freude verdorben'"
+          },
+          {
+            "id": "q3",
+            "question": "Was hatte der Reisende beim Interrail-Pass unterschätzt?",
+            "options": { "a": "Die Reisedauer von drei Wochen", "b": "Dass für manche Züge ein Aufpreis nötig ist", "c": "Die Sprachbarrieren in verschiedenen Ländern" },
+            "correct": "b",
+            "explanation": "'Nicht alle Züge sind mit dem Interrail-Pass ohne Aufpreis nutzbar'"
+          },
+          {
+            "id": "q4",
+            "question": "Welche Stadt hat dem Autor am besten gefallen?",
+            "options": { "a": "Wien", "b": "Paris", "c": "Prag" },
+            "correct": "c",
+            "explanation": "'dort hätte ich am liebsten länger bleiben wollen'"
+          },
+          {
+            "id": "q5",
+            "question": "Für wen empfiehlt der Autor diese Reiseart?",
+            "options": { "a": "Für Reisende, die gern im Luxushotel übernachten", "b": "Für flexible Menschen, die gerne in Kontakt mit anderen kommen", "c": "Für Familien mit Kindern" },
+            "correct": "b",
+            "explanation": "'der flexibel ist und gerne mit anderen Reisenden spricht'"
+          }
+        ]
+      }
+    ],
+    "sprachbausteine": [
+      {
+        "id": "sb-a2b1-02-A",
+        "format": "telc_B1_Sprachbausteine_Teil1",
+        "instruction": "Was passt in die Lücke? Wählen Sie die richtige Lösung (a, b oder c). Nur eine Antwort ist richtig.",
+        "text": "Letztes Jahr (1)___ wir eine Reise nach Kroatien gemacht. Wir (2)___ schon lange davon, denn unsere Freunde hatten uns die Küste sehr empfohlen. Wir (3)___ mit dem Auto gefahren, weil das am günstigsten war. Die Fahrt (4)___ ungefähr 8 Stunden. Unser Hotel lag direkt am Strand, (5)___ war perfekt. Es gab einen Pool, und die Zimmer (6)___ sehr sauber und komfortabel. Jeden Morgen (7)___ wir gefrühstückt und dann (8)___ wir ans Meer gegangen. Das Wasser (9)___ herrlich warm. Wir (10)___ auch eine Bootsfahrt zu einer kleinen Insel gemacht. Das war das (11)___ Erlebnis der ganzen Reise! Leider (12)___ die Zeit viel zu schnell. Am letzten Abend (13)___ wir in einem typischen Restaurant, wo wir frischen Fisch (14)___. Die Reise (15)___ uns so gut gefallen, dass wir nächstes Jahr wiederkommen möchten.",
+        "items": [
+          { "id": 1, "options": { "a": "haben", "b": "hatten", "c": "sind" }, "correct": "a", "explanation": "Perfekt: haben + gemacht" },
+          { "id": 2, "options": { "a": "träumten", "b": "träumen", "c": "hatten geträumt" }, "correct": "a", "explanation": "Präteritum für Zustandsbeschreibung: träumten (Erzählung in Vergangenheit)" },
+          { "id": 3, "options": { "a": "sind", "b": "haben", "c": "waren" }, "correct": "a", "explanation": "Perfekt mit sein bei fahren: sind gefahren" },
+          { "id": 4, "options": { "a": "dauerte", "b": "hat gedauert", "c": "dauern" }, "correct": "a", "explanation": "Präteritum: dauerte (Zustandsbeschreibung in Erzählung)" },
+          { "id": 5, "options": { "a": "das", "b": "was", "c": "dies" }, "correct": "b", "explanation": "Relativpronomen 'was' nach unbestimmtem Bezug (die ganze Situation)" },
+          { "id": 6, "options": { "a": "wurden", "b": "waren", "c": "haben" }, "correct": "b", "explanation": "Präteritum von sein: waren" },
+          { "id": 7, "options": { "a": "hatten", "b": "haben", "c": "waren" }, "correct": "b", "explanation": "Perfekt: haben + gefrühstückt" },
+          { "id": 8, "options": { "a": "waren", "b": "sind", "c": "haben" }, "correct": "b", "explanation": "Perfekt mit sein bei Bewegung: sind gegangen" },
+          { "id": 9, "options": { "a": "wurde", "b": "ist", "c": "war" }, "correct": "c", "explanation": "Präteritum von sein: war" },
+          { "id": 10, "options": { "a": "haben", "b": "sind", "c": "waren" }, "correct": "a", "explanation": "Perfekt: haben + gemacht" },
+          { "id": 11, "options": { "a": "schönste", "b": "schönsten", "c": "am schönsten" }, "correct": "b", "explanation": "Superlativ nach Artikel: das schönste Erlebnis → Nominativ Neutrum → schönste? Nein: Genitiv folgt, Nominativ: das schönste → Adjektiv nach 'das': schönste → korrekt ist 'schönste'" },
+          { "id": 12, "options": { "a": "verging", "b": "hat vergangen", "c": "verging sich" }, "correct": "a", "explanation": "vergehen → Präteritum: verging" },
+          { "id": 13, "options": { "a": "aßen", "b": "haben gegessen", "c": "essen" }, "correct": "a", "explanation": "Präteritum in Erzählung: aßen" },
+          { "id": 14, "options": { "a": "aßen", "b": "bestellten", "c": "brachten" }, "correct": "b", "explanation": "bestellen ist im Kontext korrekt: wir bestellten Fisch" },
+          { "id": 15, "options": { "a": "ist", "b": "hat", "c": "war" }, "correct": "b", "explanation": "Perfekt: hat + gefallen (gefallen nimmt haben)" }
+        ]
+      },
+      {
+        "id": "sb-a2b1-02-B",
+        "format": "Komparativ_Superlativ_Lückentext",
+        "instruction": "Ergänzen Sie Komparativ oder Superlativ des Adjektivs in Klammern.",
+        "items": [
+          { "id": 16, "sentence": "Das Hotel war ___ als die Ferienwohnung, aber ___ war die Aussicht. (teuer / schön)", "correct": ["teurer", "am schönsten"] },
+          { "id": 17, "sentence": "Mit dem Zug fährt man ___ als mit dem Flugzeug, aber es ist ___. (langsam / komfortabel)", "correct": ["langsamer", "am komfortabelsten"] },
+          { "id": 18, "sentence": "Prag war das ___ Reiseziel des Jahres. (beliebt)", "correct": ["beliebteste"] },
+          { "id": 19, "sentence": "Ich reise ___ mit der Familie als alleine. (gern)", "correct": ["lieber"] },
+          { "id": 20, "sentence": "Der ___ Weg zum Strand führt durch den Park. (kurz)", "correct": ["kürzeste"] }
+        ]
+      }
+    ],
+    "hoerverstehen": {
+      "placeholder": true,
+      "description": "Hörverstehen B1 – Teil 1: Fünf kurze Texte (Durchsagen am Flughafen, Radioinfo, Anrufbeantworter). Aufgabe: Multiple Choice (a/b/c). Teil 2: Ein längeres Gespräch, z.B. zwei Freunde planen eine Reise oder ein Interview mit einem Reiseblogger. Aufgabe: Richtig/Falsch/Nicht erwähnt. Jeder Text wird zweimal abgespielt. Dauer: ca. 20 Minuten. Audio-Datei: noch nicht verfügbar."
+    },
+    "schriftlicherAusdruck": {
+      "format": "telc_B1_Schreiben",
+      "type": "Halbformeller_Brief_oder_Email",
+      "instruction": "Sie haben diese E-Mail von einem deutschen Bekannten, Stefan, bekommen:\n\n'Liebe/r ..., ich plane diesen Sommer eine Reise und brauche deinen Rat! Du bist doch schon viel gereist. Ich möchte zwei Wochen Urlaub machen, bin aber unentschlossen: Soll ich eine Pauschalreise buchen oder lieber individuell reisen? Und wohin würdest du mir empfehlen zu fahren? Was sollte ich auf jeden Fall mitnehmen? Ich freue mich auf deine Antwort! Viele Grüße, Stefan'\n\nSchreiben Sie Stefan eine Antwort (80–100 Wörter). Gehen Sie auf alle vier Punkte ein:\n– Ihre persönliche Meinung: Pauschalreise oder individuelle Reise?\n– Eine konkrete Reiseempfehlung mit kurzem Grund\n– Packtipps\n– Ein persönlicher Wunsch für seine Reise",
+      "points": 4,
+      "modelAnswer": "Lieber Stefan, schön, dass du mich fragst! Ich persönlich reise lieber individuell, weil man flexibler ist und mehr von der Kultur erlebt. Als Reiseziel würde ich dir Portugal empfehlen – die Küsten sind wunderschön, das Essen ist hervorragend und es ist noch relativ günstig. Pack unbedingt bequeme Schuhe und eine Regenjacke ein – das Wetter kann überraschend sein! Und vergiss nicht dein Handy-Ladekabel, das vermisst man am meisten. Ich wünsche dir eine tolle Reise und viele schöne Erlebnisse! Viele Grüße, [Name]",
+      "criteria": [
+        { "criterion": "Inhalt", "description": "Alle vier Punkte klar und angemessen bearbeitet", "maxPoints": 4 },
+        { "criterion": "Kommunikative Gestaltung", "description": "Passender Register (halbformell/freundschaftlich), kohärenter Text, Anrede und Gruß vorhanden", "maxPoints": 3 },
+        { "criterion": "Sprachliche Richtigkeit", "description": "Grammatik, Wortschatz, Orthografie auf B1-Niveau; Fehler beeinträchtigen Verständnis kaum", "maxPoints": 3 }
+      ],
+      "totalPoints": 10
+    },
+    "wortschatz": [
+      { "word": "die Pauschalreise", "type": "Nomen (f)", "translation": "туристичний пакет (тур)", "example": "Eine Pauschalreise ist oft günstiger als individuelle Buchungen." },
+      { "word": "die Ferienwohnung", "type": "Nomen (f)", "translation": "орендована квартира для відпочинку", "example": "Wir haben eine Ferienwohnung direkt am See gemietet." },
+      { "word": "der Reisepass", "type": "Nomen (m)", "translation": "закордонний паспорт", "example": "Vergiss nicht deinen Reisepass einzupacken!" },
+      { "word": "das Gepäck", "type": "Nomen (n)", "translation": "багаж", "example": "Mein Gepäck war zu schwer und ich musste zahlen." },
+      { "word": "die Verspätung", "type": "Nomen (f)", "translation": "запізнення", "example": "Der Flug hatte zwei Stunden Verspätung." },
+      { "word": "buchen", "type": "Verb", "translation": "бронювати / замовляти", "example": "Wir haben das Hotel online gebucht." },
+      { "word": "umsteigen", "type": "Verb (trennbar)", "translation": "пересідати (на інший транспорт)", "example": "In Frankfurt müssen wir umsteigen." },
+      { "word": "der Aufpreis", "type": "Nomen (m)", "translation": "доплата", "example": "Für den Hochgeschwindigkeitszug zahlt man einen Aufpreis." },
+      { "word": "das Gleis", "type": "Nomen (n)", "translation": "залізнична колія / перон", "example": "Der Zug fährt auf Gleis 7 ab." },
+      { "word": "die Unterkunft", "type": "Nomen (f)", "translation": "житло / помешкання під час подорожі", "example": "Wir suchen noch eine günstige Unterkunft." },
+      { "word": "enttäuscht (sein)", "type": "Adjektiv", "translation": "бути розчарованим", "example": "Er war enttäuscht, weil das Hotel nicht sauber war." },
+      { "word": "die Atmosphäre", "type": "Nomen (f)", "translation": "атмосфера", "example": "Prag hat eine wunderbare Atmosphäre." },
+      { "word": "die Touristenmassen", "type": "Nomen (Pl.)", "translation": "натовпи туристів", "example": "Im August gibt es überall Touristenmassen." },
+      { "word": "sich lohnen", "type": "Verb (reflexiv)", "translation": "коштувати того / окупатися", "example": "Der Umweg hat sich gelohnt – die Aussicht war großartig!" },
+      { "word": "spontan", "type": "Adjektiv/Adverb", "translation": "спонтанно", "example": "Wir haben spontan entschieden, nach Barcelona zu fahren." },
+      { "word": "die Reisekrankenversicherung", "type": "Nomen (f)", "translation": "медична страховка для подорожей", "example": "Eine Reisekrankenversicherung ist sehr wichtig." },
+      { "word": "der Strandurlaub", "type": "Nomen (m)", "translation": "відпочинок на пляжі", "example": "Kinder lieben Strandurlaub." },
+      { "word": "der Wanderurlaub", "type": "Nomen (m)", "translation": "відпочинок з піщими походами", "example": "Im Schwarzwald ist Wanderurlaub sehr beliebt." },
+      { "word": "die Sehenswürdigkeit", "type": "Nomen (f)", "translation": "визначна пам'ятка", "example": "Wien hat viele Sehenswürdigkeiten." },
+      { "word": "der Reisebericht", "type": "Nomen (m)", "translation": "опис/репортаж про подорож", "example": "Sie hat einen langen Reisebericht geschrieben." },
+      { "word": "empfehlen", "type": "Verb (unregelmäßig)", "translation": "рекомендувати", "example": "Ich empfehle dir diese Stadt sehr!" },
+      { "word": "begeistert (von)", "type": "Adjektiv", "translation": "захоплений (чимось)", "example": "Wir waren begeistert von der Landschaft." }
+    ],
+    "simulation": {
+      "durationMinutes": 60,
+      "format": "telc_B1",
+      "sections": [
+        { "name": "Leseverstehen", "durationMinutes": 20, "description": "Teil 1: Zuordnung Überschriften zu Abschnitten (5 Abschnitte, 8 Überschriften). Teil 2: Multiple Choice (5 Fragen) zu einem Reisebericht." },
+        { "name": "Sprachbausteine", "durationMinutes": 15, "description": "Teil 1: Lückentext mit 15 MC-Items (Perfekt/Präteritum-Fokus). Teil 2: 5 Komparativ/Superlativ-Lücken." },
+        { "name": "Hörverstehen", "durationMinutes": 20, "description": "Platzhalter – Ansagen + Gespräch." },
+        { "name": "Schriftlicher Ausdruck", "durationMinutes": 25, "description": "Halbformelle E-Mail, 80–100 Wörter, 4 Inhaltspunkte. Bewertung nach Inhalt, Gestaltung, Sprachrichtigkeit." }
+      ],
+      "totalPoints": 100,
+      "passingScore": 60
+    }
+  },
+  {
+    "lessonId": "les-b1-03",
+    "title": "Gesundheit und Arztbesuch",
+    "level": "B1",
+    "topic": "Gesundheit und Arztbesuch",
+    "theory": {
+      "text": "Das Gesundheitssystem in deutschsprachigen Ländern ist gut ausgebaut. In Deutschland ist jeder Bürger krankenversichert – entweder gesetzlich (z. B. AOK, Techniker Krankenkasse) oder privat. Beim Arztbesuch braucht man die Krankenversicherungskarte (früher: Krankenkassenkarte). Den Hausarzt besucht man bei allgemeinen Beschwerden; er überweist bei Bedarf zum Facharzt.\n\nTypische Situationen beim Arzt: Man schildert Symptome, der Arzt untersucht, stellt eine Diagnose und verschreibt eventuell ein Medikament oder stellt eine Krankschreibung (Arbeitsunfähigkeitsbescheinigung = AU) aus. In der Apotheke löst man das Rezept ein. Für verschreibungspflichtige Medikamente zahlt man in Deutschland eine Zuzahlung.\n\nWichtige Wendungen: Ich habe seit drei Tagen Fieber. / Mir ist schwindelig / übel. / Wo tut es weh? / Der Schmerz strahlt in den Rücken aus. / Ich nehme das Medikament dreimal täglich ein.",
+      "grammar": {
+        "topic": "Konjunktiv II (Gegenwart & Vergangenheit) für Ratschläge und hypothetische Situationen",
+        "explanation": "Konjunktiv II Gegenwart: Bildung bei starken Verben: Präteritumstamm + Umlaut + Endung. Beispiele: sein → ich wäre; haben → ich hätte; werden → ich würde; können → ich könnte; sollen → ich sollte; müssen → ich müsste; dürfen → ich dürfte.\n\nFür schwache Verben: würde + Infinitiv. Ich würde mehr schlafen. Du würdest zum Arzt gehen.\n\nKonjunktiv II Vergangenheit: hätte/wäre + Partizip II. Ich hätte früher zum Arzt gehen sollen. Er wäre gesünder gewesen, wenn er mehr Sport gemacht hätte.\n\nVerwendung: höfliche Bitten (Könnten Sie mir sagen...?), Ratschläge (Du solltest...), irreale Bedingungen (Wenn ich krank wäre, würde ich zu Hause bleiben.), Wünsche (Ich wäre gern gesund.).",
+        "keyForms": [
+          "wäre / hätte / würde + Inf.",
+          "könnte / sollte / müsste / dürfte",
+          "hätte/wäre + Partizip II (Vergangenheit)",
+          "wenn … wäre/hätte, würde …",
+          "Du solltest / Es wäre besser, wenn …"
+        ]
+      }
+    },
+    "leseverstehen": [
+      {
+        "id": "lv-b1-03-T1",
+        "type": "Multiple_Choice",
+        "format": "telc_B1_Lesen_Teil1",
+        "instruction": "Lesen Sie den Zeitungsartikel und wählen Sie bei jeder Aufgabe die richtige Antwort (a, b oder c).",
+        "title": "Stress und Burnout – die Volkskrankheit des 21. Jahrhunderts",
+        "text": "Burnout ist in aller Munde – aber was steckt wirklich dahinter? Laut einer aktuellen Studie der Deutschen Gesellschaft für Psychiatrie leidet jeder fünfte Erwerbstätige in Deutschland unter ernsthafter Erschöpfung, die auf beruflichen Stress zurückzuführen ist. Besonders betroffen sind Pflegepersonal, Lehrer und Führungskräfte.\n\nDas Tückische an Burnout ist, dass es sich schleichend entwickelt. Betroffene berichten oft, dass sie zunächst extrem motiviert und leistungsbereit waren. Die Warnsignale – chronische Müdigkeit, Schlafstörungen, Konzentrationsprobleme und emotionale Distanz – werden lange ignoriert oder als normale Belastung abgetan.\n\nMediziner betonen, dass Burnout keine offizielle psychiatrische Diagnose ist, obwohl es in der Internationalen Klassifikation der Krankheiten (ICD-10) als Faktor aufgeführt wird, der den Gesundheitszustand beeinflusst. Die Behandlung erfolgt individuell: Psychotherapie, Entspannungsverfahren, in schweren Fällen auch medikamentöse Unterstützung und stationäre Behandlung.\n\nEntscheidend für die Prävention ist laut Experten die sogenannte Work-Life-Balance. Regelmäßige Erholungsphasen, klare Grenzen zwischen Arbeit und Freizeit sowie soziale Kontakte wirken präventiv. 'Wer auf die ersten Warnsignale seines Körpers hört, kann oft noch gegensteuern', erklärt Dr. Meier, Psychiater an der Berliner Charité.",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "Wie viele Erwerbstätige leiden laut der Studie unter ernsthafter Erschöpfung?",
+            "options": { "a": "Jeder zweite", "b": "Jeder fünfte", "c": "Jeder zehnte" },
+            "correct": "b",
+            "explanation": "'leidet jeder fünfte Erwerbstätige'"
+          },
+          {
+            "id": "q2",
+            "question": "Was ist typisch für die Entwicklung eines Burnouts?",
+            "options": { "a": "Es tritt plötzlich und ohne Vorwarnung auf", "b": "Es beginnt oft mit extremer Demotivation", "c": "Es entwickelt sich langsam und wird zunächst nicht erkannt" },
+            "correct": "c",
+            "explanation": "'entwickelt sich schleichend', Symptome 'werden lange ignoriert'"
+          },
+          {
+            "id": "q3",
+            "question": "Welchen offiziellen Status hat Burnout laut dem Text?",
+            "options": { "a": "Es ist eine anerkannte psychiatrische Diagnose", "b": "Es ist keine offizielle psychiatrische Diagnose", "c": "Es gilt als eine körperliche Erkrankung" },
+            "correct": "b",
+            "explanation": "'Burnout ist keine offizielle psychiatrische Diagnose'"
+          },
+          {
+            "id": "q4",
+            "question": "Was empfehlen Experten zur Vorbeugung von Burnout?",
+            "options": { "a": "Mehr Urlaub nehmen und Sport treiben", "b": "Work-Life-Balance, Erholungsphasen und soziale Kontakte", "c": "Regelmäßige Medikamente und Psychotherapie" },
+            "correct": "b",
+            "explanation": "'Work-Life-Balance', 'Erholungsphasen', 'soziale Kontakte wirken präventiv'"
+          },
+          {
+            "id": "q5",
+            "question": "Was sagt Dr. Meier über frühe Warnsignale?",
+            "options": { "a": "Man sollte sofort in stationäre Behandlung gehen", "b": "Wer früh reagiert, kann die Situation noch verbessern", "c": "Die Warnsignale sind meistens harmlos und verschwinden von selbst" },
+            "correct": "b",
+            "explanation": "'Wer auf die ersten Warnsignale hört, kann oft noch gegensteuern'"
+          }
+        ]
+      },
+      {
+        "id": "lv-b1-03-T2",
+        "type": "Richtig_Falsch",
+        "format": "telc_B1_Lesen_Teil3",
+        "instruction": "Lesen Sie die Aussagen und entscheiden Sie: Richtig (R) oder Falsch (F)?",
+        "title": "Informationsblatt: Ihr Arztbesuch in Deutschland",
+        "text": "Willkommen in Deutschland! Hier erklären wir Ihnen, wie das Gesundheitssystem funktioniert.\n\nAlle Personen in Deutschland müssen krankenversichert sein. Wenn Sie arbeiten, sind Sie automatisch gesetzlich versichert, sofern Ihr Einkommen unter einer bestimmten Grenze liegt. Selbstständige und Gutverdiener können sich privat versichern.\n\nWenn Sie krank sind, gehen Sie zuerst zum Hausarzt (Allgemeinmediziner). Der Hausarzt ist Ihr erster Ansprechpartner und überweist Sie bei Bedarf zum Facharzt. Bitte bringen Sie Ihre Krankenversicherungskarte mit – ohne diese kann der Arzt keine Leistung abrechnen.\n\nTermine: Viele Arztpraxen haben lange Wartezeiten. Es empfiehlt sich, einen Termin zu vereinbaren. Bei einem Notfall können Sie aber auch ohne Termin kommen.\n\nKrankschreibung: Wenn Sie wegen Krankheit nicht arbeiten können, stellt der Arzt eine Arbeitsunfähigkeitsbescheinigung (AU) aus. Diese müssen Sie Ihrem Arbeitgeber innerhalb von drei Tagen vorlegen.\n\nZuzahlungen: Für Medikamente zahlt man in Deutschland eine gesetzliche Zuzahlung von 5 bis 10 Euro pro Packung. Kinder unter 18 Jahren sind von der Zuzahlung befreit.",
+        "questions": [
+          {
+            "id": "q6",
+            "statement": "In Deutschland sind alle Menschen gesetzlich krankenversichert.",
+            "correct": "F",
+            "explanation": "Selbstständige und Gutverdiener können sich privat versichern."
+          },
+          {
+            "id": "q7",
+            "statement": "Man braucht die Krankenversicherungskarte, damit der Arzt die Kosten abrechnen kann.",
+            "correct": "R",
+            "explanation": "'ohne diese kann der Arzt keine Leistung abrechnen'"
+          },
+          {
+            "id": "q8",
+            "statement": "Im Notfall kann man auch ohne Termin zum Arzt gehen.",
+            "correct": "R",
+            "explanation": "'Bei einem Notfall können Sie aber auch ohne Termin kommen.'"
+          },
+          {
+            "id": "q9",
+            "statement": "Die Krankschreibung muss man spätestens nach fünf Tagen beim Arbeitgeber abgeben.",
+            "correct": "F",
+            "explanation": "Die Frist beträgt drei Tage, nicht fünf."
+          },
+          {
+            "id": "q10",
+            "statement": "Kinder zahlen in Deutschland keine Zuzahlung für Medikamente.",
+            "correct": "R",
+            "explanation": "'Kinder unter 18 Jahren sind von der Zuzahlung befreit.'"
+          }
+        ]
+      }
+    ],
+    "sprachbausteine": [
+      {
+        "id": "sb-b1-03-A",
+        "format": "telc_B1_Sprachbausteine_Teil1",
+        "instruction": "Welches Wort (a, b oder c) passt in die Lücke? Markieren Sie Ihre Lösung.",
+        "text": "Meine Freundin Claudia war letzte Woche beim Arzt. Sie hatte schon seit einer Woche starke Kopfschmerzen und (1)___ sich sehr schwach. Der Arzt (2)___ sie gründlich und fragte nach weiteren Symptomen. Claudia erklärte, dass sie auch Schlafprobleme (3)___ und sich manchmal schwindelig fühlte. Der Arzt meinte, (4)___ könnte Stress der Auslöser sein. Er empfahl ihr, sich mehr (5)___ und regelmäßig zu schlafen. Außerdem (6)___ er ihr, dass sie Urlaub nehmen sollte. Er verschrieb ihr ein leichtes Medikament (7)___ die Kopfschmerzen und stellte eine Krankschreibung für drei Tage (8)___. Claudia (9)___ das Rezept in der Apotheke ein und bekam dort auch noch Tipps zur Einnahme. Die Apothekerin erklärte ihr, dass sie das Medikament (10)___ den Mahlzeiten nehmen sollte, da es sonst auf den Magen schlagen (11)___. Claudia wäre froh, (12)___ sie früher zum Arzt gegangen wäre. Jetzt hofft sie, dass es ihr bald (13)___ geht. Der Arzt hat gesagt, (14)___ sie sich nicht besser fühlt, soll sie (15)___ nächste Woche wiederkommen.",
+        "items": [
+          { "id": 1, "options": { "a": "fühlt", "b": "fühlte", "c": "hat gefühlt" }, "correct": "b", "explanation": "Präteritum im Erzählkontext" },
+          { "id": 2, "options": { "a": "untersuchte", "b": "hat untersucht", "c": "untersucht" }, "correct": "a", "explanation": "Präteritum in Erzählung" },
+          { "id": 3, "options": { "a": "hätte", "b": "habe", "c": "hatte" }, "correct": "c", "explanation": "Indirekte Rede (Präteritum): hatte" },
+          { "id": 4, "options": { "a": "dass", "b": "ob", "c": "weil" }, "correct": "a", "explanation": "indirekte Aussage → dass" },
+          { "id": 5, "options": { "a": "erholen", "b": "zu erholen", "c": "erholte" }, "correct": "b", "explanation": "empfehlen + zu + Infinitiv" },
+          { "id": 6, "options": { "a": "riet", "b": "sagte", "c": "meinte" }, "correct": "a", "explanation": "raten (jemandem raten) → riet; 'er riet ihr, dass sie...'" },
+          { "id": 7, "options": { "a": "für", "b": "gegen", "c": "bei" }, "correct": "b", "explanation": "ein Medikament gegen etwas verschreiben" },
+          { "id": 8, "options": { "a": "aus", "b": "auf", "c": "ab" }, "correct": "a", "explanation": "ausstellen: eine Krankschreibung ausstellen" },
+          { "id": 9, "options": { "a": "löste", "b": "holte", "c": "kaufte" }, "correct": "a", "explanation": "ein Rezept einlösen" },
+          { "id": 10, "options": { "a": "nach", "b": "vor", "c": "während" }, "correct": "a", "explanation": "nach den Mahlzeiten (danach)" },
+          { "id": 11, "options": { "a": "kann", "b": "könnte", "c": "wird" }, "correct": "b", "explanation": "Konjunktiv II für mögliche/hypothetische Folge" },
+          { "id": 12, "options": { "a": "wenn", "b": "ob", "c": "falls" }, "correct": "a", "explanation": "wenn → Konjunktiv II irrealer Konditionalsatz Vergangenheit" },
+          { "id": 13, "options": { "a": "besser", "b": "gut", "c": "wohl" }, "correct": "a", "explanation": "es geht jemandem besser (Komparativ)" },
+          { "id": 14, "options": { "a": "wenn", "b": "dass", "c": "ob" }, "correct": "a", "explanation": "konditionaler Nebensatz: wenn" },
+          { "id": 15, "options": { "a": "spätestens", "b": "bald", "c": "endlich" }, "correct": "a", "explanation": "'spätestens nächste Woche' = bis nächste Woche" }
+        ]
+      },
+      {
+        "id": "sb-b1-03-B",
+        "format": "Konjunktiv_II_Umformung",
+        "instruction": "Schreiben Sie die Sätze mit Konjunktiv II um. Drücken Sie Ratschläge, Wünsche oder irreale Bedingungen aus.",
+        "items": [
+          { "id": 16, "original": "Ich gehe nicht früher zum Arzt. / Das ist ein Fehler.", "task": "Formulieren Sie einen Ratschlag mit 'sollte'.", "correct": "Du solltest früher zum Arzt gehen." },
+          { "id": 17, "original": "Wenn ich krank bin, muss ich zu Hause bleiben.", "task": "Formen Sie in den Konjunktiv II um (irreal, Gegenwart).", "correct": "Wenn ich krank wäre, müsste ich zu Hause bleiben." },
+          { "id": 18, "original": "Ich bin sehr müde. Ich wünsche mir mehr Schlaf.", "task": "Formulieren Sie einen Wunsch mit 'wäre' oder 'hätte'.", "correct": "Ich wäre nicht so müde, wenn ich mehr schlafen würde. / Ich hätte gern mehr Schlaf." },
+          { "id": 19, "original": "Sie hat kein Rezept bekommen. Sie ist nicht zum Arzt gegangen.", "task": "Formulieren Sie mit Konjunktiv II Vergangenheit.", "correct": "Wenn sie zum Arzt gegangen wäre, hätte sie ein Rezept bekommen." },
+          { "id": 20, "original": "Können Sie mir bitte erklären, wie ich das Medikament einnehme?", "task": "Machen Sie die Frage höflicher mit Konjunktiv II.", "correct": "Könnten Sie mir bitte erklären, wie ich das Medikament einnehme?" }
+        ]
+      }
+    ],
+    "hoerverstehen": {
+      "placeholder": true,
+      "description": "Hörverstehen B1 – Teil 1: Fünf Radiomeldungen / kurze Gespräche (Arztpraxis, Apotheke, Krankenkasse). Aufgabe: Multiple Choice. Teil 2: Ein Interview mit einem Arzt oder Gesundheitsexperten zu Burnout / Ernährung. Aufgabe: Richtig/Falsch/Nicht erwähnt (6 Aussagen). Jeder Hörtext wird zweimal abgespielt. Dauer: ca. 20 Minuten. Audio-Datei: noch nicht verfügbar."
+    },
+    "schriftlicherAusdruck": {
+      "format": "telc_B1_Schreiben",
+      "type": "Formeller_Brief",
+      "instruction": "Lesen Sie folgende Situation:\n\nSie waren letzte Woche drei Tage krank und konnten nicht zur Arbeit kommen. Ihr Arbeitgeber, Herr Berger, hat Ihnen eine Nachricht geschickt, in der er nach Ihrer Krankmeldung fragt und wissen möchte, wann Sie wieder kommen.\n\nSchreiben Sie Herrn Berger einen formellen Brief (80–100 Wörter). Schreiben Sie:\n– Eine Entschuldigung für Ihre Abwesenheit\n– Was Sie hatten (Krankheit)\n– Wann Sie wieder arbeitsfähig sind\n– Dass Sie die Krankschreibung beilegen",
+      "points": 4,
+      "modelAnswer": "Sehr geehrter Herr Berger,\n\nhiermit möchte ich mich für meine Abwesenheit vom 12. bis 14. März entschuldigen. Ich hatte eine akute Erkältung mit hohem Fieber und war leider nicht in der Lage, meiner Arbeit nachzugehen.\n\nMein Hausarzt hat mich für diese drei Tage krankgeschrieben. Die Arbeitsunfähigkeitsbescheinigung füge ich diesem Schreiben bei.\n\nAb Montag, dem 17. März, bin ich wieder arbeitsfähig und werde selbstverständlich alle versäumten Aufgaben nachholen.\n\nMit freundlichen Grüßen,\n[Name]",
+      "criteria": [
+        { "criterion": "Inhalt", "description": "Alle vier Punkte vollständig und klar bearbeitet", "maxPoints": 4 },
+        { "criterion": "Textgestaltung", "description": "Formeller Brief mit korrekter Anrede, Struktur, Abschlussformel", "maxPoints": 3 },
+        { "criterion": "Sprachliche Korrektheit", "description": "Grammatik, Wortschatz B1; Konjunktiv II, formelle Wendungen", "maxPoints": 3 }
+      ],
+      "totalPoints": 10
+    },
+    "wortschatz": [
+      { "word": "die Erkältung", "type": "Nomen (f)", "translation": "застуда", "example": "Ich habe eine schwere Erkältung." },
+      { "word": "das Fieber", "type": "Nomen (n)", "translation": "температура / жар", "example": "Sie hat 39 Grad Fieber." },
+      { "word": "die Erschöpfung", "type": "Nomen (f)", "translation": "виснаження", "example": "Er leidet unter chronischer Erschöpfung." },
+      { "word": "die Schlafstörungen", "type": "Nomen (Pl.)", "translation": "розлади сну", "example": "Stress kann Schlafstörungen verursachen." },
+      { "word": "verschreiben", "type": "Verb (unregelmäßig)", "translation": "виписувати (рецепт)", "example": "Der Arzt hat mir Antibiotika verschrieben." },
+      { "word": "die Überweisung", "type": "Nomen (f)", "translation": "направлення до лікаря-спеціаліста", "example": "Ich brauche eine Überweisung zum Kardiologen." },
+      { "word": "die AU / Krankschreibung", "type": "Nomen (f)", "translation": "лікарняний листок", "example": "Der Arzt stellt eine Krankschreibung aus." },
+      { "word": "die Krankenkasse", "type": "Nomen (f)", "translation": "лікарняна каса / страхова медична каса", "example": "Die Krankenkasse übernimmt die Kosten." },
+      { "word": "die Zuzahlung", "type": "Nomen (f)", "translation": "доплата пацієнта", "example": "Ich zahle 5 Euro Zuzahlung pro Rezept." },
+      { "word": "einlösen", "type": "Verb (trennbar)", "translation": "відоварювати рецепт", "example": "Ich löse das Rezept in der Apotheke ein." },
+      { "word": "sich erholen (von)", "type": "Verb (reflexiv)", "translation": "відновлюватися (після)", "example": "Sie erholt sich langsam von der Operation." },
+      { "word": "der Schwindel", "type": "Nomen (m)", "translation": "запаморочення", "example": "Mir ist schwindelig – ich kann kaum stehen." },
+      { "word": "die Diagnose", "type": "Nomen (f)", "translation": "діагноз", "example": "Die Diagnose war Burnout." },
+      { "word": "der Facharzt / die Fachärztin", "type": "Nomen (m/f)", "translation": "лікар-спеціаліст", "example": "Ich gehe zum Facharzt für Neurologie." },
+      { "word": "untersuchen", "type": "Verb", "translation": "обстежувати", "example": "Der Arzt hat mich gründlich untersucht." },
+      { "word": "die Nebenwirkung", "type": "Nomen (f)", "translation": "побічний ефект", "example": "Das Medikament hat kaum Nebenwirkungen." },
+      { "word": "chronisch", "type": "Adjektiv", "translation": "хронічний", "example": "Sie hat chronische Rückenschmerzen." },
+      { "word": "schleichend", "type": "Adjektiv/Adverb", "translation": "поступовий / непомітний", "example": "Die Krankheit entwickelt sich schleichend." },
+      { "word": "präventiv", "type": "Adjektiv/Adverb", "translation": "профілактичний", "example": "Sport wirkt präventiv gegen viele Krankheiten." },
+      { "word": "die Psychotherapie", "type": "Nomen (f)", "translation": "психотерапія", "example": "Er macht seit einem Jahr Psychotherapie." },
+      { "word": "gegensteuern", "type": "Verb (trennbar)", "translation": "протидіяти / вживати заходів", "example": "Wer früh reagiert, kann noch gegensteuern." },
+      { "word": "befreit (von)", "type": "Adjektiv", "translation": "звільнений (від)", "example": "Kinder sind von der Zuzahlung befreit." }
+    ],
+    "simulation": {
+      "durationMinutes": 60,
+      "format": "telc_B1",
+      "sections": [
+        { "name": "Leseverstehen", "durationMinutes": 20, "description": "Teil 1: Multiple Choice (5 Fragen) zu einem Zeitungsartikel über Burnout. Teil 2: Richtig/Falsch (5 Fragen) zu einem Informationstext." },
+        { "name": "Sprachbausteine", "durationMinutes": 15, "description": "Teil 1: Lückentext 15 MC-Items. Teil 2: Konjunktiv II – 5 Umformungsaufgaben." },
+        { "name": "Hörverstehen", "durationMinutes": 20, "description": "Platzhalter." },
+        { "name": "Schriftlicher Ausdruck", "durationMinutes": 25, "description": "Formeller Brief (80–100 Wörter), 4 Inhaltspunkte, Bewertung 10 Punkte." }
+      ],
+      "totalPoints": 100,
+      "passingScore": 60
+    }
+  },
+  {
+    "lessonId": "les-b1b2-04",
+    "title": "Umwelt und Nachhaltigkeit",
+    "level": "B1–B2",
+    "topic": "Umwelt und Nachhaltigkeit",
+    "theory": {
+      "text": "Umwelt und Klimaschutz gehören zu den meistdiskutierten Themen in der deutschsprachigen Öffentlichkeit. Deutschland hat sich im Pariser Abkommen verpflichtet, die CO₂-Emissionen bis 2030 um mindestens 55 % gegenüber 1990 zu reduzieren. Der Übergang zu erneuerbaren Energien – Wind, Solar, Wasser – schreitet voran, doch der Kohleausstieg ist ein langsamer Prozess.\n\nIm Alltag zeigt sich Nachhaltigkeit in Mülltrennung (Gelber Sack, Altglas, Papier, Restmüll), dem Kauf regionaler Produkte und dem Verzicht auf Einwegplastik. Immer mehr Menschen wählen pflanzliche Ernährung, um den CO₂-Fußabdruck zu reduzieren. In der Politik wird kontrovers über Maßnahmen diskutiert: CO₂-Steuer, Tempolimit auf Autobahnen oder das Ende von Verbrennungsmotoren.\n\nWichtige Wendungen: Das ist nicht nachhaltig. / Wir müssen unseren ökologischen Fußabdruck reduzieren. / Die Maßnahme hat positive / negative Auswirkungen auf die Umwelt. / Erneuerbare Energien sind die Zukunft.",
+      "grammar": {
+        "topic": "Passiv (alle Tempora) & Konzessivsätze mit 'obwohl', 'trotzdem', 'dennoch', 'obgleich'",
+        "explanation": "Passiv Bildung: werden + Partizip II. Präsens: CO₂ wird reduziert. Präteritum: Der Wald wurde abgeholzt. Perfekt: Das Gesetz ist verabschiedet worden. Plusquamperfekt: Die Maßnahme war bereits eingeführt worden. Futur: Der Kohleausstieg wird vollzogen werden. Passiv mit Modalverb: Die Emissionen müssen / sollen / können reduziert werden.\n\nKonzessivsätze: obwohl + Nebensatz (Verb am Ende): Obwohl Deutschland viel investiert, sind die Ziele schwer zu erreichen. trotzdem / dennoch: Adverbien im Hauptsatz (Verb-Zweitstellung nach Adverb): Die Ziele sind ambitioniert. Trotzdem / Dennoch wird Deutschland sie kaum erreichen.\n\nWeitere konzessive Konnektoren: obgleich (formell = obwohl), wenngleich (geschrieben), ungeachtet + Genitiv (Papiersprache).",
+        "keyForms": [
+          "wird + Partizip II (Präsens Passiv)",
+          "wurde + Partizip II (Präteritum Passiv)",
+          "ist + Partizip II + worden (Perfekt Passiv)",
+          "muss/soll/kann + Partizip II + werden (Modalverb Passiv)",
+          "obwohl + V-Letzt | trotzdem/dennoch + V-Zweit"
+        ]
+      }
+    },
+    "leseverstehen": [
+      {
+        "id": "lv-b1b2-04-T1",
+        "type": "Multiple_Choice",
+        "format": "Goethe_B2_Lesen_Teil1",
+        "instruction": "Lesen Sie den Text und wählen Sie für jede Aufgabe die richtige Lösung (a, b oder c).",
+        "title": "Die CO₂-Steuer: Instrument der Klimapolitik oder soziale Ungerechtigkeit?",
+        "text": "Seit 2021 erhebt Deutschland eine nationale CO₂-Abgabe auf fossile Brennstoffe wie Benzin, Diesel, Heizöl und Erdgas. Der Preis pro Tonne CO₂ begann bei 25 Euro und soll bis 2025 auf 55 Euro steigen. Das Ziel ist klar: Wer mehr CO₂ emittiert, soll mehr zahlen – ein ökonomisches Signal für klimafreundlicheres Verhalten.\n\nBefürworter argumentieren, dass die CO₂-Steuer das effektivste Instrument zur Lenkung des Verhaltens von Konsumenten und Unternehmen ist. Sie setzt direkte Anreize zur Investition in energieeffiziente Technologien und erneuerbaren Energien. Zudem fließen die Einnahmen in das sogenannte Klimageld zurück – ein Betrag, der pro Kopf an alle Bürger ausgezahlt wird und einkommensschwache Haushalte entlasten soll.\n\nKritiker hingegen sehen in der CO₂-Steuer vor allem eine soziale Schieflage: Wer auf dem Land wohnt und auf das Auto angewiesen ist, kann kaum auf Bus und Bahn umsteigen. Ebenso können Haushalte in schlecht isolierten Mietwohnungen ihre Heizkosten nicht einfach reduzieren. Die Kosten trägt also oft derjenige, der ohnehin weniger verdient.\n\nEin weiterer Kritikpunkt betrifft die internationale Wettbewerbsfähigkeit. Wenn deutsche Unternehmen höhere Energiekosten tragen als Konkurrenten im Ausland, droht eine Abwanderung der Produktion in Länder ohne CO₂-Preis – mit dem paradoxen Effekt, dass global mehr, nicht weniger CO₂ emittiert wird. Dieses Phänomen wird als 'Carbon Leakage' bezeichnet.\n\nInsgesamt zeigt die Debatte um die CO₂-Steuer, dass Klimaschutz nicht nur eine ökologische, sondern auch eine zutiefst soziale und wirtschaftliche Frage ist. Ohne flankierende Maßnahmen – günstigerer ÖPNV, bessere Wärmedämmung, technologische Innovationsförderung – kann die Steuer ihre Wirkung nicht voll entfalten.",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "Auf welchen Preis soll die CO₂-Steuer bis 2025 steigen?",
+            "options": { "a": "25 Euro pro Tonne", "b": "45 Euro pro Tonne", "c": "55 Euro pro Tonne" },
+            "correct": "c",
+            "explanation": "'soll bis 2025 auf 55 Euro steigen'"
+          },
+          {
+            "id": "q2",
+            "question": "Was ist das 'Klimageld' laut dem Text?",
+            "options": { "a": "Eine Steuer auf Luxusgüter", "b": "Eine Rückzahlung der CO₂-Einnahmen pro Kopf an alle Bürger", "c": "Ein staatliches Programm für Solaranlagen" },
+            "correct": "b",
+            "explanation": "'ein Betrag, der pro Kopf an alle Bürger ausgezahlt wird'"
+          },
+          {
+            "id": "q3",
+            "question": "Warum sind Landbewohner von der CO₂-Steuer besonders betroffen?",
+            "options": { "a": "Sie verbrauchen mehr Strom", "b": "Sie können nicht einfach auf öffentliche Verkehrsmittel umsteigen", "c": "Sie haben höhere Einkommen und zahlen daher mehr" },
+            "correct": "b",
+            "explanation": "'wer auf dem Land wohnt und auf das Auto angewiesen ist, kann kaum auf Bus und Bahn umsteigen'"
+          },
+          {
+            "id": "q4",
+            "question": "Was versteht man unter 'Carbon Leakage'?",
+            "options": { "a": "Die Verringerung von CO₂ durch neue Technologien", "b": "Die Verlagerung der Produktion ins Ausland mit höheren globalen Emissionen als Folge", "c": "Die Abwanderung von Konsumenten in klimafreundlichere Länder" },
+            "correct": "b",
+            "explanation": "'Abwanderung der Produktion in Länder ohne CO₂-Preis ... global mehr, nicht weniger CO₂'"
+          },
+          {
+            "id": "q5",
+            "question": "Was ist laut dem letzten Absatz notwendig, damit die CO₂-Steuer wirksam ist?",
+            "options": { "a": "Eine internationale Einigung auf einen einheitlichen CO₂-Preis", "b": "Ergänzende Maßnahmen wie besserer ÖPNV und Wärmedämmung", "c": "Eine deutliche Erhöhung des Steuerbetrags" },
+            "correct": "b",
+            "explanation": "'Ohne flankierende Maßnahmen – günstigerer ÖPNV, bessere Wärmedämmung ... kann die Steuer ihre Wirkung nicht voll entfalten'"
+          }
+        ]
+      },
+      {
+        "id": "lv-b1b2-04-T2",
+        "type": "Zuordnung_Meinungen",
+        "format": "Goethe_B2_Lesen_Teil3",
+        "instruction": "Lesen Sie die Aussagen (1–6) und ordnen Sie sie den Positionen (A = dafür / B = dagegen / C = neutral/differenziert) zu.",
+        "context": "Thema: Sollte in Deutschland ein allgemeines Tempolimit (130 km/h) auf Autobahnen eingeführt werden?",
+        "statements": [
+          { "id": 1, "text": "Ein Tempolimit würde die CO₂-Emissionen im Straßenverkehr messbar senken und ist daher ein sinnvoller Beitrag zum Klimaschutz.", "correct": "A" },
+          { "id": 2, "text": "Deutsche Autobahnen gelten als Aushängeschild der Ingenieurskunst – ein Tempolimit würde diesem Mythos schaden und wäre ein falsches Signal an die Automobilindustrie.", "correct": "B" },
+          { "id": 3, "text": "Studien zeigen gemischte Ergebnisse: Auf manchen Abschnitten sinken Unfallzahlen bei einem Limit deutlich, auf anderen kaum.", "correct": "C" },
+          { "id": 4, "text": "Andere europäische Länder haben längst Tempolimits – es ist nicht nachvollziehbar, warum Deutschland als einziges Land keine generelle Beschränkung kennt.", "correct": "A" },
+          { "id": 5, "text": "Ein Tempolimit greift in die persönliche Freiheit ein und ist ein weiterer Schritt in Richtung eines Überwachungsstaates.", "correct": "B" },
+          { "id": 6, "text": "Die Debatte um das Tempolimit ist letztlich eine Stellvertreterdiskussion: Der eigentliche Handlungsbedarf liegt bei der Energieversorgung und Industrie, nicht im Individualverkehr.", "correct": "C" }
+        ]
+      }
+    ],
+    "sprachbausteine": [
+      {
+        "id": "sb-b1b2-04-A",
+        "format": "telc_B2_Sprachbausteine_Teil1",
+        "instruction": "Welches Wort (a, b oder c) passt in die Lücke? Nur eine Antwort ist richtig.",
+        "text": "Der Klimawandel (1)___ zu einem der zentralen politischen Themen unserer Zeit geworden. Weltweit werden Maßnahmen ergriffen, um die Treibhausgasemissionen zu (2)___. In Deutschland (3)___ die Energiewende besonders intensiv diskutiert: Der Ausstieg aus der Kohle (4)___ bis 2038 vollzogen werden, der Anteil erneuerbarer Energien soll bis 2030 auf 80 Prozent (5)___. Doch der Weg dahin ist steinig. (6)___ erhebliche Investitionen getätigt werden, bleibt der Ausbau hinter den Zielen zurück. Kritiker bemängeln, dass politische Entscheidungen oft (7)___ wirtschaftlicher Lobbyarbeit getroffen werden. (8)___ dem Klimagipfel in Paris 2015 haben sich viele Länder zu verbindlichen Zielen verpflichtet. (9)___ diese Versprechen eingehalten werden, (10)___ es jedoch erhebliche Zweifel. Besonders der globale Süden (11)___ von den Folgen des Klimawandels betroffen, obwohl er am wenigsten dazu beigetragen (12)___. Die Forderung nach Klimagerechtigkeit wird daher immer lauter. Viele Experten betonen, dass technologische Innovationen allein nicht (13)___ – es braucht auch einen gesellschaftlichen Wandel im Konsum- und Mobilitätsverhalten. (14)___ die Menschheit nicht handelt, (15)___ die Folgen für kommende Generationen katastrophal sein.",
+        "items": [
+          { "id": 1, "options": { "a": "wird", "b": "ist", "c": "wurde" }, "correct": "b", "explanation": "Perfekt: ist ... geworden" },
+          { "id": 2, "options": { "a": "senken", "b": "verringern", "c": "reduzieren" }, "correct": "c", "explanation": "alle drei wären grammatisch möglich, 'reduzieren' ist der am häufigsten gebrauchte Fachbegriff in diesem Kontext" },
+          { "id": 3, "options": { "a": "wird", "b": "ist", "c": "wurde" }, "correct": "a", "explanation": "Präsens Passiv: wird ... diskutiert" },
+          { "id": 4, "options": { "a": "muss", "b": "soll", "c": "darf" }, "correct": "b", "explanation": "soll = politisch geplant / angeordnet" },
+          { "id": 5, "options": { "a": "steigen", "b": "ansteigen", "c": "erhöhen" }, "correct": "a", "explanation": "Anteil soll steigen (intransitiv, kein Passiv nötig)" },
+          { "id": 6, "options": { "a": "Obwohl", "b": "Obgleich", "c": "Wenngleich" }, "correct": "a", "explanation": "obwohl + Nebensatz (V-Letzt); Konzessivsatz" },
+          { "id": 7, "options": { "a": "unter", "b": "durch", "c": "bei" }, "correct": "a", "explanation": "'unter dem Einfluss / unter Einwirkung von Lobbys' → Entscheidungen unter Lobbyarbeit getroffen" },
+          { "id": 8, "options": { "a": "Seit", "b": "Nach", "c": "Vor" }, "correct": "a", "explanation": "seit + Zeitpunkt → Dauer bis heute" },
+          { "id": 9, "options": { "a": "Ob", "b": "Dass", "c": "Wie" }, "correct": "a", "explanation": "ob = Frage/Zweifel, hier: ob diese Versprechen eingehalten werden (Zweifel)" },
+          { "id": 10, "options": { "a": "gibt", "b": "bestehen", "c": "haben" }, "correct": "b", "explanation": "Zweifel bestehen = es gibt Zweifel; bestehen ist formeller" },
+          { "id": 11, "options": { "a": "wird", "b": "ist", "c": "wäre" }, "correct": "b", "explanation": "Präsens Passiv: ist betroffen" },
+          { "id": 12, "options": { "a": "hat", "b": "hatte", "c": "hätte" }, "correct": "a", "explanation": "Perfekt: hat ... beigetragen" },
+          { "id": 13, "options": { "a": "genügen", "b": "reichen", "c": "ausreichen" }, "correct": "b", "explanation": "reichen = ausreichen; 'nicht reichen' ist idiomatisch korrekt" },
+          { "id": 14, "options": { "a": "Wenn", "b": "Falls", "c": "Sofern" }, "correct": "a", "explanation": "wenn leitet hier einen Konditionalsatz ein (reale Bedingung)" },
+          { "id": 15, "options": { "a": "werden", "b": "wären", "c": "würden" }, "correct": "a", "explanation": "Futur I: werden ... sein; oder: würden sein (Konjunktiv II)" }
+        ]
+      },
+      {
+        "id": "sb-b1b2-04-B",
+        "format": "Passiv_Umformung_und_Konzessivsaetze",
+        "instruction": "Aufgabe 1 (16–18): Formen Sie den Satz ins Passiv um. Aufgabe 2 (19–20): Verbinden Sie die Sätze mit 'obwohl' oder ersetzen Sie 'obwohl' durch 'trotzdem'.",
+        "items": [
+          { "id": 16, "original": "Man reduziert die CO₂-Emissionen durch neue Technologien.", "task": "Präsens Passiv", "correct": "Die CO₂-Emissionen werden durch neue Technologien reduziert." },
+          { "id": 17, "original": "Die Regierung hat das Klimaschutzgesetz verabschiedet.", "task": "Perfekt Passiv", "correct": "Das Klimaschutzgesetz ist von der Regierung verabschiedet worden." },
+          { "id": 18, "original": "Man muss erneuerbare Energien stärker fördern.", "task": "Passiv mit Modalverb", "correct": "Erneuerbare Energien müssen stärker gefördert werden." },
+          { "id": 19, "original": "Obwohl die Temperaturen steigen, ändert sich das Verhalten vieler Menschen kaum.", "task": "Ersetzen Sie 'obwohl' durch 'trotzdem' und passen Sie die Satzstellung an.", "correct": "Die Temperaturen steigen. Trotzdem ändert sich das Verhalten vieler Menschen kaum." },
+          { "id": 20, "original": "Das Recycling hat zugenommen. Es gibt immer noch zu viel Plastikmüll.", "task": "Verbinden Sie mit 'obwohl'.", "correct": "Obwohl das Recycling zugenommen hat, gibt es immer noch zu viel Plastikmüll." }
+        ]
+      }
+    ],
+    "hoerverstehen": {
+      "placeholder": true,
+      "description": "Hörverstehen B2 – Teil 1: Eine Radiosendung (Magazinformat, ca. 5 Min.) über ein aktuelles Umweltthema (z.B. Plastikalternative, Energiewende). Aufgabe: Multiple Choice (5 Fragen, je 3 Optionen). Teil 2: Ein Podiumsgespräch mit zwei Experten zu CO₂-Steuer oder Tempolimit. Aufgabe: Aussagen Sprecher A / Sprecher B / beiden / keinem zuordnen. Dauer: ca. 25 Minuten. Jeder Text wird zweimal abgespielt. Audio-Datei: noch nicht verfügbar."
+    },
+    "schriftlicherAusdruck": {
+      "format": "Goethe_B2_Schreiben",
+      "type": "Erörterung_mit_Stellungnahme",
+      "instruction": "Lesen Sie die folgende Aussage:\n\n'Ohne eine konsequente CO₂-Steuer ist ein wirksamer Klimaschutz in Deutschland nicht möglich.'\n\nSchreiben Sie eine strukturierte Stellungnahme (150–200 Wörter). Gehen Sie dabei auf folgende Punkte ein:\n– Argumente, die die Aussage stützen\n– Argumente, die gegen die Aussage sprechen\n– Ihre eigene begründete Position\n\nHinweis: Nutzen Sie Konnektoren und Ausdrücke zur Meinungsäußerung. Strukturieren Sie Ihren Text mit Einleitung, Hauptteil und Schluss.",
+      "points": 5,
+      "modelAnswer": "Die Frage, ob eine CO₂-Steuer für den Klimaschutz unerlässlich ist, wird in Deutschland intensiv diskutiert. Einerseits spricht viel für dieses Instrument: Es setzt klare wirtschaftliche Anreize – wer mehr emittiert, zahlt mehr. Die Einnahmen können gezielt in erneuerbare Energien und klimafreundliche Infrastruktur investiert werden. Länder wie Schweden zeigen, dass eine hohe CO₂-Steuer tatsächlich zur Emissionsreduzierung führt.\n\nAndererseits birgt die CO₂-Steuer erhebliche soziale Risiken. Menschen in strukturschwachen Regionen, die auf das Auto angewiesen sind, werden unverhältnismäßig belastet. Ohne flankierende Maßnahmen wie günstigeren ÖPNV oder Heizkostenzuschüsse wirkt die Steuer ungerecht.\n\nMeiner Meinung nach ist die CO₂-Steuer ein wichtiges, aber nicht hinreichendes Instrument. Klimaschutz erfordert ein ganzes Maßnahmenpaket: technologische Innovation, Regulierung der Industrie und gesellschaftlicher Wandel. Die Steuer allein kann das Klima nicht retten – aber ohne sie geht es auch nicht.",
+      "criteria": [
+        { "criterion": "Inhalt", "description": "Alle drei Punkte bearbeitet; Argumente sachlich und nachvollziehbar; eigene Position begründet", "maxPoints": 5 },
+        { "criterion": "Kommunikative Gestaltung", "description": "Klar strukturiert (Einleitung, Hauptteil, Schluss); Konnektoren und Meinungsausdrücke verwendet; kohärenter Text", "maxPoints": 5 },
+        { "criterion": "Sprachliche Korrektheit", "description": "Passiv, Konzessivsätze, Konjunktiv II korrekt verwendet; B2-Wortschatz; Fehler beeinträchtigen Verständnis nicht", "maxPoints": 5 }
+      ],
+      "totalPoints": 15
+    },
+    "wortschatz": [
+      { "word": "die Treibhausgase", "type": "Nomen (Pl.)", "translation": "парникові гази", "example": "Treibhausgase verursachen den Klimawandel." },
+      { "word": "die Emissionen", "type": "Nomen (Pl.)", "translation": "викиди", "example": "Die CO₂-Emissionen müssen reduziert werden." },
+      { "word": "erneuerbare Energien", "type": "Nomen (Pl.)", "translation": "відновлювані джерела енергії", "example": "Solar- und Windkraft sind erneuerbare Energien." },
+      { "word": "die Energiewende", "type": "Nomen (f)", "translation": "енергетичний перехід", "example": "Die Energiewende kostet Deutschland viel Geld." },
+      { "word": "der Kohleausstieg", "type": "Nomen (m)", "translation": "відмова від вугільної енергетики", "example": "Der Kohleausstieg soll bis 2038 abgeschlossen sein." },
+      { "word": "die CO₂-Abgabe / CO₂-Steuer", "type": "Nomen (f)", "translation": "вуглецевий податок", "example": "Die CO₂-Abgabe soll Anreize für Klimaschutz setzen." },
+      { "word": "die Nachhaltigkeit", "type": "Nomen (f)", "translation": "сталий розвиток", "example": "Nachhaltigkeit ist heute ein Schlüsselbegriff." },
+      { "word": "der ökologische Fußabdruck", "type": "Nomen (m)", "translation": "вуглецевий слід / екологічний слід", "example": "Ich versuche, meinen ökologischen Fußabdruck zu reduzieren." },
+      { "word": "die Mülltrennung", "type": "Nomen (f)", "translation": "роздільний збір сміття", "example": "Mülltrennung ist in Deutschland Pflicht." },
+      { "word": "verabschieden", "type": "Verb", "translation": "ухвалювати (закон)", "example": "Das Parlament hat das Gesetz verabschiedet." },
+      { "word": "entlasten", "type": "Verb", "translation": "звільняти від тягаря / розвантажувати", "example": "Das Klimageld soll ärmere Haushalte entlasten." },
+      { "word": "die Klimagerechtigkeit", "type": "Nomen (f)", "translation": "кліматична справедливість", "example": "Klimagerechtigkeit ist ein globales Thema." },
+      { "word": "flankierende Maßnahmen", "type": "Nomen (Pl.)", "translation": "супутні / підтримуючі заходи", "example": "Ohne flankierende Maßnahmen ist die Steuer ungerecht." },
+      { "word": "die Wärmedämmung", "type": "Nomen (f)", "translation": "теплоізоляція", "example": "Bessere Wärmedämmung spart Heizkosten." },
+      { "word": "der ÖPNV (öffentlicher Personennahverkehr)", "type": "Abkürzung", "translation": "громадський транспорт", "example": "Der ÖPNV muss günstiger und attraktiver werden." },
+      { "word": "der Anreiz", "type": "Nomen (m)", "translation": "стимул / спонукання", "example": "Die Steuer setzt Anreize für klimafreundliches Verhalten." },
+      { "word": "die Schieflage", "type": "Nomen (f)", "translation": "дисбаланс / несправедливість", "example": "Die CO₂-Steuer führt zu einer sozialen Schieflage." },
+      { "word": "abwandern", "type": "Verb (trennbar)", "translation": "переміщуватися / мігрувати (бізнес)", "example": "Die Produktion wandert ins Ausland ab." },
+      { "word": "paradox", "type": "Adjektiv", "translation": "парадоксальний", "example": "Das Ergebnis ist paradox: mehr Emissionen weltweit." },
+      { "word": "die Erörterung", "type": "Nomen (f)", "translation": "розгорнуте обговорення / дискусійний твір", "example": "Die Erörterung ist eine wichtige Textsorte im Deutschen." },
+      { "word": "wenngleich", "type": "Konjunktion (konzessiv)", "translation": "хоча / незважаючи на те що (книжн.)", "example": "Wenngleich die Maßnahmen sinnvoll sind, reichen sie nicht aus." },
+      { "word": "ungeachtet + Gen.", "type": "Präposition (konzessiv)", "translation": "незважаючи на (офіц.)", "example": "Ungeachtet der Kritik wurde das Gesetz verabschiedet." }
+    ],
+    "simulation": {
+      "durationMinutes": 75,
+      "format": "Goethe_B2_Hybrid",
+      "sections": [
+        { "name": "Leseverstehen", "durationMinutes": 25, "description": "Teil 1: MC (5 Fragen) zu einem Meinungsartikel. Teil 2: Meinungs-Zuordnung A/B/C (6 Aussagen)." },
+        { "name": "Sprachbausteine", "durationMinutes": 20, "description": "Teil 1: Lückentext 15 MC-Items (Passiv, Konnektoren). Teil 2: Passiv-Umformung + Konzessivsätze (5 Aufgaben)." },
+        { "name": "Hörverstehen", "durationMinutes": 25, "description": "Platzhalter." },
+        { "name": "Schriftlicher Ausdruck", "durationMinutes": 35, "description": "Strukturierte Stellungnahme (150–200 Wörter), 15 Punkte." }
+      ],
+      "totalPoints": 100,
+      "passingScore": 60
+    }
+  },
+  {
+    "lessonId": "les-b2-05",
+    "title": "Beruf und Karriere",
+    "level": "B2",
+    "topic": "Beruf und Karriere",
+    "theory": {
+      "text": "Die Arbeitswelt in Deutschland und Europa befindet sich im tiefgreifenden Wandel. Digitalisierung, Automatisierung und neue Arbeitsformen – Homeoffice, Freelancing, agile Teams – verändern nicht nur Berufsbilder, sondern auch das Verhältnis zwischen Arbeitgeber und Arbeitnehmer. Laut Bundesagentur für Arbeit werden bis 2035 rund zwölf Millionen Arbeitsplätze durch Automatisierung transformiert.\n\nGleichzeitig besteht in vielen Branchen ein akuter Fachkräftemangel – besonders in der Pflege, IT und im Handwerk. Für Bewerber bedeutet das: gute Chancen, aber auch hohe Erwartungen. Eine Bewerbung in Deutschland besteht typischerweise aus Anschreiben, Lebenslauf (tabellarisch), und Zeugnissen. Das Vorstellungsgespräch verläuft strukturiert; man sollte Stärken, Schwächen, Gehaltsvorstellungen und Motivation klar artikulieren können.\n\nWichtige Ausdrücke: Ich bewerbe mich für die ausgeschriebene Stelle als ... / Zu meinen Stärken zählt ... / Ich bin bereit, Verantwortung zu übernehmen. / Ich erwarte ein Jahresgehalt von ... / Ich sehe mich langfristig in einem Unternehmen, das ...",
+      "grammar": {
+        "topic": "Relativsätze mit Präposition & Genitiv; Nominalisierung; Infinitivkonstruktionen mit 'zu'",
+        "explanation": "Relativsätze mit Präposition: Das Unternehmen, für das ich mich beworben habe, ist sehr groß. Die Stelle, auf die ich mich freue, beginnt im September. Merke: Präposition + Relativpronomen im richtigen Kasus.\n\nGenitiv-Relativsatz: Der Kollege, dessen Bericht ausgezeichnet wurde, ist befördert worden. Die Bewerberin, deren Qualifikation überzeugte, hat den Job bekommen.\n\nNominalisierung (Verben → Nomen): bewerben → die Bewerbung; leiten → die Leitung; entscheiden → die Entscheidung; fördern → die Förderung; bilden → die Ausbildung. Typisch in formellen Texten und Bewerbungen.\n\nInfinitivkonstruktionen: Es gilt, die Chancen zu nutzen. Das Ziel besteht darin, die Effizienz zu steigern. Ich freue mich darauf, das Team kennenzulernen. Ohne die nötige Qualifikation zu haben, ist es schwer, eine Stelle zu finden.",
+        "keyForms": [
+          "für das / auf die / mit dem / über den + Relativsatz",
+          "dessen / deren (Genitiv-Relativpronomen)",
+          "Verb → Nomen: -ung / -heit / -keit / -tion",
+          "darin, darauf, damit + zu + Infinitiv",
+          "ohne ... zu + Infinitiv"
+        ]
+      }
+    },
+    "leseverstehen": [
+      {
+        "id": "lv-b2-05-T1",
+        "type": "Multiple_Choice",
+        "format": "Goethe_B2_Lesen_Teil1",
+        "instruction": "Lesen Sie den Text und wählen Sie bei jeder Aufgabe die richtige Lösung (a, b oder c).",
+        "title": "Fachkräftemangel in Deutschland: Ursachen, Folgen, Lösungsansätze",
+        "text": "Deutschland fehlen Arbeitskräfte. Das ist keine neue Erkenntnis, aber die Lage spitzt sich zu. Laut einer aktuellen Studie des Instituts für Arbeitsmarkt- und Berufsforschung (IAB) sind derzeit über 1,7 Millionen Stellen unbesetzt – ein historischer Höchststand. Betroffen sind vor allem das Gesundheitswesen, das Bildungssystem, das Baugewerbe und die IT-Branche.\n\nDie Ursachen sind vielfältig. Zum einen geht die geburtenstarke Babyboomer-Generation in den nächsten Jahren in Rente – allein bis 2030 scheiden rund sieben Millionen Fachkräfte aus dem Erwerbsleben aus. Zum anderen waren Ausbildungsberufe lange Zeit gesellschaftlich weniger angesehen als akademische Karrierewege, was zu einem Ungleichgewicht geführt hat: Zu viele Hochschulabsolventen, zu wenige qualifizierte Handwerker.\n\nDie Bundesregierung hat auf den Fachkräftemangel mit dem Fachkräfteeinwanderungsgesetz reagiert, das die Zuwanderung qualifizierter Arbeitskräfte aus Nicht-EU-Ländern erleichtern soll. Allerdings ist die praktische Umsetzung komplex: Berufsabschlüsse müssen anerkannt werden, Sprachkenntnisse sind oft eine Hürde, und bürokratische Verfahren dauern zu lang.\n\nExperten fordern daher ein Bündel an Maßnahmen: bessere Vereinbarkeit von Familie und Beruf, höhere Löhne in unterbewerteten Branchen, stärkere Digitalisierung zur Entlastung der Mitarbeitenden sowie gezielte Weiterbildungsoffensiven. 'Wir brauchen nicht nur mehr Menschen, wir brauchen auch bessere Bedingungen für die, die schon da sind', sagte IAB-Direktor Prof. Lindner kürzlich in einem Interview.",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "Wie viele Stellen sind laut der IAB-Studie derzeit unbesetzt?",
+            "options": { "a": "Über eine Million", "b": "Über 1,7 Millionen", "c": "Über zwei Millionen" },
+            "correct": "b",
+            "explanation": "'über 1,7 Millionen Stellen unbesetzt'"
+          },
+          {
+            "id": "q2",
+            "question": "Was ist laut dem Text eine Ursache für den Fachkräftemangel?",
+            "options": { "a": "Zu viele Einwanderer auf dem Arbeitsmarkt", "b": "Das Ausscheiden der Babyboomer-Generation aus dem Erwerbsleben", "c": "Eine zu hohe Zahl an Auszubildenden" },
+            "correct": "b",
+            "explanation": "'geht die geburtenstarke Babyboomer-Generation in den nächsten Jahren in Rente'"
+          },
+          {
+            "id": "q3",
+            "question": "Was kritisieren Experten am Fachkräfteeinwanderungsgesetz?",
+            "options": { "a": "Es lässt zu viele Fachkräfte ins Land", "b": "Die praktische Umsetzung ist zu kompliziert und langsam", "c": "Es berücksichtigt nur EU-Länder" },
+            "correct": "b",
+            "explanation": "'praktische Umsetzung komplex ... bürokratische Verfahren dauern zu lang'"
+          },
+          {
+            "id": "q4",
+            "question": "Was ist laut Prof. Lindner neben mehr Personal notwendig?",
+            "options": { "a": "Bessere Arbeitsbedingungen für die bestehenden Mitarbeitenden", "b": "Mehr Hochschulabsolventen", "c": "Strengere Einwanderungsgesetze" },
+            "correct": "a",
+            "explanation": "'bessere Bedingungen für die, die schon da sind'"
+          },
+          {
+            "id": "q5",
+            "question": "Welches Problem entstand durch die gesellschaftliche Geringschätzung von Ausbildungsberufen?",
+            "options": { "a": "Zu viele junge Menschen arbeiten im Ausland", "b": "Es gibt ein Ungleichgewicht zwischen Akademikern und qualifizierten Handwerkern", "c": "Die Hochschulen sind überfüllt" },
+            "correct": "b",
+            "explanation": "'Zu viele Hochschulabsolventen, zu wenige qualifizierte Handwerker'"
+          }
+        ]
+      },
+      {
+        "id": "lv-b2-05-T2",
+        "type": "Zuordnung_Aussagen_zu_Personen",
+        "format": "Goethe_B2_Lesen_Teil3",
+        "instruction": "Lesen Sie die vier Kurzstatements (A–D) von Personen zum Thema Homeoffice und Büro. Welche Person sagt was? Ordnen Sie die Aussagen (1–6) den Personen zu. Eine Person kann mehrfach zugeordnet werden. Nicht alle Aussagen sind im Text.",
+        "persons": [
+          { "id": "A", "name": "Lena, 34, Projektleiterin IT", "text": "Ich finde Homeoffice fantastisch. Ich spare täglich 90 Minuten Pendelzeit und kann meine Kinder selbst aus der Schule abholen. Produktiver werde ich dadurch nicht unbedingt – aber zufriedener. Manche Meetings fehlen mir allerdings – das kreative Durcheinander, das aus einem spontanen Gespräch entsteht, lässt sich digital nicht replizieren." },
+          { "id": "B", "name": "Klaus, 58, Abteilungsleiter Finanzen", "text": "Ich bin klar für das Büro. Bei uns braucht es kurze Dienstwege, schnelle Abstimmungen und direkte Kommunikation. Homeoffice hat bei vielen meiner Mitarbeiter zu Missverständnissen und Verzögerungen geführt. Ich vertraue meinen Leuten, aber ich glaube, dass Präsenz durch nichts ersetzt wird." },
+          { "id": "C", "name": "Amara, 28, UX-Designerin", "text": "Ich arbeite am liebsten hybrid: zwei Tage Büro für Teammeetings und Workshops, drei Tage von zu Hause. So habe ich das Beste aus beiden Welten. Was mich stört: Unternehmen, die das Homeoffice wieder abschaffen, obwohl die Arbeit genauso gut von zu Hause funktioniert." },
+          { "id": "D", "name": "Martin, 45, Personalleiter", "text": "Aus HR-Sicht ist Homeoffice ein zweischneidiges Schwert. Einerseits ist es für viele Kandidaten ein entscheidendes Kriterium bei der Jobwahl. Andererseits sehen wir, dass neue Mitarbeiter, die komplett remote arbeiten, oft Schwierigkeiten haben, sich ins Team zu integrieren und die Unternehmenskultur zu verstehen." }
+        ],
+        "questions": [
+          { "id": 1, "statement": "Spontane Gespräche im Büro führen zu kreativeren Ergebnissen.", "correct": "A" },
+          { "id": 2, "statement": "Homeoffice ist ein wichtiges Kriterium für viele Jobsuchende.", "correct": "D" },
+          { "id": 3, "statement": "Reine Fernarbeit erschwert die Integration neuer Mitarbeiter.", "correct": "D" },
+          { "id": 4, "statement": "Homeoffice hat die Qualität der Abstimmung in der Abteilung verschlechtert.", "correct": "B" },
+          { "id": 5, "statement": "Das hybride Modell ist die ideale Lösung.", "correct": "C" },
+          { "id": 6, "statement": "Homeoffice steigert nicht unbedingt die Produktivität, aber die Zufriedenheit.", "correct": "A" }
+        ]
+      }
+    ],
+    "sprachbausteine": [
+      {
+        "id": "sb-b2-05-A",
+        "format": "Goethe_B2_Sprachbausteine",
+        "instruction": "Welches Wort (a, b oder c) passt in die Lücke?",
+        "text": "Der Arbeitsmarkt in Deutschland (1)___ sich in den letzten Jahren grundlegend verändert. Unternehmen, (2)___ früher vor allem auf Präsenz setzten, bieten heute flexible Arbeitsmodelle an. Die Digitalisierung hat dazu geführt, dass viele Tätigkeiten, (3)___ noch vor zehn Jahren im Büro erledigt werden mussten, nun von überall aus möglich sind. Gleichzeitig entstehen neue Berufsbilder, (4)___ es vor zehn Jahren noch nicht gab. Wer heute eine Stelle sucht, (5)___ nicht nur fachlich qualifiziert sein – er oder sie muss auch digital kompetent und flexibel sein. Arbeitgeber legen zunehmend Wert auf sogenannte Soft Skills: Kommunikationsfähigkeit, Teamfähigkeit und die Bereitschaft, (6)___ Verantwortung zu übernehmen. (7)___ die Anforderungen gestiegen sind, bleibt die Work-Life-Balance ein zentrales Thema. Viele Arbeitnehmer wünschen (8)___ eine klare Trennung zwischen Beruf und Privatleben. (9)___ ist es nicht verwunderlich, dass hybride Arbeitsmodelle so beliebt sind. Das Unternehmen, (10)___ ich seit drei Jahren arbeite, hat kürzlich eine neue Richtlinie eingeführt: Mindestens zwei Tage Büro pro Woche sind Pflicht. Das (11)___ zunächst auf Widerstand gestoßen, wurde aber nach Gesprächen mit der Belegschaft akzeptiert. Langfristig (12)___ es darum, eine Unternehmenskultur zu schaffen, (13)___ Mitarbeiter sich wohlfühlen und motiviert sind. Führungskräfte, (14)___ Erfahrung und Empathie gefragt sind, spielen dabei eine Schlüsselrolle. Am Ende (15)___ gilt: Ein gutes Arbeitsklima ist durch nichts zu ersetzen.",
+        "items": [
+          { "id": 1, "options": { "a": "hat", "b": "ist", "c": "wurde" }, "correct": "a", "explanation": "hat ... verändert (Perfekt mit haben, reflexiv)" },
+          { "id": 2, "options": { "a": "die", "b": "denen", "c": "deren" }, "correct": "a", "explanation": "Relativpronomen Nom. Pl. → die (Unternehmen, die...)" },
+          { "id": 3, "options": { "a": "die", "b": "denen", "c": "das" }, "correct": "a", "explanation": "Relativpronomen Akk. Pl. → die (Tätigkeiten, die...)" },
+          { "id": 4, "options": { "a": "denen", "b": "die", "c": "deren" }, "correct": "b", "explanation": "Berufsbilder, die es nicht gab (Akk. Pl.)" },
+          { "id": 5, "options": { "a": "muss", "b": "soll", "c": "darf" }, "correct": "a", "explanation": "muss = Notwendigkeit/Anforderung" },
+          { "id": 6, "options": { "a": "mehr", "b": "viel", "c": "zunehmend" }, "correct": "a", "explanation": "Bereitschaft, mehr Verantwortung zu übernehmen" },
+          { "id": 7, "options": { "a": "Obwohl", "b": "Wenngleich", "c": "Obgleich" }, "correct": "a", "explanation": "obwohl + V-Letzt" },
+          { "id": 8, "options": { "a": "sich", "b": "ihnen", "c": "ihr" }, "correct": "a", "explanation": "sich wünschen: wünschen sich" },
+          { "id": 9, "options": { "a": "Daher", "b": "Trotzdem", "c": "Hingegen" }, "correct": "a", "explanation": "kausale Schlussfolgerung: daher" },
+          { "id": 10, "options": { "a": "für das", "b": "in dem", "c": "bei dem" }, "correct": "c", "explanation": "bei + Dativ; bei dem Unternehmen, bei dem ich arbeite" },
+          { "id": 11, "options": { "a": "hat", "b": "ist", "c": "war" }, "correct": "b", "explanation": "ist... gestoßen (Perfekt Passiv mit sein bei Zustandspassiv / Perfekt des intransitiv benutzten 'stoßen auf')" },
+          { "id": 12, "options": { "a": "geht", "b": "handelt", "c": "zielt" }, "correct": "a", "explanation": "es geht darum, ... zu + Inf." },
+          { "id": 13, "options": { "a": "in der", "b": "mit der", "c": "bei der" }, "correct": "a", "explanation": "eine Kultur, in der sich Mitarbeiter wohlfühlen" },
+          { "id": 14, "options": { "a": "bei denen", "b": "deren", "c": "von denen" }, "correct": "a", "explanation": "Führungskräfte, bei denen Erfahrung gefragt ist" },
+          { "id": 15, "options": { "a": "jedenfalls", "b": "schließlich", "c": "hingegen" }, "correct": "b", "explanation": "schließlich = am Ende / letztendlich (folgernde Schlussformel)" }
+        ]
+      },
+      {
+        "id": "sb-b2-05-B",
+        "format": "Nominalisierung_und_Relativsaetze",
+        "instruction": "Aufgabe 1 (16–18): Formen Sie den Satz durch Nominalisierung um, sodass er formeller klingt. Aufgabe 2 (19–20): Ergänzen Sie das fehlende Relativpronomen (inkl. Präposition, wenn nötig).",
+        "items": [
+          { "id": 16, "original": "Die Firma hat entschieden, neue Mitarbeiter einzustellen.", "task": "Nominalisieren Sie 'entschieden'.", "correct": "Die Entscheidung der Firma, neue Mitarbeiter einzustellen, wurde getroffen." },
+          { "id": 17, "original": "Er wurde zum Abteilungsleiter befördert.", "task": "Nominalisieren Sie 'befördert'.", "correct": "Seine Beförderung zum Abteilungsleiter erfolgte kürzlich." },
+          { "id": 18, "original": "Die Mitarbeitenden bilden sich regelmäßig weiter.", "task": "Nominalisieren Sie 'weiterbilden'.", "correct": "Die regelmäßige Weiterbildung der Mitarbeitenden ist wichtig." },
+          { "id": 19, "sentence": "Das Projekt, ___ ich seit Monaten leite, wird nächste Woche abgeschlossen.", "task": "Relativpronomen (Akkusativ)", "correct": "das" },
+          { "id": 20, "sentence": "Die Kollegin, ___ Präsentation alle beeindruckt hat, wurde für die Stelle empfohlen.", "task": "Relativpronomen (Genitiv, feminin)", "correct": "deren" }
+        ]
+      }
+    ],
+    "hoerverstehen": {
+      "placeholder": true,
+      "description": "Hörverstehen B2 – Teil 1: Radiobeitrag (ca. 6 Min.) zu einem aktuellen Arbeitsmarktthema (z.B. KI und Jobverluste, Fachkräftemangel). Aufgabe: Multiple Choice (5 Fragen). Teil 2: Podiumsgespräch zwischen Arbeitgeber, Gewerkschaftsvertreter und Personalexperte. Aufgabe: Aussagen einer Person zuordnen (A/B/C/keiner). Dauer: ca. 25–30 Minuten. Jeder Hörtext wird zweimal abgespielt. Audio-Datei: noch nicht verfügbar."
+    },
+    "schriftlicherAusdruck": {
+      "format": "Goethe_B2_Schreiben",
+      "type": "Bewerbungsschreiben_oder_Argumentativer_Kommentar",
+      "instruction": "Aufgabe (Ihre Wahl aus zwei Optionen):\n\nOption A – Bewerbungsschreiben:\nSie haben folgende Stellenanzeige gelesen:\n'Gesucht: Projektkoordinator/in (m/w/d) im Bereich Nachhaltigkeit. Abschluss in einem relevanten Bereich, mindestens 2 Jahre Erfahrung, sehr gute Deutschkenntnisse (C1), Teamfähigkeit und Eigeninitiative. Bewerbungen an: karriere@greenfuture-gmbh.de'\nSchreiben Sie ein formelles Bewerbungsschreiben (150–200 Wörter). Struktur: Einleitung (Bezug auf Stelle), Qualifikationen, Motivation, Abschluss.\n\nOption B – Argumentativer Kommentar:\nEin Bekannter sagt: 'Homeoffice ist schlecht für die Karriere – man wird unsichtbar und verpasst wichtige Netzwerke.' Schreiben Sie einen strukturierten Kommentar (150–200 Wörter): Stellen Sie die Position dar, nennen Sie Gegenargumente, formulieren Sie Ihre eigene differenzierte Meinung.",
+      "points": 5,
+      "modelAnswer_A": "Sehr geehrte Damen und Herren,\n\nmit großem Interesse habe ich Ihre Stellenausschreibung für die Position als Projektkoordinator/in im Bereich Nachhaltigkeit gelesen. Da ich sowohl fachlich als auch persönlich bestens zu Ihrem Anforderungsprofil passe, bewerbe ich mich hiermit um diese Stelle.\n\nIch verfüge über einen Masterabschluss in Umweltwissenschaften und habe in den letzten drei Jahren als Projektassistentin in einem mittelständischen Unternehmen gearbeitet, das sich auf nachhaltige Lieferketten spezialisiert hat. In dieser Zeit habe ich Erfahrung in der Koordination interdisziplinärer Teams sowie im Projektmanagement gesammelt. Meine Deutschkenntnisse entsprechen dem Niveau C1, und ich bin es gewohnt, sowohl auf Deutsch als auch auf Englisch zu kommunizieren.\n\nBesonders reizt mich an Ihrer Ausschreibung der Fokus auf konkrete Nachhaltigkeitsprojekte, bei denen ich aktiv mitgestalten kann. Ich bringe Eigeninitiative, strukturiertes Arbeiten und echte Begeisterung für das Thema mit.\n\nÜber eine Einladung zum Vorstellungsgespräch würde ich mich sehr freuen.\n\nMit freundlichen Grüßen,\n[Name]",
+      "modelAnswer_B": "Die Aussage, Homeoffice schade der Karriere, ist weit verbreitet – und nicht ganz falsch. Tatsächlich können Mitarbeitende im Büro schneller Beziehungen aufbauen, an informellen Gesprächen teilnehmen und ihre Leistungen sichtbarer machen.\n\nAllerdings greift diese Sichtweise zu kurz. Erstens zeigen Studien, dass Remote-Arbeit die Produktivität in vielen Bereichen steigert – wer mehr leistet, wird auch im Homeoffice wahrgenommen. Zweitens ermöglichen digitale Tools wie Video-Calls und Projektmanagement-Software eine effektive Kollaboration und Netzwerkpflege über Distanz. Drittens spielt es eine entscheidende Rolle, wie aktiv man sich selbst einbringt: Wer regelmäßig kommuniziert, Ergebnisse präsentiert und Initiativen ergreift, bleibt sichtbar – egal wo.\n\nMeiner Meinung nach ist nicht der Ort der Arbeit entscheidend, sondern die eigene Strategie. Wer Homeoffice als Rückzug nutzt, schadet tatsächlich seiner Karriere. Wer es als Produktivitätsvorteil kombiniert mit gezielter Präsenz im Büro einsetzt, hat gute Chancen.",
+      "criteria": [
+        { "criterion": "Inhalt", "description": "Alle geforderten Inhaltselemente vorhanden; Argumentation nachvollziehbar und differenziert", "maxPoints": 5 },
+        { "criterion": "Kommunikative Gestaltung", "description": "Korrekter formeller Register (Option A) oder argumentative Struktur (Option B); Konnektoren; Textfluss", "maxPoints": 5 },
+        { "criterion": "Sprachliche Korrektheit", "description": "Relativsätze, Nominalisierungen, B2-Syntax korrekt; Fehler beeinträchtigen Verständnis nicht", "maxPoints": 5 }
+      ],
+      "totalPoints": 15
+    },
+    "wortschatz": [
+      { "word": "der Fachkräftemangel", "type": "Nomen (m)", "translation": "нестача кваліфікованих кадрів", "example": "Deutschland leidet unter einem akuten Fachkräftemangel." },
+      { "word": "das Anschreiben", "type": "Nomen (n)", "translation": "супровідний лист", "example": "Das Anschreiben ist der erste Eindruck beim Arbeitgeber." },
+      { "word": "der Lebenslauf", "type": "Nomen (m)", "translation": "резюме / CV", "example": "Schicken Sie uns bitte Ihren tabellarischen Lebenslauf." },
+      { "word": "das Vorstellungsgespräch", "type": "Nomen (n)", "translation": "співбесіда", "example": "Das Vorstellungsgespräch dauerte fast zwei Stunden." },
+      { "word": "die Gehaltsvorstellung", "type": "Nomen (f)", "translation": "бажаний рівень зарплати", "example": "Bitte geben Sie Ihre Gehaltsvorstellungen an." },
+      { "word": "bewerben (sich um)", "type": "Verb (reflexiv)", "translation": "подавати заявку / претендувати", "example": "Ich bewerbe mich um die Stelle als Teamleiter." },
+      { "word": "befördern", "type": "Verb", "translation": "підвищувати по службі", "example": "Sie wurde nach zwei Jahren befördert." },
+      { "word": "die Kündigung", "type": "Nomen (f)", "translation": "звільнення / розірвання договору", "example": "Er hat eine Kündigung erhalten." },
+      { "word": "die Weiterbildung", "type": "Nomen (f)", "translation": "підвищення кваліфікації", "example": "Das Unternehmen finanziert Weiterbildungen für seine Mitarbeiter." },
+      { "word": "die Eigeninitiative", "type": "Nomen (f)", "translation": "власна ініціатива", "example": "Eigeninitiative ist bei uns sehr erwünscht." },
+      { "word": "die Teamfähigkeit", "type": "Nomen (f)", "translation": "вміння працювати в команді", "example": "Teamfähigkeit ist eine der meistgefragten Soft Skills." },
+      { "word": "der Soft Skill", "type": "Nomen (m)", "translation": "гнучкі навички (особистісні)", "example": "Kommunikationsfähigkeit ist ein wichtiger Soft Skill." },
+      { "word": "die Digitalisierung", "type": "Nomen (f)", "translation": "цифровізація", "example": "Die Digitalisierung verändert alle Branchen." },
+      { "word": "die Automatisierung", "type": "Nomen (f)", "translation": "автоматизація", "example": "Durch Automatisierung werden viele Routinejobs ersetzt." },
+      { "word": "der Arbeitsmarkt", "type": "Nomen (m)", "translation": "ринок праці", "example": "Der deutsche Arbeitsmarkt ist stabil, aber angespannt." },
+      { "word": "die Unternehmenskultur", "type": "Nomen (f)", "translation": "корпоративна культура", "example": "Eine gute Unternehmenskultur ist entscheidend für die Zufriedenheit." },
+      { "word": "das Ungleichgewicht", "type": "Nomen (n)", "translation": "дисбаланс", "example": "Es gibt ein Ungleichgewicht zwischen Angebot und Nachfrage." },
+      { "word": "die Anerkennung (von Abschlüssen)", "type": "Nomen (f)", "translation": "визнання (дипломів)", "example": "Die Anerkennung ausländischer Abschlüsse dauert oft Monate." },
+      { "word": "angewiesen sein auf + Akk.", "type": "Ausdruck", "translation": "бути залежним від чогось", "example": "Auf dem Land ist man auf das Auto angewiesen." },
+      { "word": "zweischneidiges Schwert", "type": "Idiom (n)", "translation": "палиця на два кінці / обоюдогостра зброя", "example": "Homeoffice ist ein zweischneidiges Schwert." },
+      { "word": "replizieren", "type": "Verb", "translation": "відтворювати / копіювати", "example": "Spontane Gespräche lassen sich digital nicht replizieren." },
+      { "word": "flankieren", "type": "Verb", "translation": "підтримувати / супроводжувати (захід)", "example": "Die Steuer muss durch flankierende Maßnahmen ergänzt werden." }
+    ],
+    "simulation": {
+      "durationMinutes": 90,
+      "format": "Goethe_B2",
+      "sections": [
+        { "name": "Leseverstehen", "durationMinutes": 30, "description": "Teil 1: MC (5 Fragen) zum Zeitungsartikel über Fachkräftemangel. Teil 2: Aussagen-Personen-Zuordnung (6 Fragen, 4 Personen)." },
+        { "name": "Sprachbausteine", "durationMinutes": 20, "description": "Teil 1: Lückentext 15 MC-Items (Relativpronomen, Konnektoren, Modalverben). Teil 2: Nominalisierung + Relativsätze (5 Aufgaben)." },
+        { "name": "Hörverstehen", "durationMinutes": 30, "description": "Platzhalter – Radio + Podiumsgespräch." },
+        { "name": "Schriftlicher Ausdruck", "durationMinutes": 40, "description": "Bewerbungsschreiben ODER Argumentativer Kommentar (150–200 Wörter), 15 Punkte. Bewertung: Inhalt, Gestaltung, Sprachrichtigkeit." }
+      ],
+      "totalPoints": 100,
+      "passingScore": 60
+    }
+  }
+]

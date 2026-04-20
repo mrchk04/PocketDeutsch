@@ -22,4 +22,8 @@ sealed class Screen(val route: String) {
     object ResultDetail : Screen("result_detail/{timestamp}") {
         fun createRoute(timestamp: Long) = "result_detail/$timestamp"
     }
+
+    object LessonDetail : Screen("lesson_detail/{lessonId}") {
+        fun createRoute(lessonId: String) = "lesson_detail/$lessonId"
+    }
 }

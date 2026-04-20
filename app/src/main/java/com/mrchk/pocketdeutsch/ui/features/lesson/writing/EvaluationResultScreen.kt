@@ -1,6 +1,5 @@
-package com.mrchk.pocketdeutsch.ui.features.writing
+package com.mrchk.pocketdeutsch.ui.features.lesson.writing
 
-import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -12,11 +11,9 @@ import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
@@ -38,13 +35,13 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mrchk.pocketdeutsch.R
 import com.mrchk.pocketdeutsch.domain.model.AiEvaluationResult
 import com.mrchk.pocketdeutsch.domain.model.TextCorrection
-import com.mrchk.pocketdeutsch.ui.components.PdPinnedCard
 import com.mrchk.pocketdeutsch.ui.components.PdProgressBar
 import com.mrchk.pocketdeutsch.ui.components.PdStickyNote
 import com.mrchk.pocketdeutsch.ui.components.PdTitleTopBar
@@ -361,7 +358,7 @@ fun CorrectionDetailCard(correction: TextCorrection?) {
                     style = PocketTheme.typography.bodySmall,
                     fontWeight = FontWeight.Medium,
                     color = PocketTheme.colors.gray500,
-                    textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                    textAlign = TextAlign.Center
                 )
             }
         } else {

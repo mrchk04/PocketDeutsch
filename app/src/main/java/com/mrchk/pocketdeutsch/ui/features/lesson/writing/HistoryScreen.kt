@@ -1,4 +1,4 @@
-package com.mrchk.pocketdeutsch.ui.features.writing
+package com.mrchk.pocketdeutsch.ui.features.lesson.writing
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -25,6 +25,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -74,7 +75,7 @@ fun HistoryScreen(
                         text = "Ти ще не виконував цю вправу.\nЧас написати перший текст!",
                         style = PocketTheme.typography.bodyLarge,
                         color = PocketTheme.colors.gray500,
-                        textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                        textAlign = TextAlign.Center,
                         modifier = Modifier
                             .align(Alignment.Center)
                             .padding(32.dp)
@@ -117,7 +118,7 @@ fun HistoryCard(
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .offset(x = 4.dp, y = 4.dp) // Жорстка тінь
+            .offset(x = 4.dp, y = 4.dp)
             .background(PocketTheme.colors.ink, RoundedCornerShape(16.dp))
     )
 

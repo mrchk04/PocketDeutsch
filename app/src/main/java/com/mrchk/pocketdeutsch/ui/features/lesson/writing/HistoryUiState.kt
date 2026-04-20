@@ -1,4 +1,4 @@
-package com.mrchk.pocketdeutsch.ui.features.writing
+package com.mrchk.pocketdeutsch.ui.features.lesson.writing
 
 import com.mrchk.pocketdeutsch.data.local.WrittenTaskResultEntity
 

@@ -1,4 +1,4 @@
-package com.mrchk.pocketdeutsch.ui.features.writing
+package com.mrchk.pocketdeutsch.ui.features.lesson.writing
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
@@ -12,7 +12,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlinx.serialization.json.Json
 import com.mrchk.pocketdeutsch.data.repository.GeminiRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

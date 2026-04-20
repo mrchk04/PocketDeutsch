@@ -1,4 +1,4 @@
-package com.mrchk.pocketdeutsch.ui.features.writing
+package com.mrchk.pocketdeutsch.ui.features.lesson.writing
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.background
@@ -25,7 +25,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Snackbar
 import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -38,14 +37,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.mrchk.pocketdeutsch.R
+import com.mrchk.pocketdeutsch.ui.components.PdBottomActionBar
 import com.mrchk.pocketdeutsch.ui.components.PdButton
 import com.mrchk.pocketdeutsch.ui.components.PdChecklistItem
 import com.mrchk.pocketdeutsch.ui.components.PdNotepadInput
@@ -129,10 +127,12 @@ fun WritingContent(
         },
         bottomBar = {
             if (!imeVisible) {
-                WritingBottomActionBar(
-                    onCheckClick = onSubmit,
-                    onHistoryClick = onHistoryClick,
-                    state = state
+                PdBottomActionBar(
+                    mainButtonText = if (state.isLoading) "Завантаження..." else "Надіслати",
+                    isMainButtonEnabled = !state.isLoading && state.textInput.isNotBlank(),
+                    onMainButtonClick = onSubmit,
+                    secondaryIconRes = R.drawable.ic_pencil_simple_bold, // Або іконка годинника/історії
+                    onSecondaryButtonClick = onHistoryClick,
                 )
             }
         },
@@ -221,48 +221,5 @@ fun WritingContent(
                 onExpandClick = {}
             )
         }
-    }
-}
-
-@Composable
-fun WritingBottomActionBar(
-    onCheckClick: () -> Unit,
-    onHistoryClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    state: WritingUiState,
-    ) {
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .background(PocketTheme.colors.paper) // Або surface, залежно від фону
-            .padding(16.dp),
-        horizontalArrangement = Arrangement.spacedBy(16.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-
-        // 1. Кнопка "Історія" (Квадратна, другорядна, але помітна)
-        Box(
-            modifier = Modifier
-                .size(56.dp) // Зручний розмір для тапу
-                .background(PocketTheme.colors.surface, RoundedCornerShape(16.dp))
-                .border(2.dp, PocketTheme.colors.ink, RoundedCornerShape(16.dp))
-                .clip(RoundedCornerShape(16.dp))
-                .clickable { onHistoryClick() },
-            contentAlignment = Alignment.Center
-        ) {
-            Icon(
-                painter = painterResource(id = R.drawable.ic_pencil_simple_bold), // Заміни на свою іконку
-                contentDescription = "Історія перевірок",
-                tint = PocketTheme.colors.ink,
-                modifier = Modifier.size(28.dp)
-            )
-        }
-
-        PdButton(
-            text = if (state.isLoading) "Завантаження..." else "Надіслати",
-            enabled = !state.isLoading && state.textInput.isNotBlank(),
-            onClick = onCheckClick,
-            modifier = Modifier.weight(1f)
-        )
     }
 }

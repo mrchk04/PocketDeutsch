@@ -66,6 +66,7 @@ import kotlinx.coroutines.launch
 fun Modifier.pdStyle(
     cornerRadius: Dp = 16.dp,
     shadowOffset: Dp = 4.dp,
+    basePadding: Dp = shadowOffset,
     backgroundColor: Color = PocketTheme.colors.surface,
     borderColor: Color = PocketTheme.colors.ink,
     shadowColor: Color = PocketTheme.colors.ink,
@@ -83,7 +84,7 @@ fun Modifier.pdStyle(
             )
         }
     }
-    .padding(bottom = shadowOffset, end = shadowOffset)
+    .padding(bottom = basePadding, end = basePadding)
     .background(backgroundColor, RoundedCornerShape(cornerRadius + 2.dp))
     .border(borderWidth, borderColor, RoundedCornerShape(cornerRadius))
     .clip(RoundedCornerShape(cornerRadius))
@@ -176,6 +177,7 @@ fun Modifier.pdClickable(
         .pdStyle(
             cornerRadius = cornerRadius,
             shadowOffset = currentShadow,
+            basePadding = baseShadowOffset,
             backgroundColor = backgroundColor
         )
         .pointerInput(Unit) {
@@ -1254,13 +1256,6 @@ fun PdNotepadInput(
                     }
                 }
                 .padding(16.dp),
-//            onTextLayout = { layoutResult ->
-//                // скролимо до курсора після кожної зміни тексту
-//                val cursorRect = layoutResult.getCursorRect(text.length)
-//                coroutineScope.launch {
-//                    bringIntoViewRequester.bringIntoView(cursorRect)
-//                }
-//            }
             onTextLayout = { layoutResult ->
                 val cursorRect = layoutResult.getCursorRect(text.length)
                 val expandedRect = cursorRect.copy(
@@ -1270,6 +1265,48 @@ fun PdNotepadInput(
                     bringIntoViewRequester.bringIntoView(expandedRect)
                 }
             }
+        )
+    }
+}
+
+@Composable
+fun PdBottomActionBar(
+    mainButtonText: String,
+    onMainButtonClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    isMainButtonEnabled: Boolean = true,
+    secondaryIconRes: Int? = null,
+    onSecondaryButtonClick: (() -> Unit)? = null,
+    backgroundColor: Color = PocketTheme.colors.paper,
+    mainButtonColor: Color = PocketTheme.colors.primary
+) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .background(backgroundColor)
+            .padding(16.dp),
+        horizontalArrangement = Arrangement.spacedBy(16.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        // Опціональна додаткова кнопка з іконкою
+        if (secondaryIconRes != null && onSecondaryButtonClick != null) {
+            PdIconButton(
+                iconRes = secondaryIconRes,
+                onClick = onSecondaryButtonClick,
+                buttonSize = 56.dp, // Розмір, як у твоєму старому ботом-барі
+                iconSize = 28.dp,
+                cornerRadius = 16.dp,
+                backgroundColor = PocketTheme.colors.surface
+            )
+        }
+
+        // Головна кнопка (займає весь вільний простір)
+        PdButton(
+            text = mainButtonText,
+            enabled = isMainButtonEnabled,
+            onClick = onMainButtonClick,
+            backgroundColor = mainButtonColor,
+            modifier = Modifier.weight(1f)
         )
     }
 }

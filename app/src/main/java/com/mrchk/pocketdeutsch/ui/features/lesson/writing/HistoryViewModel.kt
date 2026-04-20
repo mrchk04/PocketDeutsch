@@ -1,4 +1,4 @@
-package com.mrchk.pocketdeutsch.ui.features.writing
+package com.mrchk.pocketdeutsch.ui.features.lesson.writing
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel

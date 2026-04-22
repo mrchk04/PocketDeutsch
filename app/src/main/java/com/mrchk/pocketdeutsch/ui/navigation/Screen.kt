@@ -9,9 +9,8 @@ sealed class Screen(val route: String) {
 
     // --- Додаємо нові маршрути з параметрами ---
 
-    object Writing : Screen("writing_screen/{exerciseId}") {
-        // Функція для створення готового шляху при переході
-        fun createRoute(exerciseId: String) = "writing_screen/$exerciseId"
+    object Writing : Screen("writing/{lessonId}") {
+        fun createRoute(lessonId: String) = "writing/$lessonId"
     }
 
     object History : Screen("history_screen/{exerciseId}") {
@@ -26,4 +25,6 @@ sealed class Screen(val route: String) {
     object LessonDetail : Screen("lesson_detail/{lessonId}") {
         fun createRoute(lessonId: String) = "lesson_detail/$lessonId"
     }
+
+    object Course : Screen("course_screen")
 }

@@ -3,6 +3,7 @@ package com.mrchk.pocketdeutsch.ui.navigation
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -21,6 +22,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.mrchk.pocketdeutsch.data.local.toUiModel
 import com.mrchk.pocketdeutsch.domain.model.TextCorrection
+import com.mrchk.pocketdeutsch.ui.features.learning.CourseUnitsScreen
+import com.mrchk.pocketdeutsch.ui.features.learning.CourseUnitsUiState
+import com.mrchk.pocketdeutsch.ui.features.learning.CourseUnitsViewModel
 import com.mrchk.pocketdeutsch.ui.features.lesson.detail.CoursePathwayScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.writing.EvaluationResultScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.writing.HistoryScreen
@@ -35,7 +39,8 @@ fun NavGraph(navController: NavHostController) {
         navController = navController,
 //        startDestination = Screen.Home.route,
 //        startDestination = Screen.Writing.createRoute("test_task"),
-        startDestination = Screen.LessonDetail.createRoute("les-a2-01")
+//        startDestination = Screen.LessonDetail.createRoute("les-a2-01")
+        startDestination = Screen.Course.route
     ) {
         composable(Screen.Home.route) {
             PlaceholderScreen("Main", PocketTheme.colors.primary)
@@ -48,7 +53,7 @@ fun NavGraph(navController: NavHostController) {
         // Екран вправи
         composable(
             route = Screen.Writing.route, // "writing_screen/{exerciseId}"
-            arguments = listOf(navArgument("exerciseId") { type = NavType.StringType })
+            arguments = listOf(navArgument("lessonId") { type = NavType.StringType })
         ) {
             WritingExerciseScreen(
                 onNavigateBack = {
@@ -114,6 +119,50 @@ fun NavGraph(navController: NavHostController) {
                     }
                 }
             )
+        }
+
+        composable(Screen.Course.route) {
+            val viewModel: CourseUnitsViewModel = hiltViewModel()
+            val uiState by viewModel.uiState.collectAsState()
+            val selectedLevel by viewModel.selectedLevel.collectAsState()
+
+            when (val state = uiState) {
+                is CourseUnitsUiState.Loading -> {
+                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                        CircularProgressIndicator(color = PocketTheme.colors.primary)
+                    }
+                }
+                is CourseUnitsUiState.Success -> {
+                    CourseUnitsScreen(
+                        userName = "Mariia", // Можна потім тягнути з UserData/Preferences
+                        units = state.units,
+                        availableLevels = state.availableLevels,
+                        selectedLevel = selectedLevel,
+                        onLevelSelected = { viewModel.selectLevel(it) },
+                        onUnitClick = { unitId ->
+                            // Клік по КАРТЦІ -> відкриваємо стежку (LessonPathway)
+                            navController.navigate(Screen.LessonDetail.createRoute(unitId))
+                        },
+                        onUnitActionClick = { unitId ->
+                            navController.navigate(Screen.Writing.createRoute(unitId))
+                        },
+                        onNavigateHome = {
+                            navController.navigate(Screen.Home.route) {
+                                popUpTo(navController.graph.startDestinationId) { saveState = true }
+                                launchSingleTop = true
+                                restoreState = true
+                            }
+                        },
+                        onNavigateProgress = { /* Додамо пізніше */ },
+                        onNavigateProfile = { /* Додамо пізніше */ }
+                    )
+                }
+                is CourseUnitsUiState.Error -> {
+                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                        Text(text = state.message, color = PocketTheme.colors.error)
+                    }
+                }
+            }
         }
 
     }

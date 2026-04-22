@@ -1,13 +1,6 @@
 package com.mrchk.pocketdeutsch.ui.features.lesson.detail
 
 import androidx.compose.animation.Crossfade
-import androidx.compose.animation.core.FastOutSlowInEasing
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.VectorConverter
-import androidx.compose.animation.core.animateValue
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -20,8 +13,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.imePadding
-import androidx.compose.foundation.layout.navigationBarsPadding
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -36,12 +27,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
@@ -49,22 +36,18 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.mrchk.pocketdeutsch.R
 import com.mrchk.pocketdeutsch.domain.model.Lesson
-import com.mrchk.pocketdeutsch.ui.components.PdBottomActionBar
 import com.mrchk.pocketdeutsch.ui.components.PdButton
 import com.mrchk.pocketdeutsch.ui.components.PdIconButton
 import com.mrchk.pocketdeutsch.ui.components.PdProgressBar
 import com.mrchk.pocketdeutsch.ui.components.PdProgressSize
-import com.mrchk.pocketdeutsch.ui.components.PdTitleTopBar
 import com.mrchk.pocketdeutsch.ui.components.TopBarContainer
 import com.mrchk.pocketdeutsch.ui.components.pdClickable
 import com.mrchk.pocketdeutsch.ui.components.pdStyle
-import com.mrchk.pocketdeutsch.ui.theme.Gray200
 import com.mrchk.pocketdeutsch.ui.theme.Gray400
 import com.mrchk.pocketdeutsch.ui.theme.PocketDeutschTheme
 import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
@@ -251,10 +234,11 @@ fun UnitHeader(
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.Bottom
         ) {
-            Column {
+            Column (
+                modifier = Modifier.weight(1f)
+            ) {
                 Text(
                     text = "РОЗДІЛ 4",
                     style = PocketTheme.typography.labelSmall,
@@ -267,6 +251,7 @@ fun UnitHeader(
                     color = PocketTheme.colors.ink
                 )
             }
+            Spacer(modifier = Modifier.width(16.dp))
 
             // Бейдж прогресу
             Box(

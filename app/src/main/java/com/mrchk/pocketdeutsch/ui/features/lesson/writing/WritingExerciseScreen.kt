@@ -59,7 +59,7 @@ fun WritingExerciseScreen(
     onNavigateBack: () -> Unit,
     onNavigateToHistory: (String) -> Unit
 ) {
-    val state by viewModel.state.collectAsState()
+    val state by viewModel.uiState.collectAsState()
 
     Crossfade(targetState = state.result, label = "ScreenTransition") { result ->
         if (result != null) {

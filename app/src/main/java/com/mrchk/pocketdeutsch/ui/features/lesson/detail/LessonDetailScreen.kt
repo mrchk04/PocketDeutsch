@@ -168,10 +168,18 @@ private fun PathwayContent(
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
         ) {
+
+            val totalLessons = nodes.size
+            val completedLessons = nodes.count { it.state == NodeState.COMPLETED }
+            val currentProgress = if (totalLessons > 0) completedLessons.toFloat() / totalLessons.toFloat() else 0f
+
             UnitHeader(
+                unitNumber = "Рівень ${lesson.level}",
                 unitTitle = lesson.topic,
-                unitDescription = "Підготовка до іспиту: теорія, практика та письмове завдання.",
-                progress = 0.4f
+                unitDescription = lesson.description ?: "Опануйте нову лексику та граматику.",
+                completedLessons = completedLessons,
+                totalLessons = totalLessons,
+                progress = currentProgress
             )
 
             Box(
@@ -212,8 +220,11 @@ private fun PathwayContent(
 
 @Composable
 fun UnitHeader(
+    unitNumber: String,
     unitTitle: String,
     unitDescription: String,
+    completedLessons: Int,
+    totalLessons: Int,
     progress: Float
 ) {
     val ink: Color = PocketTheme.colors.ink
@@ -240,7 +251,7 @@ fun UnitHeader(
                 modifier = Modifier.weight(1f)
             ) {
                 Text(
-                    text = "РОЗДІЛ 4",
+                    text = unitNumber.uppercase(),
                     style = PocketTheme.typography.labelSmall,
                     color = PocketTheme.colors.gray500,
                     letterSpacing = 1.sp
@@ -253,7 +264,6 @@ fun UnitHeader(
             }
             Spacer(modifier = Modifier.width(16.dp))
 
-            // Бейдж прогресу
             Box(
                 modifier = Modifier
                     .background(PocketTheme.colors.warning, RoundedCornerShape(8.dp))
@@ -262,7 +272,7 @@ fun UnitHeader(
                 contentAlignment = Alignment.Center
             ) {
                 Text(
-                    text = "2 / 5",
+                    text = "$completedLessons / $totalLessons",
                     style = PocketTheme.typography.labelMedium,
                     color = PocketTheme.colors.ink
                 )

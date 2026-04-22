@@ -6,7 +6,8 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Lesson(
     val lessonId: String,
-    val title: String,
+    val title: String? = null,
+    val description: String? = null,
     val level: String,
     val topic: String,
     val theory: Theory,

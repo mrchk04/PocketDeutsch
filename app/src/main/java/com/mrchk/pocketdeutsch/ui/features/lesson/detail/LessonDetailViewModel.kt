@@ -83,7 +83,7 @@ class LessonDetailViewModel @Inject constructor(
             PathwayNodeData(
                 id = "schreiben",
                 title = "Письмо (Schreiben)",
-                subtitle = lesson.schriftlicherAusdruck.type,
+                subtitle = lesson.writingExercise?.type ?: "Завдання відсутнє",
                 iconRes = R.drawable.ic_pencil_simple_bold, // Заміни на свою
                 state = NodeState.NOT_STARTED
             )

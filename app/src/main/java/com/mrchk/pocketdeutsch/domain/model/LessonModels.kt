@@ -1,5 +1,6 @@
 package com.mrchk.pocketdeutsch.domain.model
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -9,7 +10,8 @@ data class Lesson(
     val level: String,
     val topic: String,
     val theory: Theory,
-    val schriftlicherAusdruck: SchriftlicherAusdruck
+    @SerialName("schriftlicherAusdruck")
+    val writingExercise: WritingExercise? = null
     // Інші поля (wortschatz, leseverstehen тощо) ми додамо пізніше,
     // коли дійдемо до їхніх екранів.
 )
@@ -28,10 +30,19 @@ data class Grammar(
 )
 
 @Serializable
-data class SchriftlicherAusdruck(
+data class EvaluationCriterion(
+    val criterion: String,
+    val description: String,
+    val maxPoints: Int
+)
+
+@Serializable
+data class WritingExercise(
     val format: String,
     val type: String,
     val instruction: String,
-    val points: Int,
-    val modelAnswer: String? = null
+    val points: Int? = null,
+    val modelAnswer: String? = null,
+    val criteria: List<EvaluationCriterion> = emptyList(),
+    val totalPoints: Int? = null
 )

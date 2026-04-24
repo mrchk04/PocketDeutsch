@@ -43,65 +43,30 @@ class WritingViewModel @Inject constructor(
 
     private fun loadWritingTask() {
         viewModelScope.launch {
-            _uiState.update { it.copy(isLoading = true, errorMessage = null) }
+            _uiState.update { it.copy(isLoading = true) }
             try {
                 val lesson = lessonRepository.getLessonById(lessonId)
-                val jsonTask = lesson?.writingExercise // Твій об'єкт із JSON
+                val jsonTask = lesson?.examPractice?.writing
 
                 if (lesson != null && jsonTask != null) {
+                    // Перший рядок — це завжди опис ситуації
+                    val promptText = jsonTask.instruction.firstOrNull() ?: ""
+                    // Решта — це наші пункти (чекліст)
+                    val bulletPoints = jsonTask.instruction.drop(1)
 
-                    // 1. Розбиваємо instruction на рядки
-                    val instructionLines = jsonTask.instruction.lines()
-
-                    // 2. Витягуємо чекліст: шукаємо всі рядки, що починаються з тире (звичайного '-' або довгого '–')
-                    val bulletPoints = instructionLines
-                        .filter { it.trim().startsWith("-") || it.trim().startsWith("–") }
-                        .map { it.trim().removePrefix("-").removePrefix("–").trim() }
-
-                    // 3. Формуємо основний текст завдання: беремо все, КРІМ буліт-поінтів
-                    val mainPromptText = instructionLines
-                        .filterNot { it.trim().startsWith("-") || it.trim().startsWith("–") }
-                        .joinToString("\n")
-                        .trim()
-
-                    // 4. Створюємо фінальну модель
                     val uiTask = WritingTask(
                         id = lessonId,
-                        // Якщо lesson.level є, беремо його. Якщо ні - парсимо з формату (напр., "telc_A2_Schreiben")
-                        level = ProficiencyLevel.valueOf(lesson.level.uppercase()),
-
-                        // Перетворюємо "Mitteilung_oder_Nachricht" на красиве "Mitteilung oder Nachricht"
-                        title = jsonTask.type.replace("_", " "),
-
-                        promptText = mainPromptText,
-
-                        // Витягуємо ліміт слів (можна жорстко задати 40 для A2, або динамічно)
-                        minWords = if (lesson.level.contains("B1", ignoreCase = true)) 80 else 40,
-
-                        // Мапимо наші витягнуті рядки у TaskRequirement
+                        level = ProficiencyLevel.valueOf(lesson.level.take(2).uppercase()),
+                        title = jsonTask.format.replace("_", " ").replaceFirstChar { it.uppercase() },
+                        promptText = promptText,
+                        minWords = if (lesson.level.contains("B1")) 80 else 40,
                         requiredPoints = bulletPoints.mapIndexed { index, text ->
-                            TaskRequirement(
-                                id = "${lessonId}_req_$index",
-                                text = text,
-                                isChecked = false
-                            )
+                            TaskRequirement("${lessonId}_$index", text, false)
                         },
-                        hints = emptyList() // В JSON їх немає, залишаємо порожнім
+                        hints = emptyList()
                     )
 
-                    // 5. Оновлюємо State
-                    _uiState.update {
-                        it.copy(
-                            isLoading = false,
-                            task = uiTask,
-                            checklist = uiTask.requiredPoints, // Чекліст на екрані автоматично оживе!
-                            errorMessage = null
-                        )
-                    }
-                } else {
-                    _uiState.update {
-                        it.copy(isLoading = false, errorMessage = "Завдання не знайдено")
-                    }
+                    _uiState.update { it.copy(isLoading = false, task = uiTask, checklist = uiTask.requiredPoints) }
                 }
             } catch (e: Exception) {
                 _uiState.update {

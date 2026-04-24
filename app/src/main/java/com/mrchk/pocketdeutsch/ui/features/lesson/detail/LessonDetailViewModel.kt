@@ -16,8 +16,8 @@ import javax.inject.Inject
 @HiltViewModel
 class LessonDetailViewModel @Inject constructor(
     private val lessonRepository: LessonRepository,
-    savedStateHandle: SavedStateHandle
-): ViewModel() {
+    savedStateHandle: SavedStateHandle,
+) : ViewModel() {
 
     private val lessonId: String = checkNotNull(savedStateHandle["lessonId"])
     private val _uiState = MutableStateFlow<LessonDetailState>(LessonDetailState.Loading)
@@ -26,17 +26,17 @@ class LessonDetailViewModel @Inject constructor(
     init {
         loadLesson(lessonId)
 
-        val idFromNav: String? = savedStateHandle["lessonId"]
-        android.util.Log.d("DEBUG_NAV", "ID отриманий з навігації: $idFromNav")
-        loadLesson(idFromNav ?: "unknown")
+//        val idFromNav: String? = savedStateHandle["lessonId"]
+//        android.util.Log.d("DEBUG_NAV", "ID отриманий з навігації: $idFromNav")
+//        loadLesson(idFromNav ?: "unknown")
 
     }
 
-    private fun loadLesson(lessonId: String){
+    private fun loadLesson(lessonId: String) {
         viewModelScope.launch {
             _uiState.value = LessonDetailState.Loading
             try {
-                 val lesson = lessonRepository.getLessonById(lessonId)
+                val lesson = lessonRepository.getLessonById(lessonId)
                 if (lesson != null) {
                     val nodes = createPathwayNodes(lesson)
                     _uiState.value = LessonDetailState.Success(lesson, nodes)
@@ -50,44 +50,92 @@ class LessonDetailViewModel @Inject constructor(
     }
 
     private fun createPathwayNodes(lesson: Lesson): List<PathwayNodeData> {
-        // Поки що хардкодимо стани для краси, пізніше сюди додамо логіку прогресу
-        return listOf(
+        val nodes = mutableListOf<PathwayNodeData>()
+
+        // 1. Теорія та Граматика (Є завжди)
+        nodes.add(
             PathwayNodeData(
                 id = "theory",
                 title = "Теорія та Граматика",
-                subtitle = lesson.theory.grammar.topic,
-                iconRes = R.drawable.ic_book_bookmark_bold, // Заміни на свою
-                state = NodeState.COMPLETED
-            ),
+                subtitle = lesson.grammar.topic,
+                iconRes = R.drawable.ic_book_bookmark_bold,
+                state = NodeState.COMPLETED // Статуси поки залишаємо для краси UI
+            )
+        )
+
+        // 2. Словник (Є завжди)
+        nodes.add(
             PathwayNodeData(
                 id = "wortschatz",
                 title = "Словник (Wortschatz)",
                 subtitle = "Нові слова та вирази",
-                iconRes = R.drawable.ic_book_open_text_bold, // Заміни на свою
+                iconRes = R.drawable.ic_book_open_text_bold,
                 state = NodeState.ACTIVE
-            ),
+            )
+        )
+
+        // 3. Читання (Є завжди в екзаменаційному блоці)
+        nodes.add(
             PathwayNodeData(
                 id = "leseverstehen",
                 title = "Читання (Leseverstehen)",
                 subtitle = "Робота з текстами",
-                iconRes = R.drawable.ic_text_aa_bold, // Заміни на свою
-                state = NodeState.NOT_STARTED
-            ),
-            PathwayNodeData(
-                id = "sprachbausteine",
-                title = "Мовні конструкції",
-                subtitle = "Sprachbausteine",
-                iconRes = R.drawable.ic_pencil_simple_bold, // Заміни на свою
-                state = NodeState.NOT_STARTED
-            ),
-            PathwayNodeData(
-                id = "schreiben",
-                title = "Письмо (Schreiben)",
-                subtitle = lesson.writingExercise?.type ?: "Завдання відсутнє",
-                iconRes = R.drawable.ic_pencil_simple_bold, // Заміни на свою
+                iconRes = R.drawable.ic_text_aa_bold,
                 state = NodeState.NOT_STARTED
             )
         )
+
+        // 4. Аудіювання (НОВЕ)
+        nodes.add(
+            PathwayNodeData(
+                id = "hoerverstehen",
+                title = "Аудіювання (Hörverstehen)",
+                subtitle = "Розуміння на слух",
+                // Якщо іконки немає, заміни на існуючу (напр. ic_headphones)
+                iconRes = R.drawable.ic_text_aa_bold,
+                state = NodeState.NOT_STARTED
+            )
+        )
+
+        // 5. Мовні конструкції (ДИНАМІЧНО: додаємо тільки якщо вони є)
+        if (lesson.examPractice.languageUse.isNotEmpty()) {
+            nodes.add(
+                PathwayNodeData(
+                    id = "sprachbausteine",
+                    title = "Мовні конструкції",
+                    subtitle = "Sprachbausteine",
+                    iconRes = R.drawable.ic_pencil_simple_bold,
+                    state = NodeState.NOT_STARTED
+                )
+            )
+        }
+
+        // 6. Письмо (Ніяких елвіс-операторів, бо ми зробили поле обов'язковим)
+        nodes.add(
+            PathwayNodeData(
+                id = "schreiben",
+                title = "Письмо (Schreiben)",
+                subtitle = lesson.examPractice.writing.format.replace("_", " ")
+                    .replaceFirstChar { it.uppercase() },
+                iconRes = R.drawable.ic_pencil_simple_bold,
+                state = NodeState.NOT_STARTED
+            )
+        )
+
+        // 7. Говоріння (НОВЕ)
+        nodes.add(
+            PathwayNodeData(
+                id = "sprechen",
+                title = "Говоріння (Sprechen)",
+                subtitle = lesson.examPractice.speaking.taskType.replace("_", " ")
+                    .replaceFirstChar { it.uppercase() },
+                // Заміни на свою іконку (напр. мікрофон)
+                iconRes = R.drawable.ic_book_open_text_bold,
+                state = NodeState.NOT_STARTED
+            )
+        )
+
+        return nodes
     }
 }
 

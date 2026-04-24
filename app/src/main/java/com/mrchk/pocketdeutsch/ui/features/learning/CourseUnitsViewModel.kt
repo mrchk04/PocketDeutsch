@@ -54,10 +54,10 @@ class CourseUnitsViewModel @Inject constructor(
                                 id = lesson.lessonId,
                                 level = level,
                                 unitNumber = "Модуль ${index + 1}",
-                                title = lesson.topic,
-                                description = "Тема: ${lesson.theory.grammar.topic}. Читання, словник та письмо.",
+                                title = lesson.title,
+                                description = lesson.description,
                                 completedLessons = 0,
-                                totalLessons = 5,
+                                totalLessons = lesson.totalTasks,
                                 state = UnitState.ACTIVE,
                                 isExam = false
                             )

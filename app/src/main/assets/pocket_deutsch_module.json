@@ -1,0 +1,661 @@
+[
+  {
+    "module": {
+      "metadata": {
+        "id": "wohnen-a2-1",
+        "topic": "Wohnen",
+        "topic_de": "Wohnen – Wohnung und Einrichtung",
+        "level": "A2.1",
+        "grammar_topic": "Präpositionen mit Dativ",
+        "grammar_topic_connection": "Describing where things are in an apartment (auf dem Tisch, neben dem Schrank, in der Küche) is the core communicative need of the Wohnen topic. Dativ prepositions for location appear in every exam task type: reading ads, listening dialogues, writing emails to landlords, and speaking tasks about rooms.",
+        "exam_formats": [
+          "Goethe",
+          "ÖSD",
+          "Telc",
+          "DTZ"
+        ],
+        "cefr_skills_covered": [
+          "reading",
+          "listening",
+          "writing",
+          "speaking",
+          "language_use"
+        ],
+        "estimated_minutes": 45,
+        "pronunciation_note": "Note the vowel length in key words: die Miéte (long e), das Régal (short e). The combination -wohn- is pronounced /voːn/, not /wɔn/. In compounds: Wohnzimmer, Wohngemeinschaft – stress always falls on the first syllable."
+      },
+      "block1_vocabulary": {
+        "vocabulary_items": [
+          {
+            "word": "die Wohnung",
+            "article": "die",
+            "plural": "-en",
+            "word_class": "Nomen",
+            "english": "apartment, flat",
+            "example_sentence": "Ich suche eine Wohnung in der Stadtmitte.",
+            "register": "neutral"
+          },
+          {
+            "word": "das Zimmer",
+            "article": "das",
+            "plural": "-",
+            "word_class": "Nomen",
+            "english": "room",
+            "example_sentence": "Die Wohnung hat drei Zimmer, eine Küche und ein Bad.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Miete",
+            "article": "die",
+            "plural": "-n",
+            "word_class": "Nomen",
+            "english": "rent",
+            "example_sentence": "Die Miete beträgt 750 Euro pro Monat.",
+            "register": "neutral"
+          },
+          {
+            "word": "der Vermieter",
+            "article": "der",
+            "plural": "-",
+            "word_class": "Nomen",
+            "english": "landlord",
+            "example_sentence": "Der Vermieter wohnt im Erdgeschoss.",
+            "register": "neutral"
+          },
+          {
+            "word": "das Regal",
+            "article": "das",
+            "plural": "-e",
+            "word_class": "Nomen",
+            "english": "shelf, bookcase",
+            "example_sentence": "Das Regal steht neben dem Fenster.",
+            "register": "neutral"
+          },
+          {
+            "word": "der Schrank",
+            "article": "der",
+            "plural": "Schränke",
+            "word_class": "Nomen",
+            "english": "wardrobe, cupboard",
+            "example_sentence": "Meine Kleidung liegt im Schrank.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Nebenkosten",
+            "article": "die",
+            "plural": "nur Plural",
+            "word_class": "Nomen",
+            "english": "additional costs (utilities)",
+            "example_sentence": "Die Nebenkosten sind im Mietpreis nicht enthalten.",
+            "register": "neutral"
+          },
+          {
+            "word": "einziehen",
+            "article": null,
+            "plural": null,
+            "word_class": "Verb",
+            "english": "to move in",
+            "example_sentence": "Wir ziehen am ersten März in die neue Wohnung ein.",
+            "register": "neutral"
+          },
+          {
+            "word": "ausziehen",
+            "article": null,
+            "plural": null,
+            "word_class": "Verb",
+            "english": "to move out",
+            "example_sentence": "Meine Mitbewohnerin zieht nächsten Monat aus.",
+            "register": "neutral"
+          },
+          {
+            "word": "möbliert",
+            "article": null,
+            "plural": null,
+            "word_class": "Adjektiv",
+            "english": "furnished",
+            "example_sentence": "Ich suche ein möbliertes Zimmer zur Untermiete.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Kaution",
+            "article": "die",
+            "plural": "-en",
+            "word_class": "Nomen",
+            "english": "deposit",
+            "example_sentence": "Die Kaution beträgt drei Monatsmieten.",
+            "register": "neutral"
+          },
+          {
+            "word": "gemütlich",
+            "article": null,
+            "plural": null,
+            "word_class": "Adjektiv",
+            "english": "cosy, comfortable",
+            "example_sentence": "Das Wohnzimmer ist sehr gemütlich eingerichtet.",
+            "register": "neutral"
+          }
+        ],
+        "collocations": [
+          {
+            "phrase": "eine Wohnung mieten",
+            "translation": "to rent an apartment",
+            "example": "Wir möchten eine Wohnung in München mieten."
+          },
+          {
+            "phrase": "eine Wohnung besichtigen",
+            "translation": "to view an apartment",
+            "example": "Kann ich die Wohnung morgen besichtigen?"
+          },
+          {
+            "phrase": "Miete zahlen",
+            "translation": "to pay rent",
+            "example": "Die Miete zahle ich immer am Ersten des Monats."
+          },
+          {
+            "phrase": "in eine Wohnung einziehen",
+            "translation": "to move into an apartment",
+            "example": "Sie zieht nächste Woche in ihre neue Wohnung ein."
+          },
+          {
+            "phrase": "Möbel aufstellen",
+            "translation": "to set up / arrange furniture",
+            "example": "Wir stellen die Möbel am Wochenende auf.",
+            "register": "neutral"
+          },
+          {
+            "phrase": "zur Miete wohnen",
+            "translation": "to live in a rented place",
+            "example": "In Deutschland wohnen viele Menschen zur Miete."
+          }
+        ],
+        "words_in_context": [
+          {
+            "word": "wohnen",
+            "sentences": [
+              "Ich wohne in einer kleinen Wohnung im dritten Stock.",
+              "Wo wohnst du? – Ich wohne in der Nähe vom Bahnhof.",
+              "Meine Eltern wohnen seit 20 Jahren in demselben Haus."
+            ]
+          },
+          {
+            "word": "ziehen",
+            "sentences": [
+              "Wir ziehen im Sommer in eine größere Wohnung um.",
+              "Er zieht nächsten Monat von Hamburg nach Berlin.",
+              "Ich möchte gerne aus der WG ausziehen und alleine wohnen."
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "matching",
+            "instruction": "Ordnen Sie zu: Welches Wort passt zu welcher Erklärung?",
+            "items": [
+              "die Kaution — a) monatliche Zahlung für die Wohnung",
+              "die Miete — b) Geld, das man vor dem Einzug zahlt und zurückbekommt",
+              "der Vermieter — c) Person, die die Wohnung vermietet",
+              "möbliert — d) mit Möbeln ausgestattet",
+              "die Nebenkosten — e) Kosten für Strom, Wasser, Heizung",
+              "einziehen — f) in eine neue Wohnung kommen"
+            ],
+            "answers": [
+              "die Kaution — b",
+              "die Miete — a",
+              "der Vermieter — c",
+              "möbliert — d",
+              "die Nebenkosten — e",
+              "einziehen — f"
+            ]
+          },
+          {
+            "type": "gap_fill",
+            "instruction": "Ergänzen Sie die Lücken mit dem passenden Wort: Miete | Schrank | einziehen | Nebenkosten | besichtigen",
+            "items": [
+              "1. Die ___ beträgt 650 Euro, plus 80 Euro ___ .",
+              "2. Ich möchte die Wohnung gerne morgen ___.",
+              "3. Wir können am 1. April in die neue Wohnung ___.",
+              "4. Meine Kleider hängen im ___.",
+              "5. Die ___ für Strom und Heizung zahle ich extra."
+            ],
+            "answers": [
+              "1. Miete / Nebenkosten",
+              "2. besichtigen",
+              "3. einziehen",
+              "4. Schrank",
+              "5. Nebenkosten"
+            ]
+          },
+          {
+            "type": "collocation_sort",
+            "instruction": "Was passt zusammen? Verbinden Sie die Verben mit den Nomen.",
+            "items": [
+              "1. eine Wohnung ___",
+              "2. Miete ___",
+              "3. Möbel ___",
+              "4. eine Wohnung ___",
+              "5. in eine Wohnung ___"
+            ],
+            "answers": [
+              "1. besichtigen / mieten",
+              "2. zahlen",
+              "3. aufstellen",
+              "4. mieten / besichtigen",
+              "5. einziehen"
+            ]
+          }
+        ]
+      },
+      "block2_grammar": {
+        "grammar_topic": "Präpositionen mit Dativ (lokale Bedeutung)",
+        "explanation": "In German, when describing WHERE something is located (static position), the prepositions in, an, auf, unter, über, neben, zwischen, vor, and hinter require the dative case. The key question is 'Wo?' (Where?). This is different from 'Wohin?' (Where to?) which uses accusative. At A2 level, focus on: der → dem, die → der, das → dem in the dative.",
+        "rules": [
+          {
+            "rule": "Use 'in + Dativ' for locations inside enclosed spaces.",
+            "example": "Das Buch liegt in dem (im) Regal. / Sie sitzt in der Küche."
+          },
+          {
+            "rule": "Use 'auf + Dativ' for locations on top of surfaces.",
+            "example": "Die Tasse steht auf dem Tisch. / Die Katze liegt auf dem Sofa."
+          },
+          {
+            "rule": "Use 'an + Dativ' for locations at vertical surfaces or edges.",
+            "example": "Das Bild hängt an der Wand. / Er steht an dem (am) Fenster."
+          },
+          {
+            "rule": "Use 'neben / vor / hinter / unter / über + Dativ' for relative positions.",
+            "example": "Der Schrank steht neben der Tür. / Unter dem Bett liegt ein Teppich."
+          }
+        ],
+        "forms_table": {
+          "columns": [
+            "Präposition",
+            "maskulin (der→dem)",
+            "feminin (die→der)",
+            "neutral (das→dem)",
+            "Plural (die→den)"
+          ],
+          "rows": [
+            [
+              "in",
+              "im Zimmer",
+              "in der Küche",
+              "im Bad",
+              "in den Räumen"
+            ],
+            [
+              "auf",
+              "auf dem Tisch",
+              "auf der Couch",
+              "auf dem Bett",
+              "auf den Stühlen"
+            ],
+            [
+              "an",
+              "am Fenster",
+              "an der Wand",
+              "am Regal",
+              "an den Türen"
+            ],
+            [
+              "unter",
+              "unter dem Bett",
+              "unter der Treppe",
+              "unter dem Sofa",
+              "unter den Regalen"
+            ],
+            [
+              "über",
+              "über dem Tisch",
+              "über der Lampe",
+              "über dem Bett",
+              "über den Fenstern"
+            ],
+            [
+              "neben",
+              "neben dem Schrank",
+              "neben der Tür",
+              "neben dem Sofa",
+              "neben den Regalen"
+            ],
+            [
+              "zwischen",
+              "zwischen dem Sofa und dem Tisch",
+              "zwischen der Wand und der Tür",
+              "zwischen dem Tisch und dem Regal",
+              "zwischen den Möbeln"
+            ],
+            [
+              "vor",
+              "vor dem Haus",
+              "vor der Tür",
+              "vor dem Fenster",
+              "vor den Stufen"
+            ],
+            [
+              "hinter",
+              "hinter dem Schrank",
+              "hinter der Couch",
+              "hinter dem Regal",
+              "hinter den Möbeln"
+            ]
+          ]
+        },
+        "achtung": [
+          "❌ Das Buch liegt auf den Tisch. ✅ Das Buch liegt auf dem Tisch. — After location prepositions (Wo?), always use Dativ, not Akkusativ.",
+          "❌ Das Bild hängt an die Wand. ✅ Das Bild hängt an der Wand. — 'Hängen' (to hang, static) = Wo? = Dativ. 'Hängen' (to hang up, action) = Wohin? = Akkusativ.",
+          "❌ in dem Zimmer / an dem Fenster — ✅ im Zimmer / am Fenster — Remember the contractions: in + dem = im, an + dem = am, in + der stays as is."
+        ],
+        "topic_connection_examples": [
+          "Das Sofa steht vor dem Fenster im Wohnzimmer.",
+          "Die Lampe hängt über dem Esstisch.",
+          "Neben der Tür steht ein kleines Regal für Schuhe.",
+          "Zwischen dem Bett und dem Schrank ist leider nicht viel Platz."
+        ],
+        "exercises": [
+          {
+            "type": "gap_fill",
+            "instruction": "Ergänzen Sie: dem oder der?",
+            "items": [
+              "1. Die Lampe hängt über ___ Esstisch.",
+              "2. Das Buch liegt auf ___ Couch.",
+              "3. Der Schrank steht neben ___ Tür.",
+              "4. Die Katze schläft unter ___ Bett.",
+              "5. Das Bild hängt an ___ Wand."
+            ],
+            "answers": [
+              "1. dem",
+              "2. der",
+              "3. der",
+              "4. dem",
+              "5. der"
+            ]
+          },
+          {
+            "type": "error_correction",
+            "instruction": "Korrigieren Sie die Fehler.",
+            "items": [
+              "1. Die Tasse steht auf den Tisch.",
+              "2. Meine Jacke hängt an die Tür.",
+              "3. Das Sofa steht in dem Wohnzimmer. (Kontraktion fehlt)",
+              "4. Der Teppich liegt vor den Fenster."
+            ],
+            "answers": [
+              "1. Die Tasse steht auf dem Tisch.",
+              "2. Meine Jacke hängt an der Tür.",
+              "3. Das Sofa steht im Wohnzimmer.",
+              "4. Der Teppich liegt vor dem Fenster."
+            ]
+          },
+          {
+            "type": "sentence_construction",
+            "instruction": "Bauen Sie Sätze. Achten Sie auf den Dativ.",
+            "items": [
+              "1. hängt / Das Bild / an / Wand / die",
+              "2. Regal / Das / steht / neben / Fenster / das",
+              "3. liegt / Unter / Bett / das / ein Teppich",
+              "4. sitzt / Sie / in / Küche / die"
+            ],
+            "answers": [
+              "1. Das Bild hängt an der Wand.",
+              "2. Das Regal steht neben dem Fenster.",
+              "3. Unter dem Bett liegt ein Teppich.",
+              "4. Sie sitzt in der Küche."
+            ]
+          },
+          {
+            "type": "free_production",
+            "instruction": "Beschreiben Sie Ihr Zimmer oder Ihre Wohnung in 4–5 Sätzen. Verwenden Sie mindestens 4 verschiedene Präpositionen mit Dativ (z.B. auf dem, an der, neben dem, unter dem...).",
+            "items": [],
+            "answers": []
+          }
+        ]
+      },
+      "block3_skills": {
+        "reading": {
+          "text_type": "advertisement",
+          "text": "ANZEIGE A\nNette 2-Zimmer-Wohnung in ruhiger Lage zu vermieten. 58 m², Erdgeschoss, Küche und Bad neu renoviert. Kaltmiete: 620 €, Nebenkosten ca. 110 €. Haustiere leider nicht erlaubt. Parkplatz im Hof vorhanden. Einzug ab 1. März möglich. Nur an Nichtraucher. Kontakt: Familie Bauer, Tel. 0621-44872.\n\nANZEIGE B\nModernes WG-Zimmer (18 m²) in 3er-WG, zentrale Lage nahe U-Bahn. Möbliert mit Bett, Schreibtisch und Schrank. Küche und Bad werden geteilt. Warmmiete: 490 € (inkl. Internet und Nebenkosten). Haustiere willkommen! Ideal für Studenten oder Berufstätige. Einzug sofort möglich. Besichtigung nach Vereinbarung. Kontakt: Lena, lena.wg@mail.de",
+          "exercise_type": "information_extraction",
+          "instruction": "Welche Anzeige passt? Schreiben Sie A, B, Beide oder Keine.",
+          "items": [
+            "1. Die Wohnung ist bereits möbliert.",
+            "2. Haustiere sind erlaubt.",
+            "3. Ein Parkplatz ist verfügbar.",
+            "4. Die Nebenkosten sind im Preis enthalten.",
+            "5. Man kann sofort einziehen."
+          ],
+          "answers": [
+            "B",
+            "B",
+            "A",
+            "B",
+            "B"
+          ]
+        },
+        "listening": {
+          "audio_type": "dialogue",
+          "transcript": "Anna: Hallo Tom! Hast du schon eine neue Wohnung gefunden?\nTom: Noch nicht. Ich suche seit drei Wochen. Es ist wirklich schwierig.\nAnna: Was ist dir denn wichtig bei einer Wohnung?\nTom: Also, sie soll nicht zu teuer sein. Maximal 700 Euro warm. Und ich brauche mindestens zwei Zimmer.\nAnna: Hast du schon Wohnungen besichtigt?\nTom: Ja, zwei. Eine war schön, aber zu weit von der Arbeit entfernt. Die andere war billig, aber sehr laut wegen der Straße.\nAnna: Ich habe gehört, dass es im Neubaugebiet am Stadtrand günstige Wohnungen gibt.\nTom: Wirklich? Das klingt gut. Weißt du, ob die Wohnungen möbliert sind?\nAnna: Nein, ich glaube nicht. Aber du hast doch schon Möbel, oder?\nTom: Ja, stimmt. Ich werde mal nachschauen. Danke für den Tipp!",
+          "tts_instructions": "Speaker Anna: female ~30, friendly and helpful tone. Speaker Tom: male ~35, slightly frustrated but hopeful. Moderate pace (A2). Standard German Hochdeutsch. Natural pauses between turns.",
+          "exercise_type": "richtig_falsch",
+          "instruction": "Hören Sie den Dialog und entscheiden Sie: richtig (R) oder falsch (F)?",
+          "items": [
+            "1. Tom sucht seit drei Wochen eine Wohnung.",
+            "2. Tom möchte maximal 600 Euro Miete zahlen.",
+            "3. Tom hat bisher zwei Wohnungen besichtigt.",
+            "4. Die erste Wohnung war zu laut.",
+            "5. Anna empfiehlt Wohnungen am Stadtrand.",
+            "6. Tom hat keine Möbel."
+          ],
+          "answers": [
+            "richtig",
+            "falsch",
+            "richtig",
+            "falsch",
+            "richtig",
+            "falsch"
+          ]
+        },
+        "language_use": [
+          {
+            "subtype": "lexical_context",
+            "instruction": "Lesen Sie den Text. Welches Wort passt in die Lücke? Wählen Sie die richtige Antwort (A, B, C oder D).",
+            "text_with_gaps": "Ich [1] seit einem Jahr in einer kleinen Wohnung. Die Wohnung hat zwei Zimmer, eine Küche und ein Bad. Nächsten Monat möchte ich [2], weil ich mehr Platz brauche. Ich habe eine schöne 3-Zimmer-Wohnung [3]. Die [4] beträgt 850 Euro kalt. Der Vermieter ist sehr [5] und hat mir alle Fragen beantwortet. Ich kann am 1. Mai [6].",
+            "items": [
+              {
+                "gap_number": 1,
+                "options": [
+                  "A) wohne",
+                  "B) miete",
+                  "C) ziehe",
+                  "D) suche"
+                ],
+                "answer": "A) wohne",
+                "explanation": "'Wohnen' means to live/reside somewhere — the correct verb for describing where you currently live."
+              },
+              {
+                "gap_number": 2,
+                "options": [
+                  "A) einziehen",
+                  "B) ausziehen",
+                  "C) besichtigen",
+                  "D) renovieren"
+                ],
+                "answer": "B) ausziehen",
+                "explanation": "'Ausziehen' means to move out, which fits the context of leaving the current apartment."
+              },
+              {
+                "gap_number": 3,
+                "options": [
+                  "A) gezahlt",
+                  "B) vermietet",
+                  "C) gefunden",
+                  "D) gebaut"
+                ],
+                "answer": "C) gefunden",
+                "explanation": "'Eine Wohnung finden' — to find an apartment. The past participle 'gefunden' is needed here."
+              },
+              {
+                "gap_number": 4,
+                "options": [
+                  "A) Kaution",
+                  "B) Miete",
+                  "C) Nebenkosten",
+                  "D) Wohnung"
+                ],
+                "answer": "B) Miete",
+                "explanation": "The monthly rent amount (850 Euro) is described by 'die Miete'."
+              },
+              {
+                "gap_number": 5,
+                "options": [
+                  "A) teuer",
+                  "B) laut",
+                  "C) nett",
+                  "D) klein"
+                ],
+                "answer": "C) nett",
+                "explanation": "'Nett' (nice/kind) makes sense as a positive quality of the landlord who answered all questions."
+              },
+              {
+                "gap_number": 6,
+                "options": [
+                  "A) ausziehen",
+                  "B) besichtigen",
+                  "C) renovieren",
+                  "D) einziehen"
+                ],
+                "answer": "D) einziehen",
+                "explanation": "'Einziehen' means to move in — logical conclusion after finding a new apartment."
+              }
+            ]
+          },
+          {
+            "subtype": "grammatical_form",
+            "instruction": "Lesen Sie den Text. Welche Form passt in die Lücke? Wählen Sie die richtige Antwort (A, B, C oder D).",
+            "text_with_gaps": "Meine neue Wohnung ist sehr schön. Das Sofa steht in [1] Wohnzimmer direkt vor [2] Fenster. Auf [3] Tisch stehen Blumen. Das Bild hängt an [4] Wand neben [5] Tür. In [6] Küche gibt es viel Platz.",
+            "items": [
+              {
+                "gap_number": 1,
+                "options": [
+                  "A) dem",
+                  "B) der",
+                  "C) den",
+                  "D) des"
+                ],
+                "answer": "A) dem",
+                "explanation": "'das Wohnzimmer' is neuter → Dativ: dem Wohnzimmer. 'In + Dativ' for location (Wo?)."
+              },
+              {
+                "gap_number": 2,
+                "options": [
+                  "A) der",
+                  "B) dem",
+                  "C) den",
+                  "D) das"
+                ],
+                "answer": "B) dem",
+                "explanation": "'das Fenster' is neuter → Dativ: dem Fenster. 'Vor + Dativ' for location."
+              },
+              {
+                "gap_number": 3,
+                "options": [
+                  "A) der",
+                  "B) den",
+                  "C) dem",
+                  "D) das"
+                ],
+                "answer": "C) dem",
+                "explanation": "'der Tisch' is masculine → Dativ: dem Tisch. 'Auf + Dativ' for static location."
+              },
+              {
+                "gap_number": 4,
+                "options": [
+                  "A) dem",
+                  "B) den",
+                  "C) der",
+                  "D) die"
+                ],
+                "answer": "C) der",
+                "explanation": "'die Wand' is feminine → Dativ: der Wand. 'An + Dativ' for vertical surfaces."
+              },
+              {
+                "gap_number": 5,
+                "options": [
+                  "A) dem",
+                  "B) den",
+                  "C) das",
+                  "D) der"
+                ],
+                "answer": "D) der",
+                "explanation": "'die Tür' is feminine → Dativ: der Tür. 'Neben + Dativ' for relative location."
+              },
+              {
+                "gap_number": 6,
+                "options": [
+                  "A) dem",
+                  "B) der",
+                  "C) den",
+                  "D) das"
+                ],
+                "answer": "B) der",
+                "explanation": "'die Küche' is feminine → Dativ: der Küche. 'In + Dativ' for enclosed spaces."
+              }
+            ]
+          }
+        ],
+        "writing": {
+          "task_type": "semi_formal_email",
+          "situation": "Sie haben eine Wohnungsanzeige gelesen und interessieren sich für die Wohnung. Schreiben Sie eine E-Mail an den Vermieter Herrn Bauer. Fragen Sie nach der monatlichen Miete, der Größe der Wohnung und dem frühestmöglichen Einzugstermin.",
+          "recipient": "Herr Bauer (Vermieter)",
+          "register": "semi_formal",
+          "required_points": [
+            "Nach der monatlichen Miete (inkl. Nebenkosten) fragen",
+            "Die Größe der Wohnung und die Anzahl der Zimmer erfragen",
+            "Den frühestmöglichen Einzugstermin erfragen und einen Besichtigungstermin vorschlagen"
+          ],
+          "word_count_target": 60,
+          "useful_phrases": [
+            "Sehr geehrter Herr Bauer,",
+            "ich habe Ihre Anzeige gelesen und interessiere mich für die Wohnung.",
+            "Ich würde gerne wissen, ...",
+            "Könnten Sie mir bitte mitteilen, ...?",
+            "Wie hoch ist die monatliche Miete?",
+            "Wäre eine Besichtigung möglich?",
+            "Ich freue mich auf Ihre Antwort.",
+            "Mit freundlichen Grüßen,"
+          ],
+          "model_answer": "Sehr geehrter Herr Bauer,\n\nich habe Ihre Anzeige gelesen und interessiere mich sehr für die Wohnung. Könnten Sie mir bitte mitteilen, wie hoch die monatliche Miete inklusive Nebenkosten ist? Außerdem würde ich gerne wissen, wie groß die Wohnung ist und wie viele Zimmer sie hat. Ab wann wäre ein Einzug möglich? Ich würde die Wohnung gerne besichtigen – wäre nächste Woche ein Termin möglich?\n\nMit freundlichen Grüßen,\n[Ihr Name]",
+          "scoring_criteria": [
+            "Inhalt: Alle drei Pflichtpunkte sind angesprochen (Miete, Größe, Einzugstermin).",
+            "Kommunikative Gestaltung: Angemessene Anrede und Grußformel, höflicher Ton, klare Fragestellung.",
+            "Formale Richtigkeit: Weitgehend korrekte Grammatik und Rechtschreibung (Dativ-Formen, Verbkonjugation).",
+            "Wortschatz: Geeignete Ausdrücke für semi-formale Korrespondenz (Könnten Sie mir mitteilen...?, Ich würde gerne wissen...)."
+          ]
+        },
+        "speaking": {
+          "task_type": "describe_image",
+          "prompt": "Beschreiben Sie Ihr Traumzimmer. Wo sind die Möbel? Was steht, hängt oder liegt wo? Verwenden Sie Präpositionen.",
+          "image_description": "A tidy living room: a sofa against the left wall, a coffee table in front of the sofa, a large bookshelf next to the window on the right, a floor lamp behind the armchair in the corner, a rug under the coffee table, a picture hanging on the wall above the sofa.",
+          "time_suggestion_seconds": 90,
+          "useful_phrases": [
+            "Das Sofa steht an der Wand.",
+            "Der Tisch steht vor dem Sofa.",
+            "Das Regal steht neben dem Fenster.",
+            "Die Lampe hängt über dem Tisch.",
+            "Der Teppich liegt unter dem Tisch.",
+            "Das Bild hängt an der Wand.",
+            "In der Ecke steht ein Sessel.",
+            "Neben dem Bett steht ein Nachttisch.",
+            "Auf dem Regal liegen Bücher.",
+            "Zwischen dem Sofa und dem Fenster gibt es viel Licht."
+          ],
+          "example_response": "Mein Traumzimmer ist groß und gemütlich. Das Sofa steht an der Wand, und vor dem Sofa steht ein kleiner Tisch. Auf dem Tisch liegen Bücher und eine Fernbedienung. Neben dem Fenster steht ein großes Regal mit vielen Büchern. Die Lampe hängt über dem Esstisch. Unter dem Sofa liegt ein schöner Teppich. An der Wand hängen zwei Bilder. Das Zimmer ist hell und sehr schön.",
+          "exam_tips": [
+            "Fangen Sie einfach an: 'In meinem Traumzimmer gibt es...' oder 'Das Zimmer ist...' — ein guter Einstieg nimmt den Stress.",
+            "Benutzen Sie Verbindungswörter wie 'und', 'außerdem', 'auch' und 'daneben', damit Ihre Beschreibung flüssiger klingt.",
+            "Wenn Sie ein Wort vergessen: Beschreiben Sie es mit anderen Worten. Zum Beispiel statt 'Nachttisch': 'ein kleiner Tisch neben dem Bett'."
+          ]
+        }
+      }
+    }
+  }
+]

@@ -1,5 +1,6 @@
-package com.mrchk.pocketdeutsch.data.local
+package com.mrchk.pocketdeutsch.data.mapper
 
+import com.mrchk.pocketdeutsch.data.local.WrittenTaskResultEntity
 import com.mrchk.pocketdeutsch.domain.model.AiEvaluationResult
 
 fun WrittenTaskResultEntity.toUiModel(): AiEvaluationResult {

@@ -175,7 +175,7 @@ private fun PathwayContent(
 
             UnitHeader(
                 unitNumber = "Рівень ${lesson.level}",
-                unitTitle = lesson.topic,
+                unitTitle = lesson.title,
                 unitDescription = lesson.description ?: "Опануйте нову лексику та граматику.",
                 completedLessons = completedLessons,
                 totalLessons = totalLessons,

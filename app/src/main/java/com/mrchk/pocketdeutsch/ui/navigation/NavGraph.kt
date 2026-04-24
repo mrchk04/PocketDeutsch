@@ -20,7 +20,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.mrchk.pocketdeutsch.data.local.toUiModel
+import com.mrchk.pocketdeutsch.data.mapper.toUiModel
 import com.mrchk.pocketdeutsch.domain.model.TextCorrection
 import com.mrchk.pocketdeutsch.ui.features.learning.CourseUnitsScreen
 import com.mrchk.pocketdeutsch.ui.features.learning.CourseUnitsUiState
@@ -109,12 +109,15 @@ fun NavGraph(navController: NavHostController) {
         composable(
             route = Screen.LessonDetail.route, // "lesson_pathway/{lessonId}"
             arguments = listOf(navArgument("lessonId") { type = NavType.StringType })
-        ) {
+        ) {backStackEntry ->
+
+            val currentLessonId = backStackEntry.arguments?.getString("lessonId") ?: ""
+
             CoursePathwayScreen(
                 onBackClick = { navController.popBackStack() },
                 onNodeClick = { nodeId ->
                     when (nodeId) {
-                        "schreiben" -> navController.navigate(Screen.Writing.createRoute("les-a2-01")) // або динамічний ID
+                        "schreiben" -> navController.navigate(Screen.Writing.createRoute(currentLessonId))
                         // інші маршрути...
                     }
                 }

@@ -51,7 +51,7 @@ fun CourseUnitsScreen(
             PdBottomBar(
                 items = listOf(
                     BottomNavItem("Головна", R.drawable.ic_house_bold),
-                    BottomNavItem("Курс", R.drawable.ic_graduation_cap_bold),
+                    BottomNavItem("Навчання", R.drawable.ic_graduation_cap_bold),
                     BottomNavItem("Прогрес", R.drawable.ic_trend_up_bold),
                     BottomNavItem("Профіль", R.drawable.ic_user_bold)
                 ),

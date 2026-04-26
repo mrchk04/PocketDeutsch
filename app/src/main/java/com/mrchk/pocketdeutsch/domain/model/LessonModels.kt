@@ -93,6 +93,7 @@ data class ListeningPractice(
 )
 
 data class LanguageUsePractice(
+    val subtype: String,
     val instruction: String,
     val textWithGaps: String,
     val gaps: List<GapOption>
@@ -101,7 +102,8 @@ data class LanguageUsePractice(
 data class GapOption(
     val gapNumber: Int,
     val options: List<String>,
-    val correctAnswer: String
+    val correctAnswer: String,
+    val explanation: String
 )
 
 data class WritingExercise(

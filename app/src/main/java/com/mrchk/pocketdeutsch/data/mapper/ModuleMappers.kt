@@ -81,9 +81,17 @@ fun ModuleData.toDomainModel(): Lesson {
             ),
             languageUse = this.block3Skills.languageUse.map { task ->
                 LanguageUsePractice(
+                    subtype = task.subtype,
                     instruction = task.instruction,
                     textWithGaps = task.textWithGaps,
-                    gaps = task.items.map { GapOption(it.gapNumber, it.options, it.answer) }
+                    gaps = task.items.map { item ->
+                        GapOption(
+                            gapNumber = item.gapNumber,
+                            options = item.options,
+                            correctAnswer = item.answer,
+                            explanation = item.explanation
+                        )
+                    }
                 )
             },
             writing = WritingExercise(

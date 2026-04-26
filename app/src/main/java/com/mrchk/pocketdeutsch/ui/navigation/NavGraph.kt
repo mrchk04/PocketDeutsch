@@ -26,6 +26,9 @@ import com.mrchk.pocketdeutsch.ui.features.learning.CourseUnitsScreen
 import com.mrchk.pocketdeutsch.ui.features.learning.CourseUnitsUiState
 import com.mrchk.pocketdeutsch.ui.features.learning.CourseUnitsViewModel
 import com.mrchk.pocketdeutsch.ui.features.lesson.detail.CoursePathwayScreen
+import com.mrchk.pocketdeutsch.ui.features.lesson.theory.GrammarPracticeScreen
+import com.mrchk.pocketdeutsch.ui.features.lesson.theory.GrammarPracticeViewModel
+import com.mrchk.pocketdeutsch.ui.features.lesson.theory.TheoryScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.writing.EvaluationResultScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.writing.HistoryScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.writing.HistoryViewModel
@@ -115,10 +118,15 @@ fun NavGraph(navController: NavHostController) {
 
             CoursePathwayScreen(
                 onBackClick = { navController.popBackStack() },
-                onNodeClick = { nodeId ->
-                    when (nodeId) {
-                        "schreiben" -> navController.navigate(Screen.Writing.createRoute(currentLessonId))
-                        // інші маршрути...
+                onNodeClick = { id, type ->
+                    when (type) {
+                        "vocabulary" -> navController.navigate("vocabulary_screen/$id")
+                        "grammar" -> navController.navigate(Screen.Theory.createRoute(currentLessonId))
+                        "reading" -> navController.navigate("reading_screen/$id")
+                        "listening" -> navController.navigate("listening_screen/$id")
+                        "writing" -> navController.navigate(Screen.Writing.createRoute(currentLessonId))
+                        "speaking" -> navController.navigate("speaking_screen/$id")
+                        "language_use" -> navController.navigate("language_use_screen/$id")
                     }
                 }
             )
@@ -166,6 +174,30 @@ fun NavGraph(navController: NavHostController) {
                     }
                 }
             }
+        }
+
+        composable(route = Screen.Theory.route) { backStackEntry ->
+            val lessonId = backStackEntry.arguments?.getString("lessonId") ?: ""
+
+            TheoryScreen(
+                onBackClick = { navController.popBackStack() },
+                onNextClick = {
+                    navController.navigate("grammar_practice_screen/$lessonId")
+                }
+            )
+        }
+
+        composable(route = "grammar_practice_screen/{lessonId}") { backStackEntry ->
+            val lessonId = backStackEntry.arguments?.getString("lessonId") ?: ""
+            val viewModel: GrammarPracticeViewModel = hiltViewModel()
+
+            GrammarPracticeScreen(
+                onBackClick = { navController.popBackStack() },
+                onComplete = {
+                    viewModel.completeGrammarNode(lessonId)
+                    navController.popBackStack()
+                }
+            )
         }
 
     }

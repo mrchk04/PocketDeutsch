@@ -1280,33 +1280,43 @@ fun PdBottomActionBar(
     backgroundColor: Color = PocketTheme.colors.paper,
     mainButtonColor: Color = PocketTheme.colors.primary
 ) {
-    Row(
-        modifier = modifier
+    Column(
+        modifier = Modifier
             .fillMaxWidth()
-            .background(backgroundColor)
-            .padding(16.dp),
-        horizontalArrangement = Arrangement.spacedBy(16.dp),
-        verticalAlignment = Alignment.CenterVertically
+            .background(PocketTheme.colors.paper)
     ) {
-        // Опціональна додаткова кнопка з іконкою
-        if (secondaryIconRes != null && onSecondaryButtonClick != null) {
-            PdIconButton(
-                iconRes = secondaryIconRes,
-                onClick = onSecondaryButtonClick,
-                buttonSize = 56.dp, // Розмір, як у твоєму старому ботом-барі
-                iconSize = 28.dp,
-                cornerRadius = 16.dp,
-                backgroundColor = PocketTheme.colors.surface
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(2.dp)
+                .background(PocketTheme.colors.ink)
+        )
+        Row(
+            modifier = modifier
+                .fillMaxWidth()
+                .background(backgroundColor)
+                .padding(16.dp),
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            if (secondaryIconRes != null && onSecondaryButtonClick != null) {
+                PdIconButton(
+                    iconRes = secondaryIconRes,
+                    onClick = onSecondaryButtonClick,
+                    buttonSize = 56.dp,
+                    iconSize = 28.dp,
+                    cornerRadius = 16.dp,
+                    backgroundColor = PocketTheme.colors.surface
+                )
+            }
+
+            PdButton(
+                text = mainButtonText,
+                enabled = isMainButtonEnabled,
+                onClick = onMainButtonClick,
+                backgroundColor = mainButtonColor,
+                modifier = Modifier.weight(1f)
             )
         }
-
-        // Головна кнопка (займає весь вільний простір)
-        PdButton(
-            text = mainButtonText,
-            enabled = isMainButtonEnabled,
-            onClick = onMainButtonClick,
-            backgroundColor = mainButtonColor,
-            modifier = Modifier.weight(1f)
-        )
     }
 }

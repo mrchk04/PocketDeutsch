@@ -2,6 +2,7 @@ package com.mrchk.pocketdeutsch.di
 
 import android.content.Context
 import androidx.room.Room
+import com.mrchk.pocketdeutsch.data.local.CourseNodeDao
 import com.mrchk.pocketdeutsch.data.local.PocketDeutschDatabase
 import com.mrchk.pocketdeutsch.data.local.WrittenTaskDao
 import dagger.Module
@@ -29,5 +30,11 @@ object DatabaseModule {
     @Singleton
     fun provideWrittenTaskDao(database: PocketDeutschDatabase): WrittenTaskDao {
         return database.writtenTaskDao()
+    }
+
+    @Provides
+    @Singleton
+    fun provideCourseNodeDao(database: PocketDeutschDatabase): CourseNodeDao {
+        return database.courseNodeDao()
     }
 }

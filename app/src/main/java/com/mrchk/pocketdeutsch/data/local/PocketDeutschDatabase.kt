@@ -5,7 +5,10 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
 @Database(
-    entities = [WrittenTaskResultEntity::class],
+    entities = [
+        WrittenTaskResultEntity::class,
+        CourseNodeEntity::class
+    ],
     version = 1,
     exportSchema = false
 )
@@ -13,5 +16,5 @@ import androidx.room.TypeConverters
 abstract class PocketDeutschDatabase : RoomDatabase() {
 
     abstract fun writtenTaskDao(): WrittenTaskDao
-
+    abstract fun courseNodeDao(): CourseNodeDao
 }

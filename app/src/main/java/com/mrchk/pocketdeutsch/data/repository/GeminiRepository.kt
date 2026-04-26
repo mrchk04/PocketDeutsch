@@ -11,6 +11,7 @@ import com.mrchk.pocketdeutsch.data.local.WrittenTaskResultEntity
 import com.mrchk.pocketdeutsch.domain.model.AiEvaluationResult
 import com.mrchk.pocketdeutsch.domain.model.WritingTask
 import kotlinx.coroutines.flow.Flow
+import kotlinx.serialization.Serializable
 import javax.inject.Inject
 
 class GeminiRepository @Inject constructor(
@@ -65,6 +66,37 @@ class GeminiRepository @Inject constructor(
         }
     )
 
+    private val grammarModel = GenerativeModel(
+        modelName = "gemini-2.5-flash",
+        apiKey = BuildConfig.GEMINI_API_KEY,
+        generationConfig = generationConfig {
+            responseMimeType = "application/json"
+        },
+        systemInstruction = content {
+            text(
+                """
+                You are a strict, direct, and technical German language validator. 
+                Do NOT use flattering, supportive, pedagogical, or childish language. Your feedback must be dry and analytical.
+                
+                CRITICAL RULES:
+                1. PRIORITY: Grammatical and stylistic accuracy is the ONLY criteria for the "isCorrect" flag. 
+                2. IGNORE LENGTH: If the instruction asks for 4-5 sentences, but the student writes only 1 sentence, DO NOT mark it as incorrect. Evaluate whatever text is provided solely for grammar.
+                3. Explain ONLY the exact mistake the student made. 
+                4. Do NOT discuss or correct parts of the text that are already correct. 
+                5. Be absolutely precise with grammatical cases (Nominativ, Akkusativ, Dativ, Genitiv). Do not invent rules.
+                
+                Check the student's short text for grammatical and stylistic errors based on the instruction.
+                Output the raw JSON EXACTLY in this format without markdown:
+                {
+                  "isCorrect": <Boolean. true if there are absolutely no grammatical/stylistic errors in the provided text, false otherwise>,
+                  "feedback": "<String in Ukrainian. MUST start with 'Правильно: ' or 'Неправильно: '. Follow immediately with a short, factual explanation of the specific error. If the text is grammatically correct but too short, start with 'Правильно: ' and you MAY add a dry note at the end (e.g., 'Граматично все вірно. Зверніть увагу: за умовами завдання очікувався довший текст.'). Max 1-2 sentences.>",
+                  "correctedText": "<String. The fully corrected version of the text in German.>"
+                }
+                """.trimIndent()
+            )
+        }
+    )
+
     suspend fun evaluateText(task: WritingTask, studentText: String): AiEvaluationResult {
         val checklistText = task.requiredPoints.joinToString("\n") {
             "- ID: ${it.id}, Requirement: ${it.text}"
@@ -85,6 +117,20 @@ class GeminiRepository @Inject constructor(
         val responseText = response.text ?: throw Exception("Отримано порожню відповідь від ШІ")
 
         return jsonParser.decodeFromString<AiEvaluationResult>(responseText)
+    }
+
+    suspend fun checkSimpleGrammar(instruction: String, studentText: String): SimpleGrammarCheckResult {
+        val prompt = """
+            Task Instruction: "$instruction"
+            
+            Student's Text:
+            "$studentText"
+        """.trimIndent()
+
+        val response = grammarModel.generateContent(prompt)
+        val responseText = response.text ?: throw Exception("Отримано порожню відповідь від ШІ")
+
+        return jsonParser.decodeFromString<SimpleGrammarCheckResult>(responseText)
     }
 
     suspend fun saveResult(
@@ -111,3 +157,10 @@ class GeminiRepository @Inject constructor(
         return writtenTaskDao.getResultsForExercise(exerciseId)
     }
 }
+
+@Serializable
+data class SimpleGrammarCheckResult(
+    val isCorrect: Boolean,
+    val feedback: String,
+    val correctedText: String
+)

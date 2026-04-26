@@ -59,13 +59,14 @@ data class PathwayNodeData(
     val title: String,
     val subtitle: String,
     val iconRes: Int,
-    val state: NodeState
+    val state: NodeState,
+    val type: String,
 )
 
 @Composable
 fun CoursePathwayScreen(
     onBackClick: () -> Unit,
-    onNodeClick: (String) -> Unit,
+    onNodeClick: (String, String) -> Unit,
     viewModel: LessonDetailViewModel = hiltViewModel(),
 ) {
 
@@ -87,8 +88,8 @@ fun CoursePathwayScreen(
                     onNodeClick = onNodeClick,
                     onContinueClick = {
                         val nextTask = state.nodes.firstOrNull { it.state != NodeState.COMPLETED }
-                        val targetId = nextTask?.id ?: state.nodes.last().id
-                        onNodeClick(targetId)
+                            ?: state.nodes.last()
+                        onNodeClick(nextTask.id, nextTask.type)
                     }
                 )
             }
@@ -106,7 +107,7 @@ private fun PathwayContent(
     lesson: Lesson,
     nodes: List<PathwayNodeData>,
     onBackClick: () -> Unit,
-    onNodeClick: (String) -> Unit,
+    onNodeClick: (String, String) -> Unit,
     onContinueClick: () -> Unit
 ) {
     val ink: Color = PocketTheme.colors.ink
@@ -209,7 +210,7 @@ private fun PathwayContent(
                     nodes.forEach { node ->
                         PathwayNodeItem(
                             data = node,
-                            onClick = { onNodeClick(node.id) }
+                            onClick = { onNodeClick(node.id, node.type) }
                         )
                     }
                 }
@@ -308,11 +309,7 @@ fun PathwayNodeItem(
 
     Row(
         modifier = Modifier
-            .fillMaxWidth()
-            .graphicsLayer {
-                alpha = if (isCompleted) 0.7f else 1f
-                clip = false // Дозволяємо тіні виходити за межі контейнера!
-            },
+            .fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Box(
@@ -369,6 +366,10 @@ fun PathwayNodeItem(
         Box(
             modifier = Modifier
                 .weight(1f)
+                .graphicsLayer {
+                    alpha = if (isCompleted) 0.7f else 1f
+                    clip = false
+                }
                 .pdClickable(
                     onClick = onClick,
                     cornerRadius = 16.dp,
@@ -400,25 +401,5 @@ fun PathwayNodeItem(
                 }
             }
         }
-    }
-}
-
-
-@Preview
-@Composable
-fun CoursePathwayScreenPreview() {
-    PocketDeutschTheme {
-        val mockNodes = listOf(
-            PathwayNodeData("1", "Словник", "Нові слова: В аеропорту", R.drawable.ic_book_bookmark_bold, NodeState.COMPLETED),
-            PathwayNodeData("2", "Читання", "Текст: Лист з відпустки", R.drawable.ic_envelope_simple_bold, NodeState.COMPLETED),
-            PathwayNodeData("3", "Граматика", "Perfekt (sein vs haben)", R.drawable.ic_text_a_underline_bold, NodeState.ACTIVE),
-            PathwayNodeData("4", "Аудіювання", "Діалог у готелі", R.drawable.ic_headphones_bold, NodeState.NOT_STARTED),
-            PathwayNodeData("5", "Тест Розділу 4", "Перевірка знань", R.drawable.ic_graduation_cap_bold, NodeState.NOT_STARTED)
-        )
-
-        CoursePathwayScreen(
-            onBackClick = {},
-            onNodeClick = {},
-        )
     }
 }

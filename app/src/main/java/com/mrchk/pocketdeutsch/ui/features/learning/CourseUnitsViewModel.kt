@@ -46,23 +46,29 @@ class CourseUnitsViewModel @Inject constructor(
                     return@launch
                 }
 
-                val mappedUnits = allLessons
-                    .groupBy { it.level } // Групуємо по рівнях (напр. "A2", "B1")
-                    .flatMap { (level, lessonsInLevel) ->
-                        lessonsInLevel.mapIndexed { index, lesson ->
-                            UnitData(
-                                id = lesson.lessonId,
-                                level = level,
-                                unitNumber = "Модуль ${index + 1}",
-                                title = lesson.title,
-                                description = lesson.description,
-                                completedLessons = 0,
-                                totalLessons = lesson.totalTasks,
-                                state = UnitState.ACTIVE,
-                                isExam = false
-                            )
-                        }
+                val mappedUnits = allLessons.mapIndexed { index, lesson ->
+                    val completed = lessonRepository.getCompletedTasksCount(lesson.lessonId)
+                    val total = lesson.totalTasks
+
+                    val state = when {
+                        completed == total -> UnitState.COMPLETED
+                        completed > 0 -> UnitState.ACTIVE
+                        else -> UnitState.ACTIVE
                     }
+
+                    UnitData(
+                        id = lesson.lessonId,
+                        level = lesson.level,
+                        unitNumber = "Модуль ${index + 1}",
+                        title = lesson.title,
+                        description = lesson.description,
+                        completedLessons = completed, // ТЕПЕР ДИНАМІЧНО
+                        totalLessons = total,         // ТЕПЕР ДИНАМІЧНО
+                        state = state,                // ТЕПЕР ДИНАМІЧНО
+                        isExam = false
+                        // progress = completed.toFloat() / total.toFloat() // Якщо додала це поле в UnitData
+                    )
+                }
 
                 // Динамічно збираємо всі унікальні рівні з наших даних
                 val levels = mappedUnits.map { it.level }.distinct().sorted()

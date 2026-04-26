@@ -7,7 +7,9 @@ import com.mrchk.pocketdeutsch.domain.model.Lesson
 import com.mrchk.pocketdeutsch.domain.model.WritingExercise
 import com.mrchk.pocketdeutsch.domain.model.EvaluationCriterion
 import com.mrchk.pocketdeutsch.domain.model.ExamPracticeSection
+import com.mrchk.pocketdeutsch.domain.model.FormsTableDomain
 import com.mrchk.pocketdeutsch.domain.model.GapOption
+import com.mrchk.pocketdeutsch.domain.model.GrammarRuleDomain
 import com.mrchk.pocketdeutsch.domain.model.GrammarSection
 import com.mrchk.pocketdeutsch.domain.model.InteractiveExercise
 import com.mrchk.pocketdeutsch.domain.model.LanguageUsePractice
@@ -38,9 +40,23 @@ fun ModuleData.toDomainModel(): Lesson {
 
         grammar = GrammarSection(
             topic = this.block2Grammar.grammarTopic,
-            theoryText = this.block2Grammar.explanation + "\n\n" +
-                    this.block2Grammar.rules.joinToString("\n") { "• ${it.rule}" },
+            explanation = this.block2Grammar.explanation,
+            // Мапимо список правил у доменні моделі
+            rules = this.block2Grammar.rules.map { dtoRule ->
+                GrammarRuleDomain(
+                    rule = dtoRule.rule,
+                    example = dtoRule.example
+                )
+            },
+            // Безпечно мапимо таблицю, якщо вона є
+            formsTable = this.block2Grammar.formsTable?.let { dtoTable ->
+                FormsTableDomain(
+                    columns = dtoTable.columns,
+                    rows = dtoTable.rows
+                )
+            },
             warningNotes = this.block2Grammar.achtung,
+            contextExamples = this.block2Grammar.topicConnectionExamples,
             exercises = this.block2Grammar.exercises.map { it.toDomainExercise() }
         ),
 
@@ -89,7 +105,7 @@ fun ModuleData.toDomainModel(): Lesson {
 }
 
 // Допоміжна функція для мапінгу вправ
-fun StandardExercise.toDomainExercise() = InteractiveExercise(
+fun StandardExercise.toDomainExercise(): InteractiveExercise = InteractiveExercise(
     type = this.type,
     instruction = this.instruction,
     items = this.items,

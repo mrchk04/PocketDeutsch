@@ -83,7 +83,7 @@ data class Block2Grammar(
     @SerialName("grammar_topic") val grammarTopic: String,
     val explanation: String,
     val rules: List<GrammarRule>,
-    @SerialName("forms_table") val formsTable: FormsTable,
+    @SerialName("forms_table") val formsTable: FormsTable? = null,
     val achtung: List<String>,
     @SerialName("topic_connection_examples") val topicConnectionExamples: List<String>,
     val exercises: List<StandardExercise>

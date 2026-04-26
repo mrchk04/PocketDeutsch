@@ -1,5 +1,7 @@
 package com.mrchk.pocketdeutsch.domain.model
 
+import com.mrchk.pocketdeutsch.data.local.dto.StandardExercise
+
 data class Lesson(
     val lessonId: String,
     val level: String,
@@ -54,9 +56,22 @@ data class CollocationUi(
 
 data class GrammarSection(
     val topic: String,
-    val theoryText: String,
+    val explanation: String,
+    val rules: List<GrammarRuleDomain>,
+    val formsTable: FormsTableDomain?,
     val warningNotes: List<String>,
+    val contextExamples: List<String>,
     val exercises: List<InteractiveExercise>
+)
+
+data class GrammarRuleDomain(
+    val rule: String,
+    val example: String
+)
+
+data class FormsTableDomain(
+    val columns: List<String>,
+    val rows: List<List<String>>
 )
 
 data class ExamPracticeSection(

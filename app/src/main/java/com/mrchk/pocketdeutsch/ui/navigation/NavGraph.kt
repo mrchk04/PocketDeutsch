@@ -28,6 +28,8 @@ import com.mrchk.pocketdeutsch.ui.features.learning.CourseUnitsViewModel
 import com.mrchk.pocketdeutsch.ui.features.lesson.detail.CoursePathwayScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.language_use.LanguageUseScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.language_use.LanguageUseViewModel
+import com.mrchk.pocketdeutsch.ui.features.lesson.speaking.SpeakingScreen
+import com.mrchk.pocketdeutsch.ui.features.lesson.speaking.SpeakingViewModel
 import com.mrchk.pocketdeutsch.ui.features.lesson.theory.GrammarPracticeScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.theory.GrammarPracticeViewModel
 import com.mrchk.pocketdeutsch.ui.features.lesson.theory.TheoryScreen
@@ -127,7 +129,7 @@ fun NavGraph(navController: NavHostController) {
                         "reading" -> navController.navigate("reading_screen/$id")
                         "listening" -> navController.navigate("listening_screen/$id")
                         "writing" -> navController.navigate(Screen.Writing.createRoute(currentLessonId))
-                        "speaking" -> navController.navigate("speaking_screen/$id")
+                        "speaking" -> navController.navigate("speaking_screen/$currentLessonId")
                         "language_use" -> navController.navigate("language_use_screen/$currentLessonId")
                     }
                 }
@@ -214,6 +216,23 @@ fun NavGraph(navController: NavHostController) {
                 onBackClick = { navController.popBackStack() },
                 onComplete = {
                     viewModel.completeExerciseNode(lessonId)
+                    navController.popBackStack()
+                }
+            )
+        }
+
+        composable(
+            route = "speaking_screen/{lessonId}",
+            arguments = listOf(navArgument("lessonId") { type = NavType.StringType })
+        ) { backStackEntry ->
+            val lessonId = backStackEntry.arguments?.getString("lessonId") ?: ""
+            val viewModel = hiltViewModel<SpeakingViewModel>()
+
+            SpeakingScreen(
+                viewModel = viewModel,
+                onBackClick = { navController.popBackStack() },
+                onComplete = {
+                    viewModel.completeExerciseNode()
                     navController.popBackStack()
                 }
             )

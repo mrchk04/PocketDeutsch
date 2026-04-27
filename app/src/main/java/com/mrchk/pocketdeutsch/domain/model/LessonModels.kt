@@ -121,8 +121,11 @@ data class EvaluationCriterion(
 
 data class SpeakingPractice(
     val taskType: String,
-    val instruction: String,
+    val prompt: String,
+    val imageDescription: String,
+    val timeSuggestionSeconds: Int,
     val usefulPhrases: List<String>,
+    val exampleResponse: String,
     val examTips: List<String>
 )
 

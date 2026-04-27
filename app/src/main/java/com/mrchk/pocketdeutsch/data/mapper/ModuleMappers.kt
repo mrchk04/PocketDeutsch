@@ -104,8 +104,11 @@ fun ModuleData.toDomainModel(): Lesson {
             ),
             speaking = SpeakingPractice(
                 taskType = this.block3Skills.speaking.taskType,
-                instruction = this.block3Skills.speaking.prompt,
+                prompt = this.block3Skills.speaking.prompt,
+                imageDescription = this.block3Skills.speaking.imageDescription,
+                timeSuggestionSeconds = this.block3Skills.speaking.timeSuggestionSeconds,
                 usefulPhrases = this.block3Skills.speaking.usefulPhrases,
+                exampleResponse = this.block3Skills.speaking.exampleResponse,
                 examTips = this.block3Skills.speaking.examTips
             )
         )

@@ -62,12 +62,13 @@ fun ModuleData.toDomainModel(): Lesson {
 
         examPractice = ExamPracticeSection(
             reading = ReadingPractice(
+                textType = this.block3Skills.reading.textType,
                 text = this.block3Skills.reading.text,
                 exercise = InteractiveExercise(
                     type = this.block3Skills.reading.exerciseType,
                     instruction = this.block3Skills.reading.instruction,
                     items = this.block3Skills.reading.items,
-                    answers = this.block3Skills.reading.answers
+                    answers = this.block3Skills.reading.answers,
                 )
             ),
             listening = ListeningPractice(

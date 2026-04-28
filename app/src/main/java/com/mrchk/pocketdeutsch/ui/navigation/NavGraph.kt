@@ -28,6 +28,8 @@ import com.mrchk.pocketdeutsch.ui.features.learning.CourseUnitsViewModel
 import com.mrchk.pocketdeutsch.ui.features.lesson.detail.CoursePathwayScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.language_use.LanguageUseScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.language_use.LanguageUseViewModel
+import com.mrchk.pocketdeutsch.ui.features.lesson.reading.ReadingScreen
+import com.mrchk.pocketdeutsch.ui.features.lesson.reading.ReadingViewModel
 import com.mrchk.pocketdeutsch.ui.features.lesson.speaking.SpeakingScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.speaking.SpeakingViewModel
 import com.mrchk.pocketdeutsch.ui.features.lesson.theory.GrammarPracticeScreen
@@ -126,7 +128,7 @@ fun NavGraph(navController: NavHostController) {
                     when (type) {
                         "vocabulary" -> navController.navigate("vocabulary_screen/$id")
                         "grammar" -> navController.navigate(Screen.Theory.createRoute(currentLessonId))
-                        "reading" -> navController.navigate("reading_screen/$id")
+                        "reading" -> navController.navigate("reading_screen/$currentLessonId")
                         "listening" -> navController.navigate("listening_screen/$id")
                         "writing" -> navController.navigate(Screen.Writing.createRoute(currentLessonId))
                         "speaking" -> navController.navigate("speaking_screen/$currentLessonId")
@@ -229,6 +231,21 @@ fun NavGraph(navController: NavHostController) {
             val viewModel = hiltViewModel<SpeakingViewModel>()
 
             SpeakingScreen(
+                viewModel = viewModel,
+                onBackClick = { navController.popBackStack() },
+                onComplete = {
+                    viewModel.completeExerciseNode()
+                    navController.popBackStack()
+                }
+            )
+        }
+
+        composable(
+            route = "reading_screen/{lessonId}",
+            arguments = listOf(navArgument("lessonId") { type = NavType.StringType })
+        ) { backStackEntry ->
+            val viewModel = hiltViewModel<ReadingViewModel>()
+            ReadingScreen(
                 viewModel = viewModel,
                 onBackClick = { navController.popBackStack() },
                 onComplete = {

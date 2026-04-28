@@ -83,6 +83,7 @@ data class ExamPracticeSection(
 )
 
 data class ReadingPractice(
+    val textType: String,
     val text: String,
     val exercise: InteractiveExercise
 )

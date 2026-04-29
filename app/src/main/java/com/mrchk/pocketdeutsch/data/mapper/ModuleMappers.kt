@@ -72,6 +72,7 @@ fun ModuleData.toDomainModel(): Lesson {
                 )
             ),
             listening = ListeningPractice(
+                audioUrl = this.block3Skills.listening.audioUrl,
                 transcript = this.block3Skills.listening.transcript,
                 exercise = InteractiveExercise(
                     type = this.block3Skills.listening.exerciseType,

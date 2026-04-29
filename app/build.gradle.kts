@@ -77,7 +77,6 @@ dependencies {
     kapt(libs.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
 
-
     // Room
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
@@ -86,9 +85,12 @@ dependencies {
     // Coil
     implementation(libs.coil.compose)
 
-    // Serialization & AI (Тепер у єдиному стилі Version Catalogs!)
+    // Serialization & AI
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.generativeai)
+
+    //ExoPlayer
+    implementation(libs.media3.exoplayer)
 
     // Testing
     testImplementation(libs.junit)

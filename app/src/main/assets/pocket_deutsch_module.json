@@ -432,11 +432,11 @@
           ]
         },
         "listening": {
-          "audio_type": "dialogue",
+          "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+          "audioType": "dialogue",
           "transcript": "Anna: Hallo Tom! Hast du schon eine neue Wohnung gefunden?\nTom: Noch nicht. Ich suche seit drei Wochen. Es ist wirklich schwierig.\nAnna: Was ist dir denn wichtig bei einer Wohnung?\nTom: Also, sie soll nicht zu teuer sein. Maximal 700 Euro warm. Und ich brauche mindestens zwei Zimmer.\nAnna: Hast du schon Wohnungen besichtigt?\nTom: Ja, zwei. Eine war schön, aber zu weit von der Arbeit entfernt. Die andere war billig, aber sehr laut wegen der Straße.\nAnna: Ich habe gehört, dass es im Neubaugebiet am Stadtrand günstige Wohnungen gibt.\nTom: Wirklich? Das klingt gut. Weißt du, ob die Wohnungen möbliert sind?\nAnna: Nein, ich glaube nicht. Aber du hast doch schon Möbel, oder?\nTom: Ja, stimmt. Ich werde mal nachschauen. Danke für den Tipp!",
-          "tts_instructions": "Speaker Anna: female ~30, friendly and helpful tone. Speaker Tom: male ~35, slightly frustrated but hopeful. Moderate pace (A2). Standard German Hochdeutsch. Natural pauses between turns.",
-          "exercise_type": "richtig_falsch",
-          "instruction": "Hören Sie den Dialog und entscheiden Sie: richtig (R) oder falsch (F)?",
+          "exerciseType": "richtig_falsch",
+          "instruction": "Hören Sie den Dialog und entscheiden Sie: richtig oder falsch?",
           "items": [
             "1. Tom sucht seit drei Wochen eine Wohnung.",
             "2. Tom möchte maximal 600 Euro Miete zahlen.",

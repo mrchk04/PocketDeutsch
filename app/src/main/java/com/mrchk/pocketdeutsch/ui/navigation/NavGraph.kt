@@ -28,6 +28,8 @@ import com.mrchk.pocketdeutsch.ui.features.learning.CourseUnitsViewModel
 import com.mrchk.pocketdeutsch.ui.features.lesson.detail.CoursePathwayScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.language_use.LanguageUseScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.language_use.LanguageUseViewModel
+import com.mrchk.pocketdeutsch.ui.features.lesson.listening.ListeningScreen
+import com.mrchk.pocketdeutsch.ui.features.lesson.listening.ListeningViewModel
 import com.mrchk.pocketdeutsch.ui.features.lesson.reading.ReadingScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.reading.ReadingViewModel
 import com.mrchk.pocketdeutsch.ui.features.lesson.speaking.SpeakingScreen
@@ -129,7 +131,7 @@ fun NavGraph(navController: NavHostController) {
                         "vocabulary" -> navController.navigate("vocabulary_screen/$id")
                         "grammar" -> navController.navigate(Screen.Theory.createRoute(currentLessonId))
                         "reading" -> navController.navigate("reading_screen/$currentLessonId")
-                        "listening" -> navController.navigate("listening_screen/$id")
+                        "listening" -> navController.navigate("listening_screen/$currentLessonId")
                         "writing" -> navController.navigate(Screen.Writing.createRoute(currentLessonId))
                         "speaking" -> navController.navigate("speaking_screen/$currentLessonId")
                         "language_use" -> navController.navigate("language_use_screen/$currentLessonId")
@@ -251,6 +253,21 @@ fun NavGraph(navController: NavHostController) {
                 onComplete = {
                     viewModel.completeExerciseNode()
                     navController.popBackStack()
+                }
+            )
+        }
+
+        composable(
+            route = "listening_screen/{lessonId}",
+            arguments = listOf(navArgument("lessonId") { type = NavType.StringType })
+        ) {
+            val viewModel = hiltViewModel<ListeningViewModel>()
+            ListeningScreen(
+                viewModel = viewModel,
+                onBackClick = { navController.popBackStack() },
+                onComplete = {
+                    viewModel.completeExerciseNode()
+                    navController.popBackStack() // Або перехід на екран результатів
                 }
             )
         }

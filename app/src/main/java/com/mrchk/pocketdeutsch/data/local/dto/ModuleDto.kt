@@ -124,10 +124,10 @@ data class ReadingSkill(
 
 @Serializable
 data class ListeningSkill(
-    @SerialName("audio_type") val audioType: String,
+    @SerialName("audioUrl") val audioUrl: String? = null,
+    @SerialName("audioType") val audioType: String,
     val transcript: String,
-    @SerialName("tts_instructions") val ttsInstructions: String,
-    @SerialName("exercise_type") val exerciseType: String,
+    @SerialName("exerciseType") val exerciseType: String,
     val instruction: String,
     val items: List<String>,
     val answers: List<String>

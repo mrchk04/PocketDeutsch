@@ -48,15 +48,9 @@ class LanguageUseViewModel @Inject constructor(
                 val lesson = lessonRepository.getLessonById(lessonId)
                 val exercises = lesson?.examPractice?.languageUse ?: emptyList()
 
-                // ДОДАЄМО ЛОГИ, щоб побачити, що прийшло з бази
-                android.util.Log.d("DEBUG_EXERCISE", "Шукаємо урок ID: $lessonId")
-                android.util.Log.d("DEBUG_EXERCISE", "Урок знайдено: ${lesson != null}")
-                android.util.Log.d("DEBUG_EXERCISE", "Кількість вправ: ${exercises.size}")
-
                 _allExercises.value = exercises
             } catch (e: Exception) {
-                android.util.Log.e("DEBUG_EXERCISE", "Помилка", e)
-                _allExercises.value = emptyList() // Щоб спінер не крутився вічно при помилці
+                _allExercises.value = emptyList()
             }
         }
     }
@@ -87,6 +81,10 @@ class LanguageUseViewModel @Inject constructor(
 
     fun checkAnswers() {
         _isChecked.value = true
+    }
+
+    fun dismissGapSelection() {
+        _activeGap.value = null
     }
 
     fun completeExerciseNode(lessonId: String) {

@@ -169,22 +169,12 @@ fun LanguageUseScreen(
                     )
                     .padding(20.dp)
             ) {
-                /*InteractiveGapText(
-                    textWithGaps = exercise.textWithGaps,
-                    selectedAnswers = selectedAnswers,
-                    isChecked = isChecked,
-                    exerciseItems = exercise.gaps,
-                    onGapClick = { num ->
-                        val item = exercise.gaps.find { it.gapNumber == num }
-                        item?.let { viewModel.onGapClick(it) }
-                    }
-                )*/
                 InteractiveGapText(
                     textWithGaps = currentExercise.textWithGaps,
                     selectedAnswers = selectedAnswers,
                     isChecked = isChecked,
                     exerciseItems = currentExercise.gaps,
-                    activeGapNumber = activeGap?.gapNumber, // Передаємо поточний відкритий пропуск
+                    activeGapNumber = activeGap?.gapNumber,
                     onGapClick = { num ->
                         val item = currentExercise.gaps.find { it.gapNumber == num }
                         item?.let { viewModel.onGapClick(it) }
@@ -193,8 +183,7 @@ fun LanguageUseScreen(
                         viewModel.selectOption(num, option)
                     },
                     onDismissMenu = {
-                        // Якщо функція закриття не реалізована у ViewModel, просто передай 0 та ""
-                        viewModel.selectOption(0, "")
+                        viewModel.dismissGapSelection()
                     }
                 )
             }

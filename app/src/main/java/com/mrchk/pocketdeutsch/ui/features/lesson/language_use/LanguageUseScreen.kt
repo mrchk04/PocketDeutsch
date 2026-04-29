@@ -28,6 +28,8 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -78,6 +80,8 @@ fun LanguageUseScreen(
         return
     }
 
+    val ink: Color = PocketTheme.colors.ink
+
     Scaffold(
         topBar = {
             val totalSteps = exercisesList.size
@@ -96,7 +100,22 @@ fun LanguageUseScreen(
         },
         bottomBar = {
             // Кнопка перевірки внизу
-            Box(modifier = Modifier.padding(20.dp)) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(PocketTheme.colors.paper)
+                    .drawBehind {
+                        val strokeWidth = 2.dp.toPx()
+                        drawLine(
+                            color = ink,
+                            start = Offset(0f, 0f),
+                            end = Offset(size.width, 0f),
+                            strokeWidth = strokeWidth
+                        )
+                    }
+                    .padding(16.dp)
+                    .padding(bottom = 8.dp)
+            ) {
                 PdButton(
                     text = when {
                         !isChecked -> "Перевірити"
@@ -110,7 +129,7 @@ fun LanguageUseScreen(
                             viewModel.moveToNextStep(onAllFinished = onComplete)
                         }
                     },
-                    backgroundColor = if (isChecked) PocketTheme.colors.success else PocketTheme.colors.ink,
+                    backgroundColor = if (isChecked) PocketTheme.colors.success else PocketTheme.colors.primary,
                     modifier = Modifier.fillMaxWidth()
                 )
             }
@@ -133,7 +152,7 @@ fun LanguageUseScreen(
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = currentExercise.instruction,
-                style = PocketTheme.typography.headlineSmall,
+                style = PocketTheme.typography.titleLarge,
                 color = PocketTheme.colors.ink
             )
 

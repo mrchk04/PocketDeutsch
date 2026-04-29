@@ -55,6 +55,8 @@ fun ReadingScreen(
     val correctAnswer = exercise.answers[currentIndex]
     val isLastQuestion = currentIndex == exercise.items.size - 1
 
+    val ink: Color = PocketTheme.colors.ink
+
     Scaffold(
         topBar = {
             PdExerciseTopBar(
@@ -64,7 +66,22 @@ fun ReadingScreen(
             )
         },
         bottomBar = {
-            Box(modifier = Modifier.padding(20.dp).navigationBarsPadding()) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(PocketTheme.colors.paper)
+                    .drawBehind {
+                        val strokeWidth = 2.dp.toPx()
+                        drawLine(
+                            color = ink,
+                            start = Offset(0f, 0f),
+                            end = Offset(size.width, 0f),
+                            strokeWidth = strokeWidth
+                        )
+                    }
+                    .padding(16.dp)
+                    .padding(bottom = 8.dp)
+            ) {
                 if (isChecked) {
                     PdButton(
                         text = if (isLastQuestion) "Завершити" else "Далі",
@@ -151,8 +168,8 @@ fun ExerciseLayoutShell(
 
         Text(
             text = instruction,
-            style = PocketTheme.typography.titleMedium,
-            color = PocketTheme.colors.primary,
+            style = PocketTheme.typography.titleLarge,
+            color = PocketTheme.colors.ink,
             modifier = Modifier.padding(bottom = 12.dp)
         )
 

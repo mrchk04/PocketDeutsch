@@ -200,8 +200,8 @@ fun InteractiveGapText(
     Text(
         text = annotatedString,
         inlineContent = inlineContent,
-        style = PocketTheme.typography.bodyLarge.copy(
-            lineHeight = 38.sp,
+        style = PocketTheme.typography.bodyMedium.copy(
+            lineHeight = 35.sp,
             fontSize = 19.sp
         )
     )

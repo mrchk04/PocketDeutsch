@@ -77,7 +77,7 @@ fun GrammarPracticeScreen(
                         .height(2.dp)
                         .background(PocketTheme.colors.ink)
                 )
-                Box(modifier = Modifier.padding(16.dp)) {
+                Box(modifier = Modifier.padding(16.dp).padding(bottom = 8.dp)) {
                     PdButton(
                         text = if (uiState.isChecked) "Далі" else "Перевірити",
                         onClick = {

@@ -89,6 +89,7 @@ data class ReadingPractice(
 )
 
 data class ListeningPractice(
+    val audioUrl: String?,
     val transcript: String,
     val exercise: InteractiveExercise
 )

@@ -49,9 +49,7 @@ class WritingViewModel @Inject constructor(
                 val jsonTask = lesson?.examPractice?.writing
 
                 if (lesson != null && jsonTask != null) {
-                    // Перший рядок — це завжди опис ситуації
                     val promptText = jsonTask.instruction.firstOrNull() ?: ""
-                    // Решта — це наші пункти (чекліст)
                     val bulletPoints = jsonTask.instruction.drop(1)
 
                     val uiTask = WritingTask(
@@ -73,6 +71,17 @@ class WritingViewModel @Inject constructor(
                     it.copy(isLoading = false, errorMessage = "Помилка завантаження: ${e.message}")
                 }
             }
+        }
+    }
+
+    private suspend fun completeWritingNode() {
+        val currentLessonId = lessonId
+        try {
+            val nodeId = "${currentLessonId}_writing"
+            lessonRepository.completeNode(nodeId)
+            Log.d("WritingViewModel", "Progress updated for node: $nodeId")
+        } catch (e: Exception) {
+            Log.e("WritingViewModel", "Помилка при збереженні прогресу: ${e.message}")
         }
     }
 
@@ -132,6 +141,8 @@ class WritingViewModel @Inject constructor(
                     evaluation = evaluationResult
                 )
 
+                completeWritingNode()
+
                 _uiState.update {
                     it.copy(
                         isLoading = false,
@@ -168,27 +179,5 @@ class WritingViewModel @Inject constructor(
 
     fun clearError() {
         _uiState.update { it.copy(errorMessage = null) }
-    }
-
-    private fun loadMockTask() {
-        val mockTask = WritingTask(
-            id = "task_1",
-            level = ProficiencyLevel.B1,
-            title = "Schreiben: E-Mail",
-            promptText = "Deine Freundin Anna hat dich zur Geburtstagsparty eingeladen...",
-            minWords = 40,
-            requiredPoints = listOf(
-                TaskRequirement("1", "welche Ausflüge Sie mit Marianne machen wollen"),
-                TaskRequirement("2", "welche Kleidung sie mitnehmen soll")
-            ),
-            hints = listOf("Hallo Anna,\n\n", "Vielen Dank für ", "\n\nLiebe Grüße,\n")
-        )
-
-        _uiState.update {
-            it.copy(
-                task = mockTask,
-                checklist = mockTask.requiredPoints
-            )
-        }
     }
 }

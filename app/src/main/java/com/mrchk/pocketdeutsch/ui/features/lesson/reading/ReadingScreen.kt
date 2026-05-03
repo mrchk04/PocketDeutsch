@@ -3,13 +3,17 @@ package com.mrchk.pocketdeutsch.ui.features.lesson.reading
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -23,6 +27,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.mrchk.pocketdeutsch.domain.model.AdPart
 import com.mrchk.pocketdeutsch.ui.components.PdButton
 import com.mrchk.pocketdeutsch.ui.components.PdExerciseTopBar
 import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
@@ -31,11 +36,13 @@ import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
 fun ReadingScreen(
     viewModel: ReadingViewModel,
     onBackClick: () -> Unit,
-    onComplete: () -> Unit
+    onComplete: () -> Unit,
 ) {
     val data by viewModel.readingData.collectAsState()
-    val currentIndex by viewModel.currentQuestionIndex.collectAsState()
+    val exerciseIndex by viewModel.currentExerciseIndex.collectAsState() // Індекс вправи (0 або 1)
+    val currentIndex by viewModel.currentQuestionIndex.collectAsState() // Індекс питання всередині вправи
     val selectedAnswer by viewModel.selectedAnswer.collectAsState()
+    val userTextAnswer by viewModel.userTextAnswer.collectAsState() // Для вправи типу article
     val isChecked by viewModel.isChecked.collectAsState()
     val usedAnswers by viewModel.usedAnswers.collectAsState()
 
@@ -47,21 +54,31 @@ fun ReadingScreen(
     }
 
     val reading = data!!
-    val exercise = reading.exercise
+    // Беремо поточну вправу зі списку
+    val currentExercise = reading.exercises.getOrNull(exerciseIndex) ?: return
 
-    if (currentIndex >= exercise.items.size) return
+    if (currentIndex >= currentExercise.items.size) return
 
-    val currentItem = exercise.items[currentIndex]
-    val correctAnswer = exercise.answers[currentIndex]
-    val isLastQuestion = currentIndex == exercise.items.size - 1
+    val currentItem = currentExercise.items[currentIndex]
+    val correctAnswer = currentExercise.answers[currentIndex]
+
+    // Перевірка, чи це останнє питання ВЗАГАЛІ (в останній вправі)
+    val isLastExercise = exerciseIndex == reading.exercises.size - 1
+    val isLastQuestionInExercise = currentIndex == currentExercise.items.size - 1
+    val isFinalStep = isLastExercise && isLastQuestionInExercise
 
     val ink: Color = PocketTheme.colors.ink
 
     Scaffold(
         topBar = {
+            // Розраховуємо загальний прогрес для всіх вправ разом
+            val totalItems = reading.exercises.sumOf { it.items.size }
+            val completedInPrevious = reading.exercises.take(exerciseIndex).sumOf { it.items.size }
+            val currentProgress = (completedInPrevious + currentIndex + 1).toFloat() / totalItems
+
             PdExerciseTopBar(
-                progress = (currentIndex + 1).toFloat() / exercise.items.size,
-                progressText = "${currentIndex + 1}/${exercise.items.size}",
+                progress = currentProgress,
+                progressText = "${completedInPrevious + currentIndex + 1}/$totalItems",
                 onBackClick = onBackClick
             )
         },
@@ -71,12 +88,11 @@ fun ReadingScreen(
                     .fillMaxWidth()
                     .background(PocketTheme.colors.paper)
                     .drawBehind {
-                        val strokeWidth = 2.dp.toPx()
                         drawLine(
                             color = ink,
                             start = Offset(0f, 0f),
                             end = Offset(size.width, 0f),
-                            strokeWidth = strokeWidth
+                            strokeWidth = 2.dp.toPx()
                         )
                     }
                     .padding(16.dp)
@@ -84,36 +100,38 @@ fun ReadingScreen(
             ) {
                 if (isChecked) {
                     PdButton(
-                        text = if (isLastQuestion) "Завершити" else "Далі",
+                        text = if (isFinalStep) "Завершити" else "Далі",
                         onClick = {
-                            if (isLastQuestion) onComplete() else viewModel.nextQuestion()
+                            if (isFinalStep) onComplete() else viewModel.nextQuestion()
                         },
                         modifier = Modifier.fillMaxWidth()
                     )
                 } else {
+                    // Кнопка активна, якщо обрано варіант АБО введено текст
+                    val canCheck = selectedAnswer != null || userTextAnswer.isNotBlank()
+
                     PdButton(
                         text = "Перевірити",
                         onClick = { viewModel.checkAnswer() },
                         modifier = Modifier.fillMaxWidth(),
-                        enabled = selectedAnswer != null
+                        enabled = canCheck
                     )
                 }
             }
         },
         containerColor = PocketTheme.colors.paper
     ) { padding ->
-        // Головний контейнер на весь екран
         Box(
             modifier = Modifier
                 .padding(padding)
                 .fillMaxSize()
                 .padding(horizontal = 20.dp, vertical = 12.dp)
         ) {
-            when (exercise.type) {
-                "information_extraction" -> {
+            when (currentExercise.type) {
+                "advertisements", "information_extraction" -> {
                     AdvertisementExercise(
-                        instruction = exercise.instruction,
-                        text = reading.text,
+                        instruction = currentExercise.instruction,
+                        adParts = reading.adParts ?: emptyList(),
                         currentItem = currentItem,
                         correctAnswer = correctAnswer,
                         selectedAnswer = selectedAnswer,
@@ -121,9 +139,23 @@ fun ReadingScreen(
                         onAnswerSelect = { viewModel.selectAnswer(it) }
                     )
                 }
+
+                "article" -> {
+                    // Новий відокремлений компонент для вільного вводу
+                    FreeTextReadingExercise(
+                        instruction = currentExercise.instruction,
+                        text = reading.text,
+                        question = currentItem,
+                        userAnswer = userTextAnswer,
+                        correctAnswer = correctAnswer,
+                        isChecked = isChecked,
+                        onValueChange = { viewModel.onUserTextChange(it) }
+                    )
+                }
+
                 "multiple_choice" -> {
                     ClassicReadingExercise(
-                        instruction = exercise.instruction,
+                        instruction = currentExercise.instruction,
                         text = reading.text,
                         currentItem = currentItem,
                         correctAnswer = correctAnswer,
@@ -132,21 +164,23 @@ fun ReadingScreen(
                         onAnswerSelect = { viewModel.selectAnswer(it) }
                     )
                 }
+
                 "matching_headings" -> {
                     MatchingHeadingsExercise(
-                        instruction = exercise.instruction,
+                        instruction = currentExercise.instruction,
                         text = reading.text,
                         currentItem = currentItem,
                         correctAnswer = correctAnswer,
                         selectedAnswer = selectedAnswer,
                         isChecked = isChecked,
-                        usedAnswers = usedAnswers, // ПЕРЕДАЄМО СЮДИ
+                        usedAnswers = usedAnswers,
                         onAnswerSelect = { viewModel.selectAnswer(it) }
                     )
                 }
+
                 else -> {
                     Text(
-                        text = "Невідомий тип вправи: ${exercise.type}",
+                        text = "Невідомий тип вправи: ${currentExercise.type}",
                         color = PocketTheme.colors.error
                     )
                 }
@@ -162,7 +196,7 @@ fun ExerciseLayoutShell(
     text: String,
     headings: String? = null, // НОВЕ ПОЛЕ ДЛЯ ЗАГОЛОВКІВ
     currentItem: String,
-    optionsContent: @Composable () -> Unit
+    optionsContent: @Composable () -> Unit,
 ) {
     Column(modifier = Modifier.fillMaxSize()) {
 
@@ -197,31 +231,139 @@ fun ExerciseLayoutShell(
 @Composable
 fun AdvertisementExercise(
     instruction: String,
-    text: String,
+    adParts: List<AdPart>, // <--- ПЕРЕДАЄМО СПИСОК ОБ'ЄКТІВ
     currentItem: String,
     correctAnswer: String,
     selectedAnswer: String?,
     isChecked: Boolean,
-    onAnswerSelect: (String) -> Unit
+    onAnswerSelect: (String) -> Unit,
 ) {
-    val options = listOf("A", "B", "Beide", "Keine")
+    Column(modifier = Modifier.fillMaxSize()) {
+        Text(
+            text = instruction,
+            style = PocketTheme.typography.titleMedium,
+            color = PocketTheme.colors.ink,
+            modifier = Modifier.padding(bottom = 12.dp)
+        )
 
-    ExerciseLayoutShell(
-        instruction = instruction,
-        text = text,
-        currentItem = currentItem
-    ) {
-        Column(modifier = Modifier.fillMaxWidth()) {
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                OptionButton(text = options[0], isSelected = selectedAnswer == options[0], isChecked = isChecked, isCorrect = options[0] == correctAnswer, modifier = Modifier.weight(1f)) { onAnswerSelect(options[0]) }
-                OptionButton(text = options[1], isSelected = selectedAnswer == options[1], isChecked = isChecked, isCorrect = options[1] == correctAnswer, modifier = Modifier.weight(1f)) { onAnswerSelect(options[1]) }
-            }
-            Spacer(modifier = Modifier.height(16.dp))
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                OptionButton(text = options[2], isSelected = selectedAnswer == options[2], isChecked = isChecked, isCorrect = options[2] == correctAnswer, modifier = Modifier.weight(1f)) { onAnswerSelect(options[2]) }
-                OptionButton(text = options[3], isSelected = selectedAnswer == options[3], isChecked = isChecked, isCorrect = options[3] == correctAnswer, modifier = Modifier.weight(1f)) { onAnswerSelect(options[3]) }
+        // Горизонтальний скрол для оголошень
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f)
+                .horizontalScroll(rememberScrollState()),
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            adParts.forEach { ad ->
+                AdvertisementCard(
+                    letter = ad.letter, // Беремо літеру безпосередньо з об'єкта
+                    content = ad.content,
+                    modifier = Modifier.width(280.dp)
+                )
             }
         }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        // Блок питання та кнопок залишається майже без змін
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(PocketTheme.colors.paper)
+        ) {
+            Text(
+                text = currentItem,
+                style = PocketTheme.typography.titleMedium,
+                color = PocketTheme.colors.ink,
+                modifier = Modifier.padding(bottom = 16.dp)
+            )
+
+            // Варіанти тепер включають C та Keine, як у новому JSON
+            val options = listOf("A", "B", "C", "Keine")
+
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    OptionButton(
+                        text = "A",
+                        isSelected = selectedAnswer == "A",
+                        isChecked = isChecked,
+                        isCorrect = correctAnswer.contains("A"),
+                        modifier = Modifier.weight(1f)
+                    ) { onAnswerSelect("A") }
+                    OptionButton(
+                        text = "B",
+                        isSelected = selectedAnswer == "B",
+                        isChecked = isChecked,
+                        isCorrect = correctAnswer.contains("B"),
+                        modifier = Modifier.weight(1f)
+                    ) { onAnswerSelect("B") }
+                }
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    OptionButton(
+                        text = "C",
+                        isSelected = selectedAnswer == "C",
+                        isChecked = isChecked,
+                        isCorrect = correctAnswer.contains("C"),
+                        modifier = Modifier.weight(1f)
+                    ) { onAnswerSelect("C") }
+                    OptionButton(
+                        text = "Keine",
+                        isSelected = selectedAnswer == "Keine",
+                        isChecked = isChecked,
+                        isCorrect = correctAnswer == "Keine",
+                        modifier = Modifier.weight(1f)
+                    ) { onAnswerSelect("Keine") }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun AdvertisementCard(
+    letter: String,
+    content: String,
+    modifier: Modifier = Modifier,
+) {
+    val ink = PocketTheme.colors.ink
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .drawBehind {
+                drawRoundRect(
+                    color = ink,
+                    topLeft = Offset(4.dp.toPx(), 4.dp.toPx()),
+                    size = size,
+                    cornerRadius = CornerRadius(24.dp.toPx(), 24.dp.toPx())
+                )
+            }
+            .background(Color.White, RoundedCornerShape(24.dp))
+            .border(2.dp, ink, RoundedCornerShape(24.dp))
+            .padding(16.dp)
+    ) {
+        // Яскравий маркер літери (A, B або C)
+        Box(
+            modifier = Modifier
+                .background(PocketTheme.colors.tertiary, RoundedCornerShape(8.dp))
+                .border(1.dp, ink, RoundedCornerShape(8.dp))
+                .padding(horizontal = 8.dp, vertical = 4.dp)
+        ) {
+            Text(
+                text = "Anzeige $letter",
+                style = PocketTheme.typography.labelMedium,
+                fontWeight = FontWeight.Bold,
+                color = ink
+            )
+        }
+
+        Spacer(modifier = Modifier.height(12.dp))
+
+        Text(
+            text = content,
+            style = PocketTheme.typography.bodyMedium,
+            color = ink,
+            lineHeight = 22.sp
+        )
     }
 }
 
@@ -234,7 +376,7 @@ fun ClassicReadingExercise(
     correctAnswer: String,
     selectedAnswer: String?,
     isChecked: Boolean,
-    onAnswerSelect: (String) -> Unit
+    onAnswerSelect: (String) -> Unit,
 ) {
     val options = listOf("A", "B", "C")
 
@@ -261,7 +403,88 @@ fun ClassicReadingExercise(
     }
 }
 
-// --- ТИП 3: Підбір заголовків (A, B, C, D, E, F...) ---
+@Composable
+fun FreeTextReadingExercise(
+    instruction: String,
+    text: String,
+    question: String,
+    userAnswer: String,
+    correctAnswer: String,
+    isChecked: Boolean,
+    onValueChange: (String) -> Unit,
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+//            .verticalScroll(rememberScrollState())
+    ) {
+        Text(text = instruction, style = PocketTheme.typography.titleMedium)
+
+        Spacer(modifier = Modifier.height(12.dp))
+
+        ReadingTextCard(
+            text = text,
+            modifier = Modifier.height(360.dp)
+        )
+
+        Spacer(modifier = Modifier.height(24.dp))
+
+        Column {
+            Text(text = question, style = PocketTheme.typography.titleLarge)
+
+            Spacer(modifier = Modifier.height(12.dp))
+
+            TextField(
+                value = userAnswer,
+                onValueChange = onValueChange,
+                enabled = !isChecked,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .border(
+                        2.dp,
+                        PocketTheme.colors.ink,
+                        RoundedCornerShape(12.dp)
+                    ),
+                colors = TextFieldDefaults.colors(
+                    focusedIndicatorColor = Color.Transparent,
+                    unfocusedIndicatorColor = Color.Transparent,
+                    disabledIndicatorColor = Color.Transparent,
+                    focusedContainerColor = PocketTheme.colors.surface,
+                    unfocusedContainerColor = PocketTheme.colors.surface,
+                    disabledContainerColor = PocketTheme.colors.surface,
+                    disabledTextColor = PocketTheme.colors.ink,
+                ),
+                textStyle = PocketTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold),
+                placeholder = { Text("Впишіть відповідь...") },
+                shape = RoundedCornerShape(12.dp)
+            )
+        }
+
+        if (isChecked) {
+            Spacer(modifier = Modifier.height(16.dp))
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(
+                        PocketTheme.colors.success.copy(alpha = 0.1f),
+                        RoundedCornerShape(12.dp)
+                    )
+                    .border(2.dp, PocketTheme.colors.success, RoundedCornerShape(12.dp))
+                    .padding(16.dp)
+            ) {
+                Column {
+                    Text(
+                        text = "Mögliche Antwort (Еталон):",
+                        style = PocketTheme.typography.labelSmall,
+                        color = PocketTheme.colors.success
+                    )
+                    Text(text = correctAnswer, style = PocketTheme.typography.bodyMedium)
+                }
+            }
+        }
+    }
+}
+
 @Composable
 fun MatchingHeadingsExercise(
     instruction: String,
@@ -271,7 +494,7 @@ fun MatchingHeadingsExercise(
     selectedAnswer: String?,
     isChecked: Boolean,
     usedAnswers: Set<String>,
-    onAnswerSelect: (String) -> Unit
+    onAnswerSelect: (String) -> Unit,
 ) {
     val options = listOf("A", "B", "C", "D", "E", "F", "G", "H")
 
@@ -290,7 +513,10 @@ fun MatchingHeadingsExercise(
             modifier = Modifier.fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
                 for (i in 0..3) {
                     OptionButton(
                         text = options[i],
@@ -302,7 +528,10 @@ fun MatchingHeadingsExercise(
                     ) { onAnswerSelect(options[i]) }
                 }
             }
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
                 for (i in 4..7) {
                     OptionButton(
                         text = options[i],
@@ -322,7 +551,7 @@ fun MatchingHeadingsExercise(
 fun ReadingTextCard(
     text: String,
     headings: String? = null, // НОВЕ ПОЛЕ ДЛЯ ЗАГОЛОВКІВ
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     val ink = PocketTheme.colors.ink
     Box(
@@ -350,7 +579,10 @@ fun ReadingTextCard(
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(PocketTheme.colors.warning.copy(alpha = 0.2f), RoundedCornerShape(16.dp))
+                        .background(
+                            PocketTheme.colors.warning.copy(alpha = 0.2f),
+                            RoundedCornerShape(16.dp)
+                        )
                         .border(2.dp, PocketTheme.colors.warning, RoundedCornerShape(16.dp))
                         .padding(16.dp)
                 ) {
@@ -383,7 +615,7 @@ fun OptionButton(
     isCorrect: Boolean,
     isUsed: Boolean = false, // ДОДАЛИ ПАРАМЕТР ЗА ЗАМОВЧУВАННЯМ
     modifier: Modifier = Modifier,
-    onClick: () -> Unit
+    onClick: () -> Unit,
 ) {
     val backgroundColor = when {
         isUsed -> PocketTheme.colors.gray200 // Світло-сірий фон для використаних
@@ -395,7 +627,8 @@ fun OptionButton(
 
     // Тінь і рамка для використаних кнопок теж стають сірими, щоб кнопка "впала" на фон
     val shadowColor = if (isUsed) PocketTheme.colors.gray400 else PocketTheme.colors.ink
-    val borderColor = if (isSelected || (isChecked && isCorrect)) PocketTheme.colors.ink else PocketTheme.colors.gray400
+    val borderColor =
+        if (isSelected || (isChecked && isCorrect)) PocketTheme.colors.ink else PocketTheme.colors.gray400
     val textColor = if (isUsed) PocketTheme.colors.gray400 else PocketTheme.colors.ink
 
     Box(

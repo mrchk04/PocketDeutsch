@@ -37,6 +37,10 @@ import com.mrchk.pocketdeutsch.ui.features.lesson.speaking.SpeakingViewModel
 import com.mrchk.pocketdeutsch.ui.features.lesson.theory.GrammarPracticeScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.theory.GrammarPracticeViewModel
 import com.mrchk.pocketdeutsch.ui.features.lesson.theory.TheoryScreen
+import com.mrchk.pocketdeutsch.ui.features.lesson.vocabulary.VocabularyPracticeScreen
+import com.mrchk.pocketdeutsch.ui.features.lesson.vocabulary.VocabularyPracticeViewModel
+import com.mrchk.pocketdeutsch.ui.features.lesson.vocabulary.VocabularyScreen
+import com.mrchk.pocketdeutsch.ui.features.lesson.vocabulary.VocabularyViewModel
 import com.mrchk.pocketdeutsch.ui.features.lesson.writing.EvaluationResultScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.writing.HistoryScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.writing.HistoryViewModel
@@ -128,7 +132,7 @@ fun NavGraph(navController: NavHostController) {
                 onBackClick = { navController.popBackStack() },
                 onNodeClick = { id, type ->
                     when (type) {
-                        "vocabulary" -> navController.navigate("vocabulary_screen/$id")
+                        "vocabulary" -> navController.navigate("vocabulary_screen/$currentLessonId")
                         "grammar" -> navController.navigate(Screen.Theory.createRoute(currentLessonId))
                         "reading" -> navController.navigate("reading_screen/$currentLessonId")
                         "listening" -> navController.navigate("listening_screen/$currentLessonId")
@@ -268,6 +272,40 @@ fun NavGraph(navController: NavHostController) {
                 onComplete = {
                     viewModel.completeExerciseNode()
                     navController.popBackStack() // Або перехід на екран результатів
+        composable(
+            route = "vocabulary_screen/{lessonId}",
+            arguments = listOf(navArgument("lessonId") { type = NavType.StringType })
+        ) { backStackEntry ->
+            val viewModel: VocabularyViewModel = hiltViewModel()
+            val lessonId = backStackEntry.arguments?.getString("lessonId") ?: ""
+
+            VocabularyScreen(
+                viewModel = viewModel,
+                onBackClick = {
+                    navController.popBackStack()
+                },
+                onNextClick = {
+                    navController.navigate("vocabulary_practice_screen/$lessonId")
+                }
+            )
+        }
+
+        composable(
+            route = "vocabulary_practice_screen/{lessonId}",
+            arguments = listOf(navArgument("lessonId") { type = NavType.StringType })
+        ) { backStackEntry ->
+            // Ініціалізуємо нашу нову ViewModel
+            val viewModel: VocabularyPracticeViewModel = hiltViewModel()
+            val lessonId = backStackEntry.arguments?.getString("lessonId") ?: ""
+
+            VocabularyPracticeScreen(
+                viewModel = viewModel,
+                onBackClick = {
+                    navController.popBackStack()
+                },
+                onComplete = {
+                    viewModel.completeVocabularyNode(lessonId)
+                    navController.popBackStack("vocabulary_screen/$lessonId", inclusive = false)
                 }
             )
         }

@@ -57,11 +57,12 @@ class WritingViewModel @Inject constructor(
                         level = ProficiencyLevel.valueOf(lesson.level.take(2).uppercase()),
                         title = jsonTask.format.replace("_", " ").replaceFirstChar { it.uppercase() },
                         promptText = promptText,
-                        minWords = if (lesson.level.contains("B1")) 80 else 40,
+                        wordsTargetCount = jsonTask.wordsTargetCount,
+//                        minWords = if (lesson.level.contains("B1")) 80 else 40,
                         requiredPoints = bulletPoints.mapIndexed { index, text ->
                             TaskRequirement("${lessonId}_$index", text, false)
                         },
-                        hints = emptyList()
+                        hints = jsonTask.usefulPhrases,
                     )
 
                     _uiState.update { it.copy(isLoading = false, task = uiTask, checklist = uiTask.requiredPoints) }

@@ -13,7 +13,7 @@ data class WritingTask(
     val level: ProficiencyLevel,
     val title: String,
     val promptText: String,
-    val minWords: Int,
+    val wordsTargetCount: Int,
     val requiredPoints: List<TaskRequirement>,
     val hints: List<String> = emptyList()
 )

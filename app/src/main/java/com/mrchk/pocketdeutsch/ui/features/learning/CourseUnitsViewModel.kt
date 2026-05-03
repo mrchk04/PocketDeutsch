@@ -61,7 +61,7 @@ class CourseUnitsViewModel @Inject constructor(
                         level = lesson.level,
                         unitNumber = "Модуль ${index + 1}",
                         title = lesson.title,
-                        description = lesson.description,
+                        description = lesson.shortDescription,
                         completedLessons = completed, // ТЕПЕР ДИНАМІЧНО
                         totalLessons = total,         // ТЕПЕР ДИНАМІЧНО
                         state = state,                // ТЕПЕР ДИНАМІЧНО

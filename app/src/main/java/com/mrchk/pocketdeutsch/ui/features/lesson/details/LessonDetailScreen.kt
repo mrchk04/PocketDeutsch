@@ -1,4 +1,4 @@
-package com.mrchk.pocketdeutsch.ui.features.lesson.detail
+package com.mrchk.pocketdeutsch.ui.features.lesson.details
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.background
@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -35,7 +36,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -49,7 +49,6 @@ import com.mrchk.pocketdeutsch.ui.components.TopBarContainer
 import com.mrchk.pocketdeutsch.ui.components.pdClickable
 import com.mrchk.pocketdeutsch.ui.components.pdStyle
 import com.mrchk.pocketdeutsch.ui.theme.Gray400
-import com.mrchk.pocketdeutsch.ui.theme.PocketDeutschTheme
 import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
 
 enum class NodeState { COMPLETED, ACTIVE, NOT_STARTED }
@@ -76,7 +75,6 @@ fun CoursePathwayScreen(
         when (state) {
             is LessonDetailState.Loading -> {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    // Можна додати твій PdProgressBar або просто стандартний індикатор
                     CircularProgressIndicator(color = PocketTheme.colors.primary)
                 }
             }
@@ -115,17 +113,16 @@ private fun PathwayContent(
     Scaffold(
         containerColor = PocketTheme.colors.paper,
         topBar = {
-            // Кастомний TopBar з вогником
             TopBarContainer(isDashed = false) {
                 Box(modifier = Modifier.fillMaxWidth()) {
                     PdIconButton(
-                        iconRes = R.drawable.ic_arrow_left_bold, // Заміни на свою іконку
+                        iconRes = R.drawable.ic_arrow_left_bold,
                         onClick = onBackClick,
                         modifier = Modifier.align(Alignment.CenterStart)
                     )
 
                     Text(
-                        text = "Рівень ${lesson.level}",
+                        text = lesson.topic,
                         style = PocketTheme.typography.titleLarge,
                         color = PocketTheme.colors.ink,
                         modifier = Modifier.align(Alignment.Center)
@@ -148,7 +145,7 @@ private fun PathwayContent(
                     }
                     .padding(16.dp)
 //                     Відступ знизу для навігаційного бару системи
-//                    .navigationBarsPadding()
+                    .navigationBarsPadding()
 
             ) {
                 PdButton(
@@ -177,7 +174,7 @@ private fun PathwayContent(
             UnitHeader(
                 unitNumber = "Рівень ${lesson.level}",
                 unitTitle = lesson.title,
-                unitDescription = lesson.description ?: "Опануйте нову лексику та граматику.",
+                unitDescription = lesson.shortDescription ?: "Опануйте нову лексику та граматику.",
                 completedLessons = completedLessons,
                 totalLessons = totalLessons,
                 progress = currentProgress

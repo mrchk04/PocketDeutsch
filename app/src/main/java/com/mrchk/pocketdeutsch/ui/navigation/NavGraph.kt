@@ -22,10 +22,11 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.mrchk.pocketdeutsch.data.mapper.toUiModel
 import com.mrchk.pocketdeutsch.domain.model.TextCorrection
+//import com.mrchk.pocketdeutsch.ui.features.home.HomeScreen
 import com.mrchk.pocketdeutsch.ui.features.learning.CourseUnitsScreen
 import com.mrchk.pocketdeutsch.ui.features.learning.CourseUnitsUiState
 import com.mrchk.pocketdeutsch.ui.features.learning.CourseUnitsViewModel
-import com.mrchk.pocketdeutsch.ui.features.lesson.detail.CoursePathwayScreen
+import com.mrchk.pocketdeutsch.ui.features.lesson.details.CoursePathwayScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.language_use.LanguageUseScreen
 import com.mrchk.pocketdeutsch.ui.features.lesson.language_use.LanguageUseViewModel
 import com.mrchk.pocketdeutsch.ui.features.lesson.listening.ListeningScreen
@@ -57,15 +58,23 @@ fun NavGraph(navController: NavHostController) {
 //        startDestination = Screen.LessonDetail.createRoute("les-a2-01")
         startDestination = Screen.Course.route
     ) {
-        composable(Screen.Home.route) {
-            PlaceholderScreen("Main", PocketTheme.colors.primary)
-            // Приклад виклику екрана написання:
-            // onClick = { navController.navigate(Screen.Writing.createRoute("task_01")) }
-        }
+//        composable(Screen.Home.route) {
+//            HomeScreen(
+//                onCourseClick = {
+//                    navController.navigate(Screen.LessonDetail.createRoute("les-a2-01"))
+//                },
+//                onAllBooksClick = {
+//                    navController.navigate("dictionary_screen")
+//                },
+//                onFlashcardsClick = {
+//                    navController.navigate("flashcards_screen")
+//                },
+//                onProfileClick = {
+//                    // navController.navigate("profile_screen") // Якщо колись додаси екран профілю
+//                }
+//            )
+//        }
 
-        // ... тут можуть бути інші твої екрани (Dictionary, Test, etc.) ...
-
-        // Екран вправи
         composable(
             route = Screen.Writing.route, // "writing_screen/{exerciseId}"
             arguments = listOf(navArgument("lessonId") { type = NavType.StringType })
@@ -75,13 +84,11 @@ fun NavGraph(navController: NavHostController) {
                     navController.popBackStack()
                 },
                 onNavigateToHistory = { exerciseId ->
-                    // Використовуємо нашу функцію для підстановки ID
                     navController.navigate(Screen.History.createRoute(exerciseId))
                 }
             )
         }
 
-        // Екран історії
         composable(
             route = Screen.History.route, // "history_screen/{exerciseId}"
             arguments = listOf(navArgument("exerciseId") { type = NavType.StringType })
@@ -110,9 +117,9 @@ fun NavGraph(navController: NavHostController) {
 
             taskResult?.let { result ->
                 EvaluationResultScreen(
-                    result = result.toUiModel(), // Тут перетвори entity у модель для екрана
+                    result = result.toUiModel(),
                     originalText = result.originalText,
-                    selectedCorrection = selectedCorrection, // Або додай логіку вибору
+                    selectedCorrection = selectedCorrection,
                     onCorrectionClick = { correction ->
                         selectedCorrection = correction
                     },
@@ -157,13 +164,12 @@ fun NavGraph(navController: NavHostController) {
                 }
                 is CourseUnitsUiState.Success -> {
                     CourseUnitsScreen(
-                        userName = "Mariia", // Можна потім тягнути з UserData/Preferences
+                        userName = "Mariia",
                         units = state.units,
                         availableLevels = state.availableLevels,
                         selectedLevel = selectedLevel,
                         onLevelSelected = { viewModel.selectLevel(it) },
                         onUnitClick = { unitId ->
-                            // Клік по КАРТЦІ -> відкриваємо стежку (LessonPathway)
                             navController.navigate(Screen.LessonDetail.createRoute(unitId))
                         },
                         onUnitActionClick = { unitId ->
@@ -271,7 +277,11 @@ fun NavGraph(navController: NavHostController) {
                 onBackClick = { navController.popBackStack() },
                 onComplete = {
                     viewModel.completeExerciseNode()
-                    navController.popBackStack() // Або перехід на екран результатів
+                    navController.popBackStack()
+                }
+            )
+        }
+
         composable(
             route = "vocabulary_screen/{lessonId}",
             arguments = listOf(navArgument("lessonId") { type = NavType.StringType })
@@ -309,7 +319,6 @@ fun NavGraph(navController: NavHostController) {
                 }
             )
         }
-
     }
 }
 

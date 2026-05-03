@@ -849,7 +849,7 @@ fun PdCourseCard(
 @Composable
 fun PdToolCard(
     title: String,
-    icon: ImageVector,
+    iconRes: Int,
     onClick: () -> Unit,
     isDashed: Boolean = false,
     modifier: Modifier = Modifier,
@@ -866,7 +866,7 @@ fun PdToolCard(
             verticalArrangement = Arrangement.Center
         ) {
             Icon(
-                imageVector = icon,
+                painter = painterResource(id = iconRes),
                 contentDescription = null,
                 tint = Gray500,
                 modifier = Modifier.size(28.dp)
@@ -901,7 +901,7 @@ fun PdToolCard(
             verticalArrangement = Arrangement.SpaceBetween
         ) {
             Icon(
-                imageVector = icon,
+                painter = painterResource(id = iconRes),
                 contentDescription = null,
                 tint = Ink,
                 modifier = Modifier.size(32.dp)
@@ -927,98 +927,86 @@ fun PdBottomBar(
     onItemSelected: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
+
+    val ink: Color = PocketTheme.colors.ink
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .height(112.dp)
+            .height(72.dp) // Висота білого фону з чорною лінією
     ) {
-        Row(
+        // 1. Фон і лінія
+        Box(
             modifier = Modifier
-                .fillMaxWidth()
-                .height(72.dp)
-                .align(Alignment.BottomCenter)
-                .background(Paper)
+                .fillMaxSize()
+                .background(PocketTheme.colors.paper)
                 .drawBehind {
                     drawLine(
-                        color = Ink,
+                        color = ink,
                         start = Offset(0f, 0f),
                         end = Offset(size.width, 0f),
                         strokeWidth = 2.dp.toPx()
                     )
-                },
-            horizontalArrangement = Arrangement.SpaceAround,
-            verticalAlignment = Alignment.CenterVertically
+                }
+        )
+
+        // 2. Кнопки (всі в одному ряду)
+        Row(
+            modifier = Modifier.fillMaxSize(),
+            verticalAlignment = Alignment.Bottom // Притискаємо всі елементи до низу
         ) {
             items.forEachIndexed { index, item ->
                 val isSelected = index == selectedIndex
-                if (isSelected) {
-                    Spacer(modifier = Modifier.size(width = 64.dp, height = 56.dp))
-                } else {
-                    Column(
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        modifier = Modifier
-                            .clickable(
-                                indication = null,
-                                interactionSource = remember { MutableInteractionSource() }
-                            ) { onItemSelected(index) }
-                            .padding(8.dp)
-                    ) {
+
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    modifier = Modifier
+                        .weight(1f)
+                        // МАГІЯ ТУТ: Дозволяємо колонці вилазити вгору за межі 72.dp
+                        .wrapContentHeight(align = Alignment.Bottom, unbounded = true)
+                        .clickable(
+                            indication = null,
+                            interactionSource = remember { MutableInteractionSource() }
+                        ) { onItemSelected(index) }
+                        .padding(bottom = 12.dp) // Відступ тексту від низу (однаковий для всіх!)
+                ) {
+                    if (isSelected) {
+                        // Активна кнопка (велика, 64dp - вилізе вгору)
+                        Box(
+                            modifier = Modifier
+                                .size(64.dp)
+                                .pdStyle(
+                                    cornerRadius = 32.dp,
+                                    backgroundColor = PocketTheme.colors.primary,
+                                    shadowOffset = 2.dp
+                                ),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(
+                                painter = painterResource(item.iconRes),
+                                contentDescription = item.title,
+                                tint = PocketTheme.colors.ink,
+                                modifier = Modifier.size(32.dp)
+                            )
+                        }
+                    } else {
+                        // Неактивна кнопка (маленька, 32dp)
                         Icon(
                             painter = painterResource(item.iconRes),
                             contentDescription = item.title,
-                            tint = Gray500,
+                            tint = PocketTheme.colors.gray500,
                             modifier = Modifier.size(32.dp)
                         )
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text(
-                            text = item.title,
-                            style = PocketTheme.typography.labelSmall,
-                            color = Gray500
-                        )
                     }
-                }
-            }
-        }
 
-        // Виступаюча активна кнопка
-        BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
-            val itemWidth = maxWidth / items.size
-            val offsetX = itemWidth * selectedIndex + itemWidth / 2 - 32.dp
+                    Spacer(modifier = Modifier.height(4.dp))
 
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier
-                    .offset(x = offsetX)
-                    .align(Alignment.BottomStart)
-                    .padding(bottom = 16.dp) // виступає вгору
-                    .clickable(
-                        indication = null,
-                        interactionSource = remember { MutableInteractionSource() }
-                    ) { onItemSelected(selectedIndex) }
-            ) {
-                Box(
-                    modifier = Modifier
-                        .size(64.dp)
-                        .pdStyle(
-                            cornerRadius = 32.dp,
-                            backgroundColor = Primary,
-                            shadowOffset = 2.dp
-                        ),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Icon(
-                        painter = painterResource(items[selectedIndex].iconRes),
-                        contentDescription = items[selectedIndex].title,
-                        tint = Ink,
-                        modifier = Modifier.size(32.dp)
+                    // Текст завжди буде на одній лінії!
+                    Text(
+                        text = item.title,
+                        style = if (isSelected) PocketTheme.typography.labelMedium else PocketTheme.typography.labelSmall,
+                        color = if (isSelected) PocketTheme.colors.ink else PocketTheme.colors.gray500
                     )
                 }
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = items[selectedIndex].title,
-                    style = PocketTheme.typography.labelMedium,
-                    color = Ink
-                )
             }
         }
     }
@@ -1316,6 +1304,63 @@ fun PdBottomActionBar(
                 onClick = onMainButtonClick,
                 backgroundColor = mainButtonColor,
                 modifier = Modifier.weight(1f)
+            )
+        }
+    }
+}
+
+@Composable
+fun BrutalistCard(
+    modifier: Modifier = Modifier,
+    content: @Composable ColumnScope.() -> Unit,
+) {
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .offset(x = 4.dp, y = 4.dp)
+            .background(PocketTheme.colors.ink, RoundedCornerShape(16.dp))
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .offset(x = (-4).dp, y = (-4).dp)
+                .background(Color.White, RoundedCornerShape(16.dp))
+                .border(2.dp, PocketTheme.colors.ink, RoundedCornerShape(16.dp))
+                .padding(16.dp),
+            content = content
+        )
+    }
+}
+
+@Composable
+fun ContextExampleItem(text: String, isLast: Boolean) {
+    Column {
+        Row(
+            modifier = Modifier.padding(vertical = 12.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.Top
+        ) {
+            // Маленька фіолетова крапка
+            Box(
+                modifier = Modifier
+                    .padding(top = 6.dp)
+                    .size(10.dp)
+                    .background(PocketTheme.colors.primary, CircleShape)
+                    .border(1.dp, PocketTheme.colors.ink, CircleShape)
+            )
+            Text(
+                text = text,
+                style = PocketTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Medium),
+                color = PocketTheme.colors.ink
+            )
+        }
+        if (!isLast) {
+            // Пунктирний розділювач (можна замінити на Canvas для справжнього пунктиру)
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(1.dp)
+                    .background(PocketTheme.colors.gray200)
             )
         }
     }

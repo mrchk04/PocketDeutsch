@@ -52,7 +52,7 @@ fun TheoryScreen(
         containerColor = PocketTheme.colors.paper,
         topBar = {
             PdTitleTopBar(
-                title = "Граматика",
+                title = "Теоретичні відомості",
                 onBackClick = onBackClick,
                 onRightButtonClick = { },
                 rightButtonIcon = null
@@ -60,7 +60,6 @@ fun TheoryScreen(
         },
         bottomBar = {
             if (uiState is TheoryUiState.Success) {
-                // Фіксована панель з кнопкою знизу
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -163,7 +162,6 @@ fun TheoryScreen(
                                     verticalAlignment = Alignment.CenterVertically,
                                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                                 ) {
-                                    Text("🚨", fontSize = 20.sp)
                                     Text(
                                         text = "Achtung! (Увага)",
                                         style = PocketTheme.typography.titleMedium.copy(
@@ -172,6 +170,7 @@ fun TheoryScreen(
                                     )
                                 }
                                 Spacer(modifier = Modifier.height(8.dp))
+
                                 Text(
                                     text = grammar.warningNotes.joinToString("\n\n"),
                                     style = PocketTheme.typography.bodyMedium.copy(
@@ -199,7 +198,7 @@ fun TheoryScreen(
                             }
                         }
 
-                        Spacer(modifier = Modifier.height(120.dp))
+                        Spacer(modifier = Modifier.height(80.dp))
                     }
                 }
             }
@@ -429,73 +428,6 @@ fun GrammarTableComponent(table: FormsTableDomain) {
                         .background(ink.copy(alpha = 0.1f))
                 )
             }
-        }
-    }
-}
-
-enum class GrammarTab {
-    THEORY, EXERCISES
-}
-
-@Composable
-fun PdBrutalistTabs(
-    currentTab: GrammarTab,
-    onTabSelected: (GrammarTab) -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    val ink = PocketTheme.colors.ink
-    val primary = PocketTheme.colors.primary
-
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .height(48.dp)
-            .background(Color.White, RoundedCornerShape(12.dp))
-            .border(2.dp, ink, RoundedCornerShape(12.dp))
-            .clip(RoundedCornerShape(12.dp)) // Щоб внутрішні фони не вилазили за рамки
-    ) {
-        // Таб "Теорія"
-        Box(
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxHeight()
-                .background(if (currentTab == GrammarTab.THEORY) primary else Color.Transparent)
-                .clickable { onTabSelected(GrammarTab.THEORY) },
-            contentAlignment = Alignment.Center
-        ) {
-            Text(
-                text = "Теорія",
-                style = PocketTheme.typography.titleMedium.copy(
-                    fontWeight = if (currentTab == GrammarTab.THEORY) FontWeight.Black else FontWeight.Medium
-                ),
-                color = ink
-            )
-        }
-
-        // Вертикальний розділювач
-        Box(
-            modifier = Modifier
-                .width(2.dp)
-                .fillMaxHeight()
-                .background(ink)
-        )
-
-        // Таб "Вправи"
-        Box(
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxHeight()
-                .background(if (currentTab == GrammarTab.EXERCISES) primary else Color.Transparent)
-                .clickable { onTabSelected(GrammarTab.EXERCISES) },
-            contentAlignment = Alignment.Center
-        ) {
-            Text(
-                text = "Вправи",
-                style = PocketTheme.typography.titleMedium.copy(
-                    fontWeight = if (currentTab == GrammarTab.EXERCISES) FontWeight.Black else FontWeight.Medium
-                ),
-                color = ink
-            )
         }
     }
 }

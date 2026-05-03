@@ -95,13 +95,13 @@ fun ShowcaseScreen() {
             ) {
                 PdToolCard(
                     title = "Флешкартки",
-                    icon = Icons.Outlined.Email,
+                    iconRes = R.drawable.ic_cards_bold,
                     onClick = {},
                     modifier = Modifier.weight(1f)
                 )
                 PdToolCard(
                     title = "Граматика",
-                    icon = Icons.Outlined.Edit,
+                    iconRes = R.drawable.ic_cards_bold,
                     onClick = {},
                     modifier = Modifier.weight(1f)
                 )
@@ -113,13 +113,13 @@ fun ShowcaseScreen() {
             ) {
                 PdToolCard(
                     title = "Словник",
-                    icon = Icons.Outlined.List,
+                    iconRes = R.drawable.ic_cards_bold,
                     onClick = {},
                     modifier = Modifier.weight(1f)
                 )
                 PdToolCard(
                     title = "Всі книги",
-                    icon = Icons.Outlined.Favorite,
+                    iconRes = R.drawable.ic_cards_bold,
                     isDashed = true,
                     onClick = {},
                     modifier = Modifier.weight(1f)

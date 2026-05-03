@@ -1,12 +1,13 @@
 package com.mrchk.pocketdeutsch.domain.model
 
-import com.mrchk.pocketdeutsch.data.local.dto.StandardExercise
+import android.accessibilityservice.GestureDescription
 
 data class Lesson(
     val lessonId: String,
     val level: String,
     val title: String,
-    val description: String,
+    val topic: String,
+    val shortDescription: String,
     val estimatedMinutes: Int,
 
     val vocabulary: VocabularySection,
@@ -15,20 +16,14 @@ data class Lesson(
 ){
     val totalTasks: Int
         get() {
-            var count = 2 // Лексика і Граматика є завжди
-
-            // Якщо екзаменаційні блоки колись стануть nullable, тут можна буде додати перевірки (if != null).
-            // Поки вони обов'язкові, рахуємо їх:
-            count += 1 // Читання
-            count += 1 // Аудіювання
-            count += 1 // Письмо
-            count += 1 // Говоріння
-
-            // Мовні конструкції можуть бути порожнім списком, тому перевіряємо
+            var count = 2
+            count += 1
+            count += 1
+            count += 1
+            count += 1
             if (examPractice.languageUse.isNotEmpty()) {
                 count += 1
             }
-
             return count
         }
 }
@@ -37,8 +32,40 @@ data class VocabularySection(
     val words: List<Word>,
     val collocations: List<CollocationUi>,
     val contextSentences: List<String>,
-    val exercises: List<InteractiveExercise>
+    val exercises: List<VocabExercise>
 )
+
+sealed interface VocabExercise {
+    val instruction: String // Спільне поле для всіх вправ
+
+    data class Matching(
+        override val instruction: String,
+        val items: List<String>,     // Наприклад: "1. die Kaution"
+        val options: List<String>,   // Наприклад: "a) monatliche Zahlung..."
+        val answers: List<String>    // Наприклад: "1-b"
+    ) : VocabExercise
+
+    data class GapFill(
+        override val instruction: String,
+        val items: List<String>,     // Речення з пропусками
+        val answers: List<String>
+    ) : VocabExercise
+
+//    data class CollocationSort(
+//        override val instruction: String,
+//        val verbs: List<String>,     // Дієслова
+//        val nouns: List<String>,     // Іменники
+//        val answers: List<String>
+//    ) : VocabExercise
+
+    data class WordFormation(
+        override val instruction: String,
+        val items: List<String>,     // Слова для злиття
+        val answers: List<String>
+    ) : VocabExercise
+
+    // Вправу sentence_production поки можемо ігнорувати або зробити для неї порожню модель
+}
 
 data class Word(
     val word: String,
@@ -85,7 +112,13 @@ data class ExamPracticeSection(
 data class ReadingPractice(
     val textType: String,
     val text: String,
-    val exercise: InteractiveExercise
+    val adParts: List<AdPart>? = null,
+    val exercises: List<InteractiveExercise>
+)
+
+data class AdPart(
+    val letter: String,
+    val content: String
 )
 
 data class ListeningPractice(
@@ -110,9 +143,11 @@ data class GapOption(
 
 data class WritingExercise(
     val format: String,
+    val wordsTargetCount: Int,
     val instruction: List<String>,
     val modelAnswer: String? = null,
-    val criteria: List<EvaluationCriterion>
+    val criteria: List<EvaluationCriterion>,
+    val usefulPhrases: List<String>
 )
 
 data class EvaluationCriterion(

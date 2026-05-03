@@ -4,26 +4,18 @@
       "metadata": {
         "id": "wohnen-a2-1",
         "topic": "Wohnen",
-        "topic_de": "Wohnen – Wohnung und Einrichtung",
+        "topic_de": "Wohnen – Wohnung, Einrichtung und Wohnungssuche",
+        "short_description": "У цьому модулі ви навчитесь говорити про житло: описувати квартиру, шукати оголошення про оренду та спілкуватися з орендодавцем.",
+        "detailed_description": "Тема «Wohnen» охоплює весь цикл пошуку та облаштування житла в Германії: від читання оголошень про оренду, через перегляд квартири, до опису розташування меблів у кімнаті. Ця тема є обов'язковою для всіх форматів іспитів рівня A2 — Goethe-Zertifikat A2, ÖSD A2, Telc A2 та DTZ. На іспиті тема «Wohnen» зустрічається в усіх чотирьох модулях: у читанні — оголошення про оренду, в аудіюванні — діалоги про пошук квартири, у письмі — лист орендодавцю, у говорінні — опис кімнати або обговорення умов проживання. Граматично тема тісно пов'язана з прийменниками місця з давальним відмінком (Dativ), які використовуються для опису розміщення предметів у просторі.",
         "level": "A2.1",
-        "grammar_topic": "Präpositionen mit Dativ",
-        "grammar_topic_connection": "Describing where things are in an apartment (auf dem Tisch, neben dem Schrank, in der Küche) is the core communicative need of the Wohnen topic. Dativ prepositions for location appear in every exam task type: reading ads, listening dialogues, writing emails to landlords, and speaking tasks about rooms.",
-        "exam_formats": [
-          "Goethe",
-          "ÖSD",
-          "Telc",
-          "DTZ"
-        ],
-        "cefr_skills_covered": [
-          "reading",
-          "listening",
-          "writing",
-          "speaking",
-          "language_use"
-        ],
-        "estimated_minutes": 45,
-        "pronunciation_note": "Note the vowel length in key words: die Miéte (long e), das Régal (short e). The combination -wohn- is pronounced /voːn/, not /wɔn/. In compounds: Wohnzimmer, Wohngemeinschaft – stress always falls on the first syllable."
+        "grammar_topic": "Präpositionen mit Dativ (lokale Bedeutung)",
+        "grammar_topic_connection": "Опис розташування предметів у квартирі (auf dem Tisch, neben dem Schrank, in der Küche) є основною комунікативною потребою теми «Wohnen». Прийменники місця з Dativ з'являються в усіх форматах іспитових завдань: у читанні оголошень, прослуховуванні діалогів, написанні листів орендодавцю та у завданнях на говоріння про кімнати.",
+        "exam_formats": ["Goethe", "ÖSD", "Telc", "DTZ"],
+        "cefr_skills_covered": ["reading", "listening", "writing", "speaking", "language_use"],
+        "estimated_minutes": 90,
+        "pronunciation_note": "Зверніть увагу на довжину голосних у ключових словах: die Miéte (довге e), das Régal (коротке e). Поєднання -wohn- читається як /voːn/, а не /wɔn/. У складних словах — Wohnzimmer, Wohngemeinschaft — наголос завжди падає на перший склад."
       },
+
       "block1_vocabulary": {
         "vocabulary_items": [
           {
@@ -31,7 +23,7 @@
             "article": "die",
             "plural": "-en",
             "word_class": "Nomen",
-            "english": "apartment, flat",
+            "ukrainian": "квартира",
             "example_sentence": "Ich suche eine Wohnung in der Stadtmitte.",
             "register": "neutral"
           },
@@ -40,7 +32,7 @@
             "article": "das",
             "plural": "-",
             "word_class": "Nomen",
-            "english": "room",
+            "ukrainian": "кімната",
             "example_sentence": "Die Wohnung hat drei Zimmer, eine Küche und ein Bad.",
             "register": "neutral"
           },
@@ -49,7 +41,7 @@
             "article": "die",
             "plural": "-n",
             "word_class": "Nomen",
-            "english": "rent",
+            "ukrainian": "оренда, орендна плата",
             "example_sentence": "Die Miete beträgt 750 Euro pro Monat.",
             "register": "neutral"
           },
@@ -58,7 +50,7 @@
             "article": "der",
             "plural": "-",
             "word_class": "Nomen",
-            "english": "landlord",
+            "ukrainian": "орендодавець",
             "example_sentence": "Der Vermieter wohnt im Erdgeschoss.",
             "register": "neutral"
           },
@@ -67,7 +59,7 @@
             "article": "das",
             "plural": "-e",
             "word_class": "Nomen",
-            "english": "shelf, bookcase",
+            "ukrainian": "полиця, стелаж",
             "example_sentence": "Das Regal steht neben dem Fenster.",
             "register": "neutral"
           },
@@ -76,7 +68,7 @@
             "article": "der",
             "plural": "Schränke",
             "word_class": "Nomen",
-            "english": "wardrobe, cupboard",
+            "ukrainian": "шафа",
             "example_sentence": "Meine Kleidung liegt im Schrank.",
             "register": "neutral"
           },
@@ -85,35 +77,8 @@
             "article": "die",
             "plural": "nur Plural",
             "word_class": "Nomen",
-            "english": "additional costs (utilities)",
+            "ukrainian": "комунальні послуги (додаткові витрати)",
             "example_sentence": "Die Nebenkosten sind im Mietpreis nicht enthalten.",
-            "register": "neutral"
-          },
-          {
-            "word": "einziehen",
-            "article": null,
-            "plural": null,
-            "word_class": "Verb",
-            "english": "to move in",
-            "example_sentence": "Wir ziehen am ersten März in die neue Wohnung ein.",
-            "register": "neutral"
-          },
-          {
-            "word": "ausziehen",
-            "article": null,
-            "plural": null,
-            "word_class": "Verb",
-            "english": "to move out",
-            "example_sentence": "Meine Mitbewohnerin zieht nächsten Monat aus.",
-            "register": "neutral"
-          },
-          {
-            "word": "möbliert",
-            "article": null,
-            "plural": null,
-            "word_class": "Adjektiv",
-            "english": "furnished",
-            "example_sentence": "Ich suche ein möbliertes Zimmer zur Untermiete.",
             "register": "neutral"
           },
           {
@@ -121,8 +86,107 @@
             "article": "die",
             "plural": "-en",
             "word_class": "Nomen",
-            "english": "deposit",
+            "ukrainian": "застава, гарантійний внесок",
             "example_sentence": "Die Kaution beträgt drei Monatsmieten.",
+            "register": "neutral"
+          },
+          {
+            "word": "das Erdgeschoss",
+            "article": "das",
+            "plural": "-e",
+            "word_class": "Nomen",
+            "ukrainian": "перший поверх",
+            "example_sentence": "Die Wohnung liegt im Erdgeschoss – sehr praktisch!",
+            "register": "neutral"
+          },
+          {
+            "word": "der Stock / das Stockwerk",
+            "article": "der / das",
+            "plural": "Stockwerke",
+            "word_class": "Nomen",
+            "ukrainian": "поверх",
+            "example_sentence": "Ich wohne im dritten Stock.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Wohngemeinschaft (WG)",
+            "article": "die",
+            "plural": "-en",
+            "word_class": "Nomen",
+            "ukrainian": "спільна квартира (для кількох людей)",
+            "example_sentence": "Als Student wohne ich in einer WG mit drei anderen Leuten.",
+            "register": "neutral"
+          },
+          {
+            "word": "der Nachbar / die Nachbarin",
+            "article": "der / die",
+            "plural": "-n / -nen",
+            "word_class": "Nomen",
+            "ukrainian": "сусід / сусідка",
+            "example_sentence": "Meine Nachbarin ist sehr nett und hilfsbereit.",
+            "register": "neutral"
+          },
+          {
+            "word": "das Möbelstück",
+            "article": "das",
+            "plural": "-e",
+            "word_class": "Nomen",
+            "ukrainian": "предмет меблів",
+            "example_sentence": "Das wichtigste Möbelstück im Wohnzimmer ist das Sofa.",
+            "register": "neutral"
+          },
+          {
+            "word": "der Teppich",
+            "article": "der",
+            "plural": "-e",
+            "word_class": "Nomen",
+            "ukrainian": "килим",
+            "example_sentence": "Unter dem Tisch liegt ein großer Teppich.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Heizung",
+            "article": "die",
+            "plural": "-en",
+            "word_class": "Nomen",
+            "ukrainian": "опалення",
+            "example_sentence": "Im Winter ist eine gute Heizung sehr wichtig.",
+            "register": "neutral"
+          },
+          {
+            "word": "einziehen (zieht ein)",
+            "article": null,
+            "plural": null,
+            "word_class": "Verb (trennbar)",
+            "ukrainian": "в'їжджати, заселятися",
+            "example_sentence": "Wir ziehen am ersten März in die neue Wohnung ein.",
+            "register": "neutral"
+          },
+          {
+            "word": "ausziehen (zieht aus)",
+            "article": null,
+            "plural": null,
+            "word_class": "Verb (trennbar)",
+            "ukrainian": "виїжджати, виселятися",
+            "example_sentence": "Meine Mitbewohnerin zieht nächsten Monat aus.",
+            "register": "neutral"
+          },
+          {
+            "word": "besichtigen",
+            "article": null,
+            "plural": null,
+            "word_class": "Verb",
+            "ukrainian": "оглядати (квартиру)",
+            "example_sentence": "Kann ich die Wohnung morgen besichtigen?",
+            "register": "neutral"
+          },
+          {
+            "word": "möbliert",
+            "article": null,
+            "plural": null,
+            "word_class": "Adjektiv",
+            "ukrainian": "мебльований, з меблями",
+            "example_sentence": "Ich suche ein möbliertes Zimmer zur Untermiete.",
             "register": "neutral"
           },
           {
@@ -130,7 +194,7 @@
             "article": null,
             "plural": null,
             "word_class": "Adjektiv",
-            "english": "cosy, comfortable",
+            "ukrainian": "затишний",
             "example_sentence": "Das Wohnzimmer ist sehr gemütlich eingerichtet.",
             "register": "neutral"
           }
@@ -138,34 +202,43 @@
         "collocations": [
           {
             "phrase": "eine Wohnung mieten",
-            "translation": "to rent an apartment",
+            "translation": "орендувати квартиру",
             "example": "Wir möchten eine Wohnung in München mieten."
           },
           {
             "phrase": "eine Wohnung besichtigen",
-            "translation": "to view an apartment",
+            "translation": "оглянути квартиру",
             "example": "Kann ich die Wohnung morgen besichtigen?"
           },
           {
             "phrase": "Miete zahlen",
-            "translation": "to pay rent",
+            "translation": "платити оренду",
             "example": "Die Miete zahle ich immer am Ersten des Monats."
           },
           {
             "phrase": "in eine Wohnung einziehen",
-            "translation": "to move into an apartment",
+            "translation": "в'їхати до квартири",
             "example": "Sie zieht nächste Woche in ihre neue Wohnung ein."
           },
           {
             "phrase": "Möbel aufstellen",
-            "translation": "to set up / arrange furniture",
-            "example": "Wir stellen die Möbel am Wochenende auf.",
-            "register": "neutral"
+            "translation": "розставити меблі",
+            "example": "Wir stellen die Möbel am Wochenende auf."
           },
           {
             "phrase": "zur Miete wohnen",
-            "translation": "to live in a rented place",
+            "translation": "жити в орендованому житлі",
             "example": "In Deutschland wohnen viele Menschen zur Miete."
+          },
+          {
+            "phrase": "eine Wohnung kündigen",
+            "translation": "розірвати договір оренди",
+            "example": "Ich möchte die Wohnung zum Ende des Monats kündigen."
+          },
+          {
+            "phrase": "ruhige Lage",
+            "translation": "тихе розташування",
+            "example": "Die Wohnung befindet sich in ruhiger Lage, weit von der Straße."
           }
         ],
         "words_in_context": [
@@ -178,7 +251,7 @@
             ]
           },
           {
-            "word": "ziehen",
+            "word": "ziehen / einziehen / ausziehen / umziehen",
             "sentences": [
               "Wir ziehen im Sommer in eine größere Wohnung um.",
               "Er zieht nächsten Monat von Hamburg nach Berlin.",
@@ -191,159 +264,163 @@
             "type": "matching",
             "instruction": "Ordnen Sie zu: Welches Wort passt zu welcher Erklärung?",
             "items": [
-              "die Kaution — a) monatliche Zahlung für die Wohnung",
-              "die Miete — b) Geld, das man vor dem Einzug zahlt und zurückbekommt",
-              "der Vermieter — c) Person, die die Wohnung vermietet",
-              "möbliert — d) mit Möbeln ausgestattet",
-              "die Nebenkosten — e) Kosten für Strom, Wasser, Heizung",
-              "einziehen — f) in eine neue Wohnung kommen"
+              "1. die Kaution",
+              "2. die Miete",
+              "3. der Vermieter",
+              "4. möbliert",
+              "5. die Nebenkosten",
+              "6. einziehen",
+              "7. die WG",
+              "8. besichtigen"
+            ],
+            "options": [
+              "a) monatliche Zahlung für die Wohnung",
+              "b) Geld, das man vor dem Einzug zahlt und später zurückbekommt",
+              "c) Person, die die Wohnung vermietet",
+              "d) mit Möbeln ausgestattet",
+              "e) Kosten für Strom, Wasser, Heizung",
+              "f) in eine neue Wohnung kommen",
+              "g) Wohngemeinschaft – mehrere Personen wohnen zusammen",
+              "h) eine Wohnung anschauen, bevor man sie mietet"
             ],
             "answers": [
-              "die Kaution — b",
-              "die Miete — a",
-              "der Vermieter — c",
-              "möbliert — d",
-              "die Nebenkosten — e",
-              "einziehen — f"
+              "1-b", "2-a", "3-c", "4-d", "5-e", "6-f", "7-g", "8-h"
             ]
           },
           {
             "type": "gap_fill",
-            "instruction": "Ergänzen Sie die Lücken mit dem passenden Wort: Miete | Schrank | einziehen | Nebenkosten | besichtigen",
+            "instruction": "Ergänzen Sie die Lücken mit dem passenden Wort aus dem Kasten: Miete | Schrank | einziehen | Nebenkosten | besichtigen | Kaution | Erdgeschoss | gemütlich",
             "items": [
-              "1. Die ___ beträgt 650 Euro, plus 80 Euro ___ .",
+              "1. Die ___ beträgt 650 Euro, plus 80 Euro ___ pro Monat.",
               "2. Ich möchte die Wohnung gerne morgen ___.",
               "3. Wir können am 1. April in die neue Wohnung ___.",
               "4. Meine Kleider hängen im ___.",
-              "5. Die ___ für Strom und Heizung zahle ich extra."
+              "5. Vor dem Einzug müssen wir drei Monatsmieten als ___ zahlen.",
+              "6. Die Wohnung liegt im ___ – kein Aufzug nötig!",
+              "7. Das Wohnzimmer ist sehr ___ – ich fühle mich sofort wohl.",
+              "8. Wie hoch sind die ___? Ist die Heizung inbegriffen?"
             ],
             "answers": [
               "1. Miete / Nebenkosten",
               "2. besichtigen",
               "3. einziehen",
               "4. Schrank",
-              "5. Nebenkosten"
+              "5. Kaution",
+              "6. Erdgeschoss",
+              "7. gemütlich",
+              "8. Nebenkosten"
             ]
           },
           {
             "type": "collocation_sort",
-            "instruction": "Was passt zusammen? Verbinden Sie die Verben mit den Nomen.",
+            "instruction": "Was passt zusammen? Verbinden Sie die Verben mit den Nomen. Mehrere Kombinationen sind möglich.",
+            "verbs": ["mieten", "zahlen", "aufstellen", "besichtigen", "einziehen in", "kündigen", "wohnen in"],
+            "nouns": ["eine Wohnung", "Möbel", "die Miete", "eine WG", "die Kaution"],
+            "answers": [
+              "mieten → eine Wohnung",
+              "zahlen → die Miete, die Kaution",
+              "aufstellen → Möbel",
+              "besichtigen → eine Wohnung",
+              "einziehen in → eine Wohnung, eine WG",
+              "kündigen → eine Wohnung",
+              "wohnen in → eine Wohnung, einer WG"
+            ]
+          },
+          {
+            "type": "word_formation",
+            "instruction": "Bilden Sie aus den Wörtern ein zusammengesetztes Nomen (Kompositum). Geben Sie den Artikel an.",
             "items": [
-              "1. eine Wohnung ___",
-              "2. Miete ___",
-              "3. Möbel ___",
-              "4. eine Wohnung ___",
-              "5. in eine Wohnung ___"
+              "1. wohnen + Zimmer = ___",
+              "2. schlafen + Zimmer = ___",
+              "3. Bad + Zimmer = ___",
+              "4. Miete + Preis = ___",
+              "5. Möbel + Stück = ___",
+              "6. Neben + Kosten = ___",
+              "7. Erd + Geschoss = ___",
+              "8. wohnen + Gemeinschaft = ___"
             ],
             "answers": [
-              "1. besichtigen / mieten",
-              "2. zahlen",
-              "3. aufstellen",
-              "4. mieten / besichtigen",
-              "5. einziehen"
+              "1. das Wohnzimmer",
+              "2. das Schlafzimmer",
+              "3. das Badezimmer",
+              "4. der Mietpreis",
+              "5. das Möbelstück",
+              "6. die Nebenkosten",
+              "7. das Erdgeschoss",
+              "8. die Wohngemeinschaft"
             ]
+          },
+          {
+            "type": "sentence_production",
+            "instruction": "Schreiben Sie 5 Sätze über Ihre (echte oder ideale) Wohnsituation. Verwenden Sie mindestens 8 Wörter aus dem Vokabelkasten des Moduls.",
+            "items": [],
+            "answers": []
           }
         ]
       },
+
       "block2_grammar": {
-        "grammar_topic": "Präpositionen mit Dativ (lokale Bedeutung)",
-        "explanation": "In German, when describing WHERE something is located (static position), the prepositions in, an, auf, unter, über, neben, zwischen, vor, and hinter require the dative case. The key question is 'Wo?' (Where?). This is different from 'Wohin?' (Where to?) which uses accusative. At A2 level, focus on: der → dem, die → der, das → dem in the dative.",
+        "grammar_topic": "Präpositionen mit Dativ (lokale Bedeutung) — Прийменники місця з давальним відмінком",
+        "explanation_ua": "В німецькій мові існують два типи просторових запитань: 'Wo?' (Де?) і 'Wohin?' (Куди?). Якщо ми описуємо статичне положення предмета (де він знаходиться зараз), ми використовуємо прийменники місця з давальним відмінком (Dativ). Якщо ж ми описуємо рух або напрямок (куди хтось або щось переміщається), ті самі прийменники вимагають знахідного відмінка (Akkusativ).\n\nНа рівні A2 головне — засвоїти зміну артикля в Dativ: der (чоловічий рід) → dem, die (жіночий рід) → der, das (середній рід) → dem, die Pl. (множина) → den + -n до іменника.",
         "rules": [
           {
-            "rule": "Use 'in + Dativ' for locations inside enclosed spaces.",
-            "example": "Das Buch liegt in dem (im) Regal. / Sie sitzt in der Küche."
+            "rule": "Wo? + in + Dativ — всередині замкненого простору",
+            "example": "Das Sofa steht in dem (= im) Wohnzimmer. / Sie sitzt in der Küche."
           },
           {
-            "rule": "Use 'auf + Dativ' for locations on top of surfaces.",
+            "rule": "Wo? + auf + Dativ — на горизонтальній поверхні",
             "example": "Die Tasse steht auf dem Tisch. / Die Katze liegt auf dem Sofa."
           },
           {
-            "rule": "Use 'an + Dativ' for locations at vertical surfaces or edges.",
-            "example": "Das Bild hängt an der Wand. / Er steht an dem (am) Fenster."
+            "rule": "Wo? + an + Dativ — біля вертикальної поверхні або краю",
+            "example": "Das Bild hängt an der Wand. / Er steht an dem (= am) Fenster."
           },
           {
-            "rule": "Use 'neben / vor / hinter / unter / über + Dativ' for relative positions.",
-            "example": "Der Schrank steht neben der Tür. / Unter dem Bett liegt ein Teppich."
+            "rule": "Wo? + neben / vor / hinter / unter / über + Dativ — відносне положення",
+            "example": "Der Schrank steht neben der Tür. / Unter dem Bett liegt ein Teppich. / Die Lampe hängt über dem Tisch."
+          },
+          {
+            "rule": "Wo? + zwischen + Dativ — між двома предметами",
+            "example": "Der Sessel steht zwischen dem Sofa und dem Regal."
           }
         ],
-        "forms_table": {
-          "columns": [
-            "Präposition",
-            "maskulin (der→dem)",
-            "feminin (die→der)",
-            "neutral (das→dem)",
-            "Plural (die→den)"
-          ],
+        "contractions_note": "Зверніть увагу на скорочення: in + dem = im (im Zimmer, im Bad), an + dem = am (am Fenster, am Tisch). Скорочення in + der та an + der НЕ утворюються.",
+        "wo_wohin_contrast": {
+          "title": "Wo? (Dativ) vs. Wohin? (Akkusativ) — ключова різниця",
           "rows": [
-            [
-              "in",
-              "im Zimmer",
-              "in der Küche",
-              "im Bad",
-              "in den Räumen"
-            ],
-            [
-              "auf",
-              "auf dem Tisch",
-              "auf der Couch",
-              "auf dem Bett",
-              "auf den Stühlen"
-            ],
-            [
-              "an",
-              "am Fenster",
-              "an der Wand",
-              "am Regal",
-              "an den Türen"
-            ],
-            [
-              "unter",
-              "unter dem Bett",
-              "unter der Treppe",
-              "unter dem Sofa",
-              "unter den Regalen"
-            ],
-            [
-              "über",
-              "über dem Tisch",
-              "über der Lampe",
-              "über dem Bett",
-              "über den Fenstern"
-            ],
-            [
-              "neben",
-              "neben dem Schrank",
-              "neben der Tür",
-              "neben dem Sofa",
-              "neben den Regalen"
-            ],
-            [
-              "zwischen",
-              "zwischen dem Sofa und dem Tisch",
-              "zwischen der Wand und der Tür",
-              "zwischen dem Tisch und dem Regal",
-              "zwischen den Möbeln"
-            ],
-            [
-              "vor",
-              "vor dem Haus",
-              "vor der Tür",
-              "vor dem Fenster",
-              "vor den Stufen"
-            ],
-            [
-              "hinter",
-              "hinter dem Schrank",
-              "hinter der Couch",
-              "hinter dem Regal",
-              "hinter den Möbeln"
-            ]
+            {
+              "verb": "liegen / stehen / hängen / sitzen (стан)",
+              "question": "Wo?",
+              "case": "Dativ",
+              "example": "Das Buch liegt auf dem Tisch."
+            },
+            {
+              "verb": "legen / stellen / hängen / setzen (дія)",
+              "question": "Wohin?",
+              "case": "Akkusativ",
+              "example": "Ich lege das Buch auf den Tisch."
+            }
+          ]
+        },
+        "forms_table": {
+          "title": "Відмінювання артикля після прийменників місця (Wo? = Dativ)",
+          "columns": ["Präposition", "maskulin (der → dem)", "feminin (die → der)", "neutral (das → dem)", "Plural (die → den + -n)"],
+          "rows": [
+            ["in", "im Zimmer", "in der Küche", "im Bad", "in den Räumen"],
+            ["auf", "auf dem Tisch", "auf der Couch", "auf dem Bett", "auf den Stühlen"],
+            ["an", "am Fenster", "an der Wand", "am Regal", "an den Türen"],
+            ["unter", "unter dem Bett", "unter der Treppe", "unter dem Sofa", "unter den Regalen"],
+            ["über", "über dem Tisch", "über der Lampe", "über dem Bett", "über den Fenstern"],
+            ["neben", "neben dem Schrank", "neben der Tür", "neben dem Sofa", "neben den Regalen"],
+            ["zwischen", "zwischen dem Sofa und dem Tisch", "zwischen der Wand und der Tür", "zwischen dem Tisch und dem Regal", "zwischen den Möbeln"],
+            ["vor", "vor dem Haus", "vor der Tür", "vor dem Fenster", "vor den Stufen"],
+            ["hinter", "hinter dem Schrank", "hinter der Couch", "hinter dem Regal", "hinter den Möbeln"]
           ]
         },
         "achtung": [
-          "❌ Das Buch liegt auf den Tisch. ✅ Das Buch liegt auf dem Tisch. — After location prepositions (Wo?), always use Dativ, not Akkusativ.",
-          "❌ Das Bild hängt an die Wand. ✅ Das Bild hängt an der Wand. — 'Hängen' (to hang, static) = Wo? = Dativ. 'Hängen' (to hang up, action) = Wohin? = Akkusativ.",
-          "❌ in dem Zimmer / an dem Fenster — ✅ im Zimmer / am Fenster — Remember the contractions: in + dem = im, an + dem = am, in + der stays as is."
+          "Помилка: Das Buch liegt auf den Tisch. — Правильно: Das Buch liegt auf dem Tisch. Після прийменників місця (Wo?) завжди Dativ, не Akkusativ.",
+          "Помилка: Das Bild hängt an die Wand. — Правильно: Das Bild hängt an der Wand. Дієслово hängen у значенні 'висіти' (стан) вимагає Dativ. Якщо ж ми вішаємо (дія) — тоді Akkusativ: Ich hänge das Bild an die Wand.",
+          "Помилка: in dem Zimmer, an dem Fenster — Правильно: im Zimmer, am Fenster. Не забувайте про скорочення in + dem = im та an + dem = am."
         ],
         "topic_connection_examples": [
           "Das Sofa steht vor dem Fenster im Wohnzimmer.",
@@ -356,18 +433,18 @@
             "type": "gap_fill",
             "instruction": "Ergänzen Sie: dem oder der?",
             "items": [
-              "1. Die Lampe hängt über ___ Esstisch.",
-              "2. Das Buch liegt auf ___ Couch.",
-              "3. Der Schrank steht neben ___ Tür.",
-              "4. Die Katze schläft unter ___ Bett.",
-              "5. Das Bild hängt an ___ Wand."
+              "1. Die Lampe hängt über ___ Esstisch. (der Esstisch)",
+              "2. Das Buch liegt auf ___ Couch. (die Couch)",
+              "3. Der Schrank steht neben ___ Tür. (die Tür)",
+              "4. Die Katze schläft unter ___ Bett. (das Bett)",
+              "5. Das Bild hängt an ___ Wand. (die Wand)",
+              "6. Der Teppich liegt vor ___ Sofa. (das Sofa)",
+              "7. Das Regal steht neben ___ Fenster. (das Fenster)",
+              "8. Der Sessel steht zwischen ___ Schrank und ___ Regal. (der Schrank / das Regal)"
             ],
             "answers": [
-              "1. dem",
-              "2. der",
-              "3. der",
-              "4. dem",
-              "5. der"
+              "1. dem", "2. der", "3. der", "4. dem", "5. der",
+              "6. dem", "7. dem", "8. dem / dem"
             ]
           },
           {
@@ -376,14 +453,22 @@
             "items": [
               "1. Die Tasse steht auf den Tisch.",
               "2. Meine Jacke hängt an die Tür.",
-              "3. Das Sofa steht in dem Wohnzimmer. (Kontraktion fehlt)",
-              "4. Der Teppich liegt vor den Fenster."
+              "3. Das Sofa steht in dem Wohnzimmer.",
+              "4. Der Teppich liegt vor den Fenster.",
+              "5. Die Blumen stehen auf die Fensterbank.",
+              "6. Das Bild hängt an dem Wand.",
+              "7. Der Hund schläft unter den Tisch.",
+              "8. Zwischen die Möbel gibt es keinen Platz."
             ],
             "answers": [
               "1. Die Tasse steht auf dem Tisch.",
               "2. Meine Jacke hängt an der Tür.",
               "3. Das Sofa steht im Wohnzimmer.",
-              "4. Der Teppich liegt vor dem Fenster."
+              "4. Der Teppich liegt vor dem Fenster.",
+              "5. Die Blumen stehen auf der Fensterbank.",
+              "6. Das Bild hängt an der Wand.",
+              "7. Der Hund schläft unter dem Tisch.",
+              "8. Zwischen den Möbeln gibt es keinen Platz."
             ]
           },
           {
@@ -393,224 +478,271 @@
               "1. hängt / Das Bild / an / Wand / die",
               "2. Regal / Das / steht / neben / Fenster / das",
               "3. liegt / Unter / Bett / das / ein Teppich",
-              "4. sitzt / Sie / in / Küche / die"
+              "4. sitzt / Sie / in / Küche / die",
+              "5. steht / Der Sessel / zwischen / Schrank / der / und / Regal / das",
+              "6. liegen / Auf / Tisch / der / Bücher / viele",
+              "7. hängt / Über / Sofa / das / eine Lampe",
+              "8. steht / Hinter / Tür / die / ein Schirm"
             ],
             "answers": [
               "1. Das Bild hängt an der Wand.",
               "2. Das Regal steht neben dem Fenster.",
               "3. Unter dem Bett liegt ein Teppich.",
-              "4. Sie sitzt in der Küche."
+              "4. Sie sitzt in der Küche.",
+              "5. Der Sessel steht zwischen dem Schrank und dem Regal.",
+              "6. Auf dem Tisch liegen viele Bücher.",
+              "7. Über dem Sofa hängt eine Lampe.",
+              "8. Hinter der Tür steht ein Schirm."
             ]
           },
           {
             "type": "free_production",
-            "instruction": "Beschreiben Sie Ihr Zimmer oder Ihre Wohnung in 4–5 Sätzen. Verwenden Sie mindestens 4 verschiedene Präpositionen mit Dativ (z.B. auf dem, an der, neben dem, unter dem...).",
+            "instruction": "Beschreiben Sie Ihr Zimmer oder Ihre Traumwohnung in 6–8 Sätzen. Verwenden Sie mindestens 6 verschiedene Präpositionen mit Dativ. Beschreiben Sie, wo sich die Möbel befinden.",
             "items": [],
-            "answers": []
+            "answers": [],
+            "example": "Mein Traumzimmer ist groß und hell. Das Sofa steht an der Wand neben dem Fenster. Auf dem Sofa liegen bunte Kissen. Vor dem Sofa steht ein kleiner Tisch. Über dem Tisch hängt eine schöne Lampe. Zwischen dem Schrank und der Tür steht ein Regal mit Büchern. Unter dem Tisch liegt ein weicher Teppich. In der Ecke steht eine Pflanze."
           }
         ]
       },
+
       "block3_skills": {
         "reading": {
-          "text_type": "advertisement",
-          "text": "ANZEIGE A\nNette 2-Zimmer-Wohnung in ruhiger Lage zu vermieten. 58 m², Erdgeschoss, Küche und Bad neu renoviert. Kaltmiete: 620 €, Nebenkosten ca. 110 €. Haustiere leider nicht erlaubt. Parkplatz im Hof vorhanden. Einzug ab 1. März möglich. Nur an Nichtraucher. Kontakt: Familie Bauer, Tel. 0621-44872.\n\nANZEIGE B\nModernes WG-Zimmer (18 m²) in 3er-WG, zentrale Lage nahe U-Bahn. Möbliert mit Bett, Schreibtisch und Schrank. Küche und Bad werden geteilt. Warmmiete: 490 € (inkl. Internet und Nebenkosten). Haustiere willkommen! Ideal für Studenten oder Berufstätige. Einzug sofort möglich. Besichtigung nach Vereinbarung. Kontakt: Lena, lena.wg@mail.de",
-          "exercise_type": "information_extraction",
-          "instruction": "Welche Anzeige passt? Schreiben Sie A, B, Beide oder Keine.",
-          "items": [
-            "1. Die Wohnung ist bereits möbliert.",
-            "2. Haustiere sind erlaubt.",
-            "3. Ein Parkplatz ist verfügbar.",
-            "4. Die Nebenkosten sind im Preis enthalten.",
-            "5. Man kann sofort einziehen."
-          ],
-          "answers": [
-            "B",
-            "B",
-            "A",
-            "B",
-            "B"
-          ]
+          "exercise_1": {
+            "text_type": "advertisements",
+            "title": "Wohnungsanzeigen",
+            "instruction": "Lesen Sie die Anzeigen und entscheiden Sie: Welche Anzeige (A, B, C oder Keine) passt zu den Aussagen? Eine Aussage kann zu keiner Anzeige passen.",
+            "texts": {
+              "A": "Helle 2-Zimmer-Wohnung in ruhiger Lage zu vermieten. 58 m², Erdgeschoss, Küche und Bad neu renoviert. Kaltmiete: 620 €, Nebenkosten ca. 110 €. Haustiere leider nicht erlaubt. Parkplatz im Hof vorhanden. Einzug ab 1. März möglich. Nur an Nichtraucher. Kontakt: Familie Bauer, Tel. 0621-44872.",
+              "B": "Modernes WG-Zimmer (18 m²) in 3er-WG, zentrale Lage nahe U-Bahn. Möbliert mit Bett, Schreibtisch und Schrank. Küche und Bad werden geteilt. Warmmiete: 490 € (inkl. Internet und Nebenkosten). Haustiere willkommen! Ideal für Studenten oder Berufstätige. Einzug sofort möglich. Kontakt: Lena, lena.wg@mail.de",
+              "C": "Großzügige 3-Zimmer-Wohnung im 2. Stockwerk, 85 m², Balkon, ruhige Wohnlage. Kaltmiete 980 €, NK ca. 180 €. Garage im Haus verfügbar (extra 80 €/Monat). Frühester Einzug: 1. April. Keine Haustiere. Kaution 3 Monatsmieten. Kontakt: Immobilien Richter, 089-55321."
+            },
+            "items": [
+              "1. Die Wohnung ist bereits möbliert.",
+              "2. Haustiere sind erlaubt.",
+              "3. Ein Parkplatz oder eine Garage ist verfügbar.",
+              "4. Die Nebenkosten sind im Preis enthalten.",
+              "5. Man kann sofort einziehen.",
+              "6. Die Wohnung hat einen Balkon.",
+              "7. Die Wohnung liegt im Erdgeschoss.",
+              "8. Die Gesamtmiete übersteigt 1000 Euro.",
+              "9. Rauchen ist in der Wohnung nicht erlaubt.",
+              "10. Die Wohnung hat mehr als zwei Zimmer."
+            ],
+            "answers": ["B", "B", "A und C", "B", "B", "C", "A", "C", "A", "C"]
+          },
+          "exercise_2": {
+            "text_type": "article",
+            "title": "Wohnen in Deutschland – Fakten und Trends",
+            "instruction": "Lesen Sie den Text und beantworten Sie die Fragen. Schreiben Sie kurze Antworten auf Deutsch.",
+            "text": "Wohnen in Deutschland ist teuer – besonders in großen Städten wie München, Hamburg oder Berlin. Viele Menschen wohnen in Mietwohnungen, weil Eigentum für die meisten zu teuer ist. In Deutschland ist die Miete oft kalt angegeben, das heißt ohne Nebenkosten wie Heizung, Wasser und Strom. Diese Kosten kommen extra dazu und betragen meistens zwischen 100 und 300 Euro pro Monat.\n\nViele junge Menschen, besonders Studenten, wohnen in einer WG – einer Wohngemeinschaft. Das bedeutet, dass mehrere Personen zusammen eine Wohnung mieten und die Kosten teilen. Eine WG hat Vorteile: Die Miete ist günstiger, und man ist nicht allein. Aber man muss auch Kompromisse machen – zum Beispiel beim Lärm oder beim Putzen.\n\nWer eine Wohnung mieten möchte, braucht oft eine Kaution. Das ist eine Sicherheitszahlung, die man am Anfang des Mietvertrags zahlt. Die Kaution beträgt in Deutschland meistens zwei oder drei Monatsmieten. Man bekommt das Geld zurück, wenn man die Wohnung in gutem Zustand hinterlässt.",
+            "items": [
+              "1. Warum wohnen viele Deutsche in Mietwohnungen?",
+              "2. Was bedeutet 'Kaltmiete'?",
+              "3. Was ist eine WG?",
+              "4. Welche Vorteile hat eine WG?",
+              "5. Was ist eine Kaution und wie viel beträgt sie meistens?"
+            ],
+            "answers": [
+              "1. Weil Eigentum für die meisten Menschen zu teuer ist.",
+              "2. Kaltmiete bedeutet Miete ohne Nebenkosten (Heizung, Wasser, Strom).",
+              "3. Eine WG ist eine Wohngemeinschaft – mehrere Personen mieten zusammen eine Wohnung.",
+              "4. Die Miete ist günstiger und man ist nicht allein.",
+              "5. Eine Kaution ist eine Sicherheitszahlung zu Beginn des Mietvertrags. Sie beträgt meistens 2–3 Monatsmieten."
+            ]
+          }
         },
+
         "listening": {
-          "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-          "audioType": "dialogue",
-          "transcript": "Anna: Hallo Tom! Hast du schon eine neue Wohnung gefunden?\nTom: Noch nicht. Ich suche seit drei Wochen. Es ist wirklich schwierig.\nAnna: Was ist dir denn wichtig bei einer Wohnung?\nTom: Also, sie soll nicht zu teuer sein. Maximal 700 Euro warm. Und ich brauche mindestens zwei Zimmer.\nAnna: Hast du schon Wohnungen besichtigt?\nTom: Ja, zwei. Eine war schön, aber zu weit von der Arbeit entfernt. Die andere war billig, aber sehr laut wegen der Straße.\nAnna: Ich habe gehört, dass es im Neubaugebiet am Stadtrand günstige Wohnungen gibt.\nTom: Wirklich? Das klingt gut. Weißt du, ob die Wohnungen möbliert sind?\nAnna: Nein, ich glaube nicht. Aber du hast doch schon Möbel, oder?\nTom: Ja, stimmt. Ich werde mal nachschauen. Danke für den Tipp!",
-          "exerciseType": "richtig_falsch",
-          "instruction": "Hören Sie den Dialog und entscheiden Sie: richtig oder falsch?",
-          "items": [
-            "1. Tom sucht seit drei Wochen eine Wohnung.",
-            "2. Tom möchte maximal 600 Euro Miete zahlen.",
-            "3. Tom hat bisher zwei Wohnungen besichtigt.",
-            "4. Die erste Wohnung war zu laut.",
-            "5. Anna empfiehlt Wohnungen am Stadtrand.",
-            "6. Tom hat keine Möbel."
-          ],
-          "answers": [
-            "richtig",
-            "falsch",
-            "richtig",
-            "falsch",
-            "richtig",
-            "falsch"
-          ]
+          "listening_1": {
+            "title": "Dialog: Wohnungssuche",
+            "source": "Eigener Modelldialog im Stil des Goethe A2",
+            "audio_note": "Verwenden Sie die folgende Audioressource: DW Nicos Weg A2 – learngerman.dw.com/en/nicos-weg/c-36519797 (Folge über Wohnungssuche in Deutschland). Alternativ: Eigenproduktion des folgenden Transkripts als TTS-Audio.",
+            "transcript": "Moderatorin: Guten Tag! Heute sprechen wir über das Thema Wohnungssuche. Unser Gast ist Herr Kaya aus der Türkei. Er lebt seit sechs Monaten in Köln.\nModeratorin: Herr Kaya, wie war die Wohnungssuche für Sie?\nHerr Kaya: Am Anfang war es sehr schwierig. Ich habe viele Anzeigen im Internet gelesen. Aber die günstigen Wohnungen waren immer schon weg.\nModeratorin: Wie lange haben Sie gesucht?\nHerr Kaya: Fast zwei Monate! Ich habe zehn Wohnungen besichtigt. Aber für sieben Wohnungen hat der Vermieter nicht zurückgerufen.\nModeratorin: Warum ist das so schwierig?\nHerr Kaya: In Köln suchen viele Menschen eine Wohnung. Es gibt nicht genug Angebote. Und man braucht viele Dokumente – Gehaltsnachweis, Schufa, Ausweis ...\nModeratorin: Wie viel zahlen Sie jetzt für Ihre Wohnung?\nHerr Kaya: Ich zahle 780 Euro warm für eine 2-Zimmer-Wohnung. Das ist okay für Köln.\nModeratorin: Sind Sie mit der Wohnung zufrieden?\nHerr Kaya: Ja, sehr! Sie ist klein, aber hell und gemütlich. Meine Nachbarn sind auch nett. Ich bin froh, dass ich sie gefunden habe.",
+            "exercise_type": "richtig_falsch",
+            "instruction": "Hören Sie den Dialog und entscheiden Sie: richtig (R) oder falsch (F)?",
+            "items": [
+              "1. Herr Kaya wohnt seit sechs Monaten in Köln.",
+              "2. Die Wohnungssuche war für ihn einfach.",
+              "3. Er hat mehr als fünf Wohnungen besichtigt.",
+              "4. Er braucht unter anderem einen Gehaltsnachweis für die Bewerbung.",
+              "5. Er zahlt 780 Euro kalt für seine Wohnung."
+            ],
+            "answers": ["R", "F", "R", "R", "F"]
+          },
+          "listening_2": {
+            "title": "Telefonansage: Wohnungsanzeige",
+            "source": "Eigener Modelldialog im Stil des Goethe A2 / Telc A2",
+            "audio_note": "Verwenden Sie die folgende Ressource für authentisches Hörmaterial im Anzeigenformat: Goethe-Institut A2 Prüfungstraining – goethe.de/en/spr/prf/ueb/pa2.html (Hörmodul). Alternativ: Eigenproduktion des folgenden Transkripts.",
+            "transcript": "Sprecher: Sie hören eine Ansage auf einem Anrufbeantworter.\n\n'Guten Tag, hier spricht Ingrid Müller. Ich rufe wegen der Wohnungsanzeige an. In der Anzeige steht, die Wohnung hat 65 Quadratmeter und drei Zimmer. Ich möchte gerne wissen: Ist die Wohnung im Moment noch frei? Wie hoch ist die genaue Kaltmiete? Und sind Haustiere erlaubt? Ich habe eine kleine Katze. Außerdem hätte ich noch eine Frage zur Lage: Gibt es in der Nähe eine Bushaltestelle oder eine U-Bahn-Station? Ich habe kein Auto. Und: Wäre eine Besichtigung am Wochenende möglich? Am liebsten Samstag Nachmittag. Sie können mich unter 0176-334 89 21 zurückrufen. Vielen Dank und auf Wiederhören!'",
+            "exercise_type": "multiple_choice",
+            "instruction": "Hören Sie die Ansage und wählen Sie die richtige Antwort (A, B oder C).",
+            "items": [
+              {
+                "question": "1. Warum ruft Frau Müller an?",
+                "options": ["A) Sie möchte eine Wohnung verkaufen.", "B) Sie interessiert sich für eine Wohnung aus einer Anzeige.", "C) Sie sucht eine WG."],
+                "answer": "B"
+              },
+              {
+                "question": "2. Wie groß ist die Wohnung laut Anzeige?",
+                "options": ["A) 55 m²", "B) 75 m²", "C) 65 m²"],
+                "answer": "C"
+              },
+              {
+                "question": "3. Frau Müller fragt, ob ...",
+                "options": ["A) die Wohnung möbliert ist.", "B) Haustiere erlaubt sind.", "C) die Küche neu renoviert ist."],
+                "answer": "B"
+              },
+              {
+                "question": "4. Warum fragt Frau Müller nach öffentlichen Verkehrsmitteln?",
+                "options": ["A) Sie hat kein Auto.", "B) Sie fährt gerne Bus.", "C) Die U-Bahn-Station ist sehr weit."],
+                "answer": "A"
+              },
+              {
+                "question": "5. Wann möchte Frau Müller die Wohnung besichtigen?",
+                "options": ["A) Am Montag Morgen.", "B) Am Freitag Abend.", "C) Am Samstag Nachmittag."],
+                "answer": "C"
+              }
+            ]
+          }
         },
+
         "language_use": [
           {
             "subtype": "lexical_context",
+            "title": "Übung 1: Wortschatz im Kontext",
             "instruction": "Lesen Sie den Text. Welches Wort passt in die Lücke? Wählen Sie die richtige Antwort (A, B, C oder D).",
-            "text_with_gaps": "Ich [1] seit einem Jahr in einer kleinen Wohnung. Die Wohnung hat zwei Zimmer, eine Küche und ein Bad. Nächsten Monat möchte ich [2], weil ich mehr Platz brauche. Ich habe eine schöne 3-Zimmer-Wohnung [3]. Die [4] beträgt 850 Euro kalt. Der Vermieter ist sehr [5] und hat mir alle Fragen beantwortet. Ich kann am 1. Mai [6].",
+            "text_with_gaps": "Ich [1] seit einem Jahr in einer kleinen Wohnung im Stadtzentrum. Die Wohnung hat zwei Zimmer, eine Küche und ein Bad. Nächsten Monat möchte ich [2], weil ich mehr Platz brauche und jetzt mehr verdiene. Ich habe schon eine schöne 3-Zimmer-Wohnung [3]. Die [4] beträgt 850 Euro kalt. Der [5] ist sehr freundlich und hat mir alle Fragen zur Wohnung beantwortet. Ich kann am 1. Mai [6]. Vorher muss ich aber noch die [7] in Höhe von zwei Monatsmieten zahlen. Die Wohnung liegt im zweiten [8] – es gibt leider keinen Aufzug, aber das ist okay.",
             "items": [
               {
                 "gap_number": 1,
-                "options": [
-                  "A) wohne",
-                  "B) miete",
-                  "C) ziehe",
-                  "D) suche"
-                ],
+                "options": ["A) wohne", "B) miete", "C) ziehe", "D) suche"],
                 "answer": "A) wohne",
-                "explanation": "'Wohnen' means to live/reside somewhere — the correct verb for describing where you currently live."
+                "explanation": "'Wohnen' означає 'проживати' — правильне дієслово для опису поточного місця проживання."
               },
               {
                 "gap_number": 2,
-                "options": [
-                  "A) einziehen",
-                  "B) ausziehen",
-                  "C) besichtigen",
-                  "D) renovieren"
-                ],
+                "options": ["A) einziehen", "B) ausziehen", "C) besichtigen", "D) renovieren"],
                 "answer": "B) ausziehen",
-                "explanation": "'Ausziehen' means to move out, which fits the context of leaving the current apartment."
+                "explanation": "'Ausziehen' — виїхати, покинути квартиру. Саме це планує людина в тексті."
               },
               {
                 "gap_number": 3,
-                "options": [
-                  "A) gezahlt",
-                  "B) vermietet",
-                  "C) gefunden",
-                  "D) gebaut"
-                ],
+                "options": ["A) gezahlt", "B) vermietet", "C) gefunden", "D) gebaut"],
                 "answer": "C) gefunden",
-                "explanation": "'Eine Wohnung finden' — to find an apartment. The past participle 'gefunden' is needed here."
+                "explanation": "'eine Wohnung finden' — знайти квартиру. Потрібен Partizip II: gefunden."
               },
               {
                 "gap_number": 4,
-                "options": [
-                  "A) Kaution",
-                  "B) Miete",
-                  "C) Nebenkosten",
-                  "D) Wohnung"
-                ],
+                "options": ["A) Kaution", "B) Miete", "C) Nebenkosten", "D) Wohnung"],
                 "answer": "B) Miete",
-                "explanation": "The monthly rent amount (850 Euro) is described by 'die Miete'."
+                "explanation": "Місячна орендна плата у розмірі 850 євро — це 'die Miete'."
               },
               {
                 "gap_number": 5,
-                "options": [
-                  "A) teuer",
-                  "B) laut",
-                  "C) nett",
-                  "D) klein"
-                ],
-                "answer": "C) nett",
-                "explanation": "'Nett' (nice/kind) makes sense as a positive quality of the landlord who answered all questions."
+                "options": ["A) Nachbar", "B) Mieter", "C) Vermieter", "D) Makler"],
+                "answer": "C) Vermieter",
+                "explanation": "'Der Vermieter' — орендодавець, людина, яка здає квартиру."
               },
               {
                 "gap_number": 6,
-                "options": [
-                  "A) ausziehen",
-                  "B) besichtigen",
-                  "C) renovieren",
-                  "D) einziehen"
-                ],
+                "options": ["A) ausziehen", "B) besichtigen", "C) renovieren", "D) einziehen"],
                 "answer": "D) einziehen",
-                "explanation": "'Einziehen' means to move in — logical conclusion after finding a new apartment."
+                "explanation": "'Einziehen' — в'їхати до нової квартири. Логічний висновок після знаходження квартири."
+              },
+              {
+                "gap_number": 7,
+                "options": ["A) Miete", "B) Nebenkosten", "C) Kaution", "D) Heizung"],
+                "answer": "C) Kaution",
+                "explanation": "'Die Kaution' — заставна сума, яку платять перед в'їздом. Тут — у розмірі двох місячних орендних плат."
+              },
+              {
+                "gap_number": 8,
+                "options": ["A) Zimmer", "B) Etage", "C) Stockwerk", "D) Erdgeschoss"],
+                "answer": "C) Stockwerk",
+                "explanation": "'Das Stockwerk' або 'der Stock' — поверх будівлі. 'Der zweite Stock' = третій поверх за українською системою."
               }
             ]
           },
           {
             "subtype": "grammatical_form",
-            "instruction": "Lesen Sie den Text. Welche Form passt in die Lücke? Wählen Sie die richtige Antwort (A, B, C oder D).",
-            "text_with_gaps": "Meine neue Wohnung ist sehr schön. Das Sofa steht in [1] Wohnzimmer direkt vor [2] Fenster. Auf [3] Tisch stehen Blumen. Das Bild hängt an [4] Wand neben [5] Tür. In [6] Küche gibt es viel Platz.",
+            "title": "Übung 2: Grammatik im Text",
+            "instruction": "Lesen Sie den Text. Welche Form passt in die Lücke? Wählen Sie die richtige Antwort (A, B, C oder D). Achtung: Es werden verschiedene Grammatikthemen abgefragt.",
+            "text_with_gaps": "Meine neue Wohnung ist sehr schön. Das Sofa steht in [1] Wohnzimmer direkt vor [2] Fenster. Auf [3] Tisch stehen Blumen. Das Bild hängt an [4] Wand neben [5] Tür. In [6] Küche gibt es viel Platz. Ich habe die Wohnung letzten Monat [7] und bin sehr zufrieden. Mein Freund [8] mir beim Einziehen. Wir [9] die Möbel zusammen aufgestellt. Das war anstrengend, aber schön! Jetzt [10] ich jeden Abend gerne in meiner Wohnung.",
             "items": [
               {
                 "gap_number": 1,
-                "options": [
-                  "A) dem",
-                  "B) der",
-                  "C) den",
-                  "D) des"
-                ],
+                "options": ["A) dem", "B) der", "C) den", "D) des"],
                 "answer": "A) dem",
-                "explanation": "'das Wohnzimmer' is neuter → Dativ: dem Wohnzimmer. 'In + Dativ' for location (Wo?)."
+                "explanation": "'das Wohnzimmer' — середній рід → Dativ: dem. 'In + Dativ' для місця."
               },
               {
                 "gap_number": 2,
-                "options": [
-                  "A) der",
-                  "B) dem",
-                  "C) den",
-                  "D) das"
-                ],
+                "options": ["A) der", "B) dem", "C) den", "D) das"],
                 "answer": "B) dem",
-                "explanation": "'das Fenster' is neuter → Dativ: dem Fenster. 'Vor + Dativ' for location."
+                "explanation": "'das Fenster' — середній рід → Dativ: dem. 'Vor + Dativ' для місця."
               },
               {
                 "gap_number": 3,
-                "options": [
-                  "A) der",
-                  "B) den",
-                  "C) dem",
-                  "D) das"
-                ],
+                "options": ["A) der", "B) den", "C) dem", "D) das"],
                 "answer": "C) dem",
-                "explanation": "'der Tisch' is masculine → Dativ: dem Tisch. 'Auf + Dativ' for static location."
+                "explanation": "'der Tisch' — чоловічий рід → Dativ: dem. 'Auf + Dativ' для статичного положення."
               },
               {
                 "gap_number": 4,
-                "options": [
-                  "A) dem",
-                  "B) den",
-                  "C) der",
-                  "D) die"
-                ],
+                "options": ["A) dem", "B) den", "C) der", "D) die"],
                 "answer": "C) der",
-                "explanation": "'die Wand' is feminine → Dativ: der Wand. 'An + Dativ' for vertical surfaces."
+                "explanation": "'die Wand' — жіночий рід → Dativ: der. 'An + Dativ' для вертикальних поверхонь."
               },
               {
                 "gap_number": 5,
-                "options": [
-                  "A) dem",
-                  "B) den",
-                  "C) das",
-                  "D) der"
-                ],
+                "options": ["A) dem", "B) den", "C) das", "D) der"],
                 "answer": "D) der",
-                "explanation": "'die Tür' is feminine → Dativ: der Tür. 'Neben + Dativ' for relative location."
+                "explanation": "'die Tür' — жіночий рід → Dativ: der. 'Neben + Dativ'."
               },
               {
                 "gap_number": 6,
-                "options": [
-                  "A) dem",
-                  "B) der",
-                  "C) den",
-                  "D) das"
-                ],
+                "options": ["A) dem", "B) der", "C) den", "D) das"],
                 "answer": "B) der",
-                "explanation": "'die Küche' is feminine → Dativ: der Küche. 'In + Dativ' for enclosed spaces."
+                "explanation": "'die Küche' — жіночий рід → Dativ: der. 'In + Dativ'."
+              },
+              {
+                "gap_number": 7,
+                "options": ["A) gefunden", "B) finde", "C) findet", "D) fand"],
+                "answer": "A) gefunden",
+                "explanation": "Perfekt від 'finden': habe gefunden. Перфект використовується для опису минулих подій у розмовній мові."
+              },
+              {
+                "gap_number": 8,
+                "options": ["A) hilft", "B) helft", "C) helfen", "D) helfe"],
+                "answer": "A) hilft",
+                "explanation": "'helfen' — дієслово зі зміною кореневого голосного: er/sie/es hilft. Теперішній час, 3 особа однини."
+              },
+              {
+                "gap_number": 9,
+                "options": ["A) sind", "B) haben", "C) waren", "D) hatten"],
+                "answer": "B) haben",
+                "explanation": "Перфект дієслова 'aufstellen' (акційне дієслово) утворюється з допоміжним дієсловом 'haben'."
+              },
+              {
+                "gap_number": 10,
+                "options": ["A) sitze", "B) sitzen", "C) sitzt", "D) gesessen"],
+                "answer": "A) sitze",
+                "explanation": "Теперішній час, 1 особа однини: ich sitze."
               }
             ]
           }
         ],
+
         "writing": {
           "task_type": "semi_formal_email",
-          "situation": "Sie haben eine Wohnungsanzeige gelesen und interessieren sich für die Wohnung. Schreiben Sie eine E-Mail an den Vermieter Herrn Bauer. Fragen Sie nach der monatlichen Miete, der Größe der Wohnung und dem frühestmöglichen Einzugstermin.",
+          "situation": "Sie haben eine Wohnungsanzeige gelesen und interessieren sich für die Wohnung. Schreiben Sie eine E-Mail an den Vermieter Herrn Bauer. Fragen Sie nach der monatlichen Miete (inkl. Nebenkosten), der Größe der Wohnung und dem frühestmöglichen Einzugstermin. Schlagen Sie auch einen Besichtigungstermin vor.",
           "recipient": "Herr Bauer (Vermieter)",
           "register": "semi_formal",
           "required_points": [
-            "Nach der monatlichen Miete (inkl. Nebenkosten) fragen",
+            "Nach der monatlichen Miete inklusive Nebenkosten fragen",
             "Die Größe der Wohnung und die Anzahl der Zimmer erfragen",
-            "Den frühestmöglichen Einzugstermin erfragen und einen Besichtigungstermin vorschlagen"
+            "Den frühestmöglichen Einzugstermin erfragen",
+            "Einen Besichtigungstermin vorschlagen"
           ],
           "word_count_target": 60,
           "useful_phrases": [
@@ -618,41 +750,112 @@
             "ich habe Ihre Anzeige gelesen und interessiere mich für die Wohnung.",
             "Ich würde gerne wissen, ...",
             "Könnten Sie mir bitte mitteilen, ...?",
-            "Wie hoch ist die monatliche Miete?",
-            "Wäre eine Besichtigung möglich?",
+            "Wie hoch ist die monatliche Miete (inkl. Nebenkosten)?",
+            "Wie groß ist die Wohnung und wie viele Zimmer hat sie?",
+            "Ab wann wäre ein Einzug möglich?",
+            "Wäre eine Besichtigung am ... möglich?",
             "Ich freue mich auf Ihre Antwort.",
             "Mit freundlichen Grüßen,"
           ],
-          "model_answer": "Sehr geehrter Herr Bauer,\n\nich habe Ihre Anzeige gelesen und interessiere mich sehr für die Wohnung. Könnten Sie mir bitte mitteilen, wie hoch die monatliche Miete inklusive Nebenkosten ist? Außerdem würde ich gerne wissen, wie groß die Wohnung ist und wie viele Zimmer sie hat. Ab wann wäre ein Einzug möglich? Ich würde die Wohnung gerne besichtigen – wäre nächste Woche ein Termin möglich?\n\nMit freundlichen Grüßen,\n[Ihr Name]",
+          "model_answer": "Sehr geehrter Herr Bauer,\n\nich habe Ihre Anzeige gelesen und interessiere mich sehr für die Wohnung. Könnten Sie mir bitte mitteilen, wie hoch die monatliche Miete inklusive Nebenkosten ist? Außerdem würde ich gerne wissen, wie groß die Wohnung ist und wie viele Zimmer sie hat. Ab wann wäre ein Einzug möglich?\n\nIch würde die Wohnung gerne besichtigen – wäre nächste Woche Donnerstag ein Termin möglich?\n\nMit freundlichen Grüßen,\n[Ihr Name]",
           "scoring_criteria": [
-            "Inhalt: Alle drei Pflichtpunkte sind angesprochen (Miete, Größe, Einzugstermin).",
-            "Kommunikative Gestaltung: Angemessene Anrede und Grußformel, höflicher Ton, klare Fragestellung.",
-            "Formale Richtigkeit: Weitgehend korrekte Grammatik und Rechtschreibung (Dativ-Formen, Verbkonjugation).",
+            "Inhalt: Alle vier Pflichtpunkte sind angesprochen (Miete inkl. NK, Größe/Zimmer, Einzugstermin, Besichtigungsvorschlag).",
+            "Kommunikative Gestaltung: Angemessene Anrede (Sehr geehrter) und Grußformel (Mit freundlichen Grüßen), höflicher Ton, klare Fragestellung.",
+            "Formale Richtigkeit: Weitgehend korrekte Grammatik und Rechtschreibung (Dativ-Formen, Verbkonjugation, Groß-/Kleinschreibung).",
             "Wortschatz: Geeignete Ausdrücke für semi-formale Korrespondenz (Könnten Sie mir mitteilen...?, Ich würde gerne wissen...)."
           ]
         },
+
         "speaking": {
-          "task_type": "describe_image",
-          "prompt": "Beschreiben Sie Ihr Traumzimmer. Wo sind die Möbel? Was steht, hängt oder liegt wo? Verwenden Sie Präpositionen.",
-          "image_description": "A tidy living room: a sofa against the left wall, a coffee table in front of the sofa, a large bookshelf next to the window on the right, a floor lamp behind the armchair in the corner, a rug under the coffee table, a picture hanging on the wall above the sofa.",
-          "time_suggestion_seconds": 90,
-          "useful_phrases": [
-            "Das Sofa steht an der Wand.",
-            "Der Tisch steht vor dem Sofa.",
-            "Das Regal steht neben dem Fenster.",
-            "Die Lampe hängt über dem Tisch.",
-            "Der Teppich liegt unter dem Tisch.",
-            "Das Bild hängt an der Wand.",
-            "In der Ecke steht ein Sessel.",
-            "Neben dem Bett steht ein Nachttisch.",
-            "Auf dem Regal liegen Bücher.",
-            "Zwischen dem Sofa und dem Fenster gibt es viel Licht."
-          ],
-          "example_response": "Mein Traumzimmer ist groß und gemütlich. Das Sofa steht an der Wand, und vor dem Sofa steht ein kleiner Tisch. Auf dem Tisch liegen Bücher und eine Fernbedienung. Neben dem Fenster steht ein großes Regal mit vielen Büchern. Die Lampe hängt über dem Esstisch. Unter dem Sofa liegt ein schöner Teppich. An der Wand hängen zwei Bilder. Das Zimmer ist hell und sehr schön.",
-          "exam_tips": [
-            "Fangen Sie einfach an: 'In meinem Traumzimmer gibt es...' oder 'Das Zimmer ist...' — ein guter Einstieg nimmt den Stress.",
-            "Benutzen Sie Verbindungswörter wie 'und', 'außerdem', 'auch' und 'daneben', damit Ihre Beschreibung flüssiger klingt.",
-            "Wenn Sie ein Wort vergessen: Beschreiben Sie es mit anderen Worten. Zum Beispiel statt 'Nachttisch': 'ein kleiner Tisch neben dem Bett'."
+          "task_types": [
+            {
+              "type": "describe_image",
+              "title": "Bildbeschreibung: Ein Wohnzimmer",
+              "prompt": "Beschreiben Sie das Wohnzimmer auf dem Bild. Sagen Sie, wo die Möbel und Gegenstände sind.",
+              "image_description_for_teacher": "Ein aufgeräumtes Wohnzimmer: Ein Sofa steht an der linken Wand, vor dem Sofa ein Couchtisch, auf dem Bücher liegen. Rechts neben dem Fenster steht ein großes Bücherregal. In der Ecke steht ein Sessel, hinter dem Sessel eine Stehlampe. Auf dem Boden liegt ein Teppich. Über dem Sofa hängt ein Bild an der Wand. Ein Fernseher steht auf einem Schrank gegenüber dem Sofa.",
+              "image_search_suggestion": "Suchbegriff für lizenzfreies Bild: 'cozy living room furniture arrangement flat lay Unsplash' oder 'Wohnzimmer modern gemütlich'",
+              "required_points": [
+                "Mindestens 5 Möbelstücke nennen",
+                "Mindestens 5 verschiedene Präpositionen mit Dativ verwenden",
+                "Adjektive zur Beschreibung des Raums benutzen (hell, gemütlich, groß, klein, modern...)",
+                "Sätze verbinden mit: und, auch, außerdem, daneben, gegenüber"
+              ],
+              "time_suggestion_seconds": 90,
+              "useful_phrases": [
+                "Im Wohnzimmer steht / liegt / hängt ...",
+                "Das Sofa steht an der Wand.",
+                "Vor dem Sofa steht ein Tisch.",
+                "Neben dem Fenster steht ein Regal.",
+                "Über dem Sofa hängt ein Bild.",
+                "Unter dem Tisch liegt ein Teppich.",
+                "In der Ecke steht ein Sessel.",
+                "Auf dem Regal liegen Bücher.",
+                "Zwischen dem Sofa und dem Fenster gibt es viel Licht.",
+                "Das Zimmer ist hell / gemütlich / modern / groß."
+              ],
+              "example_response": "Im Wohnzimmer steht ein großes Sofa an der linken Wand. Vor dem Sofa steht ein kleiner Couchtisch – auf dem Tisch liegen ein paar Bücher. Neben dem Fenster steht ein hohes Bücherregal. In der Ecke steht ein bequemer Sessel, und hinter dem Sessel steht eine Stehlampe. Über dem Sofa hängt ein schönes Bild an der Wand. Auf dem Boden liegt ein großer Teppich. Das Zimmer ist sehr gemütlich und hell.",
+              "exam_tips": [
+                "Fangen Sie einfach an: 'Im Zimmer steht ...' oder 'Ich sehe ...' — ein direkter Einstieg ohne lange Einleitung ist gut.",
+                "Benutzen Sie Verbindungswörter: 'und', 'außerdem', 'auch', 'daneben', damit Ihre Beschreibung flüssiger klingt.",
+                "Wenn Sie ein Wort vergessen: Beschreiben Sie es mit anderen Worten. Zum Beispiel statt 'Nachttisch': 'ein kleiner Tisch neben dem Bett'.",
+                "Sprechen Sie in ganzen Sätzen — vermeiden Sie einzelne Wörter ohne Kontext."
+              ]
+            },
+            {
+              "type": "monologue",
+              "title": "Monolog: Meine Wohnsituation",
+              "prompt": "Erzählen Sie über Ihre aktuelle Wohnsituation. Wo wohnen Sie? Wie ist Ihre Wohnung? Was gefällt Ihnen, was nicht?",
+              "required_points": [
+                "Wo Sie wohnen (Stadt, Lage – zentral, ruhig...)",
+                "Wie die Wohnung ist (Größe, Anzahl der Zimmer, Einrichtung)",
+                "Was Ihnen an der Wohnung gefällt",
+                "Was Sie gerne ändern würden (Idealwohnung)"
+              ],
+              "time_suggestion_seconds": 90,
+              "useful_phrases": [
+                "Ich wohne in ... / in einer ... Wohnung.",
+                "Die Wohnung hat ... Zimmer.",
+                "Meine Wohnung ist ... m² groß.",
+                "Im Wohnzimmer steht / hängt ...",
+                "Was mir gut gefällt, ist ...",
+                "Ein Nachteil ist, dass ...",
+                "Meine Traumwohnung wäre ...",
+                "Ich würde gerne ..., aber ..."
+              ],
+              "example_response": "Ich wohne in einer kleinen Wohnung im Stadtzentrum. Die Wohnung hat zwei Zimmer, eine Küche und ein Bad. Sie ist etwa 45 Quadratmeter groß. Im Wohnzimmer steht ein Sofa und ein Regal mit Büchern. Das Zimmer ist gemütlich, aber ein bisschen klein. Was mir gut gefällt, ist die Lage – ich bin nah am Bahnhof. Ein Nachteil ist, dass die Wohnung manchmal laut ist. Meine Traumwohnung wäre größer und hätte einen Balkon. Aber für jetzt bin ich zufrieden.",
+              "exam_tips": [
+                "Geben Sie konkrete Details – nicht nur 'die Wohnung ist schön', sondern 'das Sofa ist bequem und das Zimmer ist hell'.",
+                "Nutzen Sie Konjunktionen wie 'aber', 'weil', 'dass', um Sätze zu verbinden.",
+                "Bereiten Sie eine Vorlage vor: Wo? → Wie ist es? → Was gefällt? → Was nicht? → Traumwohnung."
+              ]
+            },
+            {
+              "type": "dialogue",
+              "title": "Dialog: Wohnungsgespräch",
+              "prompt": "Sie möchten ein WG-Zimmer besichtigen. Sprechen Sie mit dem Mitbewohner / der Mitbewohnerin. Fragen Sie nach Miete, Regeln und dem Zimmer.",
+              "required_points": [
+                "Nach der Miete und den Nebenkosten fragen",
+                "Fragen, was im Zimmer schon vorhanden ist (Möbel etc.)",
+                "Nach den Regeln in der WG fragen (Putzen, Lärm, Gäste)",
+                "Ihre eigene Situation kurz vorstellen"
+              ],
+              "time_suggestion_seconds": 120,
+              "useful_phrases": [
+                "Wie hoch ist die Miete / die Warmmiete?",
+                "Ist das Zimmer möbliert?",
+                "Was gibt es schon im Zimmer?",
+                "Wie sind die Regeln in der WG?",
+                "Darf ich Gäste mitbringen?",
+                "Ich bin Student / Berufstätig und ...",
+                "Ich bin ruhig und ordentlich.",
+                "Wann kann ich einziehen?"
+              ],
+              "exam_tips": [
+                "Reagieren Sie auf das, was Ihr Gesprächspartner sagt – hören Sie aktiv zu.",
+                "Benutzen Sie Höflichkeitsformeln: 'Könnten Sie mir sagen, ...?' / 'Darf ich fragen, ...?'",
+                "Wenn Sie eine Frage nicht verstehen, sagen Sie: 'Könnten Sie das bitte wiederholen?'"
+              ]
+            }
           ]
         }
       }

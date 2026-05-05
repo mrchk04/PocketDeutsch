@@ -185,11 +185,11 @@ fun NavGraph(navController: NavHostController) {
                         },
 
                         onNavigateHome = {
-                            navController.navigate(Screen.Home.route) {
-                                popUpTo(navController.graph.startDestinationId) { saveState = true }
-                                launchSingleTop = true
-                                restoreState = true
-                            }
+//                            navController.navigate(Screen.Home.route) {
+//                                popUpTo(navController.graph.startDestinationId) { saveState = true }
+//                                launchSingleTop = true
+//                                restoreState = true
+//                            }
                         },
                         onNavigateProgress = { /* Додамо пізніше */ },
                         onNavigateProfile = { /* Додамо пізніше */ }

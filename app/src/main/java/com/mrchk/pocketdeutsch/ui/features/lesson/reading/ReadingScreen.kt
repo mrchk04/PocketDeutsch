@@ -421,7 +421,7 @@ fun FreeTextReadingExercise(
     Column(
         modifier = Modifier
             .fillMaxSize()
-//            .verticalScroll(rememberScrollState())
+            .verticalScroll(rememberScrollState())
     ) {
         Text(text = instruction, style = PocketTheme.typography.titleMedium)
 

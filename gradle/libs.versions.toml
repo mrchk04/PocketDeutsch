@@ -16,6 +16,8 @@ room = "2.6.1"
 coil = "2.6.0"
 kotlinx-serialization = "1.6.3"
 generativeai = "0.9.0"
+googleServices = "4.4.1"
+firebaseBom = "33.0.0"
 
 [libraries]
 # Core & UI
@@ -59,8 +61,16 @@ kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-
 # Штучний інтелект (Gemini AI)
 generativeai = { group = "com.google.ai.client.generativeai", name = "generativeai", version.ref = "generativeai" }
 
-#ExoPlayer (Media3)
+# ExoPlayer (Media3)
 media3-exoplayer = {group = "androidx.media3", name = "media3-exoplayer", version = "1.2.0"}
+
+# Firebase BoM (Bill of Materials)
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+
+# Firebase
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore" }
+firebase-storage = { group = "com.google.firebase", name = "firebase-storage" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -69,3 +79,4 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }

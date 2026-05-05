@@ -51,20 +51,11 @@ sealed interface VocabExercise {
         val answers: List<String>
     ) : VocabExercise
 
-//    data class CollocationSort(
-//        override val instruction: String,
-//        val verbs: List<String>,     // Дієслова
-//        val nouns: List<String>,     // Іменники
-//        val answers: List<String>
-//    ) : VocabExercise
-
     data class WordFormation(
         override val instruction: String,
         val items: List<String>,     // Слова для злиття
         val answers: List<String>
     ) : VocabExercise
-
-    // Вправу sentence_production поки можемо ігнорувати або зробити для неї порожню модель
 }
 
 data class Word(
@@ -122,9 +113,9 @@ data class AdPart(
 )
 
 data class ListeningPractice(
-    val audioUrl: String?,
-    val transcript: String,
-    val exercise: InteractiveExercise
+    val audioUrls: List<String?>,
+    val transcripts: List<String>,
+    val exercises: List<InteractiveExercise>
 )
 
 data class LanguageUsePractice(
@@ -166,9 +157,30 @@ data class SpeakingPractice(
     val examTips: List<String>
 )
 
-data class InteractiveExercise(
-    val type: String,
-    val instruction: String,
-    val items: List<String>,
-    val answers: List<String>
+sealed interface InteractiveExercise {
+    val instruction: String
+
+    data class MultipleChoice(
+        override val instruction: String,
+        val questions: List<McQuestion>
+    ) : InteractiveExercise
+
+    data class RichtigFalsch(
+        override val instruction: String,
+        val items: List<String>,
+        val answers: List<String>
+    ) : InteractiveExercise
+
+    data class Standard(
+        val type: String,
+        override val instruction: String,
+        val items: List<String>,
+        val answers: List<String>
+    ) : InteractiveExercise
+}
+
+data class McQuestion(
+    val question: String,
+    val options: List<String>,
+    val answer: String
 )

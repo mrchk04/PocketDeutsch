@@ -1,8 +1,9 @@
 package com.mrchk.pocketdeutsch.data.mapper
 
-import android.util.Log
 import com.mrchk.pocketdeutsch.data.local.dto.ModuleData
 import com.mrchk.pocketdeutsch.data.local.dto.StandardExercise
+import com.mrchk.pocketdeutsch.data.local.dto.ListeningExercise
+import com.mrchk.pocketdeutsch.data.local.dto.McQuestionDto
 import com.mrchk.pocketdeutsch.domain.model.AdPart
 import com.mrchk.pocketdeutsch.domain.model.CollocationUi
 import com.mrchk.pocketdeutsch.domain.model.Lesson
@@ -21,6 +22,9 @@ import com.mrchk.pocketdeutsch.domain.model.SpeakingPractice
 import com.mrchk.pocketdeutsch.domain.model.VocabExercise
 import com.mrchk.pocketdeutsch.domain.model.VocabularySection
 import com.mrchk.pocketdeutsch.domain.model.Word
+import com.mrchk.pocketdeutsch.domain.model.McQuestion
+
+import kotlinx.serialization.json.*
 
 fun ModuleData.toDomainModel(): Lesson {
     return Lesson(
@@ -82,7 +86,7 @@ fun ModuleData.toDomainModel(): Lesson {
                     combinedText = ex1.text ?: ex1.texts?.values?.joinToString("\n\n") ?: ""
 
                     exercises.add(
-                        InteractiveExercise(
+                        InteractiveExercise.Standard(
                             type = ex1.textType,
                             instruction = ex1.instruction,
                             items = ex1.items,
@@ -95,7 +99,7 @@ fun ModuleData.toDomainModel(): Lesson {
                     if (combinedText.isEmpty()) combinedText = ex2.text ?: ""
 
                     exercises.add(
-                        InteractiveExercise(
+                        InteractiveExercise.Standard(
                             type = ex2.textType,
                             instruction = ex2.instruction,
                             items = ex2.items,
@@ -112,18 +116,25 @@ fun ModuleData.toDomainModel(): Lesson {
                 )
             },
 
-            listening = this.block3Skills.listening.listening_1?.let { listening1 ->
+            listening = run {
+                val part1 = this.block3Skills.listening.listening_1?.toDomainListeningPractice()
+                val part2 = this.block3Skills.listening.listening_2?.toDomainListeningPractice()
+
                 ListeningPractice(
-                    audioUrl = null,
-                    transcript = listening1.transcript,
-                    exercise = InteractiveExercise(
-                        type = listening1.exerciseType,
-                        instruction = listening1.instruction,
-                        items = emptyList(),
-                        answers = listening1.answers
+                    audioUrls = listOfNotNull(
+                        part1?.audioUrls?.firstOrNull(),
+                        part2?.audioUrls?.firstOrNull()
+                    ),
+                    transcripts = listOfNotNull(
+                        part1?.transcripts?.firstOrNull(),
+                        part2?.transcripts?.firstOrNull()
+                    ),
+                    exercises = listOfNotNull(
+                        part1?.exercises?.firstOrNull(),
+                        part2?.exercises?.firstOrNull()
                     )
                 )
-            } ?: ListeningPractice(null, "", InteractiveExercise("", "", emptyList(), emptyList())),
+            },
 
             languageUse = this.block3Skills.languageUse.map { task ->
                 LanguageUsePractice(
@@ -170,7 +181,7 @@ fun StandardExercise.toDomainExercise(): InteractiveExercise {
         .ifEmpty { this.options }
         .ifEmpty { this.verbs + this.nouns }
 
-    return InteractiveExercise(
+    return InteractiveExercise.Standard(
         type = this.type,
         instruction = this.instruction,
         items = combinedItems,
@@ -183,7 +194,7 @@ fun StandardExercise.toVocabExercise(): VocabExercise? {
         "matching" -> VocabExercise.Matching(
             instruction = this.instruction,
             items = this.items,
-            options = this.options, // Беремо options прямо з твого DTO!
+            options = this.options,
             answers = this.answers
         )
         "gap_fill" -> VocabExercise.GapFill(
@@ -191,17 +202,48 @@ fun StandardExercise.toVocabExercise(): VocabExercise? {
             items = this.items,
             answers = this.answers
         )
-//        "collocation_sort" -> VocabExercise.CollocationSort(
-//            instruction = this.instruction,
-//            verbs = this.verbs, // Беремо verbs з DTO
-//            nouns = this.nouns, // Беремо nouns з DTO
-//            answers = this.answers
-//        )
         "word_formation" -> VocabExercise.WordFormation(
             instruction = this.instruction,
             items = this.items,
             answers = this.answers
         )
-        else -> null // Ігноруємо sentence_production та інші невідомі
+        else -> null
     }
+}
+
+fun ListeningExercise.toDomainListeningPractice(): ListeningPractice {
+    val jsonParser = Json { ignoreUnknownKeys = true }
+
+    val mappedExercise: InteractiveExercise = when (this.exerciseType) {
+        "richtig_falsch" -> {
+            val rfList = if (this.items is JsonArray) {
+                this.items.map { it.jsonPrimitive.content }
+            } else emptyList()
+
+            InteractiveExercise.RichtigFalsch(this.instruction, rfList, this.answers)
+        }
+        "multiple_choice" -> {
+            val mcList = if (this.items is JsonArray) {
+                this.items.map { element ->
+                    val dto = jsonParser.decodeFromJsonElement<McQuestionDto>(element)
+                    McQuestion(dto.question, dto.options, dto.answer)
+                }
+            } else emptyList()
+
+            InteractiveExercise.MultipleChoice(this.instruction, mcList)
+        }
+        else -> {
+            val standardItems = if (this.items is JsonArray) {
+                this.items.map { it.jsonPrimitive.content }
+            } else emptyList()
+
+            InteractiveExercise.Standard(this.exerciseType, this.instruction, standardItems, this.answers)
+        }
+    }
+
+    return ListeningPractice(
+        audioUrls = listOf(this.audioUrl),
+        transcripts = listOf(this.transcript),
+        exercises = listOf(mappedExercise)
+    )
 }

@@ -555,8 +555,9 @@
         "listening": {
           "listening_1": {
             "title": "Dialog: Wohnungssuche",
-            "source": "Eigener Modelldialog im Stil des Goethe A2",
-            "audio_note": "Verwenden Sie die folgende Audioressource: DW Nicos Weg A2 – learngerman.dw.com/en/nicos-weg/c-36519797 (Folge über Wohnungssuche in Deutschland). Alternativ: Eigenproduktion des folgenden Transkripts als TTS-Audio.",
+            "audioUrl": "https://firebasestorage.googleapis.com/v0/b/pocketdeutsch-7e465.firebasestorage.app/o/a2.1_wohnung_lisening_01.mp3?alt=media&token=810d54a1-ac25-4c77-a0c2-38d4f7845b8d",
+            "audio_type": "dialogue",
+            "tts_instructions": "Speaker Moderatorin: female ~40, professional radio host tone, clear and welcoming. Speaker Herr Kaya: male ~30, Turkish accent in German (optional but realistic), calm and positive tone. Moderate pace suitable for A2 level. Standard German (Hochdeutsch) with natural pauses between speakers.",
             "transcript": "Moderatorin: Guten Tag! Heute sprechen wir über das Thema Wohnungssuche. Unser Gast ist Herr Kaya aus der Türkei. Er lebt seit sechs Monaten in Köln.\nModeratorin: Herr Kaya, wie war die Wohnungssuche für Sie?\nHerr Kaya: Am Anfang war es sehr schwierig. Ich habe viele Anzeigen im Internet gelesen. Aber die günstigen Wohnungen waren immer schon weg.\nModeratorin: Wie lange haben Sie gesucht?\nHerr Kaya: Fast zwei Monate! Ich habe zehn Wohnungen besichtigt. Aber für sieben Wohnungen hat der Vermieter nicht zurückgerufen.\nModeratorin: Warum ist das so schwierig?\nHerr Kaya: In Köln suchen viele Menschen eine Wohnung. Es gibt nicht genug Angebote. Und man braucht viele Dokumente – Gehaltsnachweis, Schufa, Ausweis ...\nModeratorin: Wie viel zahlen Sie jetzt für Ihre Wohnung?\nHerr Kaya: Ich zahle 780 Euro warm für eine 2-Zimmer-Wohnung. Das ist okay für Köln.\nModeratorin: Sind Sie mit der Wohnung zufrieden?\nHerr Kaya: Ja, sehr! Sie ist klein, aber hell und gemütlich. Meine Nachbarn sind auch nett. Ich bin froh, dass ich sie gefunden habe.",
             "exercise_type": "richtig_falsch",
             "instruction": "Hören Sie den Dialog und entscheiden Sie: richtig (R) oder falsch (F)?",
@@ -571,8 +572,9 @@
           },
           "listening_2": {
             "title": "Telefonansage: Wohnungsanzeige",
-            "source": "Eigener Modelldialog im Stil des Goethe A2 / Telc A2",
-            "audio_note": "Verwenden Sie die folgende Ressource für authentisches Hörmaterial im Anzeigenformat: Goethe-Institut A2 Prüfungstraining – goethe.de/en/spr/prf/ueb/pa2.html (Hörmodul). Alternativ: Eigenproduktion des folgenden Transkripts.",
+            "audioUrl": "https://firebasestorage.googleapis.com/v0/b/pocketdeutsch-7e465.firebasestorage.app/o/a2.1_wohnung_listening_02.mp3?alt=media&token=414f63b3-60d9-45aa-ab81-b4164359d702",
+            "audio_type": "monologue_voicemail",
+            "tts_instructions": "Speaker Ingrid Müller: female ~55, speaking into an answering machine. Tone is polite but slightly hesitant, as people often are on voicemails. Add a very slight 'telephone/voicemail' audio effect if the TTS tool supports it. Moderate speaking pace (A2 level).",
             "transcript": "Sprecher: Sie hören eine Ansage auf einem Anrufbeantworter.\n\n'Guten Tag, hier spricht Ingrid Müller. Ich rufe wegen der Wohnungsanzeige an. In der Anzeige steht, die Wohnung hat 65 Quadratmeter und drei Zimmer. Ich möchte gerne wissen: Ist die Wohnung im Moment noch frei? Wie hoch ist die genaue Kaltmiete? Und sind Haustiere erlaubt? Ich habe eine kleine Katze. Außerdem hätte ich noch eine Frage zur Lage: Gibt es in der Nähe eine Bushaltestelle oder eine U-Bahn-Station? Ich habe kein Auto. Und: Wäre eine Besichtigung am Wochenende möglich? Am liebsten Samstag Nachmittag. Sie können mich unter 0176-334 89 21 zurückrufen. Vielen Dank und auf Wiederhören!'",
             "exercise_type": "multiple_choice",
             "instruction": "Hören Sie die Ansage und wählen Sie die richtige Antwort (A, B oder C).",

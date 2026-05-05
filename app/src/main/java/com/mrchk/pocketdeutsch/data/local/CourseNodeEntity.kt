@@ -10,5 +10,7 @@ data class CourseNodeEntity(
     val title: String,
     val type: String,
     val orderIndex: Int,
-    val isCompleted: Boolean = false
+    val isCompleted: Boolean = false,
+    val bestScore: Int = 0,
+    val lastScore: Int = 0
 )

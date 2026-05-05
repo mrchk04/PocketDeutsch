@@ -62,8 +62,24 @@ class LocalLessonRepositoryImpl @Inject constructor(
         courseNodeDao.markNodeAsCompleted(nodeId)
     }
 
+    suspend fun completeNodeWithScore(nodeId: String, score: Int) {
+        courseNodeDao.completeNodeWithScore(nodeId, score)
+    }
+
     override suspend fun getCompletedTasksCount(lessonId: String): Int {
         return courseNodeDao.getCompletedNodesCount(lessonId)
+    }
+
+    override suspend fun resetUnitProgress(lessonId: String, nodeId: String?) = withContext(Dispatchers.IO) {
+        try {
+            if (nodeId != null) {
+                courseNodeDao.resetNodeCompletion(nodeId)
+            } else {
+                courseNodeDao.resetLessonCompletion(lessonId)
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
 
     private suspend fun seedDatabaseIfNeeded(lessons: List<Lesson>) {
@@ -158,9 +174,7 @@ class LocalLessonRepositoryImpl @Inject constructor(
                 )
             }
 
-            // Зберігаємо всі вузли в Room
             courseNodeDao.insertNodes(nodesToInsert)
         }
     }
-
 }

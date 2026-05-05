@@ -11,4 +11,5 @@ interface LessonRepository {
     fun getLessonPathway(lessonId: String): Flow<List<CourseNode>>
     suspend fun completeNode(nodeId: String)
     suspend fun getCompletedTasksCount(lessonId: String): Int
+    suspend fun resetUnitProgress(lessonId: String, nodeId: String? = null)
 }

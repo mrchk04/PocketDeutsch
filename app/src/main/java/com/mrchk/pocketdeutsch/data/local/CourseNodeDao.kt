@@ -18,6 +18,23 @@ interface CourseNodeDao {
     @Query("SELECT COUNT(*) FROM course_nodes WHERE lessonId = :lessonId AND isCompleted = 1")
     suspend fun getCompletedNodesCount(lessonId: String): Int
 
+    @Query(
+        """
+        UPDATE course_nodes 
+        SET isCompleted = 1, 
+            lastScore = :score,
+            bestScore = CASE WHEN :score > bestScore THEN :score ELSE bestScore END
+        WHERE id = :nodeId
+    """
+    )
+    suspend fun completeNodeWithScore(nodeId: String, score: Int)
+
+    @Query("UPDATE course_nodes SET isCompleted = 0 WHERE id = :nodeId")
+    suspend fun resetNodeCompletion(nodeId: String)
+
+    @Query("UPDATE course_nodes SET isCompleted = 0 WHERE lessonId = :lessonId")
+    suspend fun resetLessonCompletion(lessonId: String)
+
     @Query("SELECT COUNT(*) FROM course_nodes")
     suspend fun countAllNodes(): Int
 

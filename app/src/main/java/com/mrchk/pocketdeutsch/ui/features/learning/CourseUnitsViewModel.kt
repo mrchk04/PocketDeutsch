@@ -30,15 +30,27 @@ class CourseUnitsViewModel @Inject constructor(
     private val _selectedLevel = MutableStateFlow("")
     val selectedLevel: StateFlow<String> = _selectedLevel.asStateFlow()
 
+    private val _isRefreshing = MutableStateFlow(false)
+    val isRefreshing: StateFlow<Boolean> = _isRefreshing.asStateFlow()
+
     init {
         loadCourseData()
     }
 
-    private fun loadCourseData() {
-        viewModelScope.launch {
-            _uiState.value = CourseUnitsUiState.Loading
-            try {
+    fun refreshData() {
+        loadCourseData(isSilent = true)
+    }
 
+    private fun loadCourseData(isSilent: Boolean = false) {
+        viewModelScope.launch {
+            if (!isSilent) {
+                _uiState.value = CourseUnitsUiState.Loading
+            }
+
+            // ВМИКАЄМО ІНДИКАТОР ТУТ
+            _isRefreshing.value = true
+
+            try {
                 val allLessons = lessonRepository.getLessons()
 
                 if (allLessons.isEmpty()) {
@@ -62,15 +74,13 @@ class CourseUnitsViewModel @Inject constructor(
                         unitNumber = "Модуль ${index + 1}",
                         title = lesson.title,
                         description = lesson.shortDescription,
-                        completedLessons = completed, // ТЕПЕР ДИНАМІЧНО
-                        totalLessons = total,         // ТЕПЕР ДИНАМІЧНО
-                        state = state,                // ТЕПЕР ДИНАМІЧНО
-                        isExam = false
-                        // progress = completed.toFloat() / total.toFloat() // Якщо додала це поле в UnitData
+                        completedLessons = completed,
+                        totalLessons = total,
+                        state = state,
+                        isExam = false,
                     )
                 }
 
-                // Динамічно збираємо всі унікальні рівні з наших даних
                 val levels = mappedUnits.map { it.level }.distinct().sorted()
 
                 _uiState.value = CourseUnitsUiState.Success(
@@ -83,6 +93,19 @@ class CourseUnitsViewModel @Inject constructor(
                 }
             } catch (e: Exception) {
                 _uiState.value = CourseUnitsUiState.Error(e.message ?: "Помилка завантаження курсу")
+            } finally {
+                _isRefreshing.value = false
+            }
+        }
+    }
+
+    fun resetUnitProgress(unitId: String) {
+        viewModelScope.launch {
+            try {
+                lessonRepository.resetUnitProgress(unitId)
+                loadCourseData(isSilent = true)
+            } catch (e: Exception) {
+                _uiState.value = CourseUnitsUiState.Error("Не вдалося скинути прогрес: ${e.message}")
             }
         }
     }

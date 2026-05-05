@@ -771,39 +771,6 @@
         "speaking": {
           "task_types": [
             {
-              "type": "describe_image",
-              "title": "Bildbeschreibung: Ein Wohnzimmer",
-              "prompt": "Beschreiben Sie das Wohnzimmer auf dem Bild. Sagen Sie, wo die Möbel und Gegenstände sind.",
-              "image_description_for_teacher": "Ein aufgeräumtes Wohnzimmer: Ein Sofa steht an der linken Wand, vor dem Sofa ein Couchtisch, auf dem Bücher liegen. Rechts neben dem Fenster steht ein großes Bücherregal. In der Ecke steht ein Sessel, hinter dem Sessel eine Stehlampe. Auf dem Boden liegt ein Teppich. Über dem Sofa hängt ein Bild an der Wand. Ein Fernseher steht auf einem Schrank gegenüber dem Sofa.",
-              "image_search_suggestion": "Suchbegriff für lizenzfreies Bild: 'cozy living room furniture arrangement flat lay Unsplash' oder 'Wohnzimmer modern gemütlich'",
-              "required_points": [
-                "Mindestens 5 Möbelstücke nennen",
-                "Mindestens 5 verschiedene Präpositionen mit Dativ verwenden",
-                "Adjektive zur Beschreibung des Raums benutzen (hell, gemütlich, groß, klein, modern...)",
-                "Sätze verbinden mit: und, auch, außerdem, daneben, gegenüber"
-              ],
-              "time_suggestion_seconds": 90,
-              "useful_phrases": [
-                "Im Wohnzimmer steht / liegt / hängt ...",
-                "Das Sofa steht an der Wand.",
-                "Vor dem Sofa steht ein Tisch.",
-                "Neben dem Fenster steht ein Regal.",
-                "Über dem Sofa hängt ein Bild.",
-                "Unter dem Tisch liegt ein Teppich.",
-                "In der Ecke steht ein Sessel.",
-                "Auf dem Regal liegen Bücher.",
-                "Zwischen dem Sofa und dem Fenster gibt es viel Licht.",
-                "Das Zimmer ist hell / gemütlich / modern / groß."
-              ],
-              "example_response": "Im Wohnzimmer steht ein großes Sofa an der linken Wand. Vor dem Sofa steht ein kleiner Couchtisch – auf dem Tisch liegen ein paar Bücher. Neben dem Fenster steht ein hohes Bücherregal. In der Ecke steht ein bequemer Sessel, und hinter dem Sessel steht eine Stehlampe. Über dem Sofa hängt ein schönes Bild an der Wand. Auf dem Boden liegt ein großer Teppich. Das Zimmer ist sehr gemütlich und hell.",
-              "exam_tips": [
-                "Fangen Sie einfach an: 'Im Zimmer steht ...' oder 'Ich sehe ...' — ein direkter Einstieg ohne lange Einleitung ist gut.",
-                "Benutzen Sie Verbindungswörter: 'und', 'außerdem', 'auch', 'daneben', damit Ihre Beschreibung flüssiger klingt.",
-                "Wenn Sie ein Wort vergessen: Beschreiben Sie es mit anderen Worten. Zum Beispiel statt 'Nachttisch': 'ein kleiner Tisch neben dem Bett'.",
-                "Sprechen Sie in ganzen Sätzen — vermeiden Sie einzelne Wörter ohne Kontext."
-              ]
-            },
-            {
               "type": "monologue",
               "title": "Monolog: Meine Wohnsituation",
               "prompt": "Erzählen Sie über Ihre aktuelle Wohnsituation. Wo wohnen Sie? Wie ist Ihre Wohnung? Was gefällt Ihnen, was nicht?",
@@ -829,33 +796,6 @@
                 "Geben Sie konkrete Details – nicht nur 'die Wohnung ist schön', sondern 'das Sofa ist bequem und das Zimmer ist hell'.",
                 "Nutzen Sie Konjunktionen wie 'aber', 'weil', 'dass', um Sätze zu verbinden.",
                 "Bereiten Sie eine Vorlage vor: Wo? → Wie ist es? → Was gefällt? → Was nicht? → Traumwohnung."
-              ]
-            },
-            {
-              "type": "dialogue",
-              "title": "Dialog: Wohnungsgespräch",
-              "prompt": "Sie möchten ein WG-Zimmer besichtigen. Sprechen Sie mit dem Mitbewohner / der Mitbewohnerin. Fragen Sie nach Miete, Regeln und dem Zimmer.",
-              "required_points": [
-                "Nach der Miete und den Nebenkosten fragen",
-                "Fragen, was im Zimmer schon vorhanden ist (Möbel etc.)",
-                "Nach den Regeln in der WG fragen (Putzen, Lärm, Gäste)",
-                "Ihre eigene Situation kurz vorstellen"
-              ],
-              "time_suggestion_seconds": 120,
-              "useful_phrases": [
-                "Wie hoch ist die Miete / die Warmmiete?",
-                "Ist das Zimmer möbliert?",
-                "Was gibt es schon im Zimmer?",
-                "Wie sind die Regeln in der WG?",
-                "Darf ich Gäste mitbringen?",
-                "Ich bin Student / Berufstätig und ...",
-                "Ich bin ruhig und ordentlich.",
-                "Wann kann ich einziehen?"
-              ],
-              "exam_tips": [
-                "Reagieren Sie auf das, was Ihr Gesprächspartner sagt – hören Sie aktiv zu.",
-                "Benutzen Sie Höflichkeitsformeln: 'Könnten Sie mir sagen, ...?' / 'Darf ich fragen, ...?'",
-                "Wenn Sie eine Frage nicht verstehen, sagen Sie: 'Könnten Sie das bitte wiederholen?'"
               ]
             }
           ]

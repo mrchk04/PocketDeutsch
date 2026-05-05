@@ -94,58 +94,62 @@ fun GrammarPracticeScreen(
                 CircularProgressIndicator(color = PocketTheme.colors.primary)
             }
         } else {
-            currentExercise?.let { exercise ->
+            currentExercise?.let { baseExercise ->
+                if (baseExercise is InteractiveExercise.Standard) {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(paddingValues)
+                            .verticalScroll(rememberScrollState())
+                            .padding(16.dp),
+                        verticalArrangement = Arrangement.spacedBy(24.dp)
+                    ) {
+                        Text(
+                            text = "${uiState.currentIndex + 1} з ${uiState.exercises.size}",
+                            style = PocketTheme.typography.labelLarge,
+                            color = PocketTheme.colors.ink.copy(alpha = 0.5f)
+                        )
 
-                Column(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(paddingValues)
-                        .verticalScroll(rememberScrollState())
-                        .padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(24.dp)
-                ) {
-                    // Прогрес
-                    Text(
-                        text = "${uiState.currentIndex + 1} з ${uiState.exercises.size}",
-                        style = PocketTheme.typography.labelLarge,
-                        color = PocketTheme.colors.ink.copy(alpha = 0.5f)
-                    )
+                        Text(
+                            text = baseExercise.instruction,
+                            style = PocketTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Black),
+                            color = PocketTheme.colors.ink
+                        )
 
-                    Text(
-                        text = exercise.instruction,
-                        style = PocketTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Black),
-                        color = PocketTheme.colors.ink
-                    )
-
-                    when (exercise.type) {
-                        "gap_fill", "error_correction", "sentence_construction" -> {
-                            Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                                exercise.items.forEachIndexed { index, itemText ->
-                                    ExerciseItemRow(
-                                        itemText = itemText,
-                                        userAnswer = uiState.userAnswers[index] ?: "",
-                                        correctAnswer = exercise.answers.getOrNull(index) ?: "",
-                                        isCorrect = uiState.evaluationResults[index],
-                                        isChecked = uiState.isChecked,
-                                        onAnswerChange = { viewModel.updateAnswer(index, it) }
-                                    )
+                        when (baseExercise.type) {
+                            "gap_fill", "error_correction", "sentence_construction" -> {
+                                Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+                                    baseExercise.items.forEachIndexed { index, itemText ->
+                                        ExerciseItemRow(
+                                            itemText = itemText,
+                                            userAnswer = uiState.userAnswers[index] ?: "",
+                                            correctAnswer = baseExercise.answers.getOrNull(index) ?: "",
+                                            isCorrect = uiState.evaluationResults[index],
+                                            isChecked = uiState.isChecked,
+                                            onAnswerChange = { viewModel.updateAnswer(index, it) }
+                                        )
+                                    }
                                 }
+                            }
+
+                            "free_production" -> {
+                                FreeProductionExerciseContent(
+                                    userAnswer = uiState.userAnswers[0] ?: "",
+                                    onAnswerChange = { viewModel.updateAnswer(0, it) },
+                                    isChecked = uiState.isChecked,
+                                    isEvaluating = uiState.isEvaluatingAi,
+                                    isCorrect = uiState.evaluationResults[0],
+                                    aiFeedback = uiState.aiFeedbackText
+                                )
                             }
                         }
 
-                        "free_production" -> {
-                            FreeProductionExerciseContent(
-                                userAnswer = uiState.userAnswers[0] ?: "",
-                                onAnswerChange = { viewModel.updateAnswer(0, it) },
-                                isChecked = uiState.isChecked,
-                                isEvaluating = uiState.isEvaluatingAi,
-                                isCorrect = uiState.evaluationResults[0],
-                                aiFeedback = uiState.aiFeedbackText
-                            )
-                        }
+                        Spacer(modifier = Modifier.height(80.dp))
                     }
-
-                    Spacer(modifier = Modifier.height(80.dp))
+                } else {
+                    Box(modifier = Modifier.fillMaxSize().padding(paddingValues), contentAlignment = Alignment.Center) {
+                        Text("Цей тип завдань тимчасово не підтримується", color = PocketTheme.colors.error)
+                    }
                 }
             }
         }

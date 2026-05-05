@@ -3,6 +3,7 @@ package com.mrchk.pocketdeutsch.ui.features.lesson.reading
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.mrchk.pocketdeutsch.domain.model.InteractiveExercise
 import com.mrchk.pocketdeutsch.domain.model.ReadingPractice
 import com.mrchk.pocketdeutsch.domain.repository.LessonRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -73,7 +74,8 @@ class ReadingViewModel @Inject constructor(
 
     fun nextQuestion() {
         val data = _readingData.value ?: return
-        val currentEx = data.exercises.getOrNull(_currentExerciseIndex.value) ?: return
+        val currentEx = data.exercises.getOrNull(_currentExerciseIndex.value)
+                as? InteractiveExercise.Standard ?: return
 
         if (_currentQuestionIndex.value < currentEx.items.size - 1) {
             _selectedAnswer.value?.let {

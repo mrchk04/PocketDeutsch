@@ -63,7 +63,9 @@ class GrammarPracticeViewModel @Inject constructor(
         val state = _uiState.value
         val currentExercise = state.currentExercise ?: return
 
-        if (currentExercise.type == "free_production") {
+        val standardExercise = currentExercise as? InteractiveExercise.Standard ?: return
+
+        if (standardExercise.type == "free_production") {
             val userAnswer = state.userAnswers[0] ?: ""
 
             evaluateTextWithAi(

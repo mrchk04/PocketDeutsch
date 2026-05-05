@@ -28,6 +28,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mrchk.pocketdeutsch.domain.model.AdPart
+import com.mrchk.pocketdeutsch.domain.model.InteractiveExercise
 import com.mrchk.pocketdeutsch.ui.components.PdButton
 import com.mrchk.pocketdeutsch.ui.components.PdExerciseTopBar
 import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
@@ -54,8 +55,9 @@ fun ReadingScreen(
     }
 
     val reading = data!!
-    // Беремо поточну вправу зі списку
-    val currentExercise = reading.exercises.getOrNull(exerciseIndex) ?: return
+
+    val baseExercise = reading.exercises.getOrNull(exerciseIndex) ?: return
+    val currentExercise = baseExercise as? InteractiveExercise.Standard ?: return
 
     if (currentIndex >= currentExercise.items.size) return
 
@@ -71,9 +73,12 @@ fun ReadingScreen(
 
     Scaffold(
         topBar = {
-            // Розраховуємо загальний прогрес для всіх вправ разом
-            val totalItems = reading.exercises.sumOf { it.items.size }
-            val completedInPrevious = reading.exercises.take(exerciseIndex).sumOf { it.items.size }
+            val totalItems = reading.exercises.sumOf { exercise ->
+                (exercise as? InteractiveExercise.Standard)?.items?.size ?: 0
+            }
+            val completedInPrevious = reading.exercises.take(exerciseIndex).sumOf { exercise ->
+                (exercise as? InteractiveExercise.Standard)?.items?.size ?: 0
+            }
             val currentProgress = (completedInPrevious + currentIndex + 1).toFloat() / totalItems
 
             PdExerciseTopBar(

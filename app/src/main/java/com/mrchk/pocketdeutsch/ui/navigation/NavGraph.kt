@@ -156,6 +156,8 @@ fun NavGraph(navController: NavHostController) {
             val uiState by viewModel.uiState.collectAsState()
             val selectedLevel by viewModel.selectedLevel.collectAsState()
 
+            val isRefreshing by viewModel.isRefreshing.collectAsState()
+
             when (val state = uiState) {
                 is CourseUnitsUiState.Loading -> {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -168,13 +170,20 @@ fun NavGraph(navController: NavHostController) {
                         units = state.units,
                         availableLevels = state.availableLevels,
                         selectedLevel = selectedLevel,
+                        isRefreshing = isRefreshing,
+                        onRefresh = { viewModel.refreshData() },
+
                         onLevelSelected = { viewModel.selectLevel(it) },
                         onUnitClick = { unitId ->
                             navController.navigate(Screen.LessonDetail.createRoute(unitId))
                         },
-                        onUnitActionClick = { unitId ->
-                            navController.navigate(Screen.Writing.createRoute(unitId))
+                        onUnitContinue = { unitId ->
+                            navController.navigate(Screen.LessonDetail.createRoute(unitId))
                         },
+                        onUnitReset = { unitId ->
+                            viewModel.resetUnitProgress(unitId)
+                        },
+
                         onNavigateHome = {
                             navController.navigate(Screen.Home.route) {
                                 popUpTo(navController.graph.startDestinationId) { saveState = true }

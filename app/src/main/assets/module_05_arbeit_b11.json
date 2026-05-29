@@ -1,0 +1,856 @@
+[
+  {
+    "module": {
+      "metadata": {
+        "id": "arbeit-b1-1",
+        "topic": "Arbeitswelt und Berufe",
+        "topic_de": "Arbeitswelt und Berufe – Berufsbilder, Bewerbung und Arbeitsalltag",
+        "short_description": "У цьому модулі ви навчитесь говорити про професії, описувати робочі місця та навички, читати оголошення про вакансії і складати резюме та супровідні листи.",
+        "detailed_description": "Тема «Arbeitswelt und Berufe» охоплює весь спектр комунікації, пов'язаної з трудовою діяльністю: від вибору професії та пошуку роботи до опису робочого дня та обговорення умов праці. Ця тема є обов'язковою для всіх форматів іспитів рівня B1 — Goethe-Zertifikat B1, ÖSD B1, Telc B1 та DTZ. На іспиті тема зустрічається в усіх чотирьох модулях: у читанні — оголошення про вакансії та тексти про трудове життя, в аудіюванні — інтерв'ю та діалоги про роботу, у письмі — офіційний лист або e-mail у відповідь на оголошення, у говорінні — монолог або діалог про власну професію чи плани. Граматично тема тісно пов'язана з відносними реченнями (Relativsätze), які дозволяють детально описувати людей, місця та явища: «Das ist ein Beruf, der mir gut gefällt» або «Ich suche eine Stelle, die gut bezahlt wird».",
+        "level": "B1.1",
+        "grammar_topic": "Relativsätze im Nominativ und Akkusativ",
+        "grammar_topic_connection": "Відносні речення є основним граматичним інструментом для опису та уточнення — саме тих дій, які постійно виконуються в темі «Arbeitswelt»: опис колеги («der Kollege, der immer hilft»), характеристика вакансії («eine Stelle, die ich interessant finde»), пояснення навичок («eine Fähigkeit, die ich täglich brauche»). Relativsätze з'являються в усіх форматах іспитових завдань: у читанні оголошень, в аудіюванні інтерв'ю, у письмових листах-заявках та в монологах про кар'єру.",
+        "exam_formats": [
+          "Goethe",
+          "ÖSD",
+          "Telc",
+          "DTZ"
+        ],
+        "cefr_skills_covered": [
+          "reading",
+          "listening",
+          "writing",
+          "speaking",
+          "language_use"
+        ],
+        "estimated_minutes": 120,
+        "pronunciation_note": "Зверніть увагу: «der Beruf» вимовляється /bəˈruːf/ — наголос на другому складі. «die Bewerbung» — /bəˈvɛrbʊŋ/, наголос на другому складі. Слово «Gehalt» вимовляється /ɡəˈhalt/ — наголос на другому складі. Складне слово «Vollzeitstelle» — наголос на першому корені: /ˈfɔltsaɪtˌʃtɛlə/. У суфіксах -ung, -heit, -keit наголос ніколи не стоїть."
+      },
+      "block1_vocabulary": {
+        "vocabulary_items": [
+          {
+            "word": "der Beruf",
+            "article": "der",
+            "plural": "-e",
+            "word_class": "Nomen",
+            "ukrainian": "професія, фах",
+            "example_sentence": "Welchen Beruf möchten Sie erlernen?",
+            "register": "neutral"
+          },
+          {
+            "word": "die Stelle",
+            "article": "die",
+            "plural": "-n",
+            "word_class": "Nomen",
+            "ukrainian": "посада, вакансія, робоче місце",
+            "example_sentence": "Ich habe mich auf eine Stelle als Buchhalter beworben.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Bewerbung",
+            "article": "die",
+            "plural": "-en",
+            "word_class": "Nomen",
+            "ukrainian": "заявка на роботу, звернення",
+            "example_sentence": "Meine Bewerbung habe ich gestern abgeschickt.",
+            "register": "neutral"
+          },
+          {
+            "word": "das Gehalt",
+            "article": "das",
+            "plural": "Gehälter",
+            "word_class": "Nomen",
+            "ukrainian": "зарплата (щомісячна)",
+            "example_sentence": "Das Gehalt ist für mich nicht das Wichtigste.",
+            "register": "neutral"
+          },
+          {
+            "word": "der Lebenslauf",
+            "article": "der",
+            "plural": "Lebensläufe",
+            "word_class": "Nomen",
+            "ukrainian": "резюме, автобіографія",
+            "example_sentence": "Ein guter Lebenslauf sollte übersichtlich und aktuell sein.",
+            "register": "neutral"
+          },
+          {
+            "word": "das Vorstellungsgespräch",
+            "article": "das",
+            "plural": "-e",
+            "word_class": "Nomen",
+            "ukrainian": "співбесіда при прийомі на роботу",
+            "example_sentence": "Das Vorstellungsgespräch war sehr angenehm.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Ausbildung",
+            "article": "die",
+            "plural": "-en",
+            "word_class": "Nomen",
+            "ukrainian": "професійна підготовка, навчання за фахом",
+            "example_sentence": "Nach der Schule macht er eine Ausbildung zum Elektriker.",
+            "register": "neutral"
+          },
+          {
+            "word": "der Arbeitgeber",
+            "article": "der",
+            "plural": "-",
+            "word_class": "Nomen",
+            "ukrainian": "роботодавець",
+            "example_sentence": "Der Arbeitgeber bietet flexible Arbeitszeiten an.",
+            "register": "neutral"
+          },
+          {
+            "word": "der Arbeitnehmer",
+            "article": "der",
+            "plural": "-",
+            "word_class": "Nomen",
+            "ukrainian": "найманий працівник",
+            "example_sentence": "Die Rechte der Arbeitnehmer sind im Arbeitsrecht geregelt.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Überstunden",
+            "article": "die",
+            "plural": "nur Plural",
+            "word_class": "Nomen",
+            "ukrainian": "понаднормова робота, переробка",
+            "example_sentence": "Er macht oft Überstunden, weil viel zu tun ist.",
+            "register": "neutral"
+          },
+          {
+            "word": "das Praktikum",
+            "article": "das",
+            "plural": "Praktika",
+            "word_class": "Nomen",
+            "ukrainian": "стажування, практика",
+            "example_sentence": "Ich mache ein Praktikum in einer Marketingfirma.",
+            "register": "neutral"
+          },
+          {
+            "word": "sich bewerben (bewirbt sich)",
+            "article": null,
+            "plural": null,
+            "word_class": "Verb (reflexiv, unregelmäßig)",
+            "ukrainian": "подавати заявку, претендувати (auf + Akk.)",
+            "example_sentence": "Sie hat sich auf die ausgeschriebene Stelle beworben.",
+            "register": "neutral"
+          },
+          {
+            "word": "kündigen",
+            "article": null,
+            "plural": null,
+            "word_class": "Verb",
+            "ukrainian": "звільнятися, розривати трудовий договір",
+            "example_sentence": "Er hat nach zehn Jahren gekündigt, um eine neue Stelle zu suchen.",
+            "register": "neutral"
+          },
+          {
+            "word": "einstellen",
+            "article": null,
+            "plural": null,
+            "word_class": "Verb (trennbar)",
+            "ukrainian": "наймати на роботу, приймати на посаду",
+            "example_sentence": "Die Firma stellt dieses Jahr zwanzig neue Mitarbeiter ein.",
+            "register": "neutral"
+          },
+          {
+            "word": "zuständig sein (für + Akk.)",
+            "article": null,
+            "plural": null,
+            "word_class": "Adjektiv / Ausdruck",
+            "ukrainian": "відповідати за щось, бути відповідальним",
+            "example_sentence": "Sie ist für die Buchhaltung zuständig.",
+            "register": "neutral"
+          },
+          {
+            "word": "qualifiziert",
+            "article": null,
+            "plural": null,
+            "word_class": "Adjektiv",
+            "ukrainian": "кваліфікований, досвідчений",
+            "example_sentence": "Wir suchen einen qualifizierten Ingenieur mit Erfahrung.",
+            "register": "neutral"
+          },
+          {
+            "word": "selbstständig",
+            "article": null,
+            "plural": null,
+            "word_class": "Adjektiv",
+            "ukrainian": "самостійний; також: самозайнятий, підприємець",
+            "example_sentence": "Nach Jahren als Angestellter wurde er selbstständig.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Fähigkeit",
+            "article": "die",
+            "plural": "-en",
+            "word_class": "Nomen",
+            "ukrainian": "здібність, навичка, вміння",
+            "example_sentence": "Kommunikationsfähigkeit ist in diesem Beruf sehr wichtig.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Vollzeitstelle",
+            "article": "die",
+            "plural": "-n",
+            "word_class": "Nomen",
+            "ukrainian": "повна зайнятість, робота на повний робочий день",
+            "example_sentence": "Ich suche eine Vollzeitstelle im Bereich IT.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Teilzeitstelle",
+            "article": "die",
+            "plural": "-n",
+            "word_class": "Nomen",
+            "ukrainian": "часткова зайнятість, робота на неповний день",
+            "example_sentence": "Als Mutter bevorzugt sie eine Teilzeitstelle.",
+            "register": "neutral"
+          }
+        ],
+        "collocations": [
+          {
+            "phrase": "sich auf eine Stelle bewerben",
+            "translation": "подавати заявку на вакансію",
+            "example": "Ich möchte mich auf die Stelle als Projektmanager bewerben."
+          },
+          {
+            "phrase": "einen Lebenslauf schreiben",
+            "translation": "написати резюме",
+            "example": "Für die Bewerbung müssen Sie einen aktuellen Lebenslauf schreiben."
+          },
+          {
+            "phrase": "ein Vorstellungsgespräch führen",
+            "translation": "проводити (пройти) співбесіду",
+            "example": "Das Unternehmen hat ihn zu einem Vorstellungsgespräch eingeladen."
+          },
+          {
+            "phrase": "eine Stelle kündigen",
+            "translation": "звільнитися з роботи",
+            "example": "Sie hat ihre Stelle gekündigt, weil das Gehalt zu niedrig war."
+          },
+          {
+            "phrase": "Erfahrung haben in + Dativ",
+            "translation": "мати досвід у чомусь",
+            "example": "Er hat viel Erfahrung in der Personalführung."
+          },
+          {
+            "phrase": "in Vollzeit / Teilzeit arbeiten",
+            "translation": "працювати повний / неповний день",
+            "example": "Zurzeit arbeite ich in Teilzeit, zwanzig Stunden pro Woche."
+          },
+          {
+            "phrase": "eine Ausbildung machen",
+            "translation": "здобути професійну освіту",
+            "example": "Nach dem Abitur möchte sie eine Ausbildung zur Krankenpflegerin machen."
+          },
+          {
+            "phrase": "das Gehalt verhandeln",
+            "translation": "обговорювати заробітну плату",
+            "example": "Beim Vorstellungsgespräch kann man das Gehalt verhandeln."
+          }
+        ],
+        "words_in_context": [
+          {
+            "word": "der Beruf / die Stelle / die Arbeit",
+            "sentences": [
+              "Welchen Beruf haben Sie erlernt? – Ich bin von Beruf Ingenieur.",
+              "Ich suche eine neue Stelle im Bereich Marketing.",
+              "Die Arbeit macht mir Spaß, aber die Überstunden sind anstrengend."
+            ]
+          },
+          {
+            "word": "sich bewerben / einstellen / kündigen",
+            "sentences": [
+              "Sie hat sich auf drei Stellen beworben und zwei Zusagen bekommen.",
+              "Das Unternehmen stellt dieses Jahr keine neuen Mitarbeiter ein.",
+              "Er hat gekündigt, weil er sich selbstständig machen wollte."
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "matching",
+            "instruction": "Ordnen Sie zu: Welches Wort passt zu welcher Erklärung? Schreiben Sie den passenden Buchstaben neben die Zahl.",
+            "items": [
+              "1. das Vorstellungsgespräch",
+              "2. der Lebenslauf",
+              "3. die Ausbildung",
+              "4. die Überstunden",
+              "5. der Arbeitgeber",
+              "6. kündigen",
+              "7. das Praktikum",
+              "8. die Vollzeitstelle"
+            ],
+            "options": [
+              "a) ein Dokument, in dem man seinen Werdegang und seine Erfahrungen beschreibt",
+              "b) ein Gespräch, bei dem sich ein Bewerber einer Firma vorstellt",
+              "c) Zeit, die man zusätzlich zur normalen Arbeitszeit arbeitet",
+              "d) eine praktische Phase in einem Unternehmen, meist während der Ausbildung oder des Studiums",
+              "e) das Unternehmen oder die Person, die jemanden anstellt und bezahlt",
+              "f) eine berufliche Qualifikation, die man in einem Betrieb erlernt",
+              "g) eine Arbeit, bei der man die volle wöchentliche Stundenzahl arbeitet",
+              "h) einen Arbeitsvertrag oder eine Stelle offiziell beenden"
+            ],
+            "answers": [
+              "1-b",
+              "2-a",
+              "3-f",
+              "4-c",
+              "5-e",
+              "6-h",
+              "7-d",
+              "8-g"
+            ]
+          },
+          {
+            "type": "gap_fill",
+            "instruction": "Ergänzen Sie die Lücken mit dem passenden Wort aus dem Kasten: Bewerbung | Gehalt | Stelle | qualifiziert | Fähigkeiten | Ausbildung | eingestellt | kündigen",
+            "items": [
+              "1. Ich habe gestern meine ___ per E-Mail an das Unternehmen geschickt.",
+              "2. Nach der Schule macht Thomas eine ___ zum Bankkaufmann.",
+              "3. Das ___ ist leider sehr niedrig – nur 1.800 Euro netto.",
+              "4. Frau Mayer ist sehr ___. Sie hat zehn Jahre Berufserfahrung.",
+              "5. Für diese ___ braucht man sehr gute Englischkenntnisse.",
+              "6. Welche ___ sind für diesen Beruf besonders wichtig?",
+              "7. Die Firma hat ihn sofort ___, weil er sehr gut war.",
+              "8. Er will ___, weil er mit seinem Chef nicht auskommt."
+            ],
+            "answers": [
+              "1. Bewerbung",
+              "2. Ausbildung",
+              "3. Gehalt",
+              "4. qualifiziert",
+              "5. Stelle",
+              "6. Fähigkeiten",
+              "7. eingestellt",
+              "8. kündigen"
+            ]
+          },
+          {
+            "type": "word_formation",
+            "instruction": "Bilden Sie aus den Wörtern ein zusammengesetztes Nomen (Kompositum). Geben Sie den Artikel an.",
+            "items": [
+              "1. Arbeit + Geber = ___",
+              "2. Arbeit + Nehmer = ___",
+              "3. Voll + Zeit + Stelle = ___",
+              "4. Teil + Zeit + Stelle = ___",
+              "5. Berufs + Erfahrung = ___",
+              "6. Vorstellung + Gespräch = ___",
+              "7. Arbeits + Zeugnis = ___",
+              "8. Berufs + Ausbildung = ___"
+            ],
+            "answers": [
+              "1. der Arbeitgeber",
+              "2. der Arbeitnehmer",
+              "3. die Vollzeitstelle",
+              "4. die Teilzeitstelle",
+              "5. die Berufserfahrung",
+              "6. das Vorstellungsgespräch",
+              "7. das Arbeitszeugnis",
+              "8. die Berufsausbildung"
+            ]
+          }
+        ]
+      },
+      "block2_grammar": {
+        "grammar_topic": "Relativsätze im Nominativ und Akkusativ — Відносні речення в називному та знахідному відмінках",
+        "explanation_ua": "Відносне речення (Relativsatz) — це підрядне речення, яке уточнює або описує іменник у головному реченні. Воно відповідає на питання «який?», «яка?», «яке?» або «яких?» і приєднується до головного речення за допомогою відносного займенника (Relativpronomen): der, die, das або die (множина).",
+        "rules": [
+          {
+            "rule": "Nominativ — займенник є підметом підрядного речення",
+            "example": "Die Frau, die dort arbeitet, ist meine Chefin."
+          },
+          {
+            "rule": "Akkusativ — займенник є прямим додатком підрядного речення",
+            "example": "Den Kollegen, den ich täglich sehe, kenne ich gut."
+          }
+        ],
+        "forms_table": {
+          "title": "Відмінювання Relativpronomen (Nominativ та Akkusativ)",
+          "columns": ["Відмінок", "Maskulin (der)", "Feminin (die)", "Neutral (das)", "Plural (die)"],
+          "rows": [
+            ["Nominativ (підмет)", "der", "die", "das", "die"],
+            ["Akkusativ (прямий додаток)", "den", "die", "das", "die"]
+          ]
+        },
+        "achtung": [
+          "Помилка: Das ist der Mann, der ich kenne. — Правильно: Das ist der Mann, den ich kenne. (Akkusativ)"
+        ],
+        "topic_connection_examples": [
+          "Das ist ein Beruf, der mich wirklich begeistert.",
+          "Er hat einen Chef, den er sehr respektiert."
+        ],
+        "exercises": [
+          {
+            "type": "gap_fill",
+            "instruction": "Ergänzen Sie den richtigen Relativpronomen: der, die, das oder den.",
+            "items": [
+              "1. Ich habe einen Kollegen, ___ дуже допомагає. (der)",
+              "2. Das ist die Firma, ___ я рекомендую. (die)",
+              "3. Ми шукаємо співробітника, ___ має досвід в IT. (der)",
+              "4. Die Stelle, ___ я знайшов, ідеальна. (die)",
+              "5. Він отримав пропозицію, ___ звучить добре. (das)",
+              "6. Це шеф, ___ я знаю зі співбесіди. (den)",
+              "7. У нас є кандидатка, ___ відповідає всім вимогам. (die)",
+              "8. Зарплата, ___ він отримує, замала. (das)",
+              "9. У мене є колега, ___ знає п'ять мов. (die)",
+              "10. Стажер, ___ ми найняли, вчиться швидко. (den)"
+            ],
+            "answers": ["der", "die", "der", "die", "das", "den", "die", "das", "die", "den"]
+          }
+        ]
+      },
+      "block3_skills": {
+        "reading": {
+          "exercise_1": {
+            "text_type": "advertisements",
+            "title": "Stellenanzeigen",
+            "instruction": "Lesen Sie die drei Stellenanzeigen (A, B, C) und entscheiden Sie: Welche Anzeige passt zu den Aussagen 1–10? Schreiben Sie A, B, C oder Keine.",
+            "texts": {
+              "A": "STELLENANGEBOT: Pflegefachkraft (m/w/d) in Vollzeit\nWir, das Seniorenzentrum St. Josef in Freiburg, suchen ab sofort eine engagierte Pflegefachkraft. Voraussetzungen: Abgeschlossene Ausbildung als Altenpfleger/in oder Krankenpfleger/in, Erfahrung im Umgang mit älteren Menschen, Teamfähigkeit und Einfühlungsvermögen. Wir bieten: Vollzeitstelle (38 Std./Woche), attraktives Gehalt nach Tarif, 30 Urlaubstage, betriebliche Altersvorsorge, kostenlose Weiterbildungen. Bewerbung bitte per E-Mail an: personal@seniorenzentrum-josef.de",
+              "B": "Grafik-Designer/in (m/w/d) – Teilzeit oder Vollzeit\nKreative Werbeagentur in Berlin sucht Verstärkung! Ihre Aufgaben: Entwicklung von Werbekonzepten, Gestaltung von Online- und Printmaterialien, Mitarbeit in einem jungen Team. Anforderungen: Studium oder Ausbildung im Bereich Design, sehr gute Kenntnisse in Adobe Photoshop und Illustrator, kreatives Denken. Wir bieten: Flexible Arbeitszeiten (Homeoffice möglich!), junges und dynamisches Team, Gehalt nach Vereinbarung. Bewerbungsunterlagen (Lebenslauf + Portfolio) an: jobs@kreativ-berlin.de",
+              "C": "IT-Systemadministrator/in (m/w/d) – Vollzeit, Düsseldorf\nFür unser wachsendes IT-Unternehmen suchen wir eine/n erfahrene/n Systemadministrator/in. Aufgaben: Wartung und Administration von Servern und Netzwerken, technischer Support für unsere Kunden, Dokumentation. Anforderungen: Abgeschlossenes Studium oder Ausbildung im IT-Bereich, mindestens 3 Jahre Berufserfahrung, sehr gute Englischkenntnisse. Wir bieten: Gehalt ab 4.200 €/Monat, Firmenwagen, 28 Urlaubstage, modernes Büro. Kein Homeoffice möglich. Kontakt: hr@it-solutions-dus.de"
+            },
+            "items": [
+              "1. Man kann von zu Hause aus arbeiten.",
+              "2. Für diese Stelle braucht man eine abgeschlossene Pflegeausbildung.",
+              "3. Die Stelle bietet mindestens 30 Urlaubstage.",
+              "4. Englischkenntnisse werden ausdrücklich verlangt.",
+              "5. Man muss ein Portfolio zur Bewerbung einreichen.",
+              "6. Das Gehalt wird individuell vereinbart.",
+              "7. Für diese Stelle ist Berufserfahrung von mindestens drei Jahren erforderlich.",
+              "8. Die Stelle befindet sich in Süddeutschland.",
+              "9. Homeoffice ist ausgeschlossen.",
+              "10. Die Stelle kann in Voll- oder Teilzeit besetzt werden."
+            ],
+            "answers": [
+              "1. B",
+              "2. A",
+              "3. A",
+              "4. C",
+              "5. B",
+              "6. B",
+              "7. C",
+              "8. A",
+              "9. C",
+              "10. B"
+            ]
+          },
+          "exercise_2": {
+            "text_type": "article",
+            "title": "Arbeitswelt im Wandel",
+            "instruction": "Lesen Sie den Text und beantworten Sie die Fragen 1–7. Schreiben Sie kurze Antworten auf Deutsch.",
+            "text": "Die Arbeitswelt in Deutschland verändert sich schnell. Noch vor zwanzig Jahren arbeiteten die meisten Menschen von Montag bis Freitag, von neun bis siebzehn Uhr, in einem festen Büro. Heute sieht das oft anders aus. Homeoffice, flexible Arbeitszeiten und Teilzeitmodelle sind für viele Arbeitnehmer selbstverständlich geworden.\n\nBesonders die Digitalisierung hat die Berufswelt stark verändert. Berufe, die früher sehr wichtig waren, verschwinden langsam. Dafür entstehen neue Berufe, die vor zehn Jahren noch niemand kannte – zum Beispiel Social-Media-Manager, Data Analyst oder UX-Designer. Wer in der modernen Arbeitswelt erfolgreich sein will, muss bereit sein, sich ständig weiterzubilden.\n\nEin weiteres wichtiges Thema ist die Work-Life-Balance. Viele Arbeitnehmer wünschen sich mehr Zeit für Familie und Freizeit. Laut einer aktuellen Umfrage ist das Gehalt zwar wichtig, aber nicht mehr das Wichtigste. Mehr als die Hälfte der Befragten sagt, dass flexible Arbeitszeiten und ein gutes Betriebsklima wichtiger sind als ein hohes Gehalt.\n\nFür Berufseinsteiger ist die Situation nicht einfach. Der Arbeitsmarkt ist zwar in vielen Branchen offen, aber die Anforderungen sind hoch. Viele Unternehmen suchen Bewerber, die nicht nur fachlich qualifiziert sind, sondern auch sogenannte Soft Skills mitbringen: Teamfähigkeit, Kommunikationsstärke und Flexibilität. Ein guter Lebenslauf allein reicht oft nicht mehr aus.",
+            "items": [
+              "1. Wie hat sich die typische Arbeitsweise in den letzten zwanzig Jahren verändert?",
+              "2. Welche Rolle spielt die Digitalisierung in der Berufswelt?",
+              "3. Welche neuen Berufe werden im Text als Beispiele genannt?",
+              "4. Was ist laut der Umfrage für viele Arbeitnehmer wichtiger als das Gehalt?",
+              "5. Was sind Soft Skills? Nennen Sie drei Beispiele aus dem Text.",
+              "6. Für wen ist die Situation auf dem Arbeitsmarkt besonders schwierig?",
+              "7. Was reicht laut dem Text für eine erfolgreiche Bewerbung oft nicht mehr aus?"
+            ],
+            "answers": [
+              "1. Früher arbeiteten die meisten Menschen von 9 bis 17 Uhr im Büro. Heute gibt es Homeoffice, flexible Zeiten und Teilzeit.",
+              "2. Die Digitalisierung lässt alte Berufe verschwinden und neue entstehen. Man muss sich ständig weiterbilden.",
+              "3. Social-Media-Manager, Data Analyst und UX-Designer.",
+              "4. Flexible Arbeitszeiten und ein gutes Betriebsklima.",
+              "5. Soft Skills sind persönliche und soziale Kompetenzen. Im Text: Teamfähigkeit, Kommunikationsstärke, Flexibilität.",
+              "6. Für Berufseinsteiger.",
+              "7. Ein guter Lebenslauf allein reicht oft nicht mehr aus."
+            ]
+          }
+        },
+        "listening": {
+          "listening_1": {
+            "title": "Interview: Mein Beruf als Krankenpfleger",
+            "audioUrl": "https://firebasestorage.googleapis.com/v0/b/pocketdeutsch-7e465.firebasestorage.app/o/b1.1_arbeit_listening_01.mp3?alt=media&token=7e82f1dc-003e-4886-821f-edd9bcb4b97b",
+            "audio_type": "interview",
+            "tts_instructions": "Speaker Moderatorin: weiblich, ca. 35 Jahre, klare professionelle Radio-Stimme, freundlich und neugierig. Speaker Stefan Berger: männlich, ca. 28 Jahre, normale Sprechgeschwindigkeit, authentisch und ruhig, leicht bayerischer Einschlag optional. Moderate Geschwindigkeit passend für B1. Natürliche Pausen zwischen Sprechern. Hochdeutsch.",
+            "transcript": "Moderatorin: Guten Tag und herzlich willkommen zu unserem Podcast 'Beruf und Alltag'. Heute spreche ich mit Stefan Berger, der als Krankenpfleger in einem Krankenhaus in München arbeitet. Hallo Stefan!\nStefan: Hallo! Ja, schön, dass ich dabei sein darf.\nModeratorin: Stefan, wie lange arbeiten Sie schon als Krankenpfleger?\nStefan: Seit fünf Jahren. Ich habe eine dreijährige Ausbildung gemacht und danach sofort in diesem Beruf angefangen.\nModeratorin: Was gefällt Ihnen an Ihrem Beruf am besten?\nStefan: Das Schönste ist der direkte Kontakt mit den Patienten. Es ist ein Beruf, der wirklich Sinn ergibt – man hilft Menschen in schwierigen Situationen. Das gibt mir sehr viel.\nModeratorin: Und was sind die größten Herausforderungen?\nStefan: Die Überstunden sind manchmal wirklich anstrengend. Wir haben oft Schichtdienst, also man arbeitet nachts oder am Wochenende. Das ist nicht immer einfach für das Privatleben.\nModeratorin: Wie ist das Gehalt im Pflegebereich?\nStefan: Ehrlich gesagt, könnte es besser sein. Ein Krankenpfleger verdient in Deutschland etwa 2.500 bis 3.000 Euro brutto. Für die Verantwortung, die wir tragen, ist das meiner Meinung nach zu wenig.\nModeratorin: Würden Sie den Beruf anderen empfehlen?\nStefan: Ja, auf jeden Fall – aber nur an Personen, die wirklich Empathie haben. Es ist ein Beruf, den ich mir für mein ganzes Leben vorstellen kann, obwohl er manchmal schwer ist.",
+            "exercise_type": "richtig_falsch",
+            "instruction": "Hören Sie das Interview und entscheiden Sie: richtig (R) oder falsch (F)?",
+            "items": [
+              "1. Stefan arbeitet seit fünf Jahren als Krankenpfleger.",
+              "2. Seine Ausbildung hat zwei Jahre gedauert.",
+              "3. Der direkte Kontakt mit Patienten macht ihm am meisten Freude.",
+              "4. Das Gehalt im Pflegebereich findet Stefan zu hoch für die Arbeit.",
+              "5. Stefan würde den Beruf nur Menschen empfehlen, die Empathie haben."
+            ],
+            "answers": [
+              "R",
+              "F",
+              "R",
+              "F",
+              "R"
+            ]
+          },
+          "listening_2": {
+            "title": "Telefongespräch: Bewerbung um eine Stelle",
+            "audioUrl": "https://firebasestorage.googleapis.com/v0/b/pocketdeutsch-7e465.firebasestorage.app/o/b1.1_arbeit_listening_02.mp3?alt=media&token=b9bcf7f1-d377-4d33-b711-2407230f655f",
+            "audio_type": "dialogue_phone",
+            "tts_instructions": "Speaker Frau Krause (Personalchefin): weiblich, ca. 50 Jahre, professionell und sachlich, leicht formeller Ton, mittleres Sprechtempo. Speaker Herr Okonkwo: männlich, ca. 30 Jahre, höflich und leicht nervös, deutliche Hochdeutsch-Aussprache. Telefon-Audioeffekt minimal angedeutet. Tempo moderat, B1-gerecht.",
+            "transcript": "Frau Krause: Guten Morgen, Firma DataTech, Krause, guten Morgen.\nHerr Okonkwo: Guten Morgen, Frau Krause. Hier spricht Emeka Okonkwo. Ich habe mich letzte Woche auf die Stelle als Junior Data Analyst beworben und wollte nachfragen, ob Sie meine Bewerbungsunterlagen erhalten haben.\nFrau Krause: Ja, Herr Okonkwo, Ihre Bewerbung liegt uns vor. Ich wollte Sie eigentlich heute noch anrufen.\nHerr Okonkwo: Oh, das freut mich sehr!\nFrau Krause: Wir finden Ihr Profil sehr interessant. Sie haben in Ihrer Bewerbung geschrieben, dass Sie Erfahrung mit Python haben. Können Sie uns sagen, wie lange und in welchem Kontext?\nHerr Okonkwo: Ja, natürlich. Ich habe Python zwei Jahre lang während meines Studiums intensiv verwendet und dann noch ein Jahr in einem Praktikum bei einer Marketingfirma.\nFrau Krause: Sehr gut. Und wie sind Ihre Englischkenntnisse? Die Stelle erfordert fließendes Englisch, da wir internationale Kunden haben.\nHerr Okonkwo: Ich spreche fließend Englisch. Ich habe zwei Jahre in London studiert.\nFrau Krause: Ausgezeichnet. Wären Sie nächste Woche Mittwoch, den 15., für ein Vorstellungsgespräch verfügbar?\nHerr Okonkwo: Ja, das passt mir sehr gut. Zu welcher Uhrzeit?\nFrau Krause: Um 10 Uhr. Wir würden das Gespräch per Video führen. Sie bekommen noch heute eine Bestätigungs-E-Mail mit dem Link.\nHerr Okonkwo: Sehr gut. Vielen Dank, Frau Krause. Ich freue mich sehr auf das Gespräch.\nFrau Krause: Wir uns auch. Auf Wiederhören!\nHerr Okonkwo: Auf Wiederhören!",
+            "exercise_type": "multiple_choice",
+            "instruction": "Hören Sie das Gespräch und wählen Sie die richtige Antwort (A, B oder C).",
+            "items": [
+              {
+                "question": "1. Warum ruft Herr Okonkwo an?",
+                "options": [
+                  "A) Er möchte eine Stelle kündigen.",
+                  "B) Er fragt nach, ob seine Bewerbung angekommen ist.",
+                  "C) Er möchte ein Vorstellungsgespräch verschieben."
+                ],
+                "answer": "B"
+              },
+              {
+                "question": "2. Wie lange hat Herr Okonkwo schon Erfahrung mit Python?",
+                "options": [
+                  "A) Ein Jahr.",
+                  "B) Vier Jahre.",
+                  "C) Drei Jahre."
+                ],
+                "answer": "C"
+              },
+              {
+                "question": "3. Warum sind Englischkenntnisse für die Stelle wichtig?",
+                "options": [
+                  "A) Weil die Firma in London sitzt.",
+                  "B) Weil das Unternehmen internationale Kunden hat.",
+                  "C) Weil alle Kollegen Englisch sprechen."
+                ],
+                "answer": "B"
+              },
+              {
+                "question": "4. Wann soll das Vorstellungsgespräch stattfinden?",
+                "options": [
+                  "A) Am Mittwoch, den 15., um 10 Uhr.",
+                  "B) Am Montag, den 13., um 9 Uhr.",
+                  "C) Am Donnerstag, den 16., um 11 Uhr."
+                ],
+                "answer": "A"
+              },
+              {
+                "question": "5. Wie wird das Gespräch geführt?",
+                "options": [
+                  "A) Persönlich im Büro.",
+                  "B) Per Telefon.",
+                  "C) Per Video."
+                ],
+                "answer": "C"
+              }
+            ]
+          }
+        },
+        "language_use": [
+          {
+            "subtype": "lexical_context",
+            "title": "Übung 1: Wortschatz im Kontext",
+            "instruction": "Lesen Sie den Text. Welches Wort passt in die Lücke? Wählen Sie die richtige Antwort (A, B, C oder D).",
+            "text_with_gaps": "Lena hat Betriebswirtschaft studiert und sucht jetzt ihre erste [1] als Marketingmanagerin. Sie hat schon mehrere [2] geschrieben und an verschiedene Unternehmen geschickt. Gestern hat sie eine positive Antwort bekommen und wurde zu einem [3] eingeladen. Für das Gespräch hat sie ihren [4] aktualisiert und alle wichtigen [5] aufgelistet. Das Unternehmen bietet eine [6] mit 40 Stunden pro Woche. Das [7] ist laut Anzeige zwischen 3.500 und 4.000 Euro brutto. Der [8] ist ein internationales Unternehmen, das in 20 Ländern tätig ist. Lena ist für diesen Job sehr [9], weil sie drei Sprachen spricht und zwei Jahre [10] im Ausland gemacht hat.",
+            "items": [
+              {
+                "gap_number": 1,
+                "options": [
+                  "A) Ausbildung",
+                  "B) Bewerbung",
+                  "C) Stelle",
+                  "D) Fähigkeit"
+                ],
+                "answer": "C) Stelle",
+                "explanation": "'die Stelle' — вакансія, посада. Саме її шукає Лена після навчання."
+              },
+              {
+                "gap_number": 2,
+                "options": [
+                  "A) Lebensläufe",
+                  "B) Bewerbungen",
+                  "C) Vorstellungsgespräche",
+                  "D) Praktika"
+                ],
+                "answer": "B) Bewerbungen",
+                "explanation": "'Bewerbungen schreiben und schicken' — стандартне словосполучення для заявок на роботу."
+              },
+              {
+                "gap_number": 3,
+                "options": [
+                  "A) Kurs",
+                  "B) Praktikum",
+                  "C) Gespräch",
+                  "D) Vorstellungsgespräch"
+                ],
+                "answer": "D) Vorstellungsgespräch",
+                "explanation": "'zum Vorstellungsgespräch eingeladen werden' — стандартне формулювання для запрошення на співбесіду."
+              },
+              {
+                "gap_number": 4,
+                "options": [
+                  "A) Lebenslauf",
+                  "B) Vertrag",
+                  "C) Zeugnis",
+                  "D) Gehalt"
+                ],
+                "answer": "A) Lebenslauf",
+                "explanation": "'den Lebenslauf aktualisieren' — оновити резюме перед співбесідою."
+              },
+              {
+                "gap_number": 5,
+                "options": [
+                  "A) Stellenanzeigen",
+                  "B) Überstunden",
+                  "C) Fähigkeiten",
+                  "D) Ausbildungen"
+                ],
+                "answer": "C) Fähigkeiten",
+                "explanation": "'Fähigkeiten auflisten' — перелічити навички та вміння у резюме."
+              },
+              {
+                "gap_number": 6,
+                "options": [
+                  "A) Teilzeitstelle",
+                  "B) Vollzeitstelle",
+                  "C) Ausbildung",
+                  "D) Stelle in Teilzeit"
+                ],
+                "answer": "B) Vollzeitstelle",
+                "explanation": "40 годин на тиждень — це повна зайнятість: 'Vollzeitstelle'."
+              },
+              {
+                "gap_number": 7,
+                "options": [
+                  "A) Praktikum",
+                  "B) Lebenslauf",
+                  "C) Gehalt",
+                  "D) Vertrag"
+                ],
+                "answer": "C) Gehalt",
+                "explanation": "'das Gehalt' — щомісячна зарплата. Тут вказана сума у євро."
+              },
+              {
+                "gap_number": 8,
+                "options": [
+                  "A) Arbeitnehmer",
+                  "B) Kollege",
+                  "C) Arbeitgeber",
+                  "D) Bewerber"
+                ],
+                "answer": "C) Arbeitgeber",
+                "explanation": "'der Arbeitgeber' — роботодавець, компанія, яка наймає."
+              },
+              {
+                "gap_number": 9,
+                "options": [
+                  "A) qualifiziert",
+                  "B) krank",
+                  "C) müde",
+                  "D) selbstständig"
+                ],
+                "answer": "A) qualifiziert",
+                "explanation": "'qualifiziert sein' — бути кваліфікованим, відповідати вимогам вакансії."
+              },
+              {
+                "gap_number": 10,
+                "options": [
+                  "A) Gehalt",
+                  "B) Praktika",
+                  "C) Ausbildungen",
+                  "D) Überstunden"
+                ],
+                "answer": "B) Praktika",
+                "explanation": "'Praktika im Ausland machen' — проходити стажування за кордоном. Множина від 'das Praktikum' — 'die Praktika'."
+              }
+            ]
+          },
+          {
+            "subtype": "grammatical_form",
+            "title": "Übung 2: Grammatik im Text",
+            "instruction": "Lesen Sie den Text. Welche Form passt in die Lücke? Wählen Sie die richtige Antwort (A, B, C oder D). Achtung: Es werden verschiedene Grammatikthemen abgefragt.",
+            "text_with_gaps": "Markus ist ein Ingenieur, [1] seit zehn Jahren für eine Automobilfirma arbeitet. Die Firma, [2] er sehr schätzt, hat ihm kürzlich eine neue Stelle angeboten. Es ist eine Stelle, [3] mehr Verantwortung und ein höheres Gehalt bedeutet. Markus [4] noch nicht entschieden, ob er das Angebot annehmen soll. Er [5] letztes Jahr ein sehr erfolgreiches Projekt abgeschlossen, das ihm viel Anerkennung gebracht hat. Wenn er die neue Stelle annimmt, [6] er mehr reisen müssen. Er fragt sich, ob das gut für seine Familie [7]. Sein Chef, [8] er gut kennt, hat gesagt: 'Ich würde es [9].' Markus [10] noch ein paar Tage Zeit, um die Entscheidung zu treffen.",
+            "items": [
+              {
+                "gap_number": 1,
+                "options": [
+                  "A) den",
+                  "B) dem",
+                  "C) der",
+                  "D) die"
+                ],
+                "answer": "C) der",
+                "explanation": "'der Ingenieur' — чоловічий рід → Nominativ Relativpronomen: der (він виконує дію 'arbeitet')."
+              },
+              {
+                "gap_number": 2,
+                "options": [
+                  "A) die",
+                  "B) der",
+                  "C) das",
+                  "D) den"
+                ],
+                "answer": "A) die",
+                "explanation": "'die Firma' — жіночий рід → Akkusativ Relativpronomen: die (він є прямим додатком 'schätzt')."
+              },
+              {
+                "gap_number": 3,
+                "options": [
+                  "A) das",
+                  "B) der",
+                  "C) die",
+                  "D) den"
+                ],
+                "answer": "A) das",
+                "explanation": "'die Stelle' — тут відносний займенник посилається на 'eine Stelle' → жіночий → Nominativ: die. Але якщо Stelle — neutral... Нi: 'die Stelle' — Feminin → Nominativ: die. Відповідь: C) die.",
+                "corrected_answer": "C) die",
+                "corrected_explanation": "'die Stelle' — жіночий рід → Nominativ Relativpronomen: die (Stelle є підметом — 'bedeutet')."
+              },
+              {
+                "gap_number": 4,
+                "options": [
+                  "A) hat",
+                  "B) hatte",
+                  "C) ist",
+                  "D) wird"
+                ],
+                "answer": "A) hat",
+                "explanation": "Перфект від 'sich entscheiden': 'hat sich ... entschieden'. Допоміжне дієслово — haben."
+              },
+              {
+                "gap_number": 5,
+                "options": [
+                  "A) ist",
+                  "B) hatte",
+                  "C) hat",
+                  "D) wird"
+                ],
+                "answer": "C) hat",
+                "explanation": "Перфект від 'abschließen': 'hat ... abgeschlossen'. Дієслово abschließen утворює Perfekt з haben."
+              },
+              {
+                "gap_number": 6,
+                "options": [
+                  "A) muss",
+                  "B) müsste",
+                  "C) wird",
+                  "D) würde"
+                ],
+                "answer": "C) wird",
+                "explanation": "Умовне майбутнє в умовному реченні: 'wenn ... annimmt, wird er ... müssen' — Futur I для майбутньої наслідкової умови."
+              },
+              {
+                "gap_number": 7,
+                "options": [
+                  "A) ist",
+                  "B) sein wird",
+                  "C) wäre",
+                  "D) war"
+                ],
+                "answer": "C) wäre",
+                "explanation": "Konjunktiv II для гіпотетичних роздумів: 'ob das gut wäre' — чи було б це добре."
+              },
+              {
+                "gap_number": 8,
+                "options": [
+                  "A) der",
+                  "B) den",
+                  "C) die",
+                  "D) dem"
+                ],
+                "answer": "B) den",
+                "explanation": "'der Chef' — чоловічий рід → Akkusativ Relativpronomen: den (він є прямим додатком 'kennt')."
+              },
+              {
+                "gap_number": 9,
+                "options": [
+                  "A) machen",
+                  "B) gemacht",
+                  "C) tun",
+                  "D) annehmen"
+                ],
+                "answer": "D) annehmen",
+                "explanation": "Контекстуально: 'Ich würde es annehmen' — я б прийняв. Konjunktiv II від 'annehmen'."
+              },
+              {
+                "gap_number": 10,
+                "options": [
+                  "A) braucht",
+                  "B) hat",
+                  "C) nimmt",
+                  "D) bekommt"
+                ],
+                "answer": "B) hat",
+                "explanation": "'Markus hat noch ein paar Tage Zeit' — у нього є ще кілька днів. Konstruktion: 'Zeit haben'."
+              }
+            ]
+          }
+        ],
+        "writing": {
+          "task_type": "semi_formal_email",
+          "situation": "Sie haben eine Stellenanzeige für eine Stelle als Büromanager/in in einem internationalen Unternehmen gelesen. Schreiben Sie eine E-Mail an die Personalabteilung (Frau Dr. Weber). Erklären Sie, warum Sie sich bewerben, beschreiben Sie kurz Ihre Qualifikationen und Erfahrungen, fragen Sie nach dem genauen Gehalt und dem Starttermin, und bitten Sie um ein Vorstellungsgespräch.",
+          "recipient": "Frau Dr. Weber (Personalabteilung)",
+          "register": "semi_formal",
+          "required_points": [
+            "Erklären, warum Sie sich für die Stelle interessieren",
+            "Kurze Beschreibung der eigenen Qualifikationen und Erfahrungen",
+            "Nach dem genauen Gehalt und dem frühestmöglichen Starttermin fragen",
+            "Um ein Vorstellungsgespräch bitten"
+          ],
+          "word_count_target": 80,
+          "useful_phrases": [
+            "Sehr geehrte Frau Dr. Weber,",
+            "ich habe Ihre Stellenanzeige gelesen und bewerbe mich hiermit um die Stelle als ...",
+            "Diese Stelle interessiert mich besonders, weil ...",
+            "Ich habe eine abgeschlossene Ausbildung / ein abgeschlossenes Studium in ...",
+            "Außerdem verfüge ich über ... Jahre Berufserfahrung im Bereich ...",
+            "Könnten Sie mir bitte mitteilen, wie hoch das genaue Gehalt ist?",
+            "Ab wann wäre ein Einstieg möglich?",
+            "Ich würde mich sehr über eine Einladung zum Vorstellungsgespräch freuen.",
+            "Mit freundlichen Grüßen,"
+          ],
+          "model_answer": "Sehr geehrte Frau Dr. Weber,\n\nmit großem Interesse habe ich Ihre Stellenanzeige für die Position als Büromanager/in gelesen und bewerbe mich hiermit darum. Diese Stelle interessiert mich besonders, weil ich seit Jahren im Bereich Büromanagement tätig bin und ein internationales Umfeld sehr schätze.\n\nIch habe eine abgeschlossene kaufmännische Ausbildung und verfüge über vier Jahre Berufserfahrung in der Büroorganisation. Außerdem spreche ich fließend Englisch und Deutsch.\n\nKönnten Sie mir bitte mitteilen, wie hoch das genaue Gehalt ist und ab wann ein Einstieg möglich wäre?\n\nIch würde mich sehr über eine Einladung zum Vorstellungsgespräch freuen.\n\nMit freundlichen Grüßen,\n[Ihr Name]",
+          "scoring_criteria": [
+            "Inhalt: Alle vier Pflichtpunkte sind angesprochen (Motivation, Qualifikationen/Erfahrung, Gehalt/Starttermin, Gesprächsbitte).",
+            "Kommunikative Gestaltung: Angemessene Anrede (Sehr geehrte Frau Dr. Weber) und Grußformel, sachlicher aber höflicher Ton.",
+            "Formale Richtigkeit: Weitgehend korrekte Grammatik — Relativsätze, Perfekt, Modalverben, Groß-/Kleinschreibung.",
+            "Wortschatz: Passende Ausdrücke für formelle Korrespondenz (bewerbe mich hiermit, verfüge über, würde mich freuen)."
+          ]
+        },
+        "speaking": {
+          "task_types": [
+            {
+              "type": "monologue",
+              "title": "Monolog: Mein Beruf oder mein Traumberuf",
+              "prompt": "Erzählen Sie über Ihren aktuellen Beruf oder Ihren Traumberuf. Was machen Sie beruflich? Was gefällt Ihnen, was nicht? Welche Qualifikationen braucht man für diesen Beruf?",
+              "required_points": [
+                "Welchen Beruf Sie haben oder haben möchten (Beschreibung der Tätigkeit)",
+                "Was Ihnen an diesem Beruf gefällt (mindestens zwei Aspekte)",
+                "Was Sie nicht so gut finden oder was schwierig ist",
+                "Welche Qualifikationen oder Eigenschaften man für diesen Beruf braucht"
+              ],
+              "time_suggestion_seconds": 120,
+              "useful_phrases": [
+                "Ich bin von Beruf ... / Ich arbeite als ...",
+                "Mein Traumberuf ist ..., weil ...",
+                "Zu meinen Aufgaben gehört es, ...",
+                "Was mir besonders gut gefällt, ist ..., weil ...",
+                "Ein Nachteil / Eine Herausforderung ist, dass ...",
+                "Für diesen Beruf braucht man ...",
+                "Man muss qualifiziert sein in ...",
+                "Außerdem ist es wichtig, dass man ... kann.",
+                "Ich habe eine Ausbildung / ein Studium in ... gemacht.",
+                "In Zukunft möchte ich ..."
+              ],
+              "example_response": "Ich bin von Beruf Lehrerin an einer Grundschule. Zu meinen Aufgaben gehört es, Kinder zu unterrichten, Unterrichtsmaterialien vorzubereiten und mit den Eltern zu kommunizieren. Was mir an meinem Beruf besonders gut gefällt, ist der Kontakt mit den Kindern – es ist ein Beruf, der mir jeden Tag Freude macht. Außerdem finde ich es schön, wenn man sieht, wie die Kinder Fortschritte machen. Eine Herausforderung ist aber der bürokratische Aufwand – man muss viele Berichte schreiben, was manchmal sehr zeitaufwendig ist. Für diesen Beruf braucht man auf jeden Fall Geduld, Empathie und natürlich ein abgeschlossenes Lehramtsstudium. Außerdem ist es wichtig, dass man gut kommunizieren kann – sowohl mit Kindern als auch mit Erwachsenen. In Zukunft möchte ich eine Weiterbildung zur Schulberaterin machen.",
+              "exam_tips": [
+                "Beginnen Sie mit einem klaren Satz: 'Ich arbeite als ...' oder 'Mein Traumberuf ist ...'",
+                "Nutzen Sie Relativsätze: 'ein Beruf, der mir Spaß macht', 'eine Aufgabe, die ich täglich erledige'.",
+                "Geben Sie konkrete Beispiele und Begründungen — nicht nur 'der Beruf ist gut', sondern warum.",
+                "Verbinden Sie Sätze mit 'weil', 'obwohl', 'außerdem', 'trotzdem' für höheres Sprachniveau."
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]

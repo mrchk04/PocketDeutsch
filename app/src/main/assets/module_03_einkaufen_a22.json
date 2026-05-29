@@ -1,0 +1,1044 @@
+[
+  {
+    "module": {
+      "metadata": {
+        "id": "einkaufen-kleidung-a2-2",
+        "topic": "Einkaufen, Kleidung und Aussehen",
+        "topic_de": "Einkaufen, Kleidung und Aussehen — Mode, Stil und Vergleiche",
+        "short_description": "У цьому модулі ви навчитесь описувати одяг та зовнішність, вести діалоги в магазині, порівнювати товари за ціною, якістю та стилем, а також висловлювати власні уподобання.",
+        "detailed_description": "Тема «Einkaufen, Kleidung und Aussehen» охоплює весь спектр ситуацій, пов'язаних із модою та шопінгом: від опису одягу й зовнішності до діалогів у магазині, порівняння товарів за ціною, якістю та стилем. Ця тема є обов'язковою для всіх форматів іспитів рівня A2: Goethe-Zertifikat A2, ÖSD A2, Telc A2 та DTZ. У читанні зустрічаються оголошення про розпродажі та рекламні тексти, в аудіюванні — діалоги в магазині або розмови про стиль, у письмі — повідомлення або відповідь на оголошення, у говорінні — порівняння речей або опис власного стилю. Граматично тема нерозривно пов'язана з Komparation der Adjektive, оскільки будь-яке порівняння одягу, ціни чи якості потребує форм вищого та найвищого ступенів: billiger, am teuersten, modischer.",
+        "level": "A2.2",
+        "grammar_topic": "Komparation der Adjektive",
+        "grammar_topic_connection": "Порівняння є серцем теми «Einkaufen»: цей светр дорожчий за той, ця куртка найтепліша в магазині, червоне плаття красивіше за синє. Ступені порівняння прикметників з'являються у всіх іспитових форматах: у діалогах покупець-продавець (Das ist günstiger als...), у рекламних текстах (die günstigsten Preise!), у письмових завданнях про уподобання та у говорінні при описі й порівнянні речей.",
+        "exam_formats": [
+          "Goethe",
+          "OeSD",
+          "Telc",
+          "DTZ"
+        ],
+        "cefr_skills_covered": [
+          "reading",
+          "listening",
+          "writing",
+          "speaking",
+          "language_use"
+        ],
+        "estimated_minutes": 90,
+        "pronunciation_note": "Зверніть увагу: суфікс -er у вищому ступені НЕ додає зайвого складу до коротких слів — 'teuer' стає 'teurer' (3 склади, не 4). Слово 'günstig' вимовляється ['ɡʏnstɪç] — не плутайте /ç/ із /g/ наприкінці. 'Die Bluse' — ['bluːzə] з довгим /uː/. Складні слова типу 'Umkleidekabine' наголошуються на першому значущому компоненті."
+      },
+      "block1_vocabulary": {
+        "vocabulary_items": [
+          {
+            "word": "die Bluse",
+            "article": "die",
+            "plural": "-n",
+            "word_class": "Nomen",
+            "ukrainian": "блуза, блузка",
+            "example_sentence": "Diese Bluse passt perfekt zu deiner Hose.",
+            "register": "neutral"
+          },
+          {
+            "word": "der Pullover",
+            "article": "der",
+            "plural": "-",
+            "word_class": "Nomen",
+            "ukrainian": "светр",
+            "example_sentence": "Im Winter trage ich immer einen warmen Pullover.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Jacke",
+            "article": "die",
+            "plural": "-n",
+            "word_class": "Nomen",
+            "ukrainian": "куртка, жакет",
+            "example_sentence": "Diese Jacke ist aus Leder und sehr elegant.",
+            "register": "neutral"
+          },
+          {
+            "word": "das Kleid",
+            "article": "das",
+            "plural": "-er",
+            "word_class": "Nomen",
+            "ukrainian": "сукня, плаття",
+            "example_sentence": "Sie hat ein rotes Kleid zur Party angezogen.",
+            "register": "neutral"
+          },
+          {
+            "word": "der Stiefel",
+            "article": "der",
+            "plural": "-",
+            "word_class": "Nomen",
+            "ukrainian": "чобіт",
+            "example_sentence": "Im Herbst trage ich am liebsten hohe Stiefel.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Größe",
+            "article": "die",
+            "plural": "-n",
+            "word_class": "Nomen",
+            "ukrainian": "розмір",
+            "example_sentence": "Welche Größe haben Sie? — Ich trage Größe 40.",
+            "register": "neutral"
+          },
+          {
+            "word": "der Stoff",
+            "article": "der",
+            "plural": "-e",
+            "word_class": "Nomen",
+            "ukrainian": "тканина, матеріал",
+            "example_sentence": "Dieser Stoff ist sehr weich und angenehm auf der Haut.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Umkleidekabine",
+            "article": "die",
+            "plural": "-n",
+            "word_class": "Nomen",
+            "ukrainian": "примірювальна кабіна",
+            "example_sentence": "Kann ich das Kleid in der Umkleidekabine anprobieren?",
+            "register": "neutral"
+          },
+          {
+            "word": "der Rabatt",
+            "article": "der",
+            "plural": "-e",
+            "word_class": "Nomen",
+            "ukrainian": "знижка",
+            "example_sentence": "Im Schlussverkauf bekommt man oft 30% Rabatt.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Kasse",
+            "article": "die",
+            "plural": "-n",
+            "word_class": "Nomen",
+            "ukrainian": "каса",
+            "example_sentence": "Bitte zahlen Sie an der Kasse im Erdgeschoss.",
+            "register": "neutral"
+          },
+          {
+            "word": "der Schlussverkauf",
+            "article": "der",
+            "plural": "Schlussverkäufe",
+            "word_class": "Nomen",
+            "ukrainian": "сезонний розпродаж",
+            "example_sentence": "Im Schlussverkauf kaufe ich immer Kleidung für die nächste Saison.",
+            "register": "neutral"
+          },
+          {
+            "word": "gestreift",
+            "article": null,
+            "plural": null,
+            "word_class": "Adjektiv",
+            "ukrainian": "в смужку, смугастий",
+            "example_sentence": "Das gestreifte Hemd sieht sehr modern aus.",
+            "register": "neutral"
+          },
+          {
+            "word": "kariert",
+            "article": null,
+            "plural": null,
+            "word_class": "Adjektiv",
+            "ukrainian": "в клітинку",
+            "example_sentence": "Sie trägt gerne karierte Hemden.",
+            "register": "neutral"
+          },
+          {
+            "word": "eng",
+            "article": null,
+            "plural": null,
+            "word_class": "Adjektiv",
+            "ukrainian": "тісний, вузький (про одяг)",
+            "example_sentence": "Diese Hose ist zu eng — haben Sie eine Größe größer?",
+            "register": "neutral"
+          },
+          {
+            "word": "weit",
+            "article": null,
+            "plural": null,
+            "word_class": "Adjektiv",
+            "ukrainian": "широкий, вільний (про одяг)",
+            "example_sentence": "Ich mag weite Pullover — sie sind so bequem.",
+            "register": "neutral"
+          },
+          {
+            "word": "anprobieren (probiert an)",
+            "article": null,
+            "plural": null,
+            "word_class": "Verb (trennbar)",
+            "ukrainian": "приміряти (одяг)",
+            "example_sentence": "Darf ich diese Jacke anprobieren?",
+            "register": "neutral"
+          },
+          {
+            "word": "passen",
+            "article": null,
+            "plural": null,
+            "word_class": "Verb",
+            "ukrainian": "пасувати, підходити (за розміром або стилем)",
+            "example_sentence": "Die Schuhe passen gut, aber die Farbe gefällt mir nicht.",
+            "register": "neutral"
+          },
+          {
+            "word": "stehen (jemandem)",
+            "article": null,
+            "plural": null,
+            "word_class": "Verb",
+            "ukrainian": "личити, пасувати зовнішньо (комусь)",
+            "example_sentence": "Blau steht dir wirklich gut!",
+            "register": "neutral"
+          },
+          {
+            "word": "modisch",
+            "article": null,
+            "plural": null,
+            "word_class": "Adjektiv",
+            "ukrainian": "модний, стильний",
+            "example_sentence": "Diese Schuhe sind sehr modisch — alle tragen sie gerade.",
+            "register": "neutral"
+          },
+          {
+            "word": "bequem",
+            "article": null,
+            "plural": null,
+            "word_class": "Adjektiv",
+            "ukrainian": "зручний, комфортний",
+            "example_sentence": "Sportschuhe sind bequemer als hohe Absätze.",
+            "register": "neutral"
+          }
+        ],
+        "collocations": [
+          {
+            "phrase": "etwas anprobieren",
+            "translation": "приміряти щось",
+            "example": "Kann ich diese Jacke anprobieren? — Ja, die Umkleidekabine ist dort drüben."
+          },
+          {
+            "phrase": "in Größe ... haben",
+            "translation": "мати (певний розмір)",
+            "example": "Haben Sie diesen Pullover auch in Größe M?"
+          },
+          {
+            "phrase": "zu etwas passen",
+            "translation": "пасувати до чогось",
+            "example": "Diese Schuhe passen gut zu dem Kleid."
+          },
+          {
+            "phrase": "jemandem gut stehen",
+            "translation": "личити комусь",
+            "example": "Der rote Schal steht dir wirklich gut!"
+          },
+          {
+            "phrase": "einen Rabatt bekommen",
+            "translation": "отримати знижку",
+            "example": "Ich habe 20% Rabatt bekommen, weil ich eine Kundenkarte habe."
+          },
+          {
+            "phrase": "an der Kasse zahlen",
+            "translation": "платити на касі",
+            "example": "Sie können bar oder mit Karte an der Kasse zahlen."
+          },
+          {
+            "phrase": "im Schlussverkauf kaufen",
+            "translation": "купувати на розпродажі",
+            "example": "Ich kaufe Winterjacken immer im Schlussverkauf — da ist alles viel günstiger."
+          },
+          {
+            "phrase": "Kleidung aus Baumwolle / Leder / Wolle",
+            "translation": "одяг із бавовни / шкіри / вовни",
+            "example": "Ich bevorzuge Kleidung aus Baumwolle — das ist angenehmer auf der Haut."
+          }
+        ],
+        "words_in_context": [
+          {
+            "word": "passen / stehen / gefallen",
+            "sentences": [
+              "Diese Hose passt mir nicht — sie ist zu eng.",
+              "Das blaue Hemd steht dir sehr gut!",
+              "Der Pullover gefällt mir, aber er ist zu teuer."
+            ]
+          },
+          {
+            "word": "tragen / anziehen / anhaben",
+            "sentences": [
+              "Ich trage heute ein weißes Kleid.",
+              "Zieh die Jacke an — draußen ist es kalt!",
+              "Was hast du heute an? — Eine Jeans und ein T-Shirt."
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "type": "matching",
+            "instruction": "Ordnen Sie zu: Welches Wort passt zu welcher Erklärung?",
+            "items": [
+              "1. die Umkleidekabine",
+              "2. der Rabatt",
+              "3. der Schlussverkauf",
+              "4. kariert",
+              "5. eng",
+              "6. die Größe",
+              "7. anprobieren",
+              "8. der Stoff"
+            ],
+            "options": [
+              "a) kleiner Raum im Geschäft, wo man Kleidung anziehen und testen kann",
+              "b) Muster mit sich kreuzenden Linien — wie ein Schachbrett",
+              "c) Preisreduzierung in einem Geschäft",
+              "d) das Material, aus dem Kleidung gemacht wird",
+              "e) Kleidung auf den Körper ziehen, um zu sehen, ob sie passt",
+              "f) saisonaler Verkauf, bei dem alles günstiger ist",
+              "g) zu klein — sitzt sehr nah am Körper",
+              "h) Zahl, die angibt, welche Kleidung zu einem Körper passt"
+            ],
+            "answers": [
+              "1-a",
+              "2-c",
+              "3-f",
+              "4-b",
+              "5-g",
+              "6-h",
+              "7-e",
+              "8-d"
+            ]
+          },
+          {
+            "type": "gap_fill",
+            "instruction": "Ergänzen Sie die Lücken mit dem passenden Wort aus dem Kasten: anprobieren | Kasse | Rabatt | Größe | passt | steht | Schlussverkauf | eng",
+            "items": [
+              "1. Entschuldigung, in welcher ___ haben Sie diese Jeans? Ich trage normalerweise 32.",
+              "2. Darf ich diesen Pullover ___? — Ja, die Kabine ist dort hinten.",
+              "3. Das Kleid ___ mir leider nicht — es ist zu ___ an den Schultern.",
+              "4. Diese Farbe ___ dir wirklich gut — du siehst toll aus!",
+              "5. Wo kann ich zahlen? — Die ___ ist im zweiten Stock.",
+              "6. Im ___ bekommt man oft 50% ___ auf alle Artikel."
+            ],
+            "answers": [
+              "1. Größe",
+              "2. anprobieren",
+              "3. passt / eng",
+              "4. steht",
+              "5. Kasse",
+              "6. Schlussverkauf / Rabatt"
+            ]
+          },
+          {
+            "type": "word_formation",
+            "instruction": "Bilden Sie zusammengesetzte Nomen (Komposita). Geben Sie den Artikel an.",
+            "items": [
+              "1. Sommer + Kleid = ___",
+              "2. Baumwolle + Hemd = ___",
+              "3. Sport + Schuhe = ___",
+              "4. Winter + Jacke = ___",
+              "5. Kleidung + Geschäft = ___",
+              "6. Umkleiden + Kabine = ___",
+              "7. Mode + Geschäft = ___",
+              "8. Schluss + Verkauf = ___"
+            ],
+            "answers": [
+              "1. das Sommerkleid",
+              "2. das Baumwollhemd",
+              "3. die Sportschuhe (Pl.)",
+              "4. die Winterjacke",
+              "5. das Kleidungsgeschäft",
+              "6. die Umkleidekabine",
+              "7. das Modegeschäft",
+              "8. der Schlussverkauf"
+            ]
+          }
+        ]
+      },
+      "block2_grammar": {
+        "grammar_topic": "Komparation der Adjektive — Ступені порівняння прикметників",
+        "explanation_ua": "У німецькій мові прикметники мають три ступені порівняння: Positiv (звичайна форма), Komparativ (вищий ступінь) та Superlativ (найвищий ступінь).\n\nPOSITIV — це вихідна форма прикметника: billig, schön, teuer, bequem.\n\nKOMPARATIV утворюється додаванням суфікса -er до основи: billig -> billiger, schön -> schöner. Комpaративна форма вживається у двох конструкціях:\n1. Порівняння нерівних предметів: Das rote Kleid ist schöner ALS das blaue.\n2. Позначення більшого ступеня якості без прямого порівняння: Ich suche etwas Günstigeres.\n\nДля порівняння рівних предметів використовується SO ... WIE: Diese Jacke ist so teuer wie jene.\n\nSUPERLATIV має дві форми:\n- Предикативна (після дієслова sein): am + основа + -(e)sten: Das ist am billigsten.\n- Атрибутивна (перед іменником): der/die/das + основа + -(e)ste + відмінкове закінчення: das billigste Kleid, die schönste Bluse, der eleganteste Mantel.\n\nВАЖЛИВІ ПРАВИЛА УТВОРЕННЯ:\n1. Багато односкладових прикметників отримують умлаут у Komparativ і Superlativ: alt -> älter -> am ältesten, jung -> jünger -> am jüngsten, groß -> größer -> am größten, warm -> wärmer -> am wärmsten, lang -> länger -> am längsten, kurz -> kürzer -> am kürzesten, kalt -> kälter -> am kältesten.\n2. Прикметники з основою на -d, -t, -s, -ß, -z, -x, -sch отримують у суперлативі -esten (а не просто -sten): heiß -> am heißesten, kurz -> am kürzesten, wild -> am wildesten.\n3. Прикметники на -el та -er втрачають -e- при утворенні компаратива: dunkel -> dunkler, teuer -> teurer.\n4. НЕРЕГУЛЯРНІ ФОРМИ — необхідно вивчити напам'ять:\n   gut -> besser -> am besten\n   viel -> mehr -> am meisten\n   gern -> lieber -> am liebsten",
+        "rules": [
+          {
+            "rule": "Positiv: звичайна форма; so ... wie = порівняння рівних",
+            "example": "Diese Jacke ist so teuer wie jene. / Der Pullover ist bequem."
+          },
+          {
+            "rule": "Komparativ: Grundform + -er (+ Umlaut у односкладових); ... als = порівняння нерівних",
+            "example": "billig -> billiger, schön -> schöner, alt -> älter. — Diese Jacke ist billiger als jene."
+          },
+          {
+            "rule": "Superlativ predikativ: am + Grundform + -(e)sten",
+            "example": "billig -> am billigsten, schön -> am schönsten, alt -> am ältesten"
+          },
+          {
+            "rule": "Superlativ attributiv: der/die/das + Grundform + -(e)ste/-(e)sten + Kasusendung",
+            "example": "das billigste Kleid (Nom./Akk. Neutr.), die schönste Bluse (Nom. Fem.), den elegantesten Mantel (Akk. Mask.)"
+          },
+          {
+            "rule": "Нерегулярні форми: gut / viel / gern",
+            "example": "gut -> besser -> am besten; viel -> mehr -> am meisten; gern -> lieber -> am liebsten"
+          }
+        ],
+        "contractions_note": "Ключова різниця між 'als' та 'wie': 'so ... wie' вживається для порівняння РІВНИХ предметів (ця куртка така ж дорога, як та), а 'als' — після компаратива для порівняння НЕРІВНИХ (ця куртка дорожча, ніж та). Поширена помилка: 'schöner wie' — це хибна конструкція. Після компаратива завжди 'als'.",
+        "forms_table": {
+          "title": "Ступені порівняння прикметників — регулярні та нерегулярні форми",
+          "columns": [
+            "Positiv",
+            "Komparativ",
+            "Superlativ (prädikativ)",
+            "Superlativ (attributiv, Nom. Sg.)"
+          ],
+          "rows": [
+            [
+              "billig",
+              "billiger",
+              "am billigsten",
+              "das billigste Kleid"
+            ],
+            [
+              "schön",
+              "schöner",
+              "am schönsten",
+              "die schönste Bluse"
+            ],
+            [
+              "teuer",
+              "teurer",
+              "am teuersten",
+              "der teuerste Mantel"
+            ],
+            [
+              "bequem",
+              "bequemer",
+              "am bequemsten",
+              "die bequemsten Schuhe"
+            ],
+            [
+              "modisch",
+              "modischer",
+              "am modischsten",
+              "das modischste Outfit"
+            ],
+            [
+              "elegant",
+              "eleganter",
+              "am elegantesten",
+              "der eleganteste Anzug"
+            ],
+            [
+              "alt",
+              "älter",
+              "am ältesten",
+              "der älteste Stil"
+            ],
+            [
+              "groß",
+              "größer",
+              "am größten",
+              "das größte Geschäft"
+            ],
+            [
+              "lang",
+              "länger",
+              "am längsten",
+              "das längste Kleid"
+            ],
+            [
+              "kurz",
+              "kürzer",
+              "am kürzesten",
+              "der kürzeste Rock"
+            ],
+            [
+              "warm",
+              "wärmer",
+              "am wärmsten",
+              "die wärmste Jacke"
+            ],
+            [
+              "dunkel",
+              "dunkler",
+              "am dunkelsten",
+              "die dunkelste Farbe"
+            ],
+            [
+              "gut",
+              "besser",
+              "am besten",
+              "das beste Angebot"
+            ],
+            [
+              "viel",
+              "mehr",
+              "am meisten",
+              "die meisten Kunden"
+            ],
+            [
+              "gern",
+              "lieber",
+              "am liebsten",
+              "(wird nicht attributiv verwendet)"
+            ]
+          ]
+        },
+        "achtung": [
+          "Помилка: Diese Jacke ist schöner wie jene. — Правильно: Diese Jacke ist schöner ALS jene. Після компаратива завжди вживається 'als', а не 'wie'.",
+          "Помилка: Das ist am teuersten Jacke. — Правильно або: Das ist die teuerste Jacke (атрибутивно), або: Diese Jacke ist am teuersten (предикативно). Не можна поєднувати 'am ...sten' з іменником.",
+          "Помилка: teuer -> teuerer -> am teuerststen. — Правильно: teuer -> teurer -> am teuersten. Прикметники на -er втрачають одне -e- у компаративі.",
+          "Помилка: gut -> guter -> am gutesten. — Правильно: gut -> besser -> am besten. Це нерегулярна форма, її необхідно запам'ятати окремо."
+        ],
+        "topic_connection_examples": [
+          "Dieser Pullover ist wärmer als jener, aber er ist auch teurer.",
+          "Das rote Kleid steht dir am besten — kauf es!",
+          "Im Schlussverkauf sind die Preise am günstigsten.",
+          "Ich suche etwas Bequemeres — diese Schuhe sind zu eng.",
+          "Das größte Modegeschäft in der Stadt hat die schönste Auswahl."
+        ],
+        "exercises": [
+          {
+            "type": "gap_fill",
+            "instruction": "Ergänzen Sie den Komparativ oder Superlativ des Adjektivs in Klammern. Achten Sie auf die richtige Form.",
+            "items": [
+              "1. Diese Jeans ist ___ als die andere. (billig)",
+              "2. Welcher Pullover ist am ___? — Der rote ist am ___. (warm)",
+              "3. Ich suche etwas ___. Diese Schuhe sind zu unbequem. (bequem — Komparativ-Pronomen)",
+              "4. Das blaue Kleid ist ___ als das grüne. (schön)",
+              "5. Welches Geschäft hat die ___ Preise in der Stadt? (günstig — attributiver Superlativ)",
+              "6. Diese Jacke passt mir ___ als die andere — sie ist nicht so eng. (gut)",
+              "7. Der schwarze Mantel ist ___ als der braune. (lang)",
+              "8. Im Schlussverkauf sind die Angebote am ___. (gut)"
+            ],
+            "answers": [
+              "1. billiger",
+              "2. wärmsten / wärmsten",
+              "3. etwas Bequemeres",
+              "4. schöner",
+              "5. günstigsten",
+              "6. besser",
+              "7. länger",
+              "8. besten"
+            ]
+          },
+          {
+            "type": "error_correction",
+            "instruction": "Finden Sie den Fehler und korrigieren Sie den Satz. Schreiben Sie den ganzen korrekten Satz. Wenn der Satz korrekt ist, schreiben Sie 'Kein Fehler'.",
+            "items": [
+              "1. Diese Bluse ist schöner wie jene im Schaufenster.",
+              "2. Das ist am teuersten Kleid in diesem Geschäft.",
+              "3. Dieser Pullover ist wärmer als der andere — ich nehme ihn.",
+              "4. Der neue Stil ist modernischer als der alte.",
+              "5. Welche Schuhe stehen dir am besten? — Die schwarzen.",
+              "6. Ich möchte etwas Guteres kaufen — diese Qualität ist nicht gut genug.",
+              "7. Diese Hose ist so eng wie die andere, also kaufe ich keine.",
+              "8. Das billigste Kleid im Laden kostet nur 15 Euro."
+            ],
+            "answers": [
+              "1. Diese Bluse ist schöner ALS jene im Schaufenster. ('wie' -> 'als' nach Komparativ)",
+              "2. Das ist das teuerste Kleid in diesem Geschäft. (attributiver Superlativ: 'das teuerste', nicht 'am teuersten' vor Nomen)",
+              "3. Kein Fehler",
+              "4. Der neue Stil ist modischer als der alte. ('modernischer' existiert nicht; korrekte Form: modischer)",
+              "5. Kein Fehler",
+              "6. Ich möchte etwas Besseres kaufen — diese Qualität ist nicht gut genug. (gut -> besser, nерегулярна форма)",
+              "7. Kein Fehler",
+              "8. Kein Fehler"
+            ]
+          },
+          {
+            "type": "sentence_construction",
+            "instruction": "Bauen Sie aus den Elementen vollständige Sätze. Achten Sie auf die korrekte Komparativ- oder Superlativform und die richtige Wortstellung.",
+            "items": [
+              "1. Das rote Kleid / schön / sein / als / das blaue (Komparativ)",
+              "2. diese schwarzen Schuhe / bequem / sein / am (Superlativ prädikativ)",
+              "3. dieser Pullover / warm / sein / als / der andere (Komparativ)",
+              "4. die Jacke / günstig / im Schlussverkauf / sein / am (Superlativ prädikativ)",
+              "5. ich / suchen / etwas / billig (Komparativ-Pronomen)",
+              "6. das größte Geschäft / der Stadt / haben / die / schön / Auswahl (Superlativ attributiv)",
+              "7. Baumwollstoff / angenehm / sein / als / Polyesterstoff (Komparativ)",
+              "8. welche Farbe / gut / stehen / dir? (Superlativ)"
+            ],
+            "answers": [
+              "1. Das rote Kleid ist schöner als das blaue.",
+              "2. Diese schwarzen Schuhe sind am bequemsten.",
+              "3. Dieser Pullover ist wärmer als der andere.",
+              "4. Die Jacke ist im Schlussverkauf am günstigsten.",
+              "5. Ich suche etwas Billigeres.",
+              "6. Das größte Geschäft der Stadt hat die schönste Auswahl.",
+              "7. Baumwollstoff ist angenehmer als Polyesterstoff.",
+              "8. Welche Farbe steht dir am besten?"
+            ]
+          },
+          {
+            "type": "gap_fill",
+            "instruction": "Ergänzen Sie: so ... wie, Komparativ + als, am ...sten oder den attributiven Superlativ. Wählen Sie jeweils die grammatisch und inhaltlich passende Variante.",
+            "items": [
+              "1. Diese Bluse kostet 30 Euro, jene kostet 45 Euro. Diese Bluse ist ___ als jene. (billig)",
+              "2. Beide Jacken kosten gleich viel. Diese Jacke ist ___ teuer ___ jene.",
+              "3. Ich möchte das ___ Kleid im Geschäft sehen, bitte. (schön — attributiver Superlativ, Akk. Neutr.)",
+              "4. Trägst du lieber Jeans oder Röcke? — Ich trage ___ Jeans. (gern — Komparativ)",
+              "5. Das war das ___ Angebot des Jahres! (gut — attributiver Superlativ, Nom. Neutr.)",
+              "6. Dieser Schal ist nicht ___ lang ___ der andere.",
+              "7. Welche Schuhe haben Sie gekauft? — Die ___. (billig — attributiver Superlativ, Akk. Pl.)",
+              "8. Er kauft immer ___ Kleidung als nötig. (viel — Komparativ)"
+            ],
+            "answers": [
+              "1. billiger",
+              "2. so / wie",
+              "3. schönste",
+              "4. lieber",
+              "5. beste",
+              "6. so / wie",
+              "7. billigsten",
+              "8. mehr"
+            ]
+          },
+          {
+            "type": "free_production",
+            "instruction": "Schreiben Sie 6-8 Sätze: Sie stehen in einem Modegeschäft und vergleichen verschiedene Kleidungsstücke. Erfüllen Sie alle folgenden Bedingungen: (1) Verwenden Sie mindestens 4 verschiedene Komparativ-Formen. (2) Verwenden Sie mindestens 2 Superlativ-Formen (davon mindestens eine attributive). (3) Verwenden Sie einmal die Konstruktion 'so ... wie'. (4) Beschreiben Sie mindestens zwei verschiedene Kleidungsstücke und vergleichen Sie Preis, Qualität oder Stil.",
+            "items": [],
+            "answers": [],
+            "example": "Ich stehe in einem Modegeschäft und vergleiche zwei Kleider. Das rote Kleid ist schöner als das graue, aber es ist auch teurer. Das graue Kleid ist billiger und der Stoff ist angenehmer — er ist so weich wie Seide. Die schwarze Jacke ist am elegantesten im ganzen Geschäft, und sie ist auch die wärmste Jacke hier. Ich suche etwas Modischeres und finde einen gestreiften Pullover. Er ist nicht so lang wie die Jacke, aber er ist das günstigste Stück im Laden. Am liebsten kaufe ich Kleidung aus Baumwolle, weil sie bequemer ist als synthetische Stoffe."
+          }
+        ]
+      },
+      "block3_skills": {
+        "reading": {
+          "exercise_1": {
+            "text_type": "advertisements",
+            "title": "Angebote aus Modegeschäften",
+            "instruction": "Lesen Sie die drei Anzeigen (A, B, C). Welche Anzeige passt zu welcher Aussage? Schreiben Sie A, B, C oder 'Keine'. Eine Aussage kann zu keiner Anzeige passen.",
+            "texts": {
+              "A": "MODEHAUS STERN — Grosser Sommerschlussverkauf! Alle Sommerkleider, Blusen und T-Shirts jetzt 40% guenstiger! Nur diese Woche gueltig. Groessen XS bis XXL. Viele Artikel auch online bestellbar. Kostenlose Lieferung ab 50 Euro Bestellwert. Nur solange der Vorrat reicht! Besuchen Sie uns: Hauptstrasse 14, Mo-Sa 9-20 Uhr.",
+              "B": "NEU: Jetzt auch online shoppen bei TRENDY STYLE! Grosse Auswahl an modischer Damenkleidung — Kleider, Jacken, Blusen und mehr. Alle Preise inklusive Mehrwertsteuer. Kostenlose Ruecksendung innerhalb von 30 Tagen. Kein Mindestbestellwert. Zahlung per Kreditkarte, PayPal oder Rechnung moeglich. www.trendy-style.de",
+              "C": "SECOND-HAND-BOUTIQUE 'VINTAGE LOVE': Wunderschoene gebrauchte Kleidung in Top-Zustand! Markenkleidung bis zu 70% guenstiger als neu. Jeden Dienstag und Donnerstag neue Ware! Wir kaufen auch an — bringen Sie Ihre saubere, gut erhaltene Kleidung mit. Stadtmitte, Blumenstrasse 7. Di, Do, Sa 10-18 Uhr."
+            },
+            "items": [
+              "1. Man kann Kleidung ohne zusaetzliche Kosten zurueckschicken.",
+              "2. Dort findet man Kleidung von bekannten Marken zu sehr niedrigen Preisen.",
+              "3. Das Angebot gilt nur fuer eine begrenzte Zeit.",
+              "4. Man kann dort seine eigene Kleidung verkaufen oder abgeben.",
+              "5. Das Geschaeft ist jeden Tag in der Woche geoeffnet.",
+              "6. Fuer eine Online-Bestellung gibt es keinen Mindestbetrag.",
+              "7. Die Lieferung ist immer kostenlos, unabhaengig vom Bestellwert.",
+              "8. Die Ware wird zweimal pro Woche erneuert.",
+              "9. Man kann mit PayPal bezahlen.",
+              "10. Das Angebot richtet sich nur an Frauen."
+            ],
+            "answers": [
+              "1-B",
+              "2-C",
+              "3-A",
+              "4-C",
+              "5-Keine",
+              "6-B",
+              "7-Keine",
+              "8-C",
+              "9-B",
+              "10-B"
+            ]
+          },
+          "exercise_2": {
+            "text_type": "article",
+            "title": "Mode und Nachhaltigkeit",
+            "instruction": "Lesen Sie den Text und beantworten Sie die Fragen in ganzen Sätzen auf Deutsch.",
+            "text": "Mode ist fuer viele Menschen ein wichtiger Teil des Lebens. Wir kleiden uns, um uns wohlzufuehlen, um einen guten Eindruck zu machen und um unsere Persoenlichkeit zu zeigen. Aber heute kaufen viele Menschen mehr Kleidung als frueher — und oft ist sie billiger als je zuvor.\n\nDas Problem: Billige Mode, auch 'Fast Fashion' genannt, ist schlecht fuer die Umwelt. Die Produktion von Kleidung braucht sehr viel Wasser und Energie. Ausserdem landen viele Kleidungsstuecke nach kurzer Zeit im Muell, weil sie nicht mehr modern sind oder weil sie schnell kaputtgehen.\n\nImmer mehr Menschen suchen deshalb nach Alternativen. Second-Hand-Shops werden immer beliebter — dort findet man oft schoene Kleidung zu guenstigeren Preisen als in normalen Geschaeften. Andere kaufen bewusst weniger, aber bessere Qualitaet — Kleidung, die laenger haelt und zeitloser ist.\n\nExperten empfehlen: Kaufen Sie Kleidung aus natuerlichen Materialien wie Baumwolle oder Wolle — die sind angenehmer auf der Haut und haltbarer als Kunstfasern. Reparieren Sie Kleidung, statt sie wegzuwerfen. Und fragen Sie sich vor jedem Kauf: Brauche ich das wirklich — oder kaufe ich es nur, weil es gerade guenstig ist?",
+            "items": [
+              "1. Warum kaufen Menschen Kleidung? Nennen Sie zwei Gruende aus dem Text.",
+              "2. Was ist das Hauptproblem mit 'Fast Fashion'?",
+              "3. Welche zwei Alternativen zu billiger Massenmode nennt der Text?",
+              "4. Welche Materialien empfehlen Experten und warum?",
+              "5. Welche Frage soll man sich laut dem Text vor jedem Einkauf stellen?"
+            ],
+            "answers": [
+              "1. Um sich wohlzufuehlen und um einen guten Eindruck zu machen (oder: um die Persoenlichkeit zu zeigen).",
+              "2. Fast Fashion ist schlecht fuer die Umwelt, weil die Produktion viel Wasser und Energie braucht und die Kleidung schnell im Muell landet.",
+              "3. Second-Hand-Shops nutzen und weniger, aber bessere Qualitaet kaufen.",
+              "4. Baumwolle und Wolle — sie sind angenehmer auf der Haut und haltbarer als Kunstfasern.",
+              "5. Man soll sich fragen: Brauche ich das wirklich, oder kaufe ich es nur, weil es guenstig ist?"
+            ]
+          }
+        },
+        "listening": {
+          "listening_1": {
+            "title": "Dialog: Im Kleidungsgeschäft",
+            "audioUrl": "https://firebasestorage.googleapis.com/v0/b/pocketdeutsch-7e465.firebasestorage.app/o/a2.2_einkaufen_listening_01.mp3?alt=media&token=24442fbc-28b4-4717-8b11-4d5ec921ef53",
+            "audio_type": "dialogue",
+            "tts_instructions": "Speaker 1 (Kundin): female, approximately 28 years old, friendly and slightly uncertain tone, speaks at A2 pace with natural pauses. Speaker 2 (Verkäuferin): female, approximately 38 years old, professional, warm and helpful, clear articulation. Both speakers use standard German (Hochdeutsch). Add brief natural pauses between speaker turns. No background music.",
+            "transcript": "Kundin: Entschuldigung, ich suche eine Jacke fuer den Herbst. Koennen Sie mir helfen?\nVerkaeuferin: Natuerlich! Was fuer eine Jacke suchen Sie denn — eher etwas Elegantes oder lieber etwas Sportliches?\nKundin: Eher etwas Eleganteres. Ich brauche sie auch fuer die Arbeit.\nVerkaeuferin: Dann empfehle ich Ihnen diese Modelle hier. Das ist unsere neue Kollektion. Diese schwarze Jacke ist sehr beliebt — sie ist eleganter als die anderen und passt zu fast allem.\nKundin: Oh, die sieht schoen aus! Darf ich sie anprobieren?\nVerkaeuferin: Natuerlich! Welche Groesse haben Sie?\nKundin: Groesse 38, normalerweise.\nVerkaeuferin: Einen Moment bitte... Hier, bitte schoen. Die Umkleidekabine ist dort hinten links.\n(nach zwei Minuten)\nKundin: Die Jacke passt gut, aber sie ist ein bisschen eng an den Schultern. Haben Sie die auch in Groesse 40?\nVerkaeuferin: Ja, warten Sie kurz... Hier ist die 40. Ist das besser?\nKundin: Ja, viel besser! Sie sitzt perfekt. Wie viel kostet sie?\nVerkaeuferin: Normalerweise 129 Euro. Aber gerade haben wir Schlussverkauf — sie ist jetzt 30% guenstiger, also 90 Euro 30.\nKundin: Oh, das ist viel guenstiger als ich gedacht hatte! Ich nehme sie.",
+            "exercise_type": "richtig_falsch",
+            "instruction": "Hören Sie den Dialog und entscheiden Sie: richtig (R) oder falsch (F)?",
+            "items": [
+              "1. Die Kundin sucht eine Jacke fuer den Winter.",
+              "2. Die Verkaeuferin empfiehlt eine schwarze Jacke aus der neuen Kollektion.",
+              "3. Die Kundin traegt normalerweise Groesse 38.",
+              "4. Die Jacke in Groesse 38 ist zu weit an den Schultern.",
+              "5. Die Kundin kauft die Jacke am Ende des Dialogs."
+            ],
+            "answers": [
+              "F",
+              "R",
+              "R",
+              "F",
+              "R"
+            ]
+          },
+          "listening_2": {
+            "title": "Kurzvortrag: Was tragen Deutsche am liebsten?",
+            "audioUrl": "https://firebasestorage.googleapis.com/v0/b/pocketdeutsch-7e465.firebasestorage.app/o/a2.2_einkaufen_listening_02.mp3?alt=media&token=fd1c8f8a-3197-4b7d-ad60-7f2b049e6e8b",
+            "audio_type": "monologue_podcast",
+            "tts_instructions": "Speaker: female, approximately 32 years old, friendly podcast presenter style — conversational and clear, slightly informal. Standard German (Hochdeutsch). Moderate pace appropriate for A2 level. Natural pauses after each statistic. No background sound effects or music.",
+            "transcript": "Hallo und herzlich willkommen! Heute sprechen wir ueber Mode und Kleidungsgewohnheiten in Deutschland. Was kaufen die Deutschen am liebsten? Was ist ihnen beim Einkaufen am wichtigsten?\n\nLaut einer aktuellen Umfrage ist Bequemlichkeit fuer die meisten Deutschen wichtiger als Stil. 68 Prozent der Befragten sagen: Ein Kleidungsstueck muss vor allem bequem sein. Nur 21 Prozent kaufen Kleidung hauptsaechlich wegen des Aussehens.\n\nInteressant: Maenner kaufen seltener Kleidung als Frauen, geben aber pro Einkauf mehr Geld aus. Frauen kaufen haeufiger, aber zu guenstigeren Preisen — sie suchen oefter nach Angeboten und Schlussverkaufen.\n\nBei den Materialien ist Baumwolle mit Abstand am beliebtesten: 74 Prozent der Deutschen bevorzugen sie. Synthetische Materialien wie Polyester werden immer unbeliebter, weil sie weniger angenehm auf der Haut sind.\n\nUnd eine letzte Zahl: Ein Deutscher kauft im Schnitt 60 neue Kleidungsstuecke pro Jahr. Das ist mehr als in den meisten anderen europaeischen Laendern. Gleichzeitig landen 40 Prozent dieser Stuecke nach nur einem Jahr im Muell.\n\nDie Botschaft ist also klar: Qualitaet ist oft besser als Quantitaet. Bis zum naechsten Mal!",
+            "exercise_type": "multiple_choice",
+            "instruction": "Hören Sie den Vortrag und wählen Sie die richtige Antwort (A, B oder C).",
+            "items": [
+              {
+                "question": "1. Was ist den meisten Deutschen beim Kleidungskauf am wichtigsten?",
+                "options": [
+                  "A) Das modische Aussehen.",
+                  "B) Die Bequemlichkeit.",
+                  "C) Der Preis."
+                ],
+                "answer": "B"
+              },
+              {
+                "question": "2. Was ist laut dem Text typisch fuer Maenner beim Einkaufen?",
+                "options": [
+                  "A) Sie kaufen haeufiger als Frauen.",
+                  "B) Sie suchen mehr nach Rabatten.",
+                  "C) Sie kaufen seltener, geben aber mehr pro Einkauf aus."
+                ],
+                "answer": "C"
+              },
+              {
+                "question": "3. Welches Material ist bei Deutschen am beliebtesten?",
+                "options": [
+                  "A) Wolle.",
+                  "B) Baumwolle.",
+                  "C) Polyester."
+                ],
+                "answer": "B"
+              },
+              {
+                "question": "4. Wie viele neue Kleidungsstuecke kauft ein Deutscher durchschnittlich pro Jahr?",
+                "options": [
+                  "A) 40.",
+                  "B) 68.",
+                  "C) 60."
+                ],
+                "answer": "C"
+              },
+              {
+                "question": "5. Was passiert laut dem Text mit 40% der gekauften Kleidungsstuecke?",
+                "options": [
+                  "A) Sie werden in Second-Hand-Laeden verkauft.",
+                  "B) Sie kommen nach einem Jahr in den Muell.",
+                  "C) Sie werden an Freunde weitergegeben."
+                ],
+                "answer": "B"
+              }
+            ]
+          }
+        },
+        "language_use": [
+          {
+            "subtype": "lexical_context",
+            "title": "Übung 1: Wortschatz im Kontext",
+            "instruction": "Lesen Sie den Text. Welches Wort passt in die Lücke? Wählen Sie die richtige Antwort (A, B, C oder D).",
+            "text_with_gaps": "Heute gehe ich in die Stadt, um neue Kleidung zu [1]. Ich brauche eine warme Jacke fuer den Winter. Im Kaufhaus gibt es viele verschiedene Modelle in verschiedenen Farben und Groessen. Zuerst [2] ich eine lange schwarze Jacke an — sie sieht sehr elegant aus, aber sie ist zu [3] an den Armen. Die Verkaeuferin empfiehlt mir ein anderes Modell. Diese Jacke [4] mir viel besser — sie ist weiter und bequemer. Das Material ist aus reiner Baumwolle, die [5] angenehmer als Polyester. Der Preis — 89 Euro — erscheint mir etwas [6], aber die Verkaeuferin erklaert, es gibt gerade 20% [7]. Also kostet die Jacke jetzt nur etwa 71 Euro. Das ist ein wirklich gutes [8]! Ich gehe zur [9] und bezahle mit meiner Kreditkarte. Zu Hause [10] ich die Jacke stolz meiner Schwester — sie findet sie auch wunderschoen.",
+            "items": [
+              {
+                "gap_number": 1,
+                "options": [
+                  "A) verkaufen",
+                  "B) kaufen",
+                  "C) anprobieren",
+                  "D) tragen"
+                ],
+                "answer": "B) kaufen",
+                "explanation": "'Kleidung kaufen' — купувати одяг. Людина йде до міста саме з метою придбати нові речі. 'Anprobieren' означає 'приміряти', але не 'купити'."
+              },
+              {
+                "gap_number": 2,
+                "options": [
+                  "A) probiere ... an",
+                  "B) trage",
+                  "C) kaufe",
+                  "D) stehe"
+                ],
+                "answer": "A) probiere ... an",
+                "explanation": "'anprobieren' (трennbar) — приміряти. Правильна розібрана форма в реченні: 'probiere ... an'. Контекст: дія примірювання перед покупкою."
+              },
+              {
+                "gap_number": 3,
+                "options": [
+                  "A) weit",
+                  "B) modisch",
+                  "C) bequem",
+                  "D) eng"
+                ],
+                "answer": "D) eng",
+                "explanation": "'eng' — тісний, вузький. Куртка не підходить саме тому, що тісна ('zu eng an den Armen' — завузька на рукавах)."
+              },
+              {
+                "gap_number": 4,
+                "options": [
+                  "A) steht",
+                  "B) gefaellt",
+                  "C) passt",
+                  "D) traegt"
+                ],
+                "answer": "C) passt",
+                "explanation": "'passen' — підходити за розміром і формою. 'Passt mir besser' означає, що ця куртка краще сидить на тілі. 'Stehen' означає 'личити зовнішньо', 'gefallen' — 'подобатися'."
+              },
+              {
+                "gap_number": 5,
+                "options": [
+                  "A) ist",
+                  "B) war",
+                  "C) wird",
+                  "D) hat"
+                ],
+                "answer": "A) ist",
+                "explanation": "Теперішній час, 3-тя особа однини: 'sie ist'. Стверджуємо факт про матеріал у теперішньому часі."
+              },
+              {
+                "gap_number": 6,
+                "options": [
+                  "A) guenstig",
+                  "B) billig",
+                  "C) modisch",
+                  "D) teuer"
+                ],
+                "answer": "D) teuer",
+                "explanation": "'teuer' — дорогий. Людина вважає ціну в 89 євро зависокою — тому 'erscheint mir etwas teuer'."
+              },
+              {
+                "gap_number": 7,
+                "options": [
+                  "A) Preis",
+                  "B) Angebot",
+                  "C) Rabatt",
+                  "D) Kasse"
+                ],
+                "answer": "C) Rabatt",
+                "explanation": "'Rabatt' — знижка. 'Es gibt 20% Rabatt' — фіксований вираз для позначення знижки у відсотках."
+              },
+              {
+                "gap_number": 8,
+                "options": [
+                  "A) Stoff",
+                  "B) Kleid",
+                  "C) Rabatt",
+                  "D) Angebot"
+                ],
+                "answer": "D) Angebot",
+                "explanation": "'ein gutes Angebot' — вигідна пропозиція/угода. Фіксований вираз для вигідної покупки. 'Rabatt' — це сама знижка, а 'Angebot' — вигідна пропозиція загалом."
+              },
+              {
+                "gap_number": 9,
+                "options": [
+                  "A) Kabine",
+                  "B) Groesse",
+                  "C) Kasse",
+                  "D) Abteilung"
+                ],
+                "answer": "C) Kasse",
+                "explanation": "'zur Kasse gehen' — підійти до каси, щоб заплатити. Фіксований вираз."
+              },
+              {
+                "gap_number": 10,
+                "options": [
+                  "A) kaufe",
+                  "B) probiere an",
+                  "C) zeige",
+                  "D) trage"
+                ],
+                "answer": "C) zeige",
+                "explanation": "'zeigen' — показувати. Людина вдома показує ('zeigt') нову куртку сестрі. 'Tragen' означало б просто 'носити'."
+              }
+            ]
+          },
+          {
+            "subtype": "grammatical_form",
+            "title": "Übung 2: Grammatik im Kontext",
+            "instruction": "Lesen Sie den Text. Welche Form passt in die Lücke? Wählen Sie die richtige Antwort (A, B, C oder D). Es werden verschiedene Grammatikthemen geprüft.",
+            "text_with_gaps": "Letzten Samstag [1] ich mit meiner Freundin einkaufen gegangen. Wir [2] zuerst in ein grosses Kaufhaus gegangen. Ich [3] eine neue Jeans, weil meine alte Jeans zu eng geworden war. Im Geschaeft [4] es viele Modelle — alle sahen modisch aus und waren [5] als die Jeans in meinem Lieblingsgeschaeft. Meine Freundin [6] mir, eine dunkelblaue Jeans zu kaufen. Sie meinte, die [7] mir am besten. Ich [8] sie sofort an und sie hatte recht! Die Jeans war auch [9] als ich gedacht hatte — nur 45 Euro. Danach [10] wir noch in ein Cafe gegangen und haben Kuchen gegessen.",
+            "items": [
+              {
+                "gap_number": 1,
+                "options": [
+                  "A) habe",
+                  "B) bin",
+                  "C) war",
+                  "D) hatte"
+                ],
+                "answer": "B) bin",
+                "explanation": "'Einkaufen gehen' — дієслово руху/переміщення -> Perfekt із 'sein': ich bin ... gegangen."
+              },
+              {
+                "gap_number": 2,
+                "options": [
+                  "A) haben",
+                  "B) sind",
+                  "C) waren",
+                  "D) hatten"
+                ],
+                "answer": "B) sind",
+                "explanation": "'Gehen' -> Perfekt із 'sein': wir sind gegangen. Дієслова переміщення (gehen, fahren, fliegen, laufen...) утворюють Perfekt із 'sein'."
+              },
+              {
+                "gap_number": 3,
+                "options": [
+                  "A) suchte",
+                  "B) suche",
+                  "C) habe gesucht",
+                  "D) suchen"
+                ],
+                "answer": "C) habe gesucht",
+                "explanation": "Perfekt у розмовній мові для позначення минулих подій: ich habe gesucht. 'Suchte' (Praeteritum) рідше вживається в розмовній мові."
+              },
+              {
+                "gap_number": 4,
+                "options": [
+                  "A) hat",
+                  "B) gab",
+                  "C) war",
+                  "D) hatte"
+                ],
+                "answer": "B) gab",
+                "explanation": "'Es gab' — Praeteritum від 'es gibt'. Для безособової конструкції 'es gibt' у минулому завжди вживається Praeteritum 'es gab'."
+              },
+              {
+                "gap_number": 5,
+                "options": [
+                  "A) guenstiger",
+                  "B) am guenstigsten",
+                  "C) guenstig",
+                  "D) guenstigste"
+                ],
+                "answer": "A) guenstiger",
+                "explanation": "Порівняння двох груп (Jeans у цьому магазині vs Jeans у моєму магазині): ... als die Jeans in meinem Lieblingsgeschaeft -> Komparativ: guenstiger."
+              },
+              {
+                "gap_number": 6,
+                "options": [
+                  "A) sagte",
+                  "B) hat gesagt",
+                  "C) sagt",
+                  "D) sagen"
+                ],
+                "answer": "B) hat gesagt",
+                "explanation": "Perfekt у розповідній мові: meine Freundin hat mir gesagt. Рекомендую надавати перевагу Perfekt у розмовній мові для позначення минулого."
+              },
+              {
+                "gap_number": 7,
+                "options": [
+                  "A) stehe",
+                  "B) steht",
+                  "C) stehen",
+                  "D) stand"
+                ],
+                "answer": "B) steht",
+                "explanation": "'stehen + Dativ' для позначення 'личити': die (= die Jeans) steht mir am besten. 3-тя особа однини теперішнього часу."
+              },
+              {
+                "gap_number": 8,
+                "options": [
+                  "A) probierte an",
+                  "B) habe anprobiert",
+                  "C) probiere an",
+                  "D) anprobiert"
+                ],
+                "answer": "B) habe anprobiert",
+                "explanation": "'anprobieren' -> Perfekt: ich habe anprobiert. Partizip II від роздільних дієслів утворюється без додаткового -ge-: an + probiert -> anprobiert."
+              },
+              {
+                "gap_number": 9,
+                "options": [
+                  "A) billigste",
+                  "B) am billigsten",
+                  "C) billiger",
+                  "D) billig"
+                ],
+                "answer": "C) billiger",
+                "explanation": "Порівняння: guenstiger als ich gedacht hatte -> Komparativ: billiger. Контекст: ціна виявилась нижчою за очікувану."
+              },
+              {
+                "gap_number": 10,
+                "options": [
+                  "A) haben",
+                  "B) sind",
+                  "C) waren",
+                  "D) hatten"
+                ],
+                "answer": "B) sind",
+                "explanation": "'Gehen' -> Perfekt із 'sein': danach sind wir ... gegangen. Дієслово переміщення."
+              }
+            ]
+          }
+        ],
+        "writing": {
+          "task_type": "informal_message",
+          "situation": "Ihre Freundin Lena hat Sie gefragt, ob Online-Shopping fuer Kleidung wirklich gut ist. Sie haben letzte Woche zum ersten Mal online Kleidung bestellt und gemischte Erfahrungen gemacht. Schreiben Sie Lena eine kurze Nachricht (z.B. per WhatsApp). Berichten Sie, was Sie bestellt haben, was gut und was nicht so gut war, und ob Sie es weiterempfehlen wuerden.",
+          "recipient": "Freundin Lena",
+          "register": "informal",
+          "required_points": [
+            "Was Sie bestellt haben (Kleidungsstueck, Farbe, Groesse oder Material)",
+            "Was gut war (z.B. Preis, Lieferzeit, Auswahl)",
+            "Was nicht so gut war (z.B. Qualitaet, Passform, Ruecksendung)",
+            "Ihre persoenliche Empfehlung: Wuerden Sie es wieder machen?"
+          ],
+          "word_count_target": 60,
+          "useful_phrases": [
+            "Ich habe letzte Woche zum ersten Mal online Kleidung bestellt.",
+            "Ich habe ein/eine ... in Groesse ... bestellt.",
+            "Die Lieferung war schneller / langsamer als erwartet.",
+            "Die Qualitaet war besser / schlechter als ich gedacht hatte.",
+            "Der Preis war viel guenstiger als im Geschaeft.",
+            "Leider hat das Kleidungsstueck nicht gepasst — es war zu eng / zu weit.",
+            "Die Ruecksendung war einfacher / komplizierter als ich dachte.",
+            "Ich wuerde es (nicht) wieder machen, weil ...",
+            "Am besten hat mir ... gefallen.",
+            "Ich empfehle es dir / nicht, weil ..."
+          ],
+          "model_answer": "Hey Lena!\n\nIch habe letzte Woche endlich mal online Kleidung bestellt — bei einem grossen deutschen Modeshop. Ich habe eine schwarze Winterjacke in Groesse 38 bestellt. Der Preis war viel guenstiger als im Geschaeft — ganze 30% billiger! Und die Lieferung war schneller als ich erwartet hatte: nur zwei Tage.\n\nAber: Die Jacke hat leider nicht so gut gepasst wie auf dem Foto — sie war etwas enger an den Schultern. Ich musste sie zurueckschicken, und das war etwas komplizierter als ich dachte.\n\nInsgesamt war es okay, aber ich glaube, Jacken probiere ich lieber im Geschaeft an. Fuer T-Shirts oder Blusen wuerde ich es aber auf jeden Fall wieder machen!\n\nLiebe Gruesse,\n[Dein Name]",
+          "scoring_criteria": [
+            "Inhalt: Alle vier Pflichtpunkte sind angesprochen — was bestellt, was gut war, was nicht gut war, persoenliche Empfehlung.",
+            "Kommunikative Gestaltung: Informeller Ton (Hey, Liebe Gruesse), persoenliche und direkte Sprache, angemessene Laenge.",
+            "Formale Richtigkeit: Korrekte Komparativformen (guenstiger, schneller, enger, komplizierter), korrekte Perfektbildung, richtige Wortstellung.",
+            "Wortschatz: Themenbezogene Ausdruecke (Lieferung, Ruecksendung, Passform, Groesse, bestellen, zurueckschicken)."
+          ]
+        },
+        "speaking": {
+          "task_types": [
+            {
+              "type": "monologue",
+              "title": "Monolog: Mein persoenlicher Kleidungsstil",
+              "prompt": "Beschreiben Sie Ihren persoenlichen Kleidungsstil. Was tragen Sie am liebsten? Was ist Ihnen bei Kleidung wichtig — Preis, Qualitaet, Marke oder Bequemlichkeit? Vergleichen Sie auch: Was tragen Sie im Alltag und was tragen Sie bei besonderen Anlaessen?",
+              "required_points": [
+                "Allgemeinen Stil beschreiben (sportlich, elegant, casual, klassisch ...)",
+                "Lieblingskleidungsstuecke oder Lieblingsfarben nennen",
+                "Vergleich zwischen Alltag und besonderen Anlaessen (mindestens 2 Komparativ- oder Superlativformen verwenden)",
+                "Erklaeren, was beim Kauf am wichtigsten ist (Preis, Qualitaet, Bequemlichkeit ...)"
+              ],
+              "time_suggestion_seconds": 90,
+              "useful_phrases": [
+                "Mein Stil ist eher ... (sportlich / klassisch / casual / elegant).",
+                "Am liebsten trage ich ...",
+                "Im Alltag trage ich lieber ..., aber bei besonderen Anlaessen ...",
+                "Qualitaet ist mir wichtiger als der Preis.",
+                "Bequemlichkeit ist fuer mich am wichtigsten.",
+                "Ich kaufe am liebsten im Schlussverkauf — da ist alles guenstiger.",
+                "Ich mag besonders ..., weil ...",
+                "Im Vergleich zu ... ist ... viel bequemer / eleganter / guenstiger.",
+                "Das Wichtigste fuer mich ist, dass die Kleidung ..."
+              ],
+              "example_response": "Mein persoenlicher Stil ist eher casual und bequem — ich trage am liebsten Jeans und Pullover. Im Alltag ist mir Bequemlichkeit viel wichtiger als Eleganz. Ich trage meistens weite Hosen und weiche Pullover aus Baumwolle, weil das angenehmer ist als enge, formelle Kleidung.\n\nBei besonderen Anlaessen — zum Beispiel bei einer Party oder einem wichtigen Treffen — ziehe ich mich eleganter an. Dann trage ich ein schoenes Kleid oder eine Bluse mit einem Rock. Das sieht gepflegter aus als mein normaler Alltagslook, aber es ist auch weniger bequem.\n\nBeim Kaufen ist mir Qualitaet am wichtigsten — ich kaufe lieber ein teureres Stueck, das laenger haelt, als viele billige Sachen, die nach einem Jahr kaputtgehen. Am liebsten kaufe ich Kleidung im Schlussverkauf oder in Second-Hand-Laeden — da bekomme ich bessere Qualitaet fuer weniger Geld. Meine Lieblingsfarben sind Blau und Schwarz — die passen zu allem und sehen immer ordentlich aus.",
+              "exam_tips": [
+                "Verwenden Sie mindestens 3-4 Komparativ- oder Superlativformen — das zeigt aktive Grammatikkompetenz.",
+                "Verbinden Sie Saetze mit Konjunktionen: 'weil', 'aber', 'deshalb', 'obwohl', 'dass' — das macht den Monolog fluessiger.",
+                "Sprechen Sie mit konkreten Beispielen: nicht nur 'Kleidung ist wichtig', sondern 'Ich kaufe lieber einen Pullover aus Wolle als aus Polyester, weil Wolle waermer ist'.",
+                "Strukturieren Sie Ihren Monolog: Allgemeiner Stil -> Alltag -> Besondere Anlaesse -> Kriterien beim Kauf."
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]

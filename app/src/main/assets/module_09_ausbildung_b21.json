@@ -1,0 +1,971 @@
+[
+  {
+    "module": {
+      "metadata": {
+        "id": "ausbildung-b2-1",
+        "topic": "Ausbildung, Studium und Schulsystem",
+        "topic_de": "Ausbildung, Studium und Schulsystem",
+        "short_description": "У цьому модулі ви навчитеся обговорювати освіту, навчальні заклади, процес навчання та систему освіти в Німеччині.",
+        "detailed_description": "Тема «Ausbildung, Studium und Schulsystem» охоплює шкільну систему, професійне навчання (duale Ausbildung), університетське навчання, іспити та повсякденне життя студентів. Ця тема є однією з ключових для рівня B2, оскільки постійно зустрічається в іспитах Goethe-Zertifikat B2, Telc B2 та ÖSD B2. Вона перевіряється у читанні (статті про освітні реформи), аудіюванні (інтерв'ю зі студентами та експертами), письмі (офіційні листи до університету) та говорінні (презентація чи дискусія про кар'єрні шляхи).",
+        "level": "B2.1",
+        "grammar_topic": "Zweiteilige Konnektoren (sowohl ... als auch, etc.)",
+        "grammar_topic_connection": "Двоскладові сполучники (zweiteilige Konnektoren) є невід'ємною частиною академічної та професійної мови. Вони допомагають точно і структуровано описувати вибір, альтернативи, подібності та контрасти в контексті освіти. Наприклад: 'Sowohl das Abitur als auch die Ausbildung öffnen viele Türen im Berufsleben.'",
+        "exam_formats": [
+          "Goethe",
+          "ÖSD",
+          "Telc"
+        ],
+        "cefr_skills_covered": [
+          "reading",
+          "listening",
+          "writing",
+          "speaking",
+          "language_use"
+        ],
+        "estimated_minutes": 120,
+        "pronunciation_note": "Зверніть увагу на вимову складних запозичених слів: das Abitur (/abiˈtuːɐ̯/), die Universität (/univeʁziˈtɛːt/), der Bachelor (/ˈbɛtʃəlɐ/ або /ˈbɛtʃlɐ/). Наголос у німецьких складних іменниках завжди падає на першу частину: die Bérufsausbildung."
+      },
+      "block1_vocabulary": {
+        "vocabulary_items": [
+          {
+            "word": "die Ausbildung",
+            "article": "die",
+            "plural": "-en",
+            "word_class": "Nomen",
+            "ukrainian": "професійне навчання, освіта",
+            "example_sentence": "Die duale Ausbildung in Deutschland dauert normalerweise drei Jahre.",
+            "register": "neutral"
+          },
+          {
+            "word": "das Studium",
+            "article": "das",
+            "plural": "Studien",
+            "word_class": "Nomen",
+            "ukrainian": "навчання у вищому навчальному закладі",
+            "example_sentence": "Das Studium an der Uni ist sehr anspruchsvoll und erfordert viel Selbstdisziplin.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Universität",
+            "article": "die",
+            "plural": "-en",
+            "word_class": "Nomen",
+            "ukrainian": "університет",
+            "example_sentence": "Ich studiere Maschinenbau an der Technischen Universität München.",
+            "register": "neutral"
+          },
+          {
+            "word": "der Bachelor",
+            "article": "der",
+            "plural": "-s",
+            "word_class": "Nomen",
+            "ukrainian": "бакалавр (ступінь)",
+            "example_sentence": "Nach dem Bachelor kann man direkt arbeiten oder einen Master machen.",
+            "register": "neutral"
+          },
+          {
+            "word": "das Abitur",
+            "article": "das",
+            "plural": "-e",
+            "word_class": "Nomen",
+            "ukrainian": "іспит на атестат зрілості (випускний іспит у гімназії)",
+            "example_sentence": "Das Abitur ist die wichtigste Voraussetzung für ein Hochschulstudium.",
+            "register": "neutral"
+          },
+          {
+            "word": "der Schüler / die Schülerin",
+            "article": "der / die",
+            "plural": "- / -nen",
+            "word_class": "Nomen",
+            "ukrainian": "учень / учениця",
+            "example_sentence": "Die Schüler bereiten sich intensiv auf ihre Abschlussprüfungen vor.",
+            "register": "neutral"
+          },
+          {
+            "word": "der Student / die Studentin",
+            "article": "der / die",
+            "plural": "-en / -nen",
+            "word_class": "Nomen",
+            "ukrainian": "студент / студентка",
+            "example_sentence": "Viele Studenten arbeiten neben dem Studium als Werkstudenten.",
+            "register": "neutral"
+          },
+          {
+            "word": "der Dozent / die Dozentin",
+            "article": "der / die",
+            "plural": "-en / -nen",
+            "word_class": "Nomen",
+            "ukrainian": "доцент, викладач у ВНЗ",
+            "example_sentence": "Der Dozent hat die komplexe Theorie sehr verständlich erklärt.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Note",
+            "article": "die",
+            "plural": "-n",
+            "word_class": "Nomen",
+            "ukrainian": "оцінка",
+            "example_sentence": "In Deutschland ist eine Eins die beste und eine Sechs die schlechteste Note.",
+            "register": "neutral"
+          },
+          {
+            "word": "das Seminar",
+            "article": "das",
+            "plural": "-e",
+            "word_class": "Nomen",
+            "ukrainian": "семінар",
+            "example_sentence": "Im Seminar müssen wir viel diskutieren und eigene Präsentationen halten.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Prüfung",
+            "article": "die",
+            "plural": "-en",
+            "word_class": "Nomen",
+            "ukrainian": "іспит",
+            "example_sentence": "Die mündliche Prüfung war viel schwerer als die schriftliche.",
+            "register": "neutral"
+          },
+          {
+            "word": "das Semester",
+            "article": "das",
+            "plural": "-",
+            "word_class": "Nomen",
+            "ukrainian": "семестр",
+            "example_sentence": "Im dritten Semester muss ich ein Praktikum im Ausland machen.",
+            "register": "neutral"
+          },
+          {
+            "word": "die Vorlesung",
+            "article": "die",
+            "plural": "-en",
+            "word_class": "Nomen",
+            "ukrainian": "лекція",
+            "example_sentence": "Die Vorlesung findet jeden Montagmorgen im großen Hörsaal statt.",
+            "register": "neutral"
+          },
+          {
+            "word": "das Praktikum",
+            "article": "das",
+            "plural": "Praktika",
+            "word_class": "Nomen",
+            "ukrainian": "практика, стажування",
+            "example_sentence": "Ein Praktikum hilft dabei, erste berufliche Erfahrungen zu sammeln.",
+            "register": "neutral"
+          },
+          {
+            "word": "abschließen",
+            "article": null,
+            "plural": null,
+            "word_class": "Verb",
+            "ukrainian": "закінчувати, завершувати",
+            "example_sentence": "Er hat sein Studium mit Auszeichnung erfolgreich abgeschlossen.",
+            "register": "neutral"
+          },
+          {
+            "word": "bestehen",
+            "article": null,
+            "plural": null,
+            "word_class": "Verb",
+            "ukrainian": "складати (іспит успішно)",
+            "example_sentence": "Ich bin so froh, dass ich die schwierige Prüfung bestanden habe.",
+            "register": "neutral"
+          },
+          {
+            "word": "teilnehmen",
+            "article": null,
+            "plural": null,
+            "word_class": "Verb (trennbar)",
+            "ukrainian": "брати участь (an + Dativ)",
+            "example_sentence": "Leider kann ich heute nicht an der Vorlesung teilnehmen.",
+            "register": "neutral"
+          },
+          {
+            "word": "anspruchsvoll",
+            "article": null,
+            "plural": null,
+            "word_class": "Adjektiv",
+            "ukrainian": "вимогливий, складний",
+            "example_sentence": "Das Masterstudium ist anspruchsvoll, aber die Mühe lohnt sich.",
+            "register": "neutral"
+          },
+          {
+            "word": "berufsbegleitend",
+            "article": null,
+            "plural": null,
+            "word_class": "Adjektiv",
+            "ukrainian": "паралельно з роботою, без відриву від виробництва",
+            "example_sentence": "Sie macht ein berufsbegleitendes Studium am Wochenende.",
+            "register": "neutral"
+          }
+        ],
+        "collocations": [
+          {
+            "phrase": "ein Studium absolvieren",
+            "translation": "успішно закінчити навчання в університеті",
+            "example": "Sie hat ein Studium der Medizin an der Charité absolviert."
+          },
+          {
+            "phrase": "eine Prüfung ablegen",
+            "translation": "складати іспит (процес)",
+            "example": "Am Ende des Semesters muss man mehrere Prüfungen ablegen."
+          },
+          {
+            "phrase": "am Unterricht teilnehmen",
+            "translation": "брати участь у занятті/уроці",
+            "example": "Es ist Pflicht, regelmäßig am Unterricht teilzunehmen."
+          },
+          {
+            "phrase": "gute Noten bekommen",
+            "translation": "отримувати хороші оцінки",
+            "example": "Wer gute Noten bekommt, hat bessere Chancen auf einen Studienplatz."
+          },
+          {
+            "phrase": "ein Praktikum machen / absolvieren",
+            "translation": "проходити практику",
+            "example": "Ich möchte im Sommer ein Praktikum in einer internationalen Firma machen."
+          },
+          {
+            "phrase": "das Abitur machen",
+            "translation": "складати іспит на атестат зрілості",
+            "example": "In Deutschland macht man das Abitur meistens nach der 12. oder 13. Klasse."
+          },
+          {
+            "phrase": "sich an der Universität einschreiben / immatrikulieren",
+            "translation": "записатися/зарахуватися до університету",
+            "example": "Man muss sich rechtzeitig für das Wintersemester einschreiben."
+          }
+        ],
+        "words_in_context": [],
+        "exercises": [
+          {
+            "type": "matching",
+            "instruction": "Ordnen Sie zu: Welches Wort passt zu welcher Erklärung?",
+            "items": [
+              "1. das Abitur",
+              "2. die Ausbildung",
+              "3. das Praktikum",
+              "4. die Note",
+              "5. die Vorlesung",
+              "6. das Semester",
+              "7. anspruchsvoll",
+              "8. abschließen"
+            ],
+            "options": [
+              "a) die Abschlussprüfung nach dem Gymnasium, die zum Studium berechtigt",
+              "b) das Erlernen eines Berufs (oft praktisch und theoretisch kombiniert)",
+              "c) eine Phase, in der man praktische Arbeitserfahrungen in einer Firma sammelt",
+              "d) eine Ziffer (z.B. 1 bis 6), die die Leistung in der Schule bewertet",
+              "e) ein Vortrag eines Professors an der Universität",
+              "f) ein Studienabschnitt an der Universität (meistens sechs Monate)",
+              "g) ein Adjektiv für Aufgaben, die sehr schwer sind und viel Konzentration erfordern",
+              "h) etwas erfolgreich zu Ende bringen (z.B. ein Studium)"
+            ],
+            "answers": [
+              "1-a",
+              "2-b",
+              "3-c",
+              "4-d",
+              "5-e",
+              "6-f",
+              "7-g",
+              "8-h"
+            ]
+          },
+          {
+            "type": "gap_fill",
+            "instruction": "Ergänzen Sie die Lücken mit dem passenden Wort aus dem Kasten: Abitur | Studium | Praktikum | Note | Vorlesung | Semester | Ausbildung | Prüfung",
+            "items": [
+              "1. Nach dem ___ am Gymnasium kann man entscheiden, ob man an die Uni geht.",
+              "2. Mein ___ an der Universität dauert insgesamt sechs ___.",
+              "3. In der ___ sitzen oft über hundert Studenten und hören dem Dozenten zu.",
+              "4. Ich habe zum Glück eine sehr gute ___ in Mathematik bekommen.",
+              "5. Um Berufserfahrung zu sammeln, mache ich im Sommer ein ___ bei BMW.",
+              "6. Die praktische ___ im Betrieb ist genauso wichtig wie die Theorie.",
+              "7. Morgen habe ich eine schwere mündliche ___, ich muss noch viel lernen."
+            ],
+            "answers": [
+              "1. Abitur",
+              "2. Studium / Semester",
+              "3. Vorlesung",
+              "4. Note",
+              "5. Praktikum",
+              "6. Ausbildung",
+              "7. Prüfung"
+            ]
+          },
+          {
+            "type": "collocation_sort",
+            "instruction": "Was passt zusammen? Verbinden Sie die Verben mit den passenden Nomen.",
+            "verbs": [
+              "absolvieren",
+              "ablegen",
+              "teilnehmen (an)",
+              "bekommen",
+              "machen",
+              "sich einschreiben (an)"
+            ],
+            "nouns": [
+              "eine Prüfung",
+              "ein Praktikum",
+              "der Universität",
+              "ein Studium",
+              "gute Noten",
+              "einem Seminar"
+            ],
+            "answers": [
+              "absolvieren → ein Studium",
+              "ablegen → eine Prüfung",
+              "teilnehmen (an) → einem Seminar",
+              "bekommen → gute Noten",
+              "machen → ein Praktikum",
+              "sich einschreiben (an) → der Universität"
+            ]
+          },
+          {
+            "type": "word_formation",
+            "instruction": "Bilden Sie zusammengesetzte Nomen (Komposita). Geben Sie den richtigen Artikel an.",
+            "items": [
+              "1. hoch + die Schule = ___",
+              "2. der Beruf + die Ausbildung = ___",
+              "3. das Studium + der Gang = ___",
+              "4. die Prüfung + die Angst = ___",
+              "5. das Praktikum + der Platz = ___",
+              "6. der Student + das Wohnheim = ___",
+              "7. das Semester + die Ferien (Pl.) = ___",
+              "8. die Vorlesung + der Saal = ___"
+            ],
+            "answers": [
+              "1. die Hochschule",
+              "2. die Berufsausbildung",
+              "3. der Studiengang",
+              "4. die Prüfungsangst",
+              "5. der Praktikumsplatz",
+              "6. das Studentenwohnheim",
+              "7. die Semesterferien",
+              "8. der Vorlesungssaal"
+            ]
+          }
+        ]
+      },
+      "block2_grammar": {
+        "grammar_topic": "Zweiteilige Konnektoren (sowohl ... als auch, etc.) — Двоскладові сполучники",
+        "explanation_ua": "Двоскладові сполучники (zweiteilige Konnektoren) використовуються для встановлення логічного зв'язку між двома частинами речення (додавання, альтернатива, заперечення, контраст). Вони роблять мову більш різноманітною та структурованою, що критично важливо на рівні B2. Зверніть увагу, що деякі з них впливають на порядок слів, а деякі об'єднують лише частини мови.",
+        "rules": [
+          {
+            "rule": "sowohl ... als auch (як ..., так і) — Додавання (позитивне)",
+            "example": "Sowohl das Studium als auch die Ausbildung sind wichtig für die Karriere. (Після сполучника порядок слів не змінюється. Дієслово стоїть у множині)."
+          },
+          {
+            "rule": "nicht nur ... sondern auch (не тільки ..., а й) — Підсилення, додавання",
+            "example": "Er lernt nicht nur schnell, sondern er hat auch viel Erfahrung. / Er hat nicht nur gute Noten, sondern auch praktische Erfahrung."
+          },
+          {
+            "rule": "entweder ... oder (або ..., або) — Альтернатива",
+            "example": "Entweder du studierst Medizin, oder du machst eine Ausbildung zum Pfleger. (Entweder часто стоїть на першій позиції, тоді після нього йде дієслово. Oder працює як звичайний сполучник)."
+          },
+          {
+            "rule": "weder ... noch (ні ..., ні) — Подвійне заперечення",
+            "example": "Weder der Dozent noch die Studenten waren mit dem Ergebnis zufrieden. (У реченні з 'weder ... noch' не можна використовувати слова nicht або kein)."
+          },
+          {
+            "rule": "zwar ... aber (хоча й ..., але) — Контраст, обмеження",
+            "example": "Das Studium ist zwar sehr anspruchsvoll, aber es macht auch viel Spaß."
+          },
+          {
+            "rule": "je ... desto / umso (чим ..., тим ...) — Пропорція",
+            "example": "Je mehr man lernt, desto bessere Noten bekommt man. (Je вимагає порядку слів підрядного речення (дієслово в кінці), а desto є позицією 1 для головного речення (одразу після desto йде прикметник і потім дієслово))."
+          }
+        ],
+        "contractions_note": "",
+        "wo_wohin_contrast": null,
+        "forms_table": {
+          "title": "Огляд найважливіших двоскладових сполучників",
+          "columns": [
+            "Konnektor",
+            "Bedeutung (Значення)",
+            "Beispiel im Kontext"
+          ],
+          "rows": [
+            [
+              "sowohl ... als auch",
+              "Aufzählung (Додавання)",
+              "Ich spreche sowohl Englisch als auch Deutsch."
+            ],
+            [
+              "nicht nur ... sondern auch",
+              "Aufzählung / Steigerung (Підсилення)",
+              "Wir haben nicht nur gelernt, sondern auch gelacht."
+            ],
+            [
+              "entweder ... oder",
+              "Alternative (Вибір)",
+              "Entweder wir gehen in die Bibliothek, oder wir lernen zu Hause."
+            ],
+            [
+              "weder ... noch",
+              "Negative Aufzählung (Заперечення)",
+              "Ich habe weder Zeit noch Geld für dieses Seminar."
+            ],
+            [
+              "zwar ... aber",
+              "Einschränkung / Gegensatz (Контраст)",
+              "Er ist zwar klug, aber er ist auch sehr faul."
+            ],
+            [
+              "je ... desto",
+              "Verhältnis (Пропорція)",
+              "Je früher wir anfangen, desto eher sind wir fertig."
+            ]
+          ]
+        },
+        "achtung": [
+          "Часта помилка: 'Sowohl der Student als die Studentin'. — Правильно: 'Sowohl der Student als AUCH die Studentin'. Слово 'auch' є обов'язковим.",
+          "Після 'weder ... noch' дієслово завжди стоїть у стверджувальній формі. Помилка: 'Ich habe weder Zeit noch kein Geld'. Правильно: 'Ich habe weder Zeit noch Geld'.",
+          "У структурі 'je ... desto' зверніть увагу на коми: Je + підмет + ... + дієслово, desto + прикметник + дієслово + підмет."
+        ],
+        "topic_connection_examples": [
+          "Sowohl das Abitur als auch eine gute Ausbildung öffnen viele Türen.",
+          "Nicht nur die Vorlesungen, sondern auch die Seminare sind für die Prüfung relevant.",
+          "Entweder man studiert an einer Universität oder man beginnt direkt mit der Arbeit in einem Betrieb."
+        ],
+        "exercises": [
+          {
+            "type": "gap_fill",
+            "instruction": "Ergänzen Sie die passenden zweiteiligen Konnektoren aus dem Kasten: weder... noch | sowohl... als auch | zwar... aber | je... desto | nicht nur... sondern auch | entweder... oder",
+            "items": [
+              "1. ___ der Dozent ___ die Studenten waren pünktlich. Alle kamen zu spät.",
+              "2. Das Studium in Deutschland ist ___ oft kostenlos, ___ man muss trotzdem die Lebenshaltungskosten bezahlen.",
+              "3. ___ höher der angestrebte Abschluss ist, ___ schwerer werden die Prüfungen.",
+              "4. Sie spricht ___ Englisch ___ Französisch fließend. Sie hat ein echtes Talent für Sprachen.",
+              "5. Wir müssen eine Entscheidung treffen: ___ wir schreiben eine Hausarbeit, ___ wir halten eine Präsentation.",
+              "6. Für dieses Projekt brauchen wir ___ viel Zeit, ___ viel Geld. Es ist ein riesiges Vorhaben.",
+              "7. Das Buch war ___ informativ, ___ leider auch etwas langweilig geschrieben.",
+              "8. ___ intensiver du dich auf das Vorstellungsgespräch vorbereitest, ___ sicherer wirst du auftreten."
+            ],
+            "answers": [
+              "1. Weder ... noch",
+              "2. zwar ... aber",
+              "3. Je ... desto",
+              "4. sowohl ... als auch",
+              "5. Entweder ... oder",
+              "6. nicht nur ... sondern auch",
+              "7. zwar ... aber",
+              "8. Je ... desto"
+            ]
+          },
+          {
+            "type": "error_correction",
+            "instruction": "Korrigieren Sie die grammatikalischen Fehler in den folgenden Sätzen.",
+            "items": [
+              "1. Sowohl in der Schule als in der Universität lernt man viel für das Leben.",
+              "2. Nicht nur gute Noten sondern auch gute Praktika sind wichtig für den Lebenslauf.",
+              "3. Entweder du machst Abitur oder du eine Ausbildung machst.",
+              "4. Weder der Kursleiter noch die Teilnehmer war mit dem Ausflug zufrieden.",
+              "5. Je mehr Vokabeln man lernt, man desto besser versteht den Text.",
+              "6. Er hat weder keine Zeit noch kein Interesse an dem Seminar.",
+              "7. Das Praktikum ist zwar unbezahlt, oder man lernt dort sehr viel.",
+              "8. Nicht nur er hat die Prüfung bestanden, sondern seine Freundin auch."
+            ],
+            "answers": [
+              "1. Sowohl in der Schule als AUCH in der Universität lernt man viel für das Leben.",
+              "2. Nicht nur gute Noten, sondern auch gute Praktika sind wichtig für den Lebenslauf. (Komma fehlt)",
+              "3. Entweder du machst Abitur, oder du machst eine Ausbildung.",
+              "4. Weder der Kursleiter noch die Teilnehmer WAREN mit dem Ausflug zufrieden.",
+              "5. Je mehr Vokabeln man lernt, desto besser versteht man den Text.",
+              "6. Er hat weder Zeit noch Interesse an dem Seminar. (Keine doppelte Verneinung)",
+              "7. Das Praktikum ist zwar unbezahlt, ABER man lernt dort sehr viel.",
+              "8. Nicht nur er hat die Prüfung bestanden, sondern AUCH seine Freundin."
+            ]
+          },
+          {
+            "type": "sentence_construction",
+            "instruction": "Verbinden Sie die beiden Sätze mit dem angegebenen Konnektor.",
+            "items": [
+              "1. (sowohl ... als auch) Das Abitur ist wichtig. Eine Ausbildung ist wichtig.",
+              "2. (nicht nur ... sondern auch) Wir müssen die Theorie lernen. Wir müssen die Praxis verstehen.",
+              "3. (entweder ... oder) Du schreibst dich heute an der Uni ein. Du verlierst deinen Studienplatz.",
+              "4. (weder ... noch) Die Prüfung war nicht einfach. Die Prüfung war nicht kurz.",
+              "5. (je ... desto) Du lernst viel. Du schreibst gute Noten.",
+              "6. (zwar ... aber) Die Wohnung ist klein. Die Wohnung liegt nah an der Universität.",
+              "7. (sowohl ... als auch) Ich interessiere mich für Informatik. Ich interessiere mich für Wirtschaft.",
+              "8. (je ... desto) Das Praktikum dauert lang. Man bekommt mehr Verantwortung."
+            ],
+            "answers": [
+              "1. Sowohl das Abitur als auch eine Ausbildung sind wichtig.",
+              "2. Wir müssen nicht nur die Theorie lernen, sondern auch die Praxis verstehen.",
+              "3. Entweder du schreibst dich heute an der Uni ein, oder du verlierst deinen Studienplatz.",
+              "4. Die Prüfung war weder einfach noch kurz.",
+              "5. Je mehr du lernst, desto bessere Noten schreibst du.",
+              "6. Die Wohnung ist zwar klein, aber sie liegt nah an der Universität.",
+              "7. Ich interessiere mich sowohl für Informatik als auch für Wirtschaft.",
+              "8. Je länger das Praktikum dauert, desto mehr Verantwortung bekommt man."
+            ]
+          },
+          {
+            "type": "sentence_transformation",
+            "instruction": "Formulieren Sie den Satz um, sodass die Bedeutung gleich bleibt. Nutzen Sie die angegebenen Konnektoren.",
+            "items": [
+              "1. Er lernt Spanisch und er lernt Französisch. (sowohl ... als auch)",
+              "2. Wenn man viel liest, wird der Wortschatz größer. (je ... desto)",
+              "3. Wir können ins Kino gehen, oder wir können zu Hause bleiben. (entweder ... oder)",
+              "4. Ich habe kein Geld und ich habe keine Zeit für einen Urlaub. (weder ... noch)",
+              "5. Das Seminar war interessant, allerdings war es auch sehr anstrengend. (zwar ... aber)",
+              "6. Sie ist nicht nur intelligent, sie ist außerdem sehr fleißig. (nicht nur ... sondern auch)"
+            ],
+            "answers": [
+              "1. Er lernt sowohl Spanisch als auch Französisch.",
+              "2. Je mehr man liest, desto größer wird der Wortschatz.",
+              "3. Entweder wir gehen ins Kino, oder wir bleiben zu Hause.",
+              "4. Ich habe weder Geld noch Zeit für einen Urlaub.",
+              "5. Das Seminar war zwar interessant, aber es war auch sehr anstrengend.",
+              "6. Sie ist nicht nur intelligent, sondern auch sehr fleißig."
+            ]
+          },
+          {
+            "type": "free_production",
+            "instruction": "Schreiben Sie 6–8 Sätze über Ihr eigenes Bildungssystem, Ihre bisherigen Erfahrungen oder Ihre Pläne für die Zukunft. Verwenden Sie dabei mindestens 5 verschiedene zweiteilige Konnektoren.",
+            "items": [],
+            "answers": [],
+            "example": "In der Ukraine ist sowohl das Schulsystem als auch das Studium sehr anspruchsvoll. Nicht nur die Lehrer, sondern auch die Eltern legen großen Wert auf gute Noten. Nach der Schule kann man sich entscheiden: Entweder man geht auf eine Universität, oder man wählt eine berufliche Richtung am College. Ich habe mich für ein Studium entschieden. Das Studium ist zwar manchmal stressig, aber es bereitet mich gut auf den Beruf vor. Ich glaube: Je früher man anfängt, praktische Erfahrungen zu sammeln, desto leichter ist es später auf dem Arbeitsmarkt. Für meine Karriere möchte ich weder auf Theorie noch auf Praxis verzichten."
+          }
+        ]
+      },
+      "block3_skills": {
+        "reading": {
+          "exercise_1": {
+            "text_type": "multiple_choice",
+            "title": "Das deutsche Bildungssystem: Vielfältige Wege zum Erfolg",
+            "instruction": "Lesen Sie den folgenden Text über das Bildungssystem in Deutschland und entscheiden Sie, ob die Aussagen darunter richtig (R) oder falsch (F) (правильно чи хибно) sind.",
+            "text": "Das Bildungssystem in Deutschland ist in hohem Maße föderal organisiert. Das bedeutet, dass nicht die Bundesregierung in Berlin, sondern jedes der 16 Bundesländer seine eigenen Schulgesetze macht. Trotzdem gibt es gemeinsame Grundstrukturen. Nach der vierjährigen Grundschule (in einigen Bundesländern sechs Jahre) werden die Kinder je nach Leistung und Empfehlung der Lehrer auf verschiedene weiterführende Schulen verteilt: die Hauptschule, die Realschule oder das Gymnasium. Es gibt auch Gesamtschulen, die alle diese Schulformen unter einem Dach vereinen.\n\nDas Abitur, der Abschluss des Gymnasiums, ist die klassische Voraussetzung für ein Studium an einer Universität. Viele junge Menschen entscheiden sich in Deutschland jedoch bewusst gegen ein sofortiges Studium und wählen die sogenannte 'duale Ausbildung'. Dieses System ist international sehr anerkannt. Bei der dualen Ausbildung lernen die Auszubildenden sowohl die praktische Arbeit in einem Betrieb als auch die Theorie in einer Berufsschule. Diese Ausbildung dauert in der Regel zwischen zweieinhalb und dreieinhalb Jahren und man erhält bereits ein Ausbildungsgehalt.\n\nAn den Hochschulen hat sich das System durch den Bologna-Prozess in den letzten Jahrzehnten stark gewandelt. Die traditionellen Abschlüsse Diplom und Magister wurden größtenteils durch Bachelor- und Masterstudiengänge ersetzt. Ein großer Vorteil des Studiums in Deutschland ist, dass es an staatlichen Universitäten in den meisten Bundesländern keine oder nur sehr geringe Studiengebühren gibt. Das macht das Studium nicht nur für Einheimische, sondern auch für internationale Studierende sehr attraktiv.",
+            "items": [
+              "1. Die Bundesregierung in Berlin bestimmt die Schulgesetze für ganz Deutschland.",
+              "2. Die Aufteilung der Kinder auf weiterführende Schulen passiert normalerweise nach vier oder sechs Jahren Grundschule.",
+              "3. Die duale Ausbildung findet ausschließlich in einer Berufsschule statt.",
+              "4. Während einer dualen Ausbildung bekommt man bereits ein Gehalt.",
+              "5. Diplom und Magister sind heute die häufigsten Abschlüsse an deutschen Unis.",
+              "6. An staatlichen Universitäten in Deutschland muss man meistens hohe Studiengebühren bezahlen."
+            ],
+            "answers": [
+              "F",
+              "R",
+              "F",
+              "R",
+              "F",
+              "F"
+            ]
+          },
+          "exercise_2": {
+            "text_type": "advertisements",
+            "title": "Studien- und Ausbildungsangebote",
+            "instruction": "Lesen Sie die vier Anzeigen (A-D) und ordnen Sie sie den Aussagen (1-6) zu. Welche Anzeige passt zu welcher Aussage? Eine Anzeige kann mehrfach passen.",
+            "texts": {
+              "A": "Bachelor-Studiengang Wirtschaftsinformatik an der TU Berlin. Dauer: 6 Semester. Voraussetzung: Abitur oder Fachabitur. Zwei sechsmonatige Praktika in Partnerunternehmen sind fest integriert. Keine Studiengebühren, nur Semesterbeitrag von 310 Euro.",
+              "B": "Duale Ausbildung zum Mechatroniker bei Siemens AG. Dauer: 3,5 Jahre. Wir suchen motivierte Schulabgänger (mindestens Realschulabschluss). Wir bieten eine exzellente Betreuung, gute Bezahlung während der Ausbildung und eine Übernahmegarantie bei guten Noten.",
+              "C": "Master-Programm 'Data Science' an der LMU München. Dieses Programm richtet sich nicht nur an Informatiker, sondern ist auch für Quereinsteiger aus Mathematik und Physik bestens geeignet. Unterrichtssprache: Englisch. Dauer: 4 Semester.",
+              "D": "Abendgymnasium Köln. Holen Sie Ihr Abitur nach! Für Berufstätige, die sich weiterbilden möchten. Der Unterricht findet berufsbegleitend von Montag bis Donnerstag ab 18 Uhr statt. Kostenlos. Voraussetzung: Mindestalter 18 Jahre und abgeschlossene Berufsausbildung."
+            },
+            "items": [
+              "1. Dieses Angebot ist für Personen, die bereits arbeiten und abends zur Schule gehen wollen.",
+              "2. Hier wird Ihnen ein Job im Unternehmen nach dem Abschluss versprochen, wenn Sie gute Leistungen zeigen.",
+              "3. Für diesen Studiengang müssen Sie bereits einen Bachelor-Abschluss haben.",
+              "4. Dieses Programm beinhaltet Pflichtpraktika während des Studiums.",
+              "5. Für dieses Angebot reicht ein Realschulabschluss aus.",
+              "6. Dieses Angebot ist auch für Menschen interessant, die vorher etwas anderes studiert haben (Quereinsteiger)."
+            ],
+            "answers": [
+              "D",
+              "B",
+              "C",
+              "A",
+              "B",
+              "C"
+            ]
+          }
+        },
+        "listening": {
+          "listening_1": {
+            "title": "Interview: Studium oder duale Ausbildung?",
+            "audioUrl": "https://firebasestorage.googleapis.com/v0/b/pocketdeutsch-7e465.firebasestorage.app/o/b2.1_ausbildung_listening_01.mp3?alt=media&token=40af1436-9638-4778-a89b-381d15d2f062",
+            "audio_type": "dialogue",
+            "tts_instructions": "Speaker Moderator: male ~35, neutral German accent, professional radio host tone, clear and engaging. Speaker Anna: female ~25, enthusiastic young professional tone. Natural conversation pace for B2 with slight pauses.",
+            "transcript": "Moderator: Herzlich willkommen zu unserer Sendung 'Karrierewege'. Heute sprechen wir mit Anna, 25 Jahre alt. Anna, du bist einen sehr interessanten Weg gegangen: Du hast sowohl eine Ausbildung gemacht als auch ein Studium absolviert. Kannst du uns davon erzählen?\nAnna: Hallo! Ja, genau. Nach meinem Abitur war ich unsicher. Ich wollte nicht direkt wieder nur Theorie lernen. Deshalb habe ich mich für eine duale Ausbildung zur Industriekauffrau entschieden. Das war eine tolle Zeit.\nModerator: Was war das Beste an der Ausbildung?\nAnna: Definitiv die Praxis! Ich war drei Tage in der Woche im Unternehmen und zwei Tage in der Berufsschule. Ich habe nicht nur gelernt, wie ein Betrieb funktioniert, sondern ich habe auch schon mein eigenes Geld verdient. Das hat mir viel Unabhängigkeit gegeben.\nModerator: Aber dann hast du dich trotzdem noch für ein Studium entschieden. Warum?\nAnna: Die Ausbildung war zwar super, aber ich habe gemerkt, dass ich in der Firma ohne ein Studium nicht so leicht aufsteigen kann. Für Führungspositionen wird oft ein Bachelor erwartet. Deshalb habe ich noch BWL studiert.\nModerator: Wenn du heute junge Leute berätst, was würdest du empfehlen? Entweder Ausbildung oder Studium?\nAnna: Das kann man pauschal nicht sagen. Je praktischer jemand veranlagt ist, desto besser passt die Ausbildung. Wer gerne analysiert und theoretisch arbeitet, sollte studieren. Weder das eine noch das andere ist der 'einzige' richtige Weg.",
+            "exercise_type": "richtig_falsch",
+            "instruction": "Hören Sie das Interview und entscheiden Sie: Sind die Aussagen richtig (R) oder falsch (F) (правильно чи хибно)?",
+            "items": [
+              "1. Anna wusste nach dem Abitur sofort, dass sie studieren möchte.",
+              "2. Während der Ausbildung war Anna sowohl in der Schule als auch im Unternehmen.",
+              "3. Durch die Ausbildung war Anna finanziell unabhängig.",
+              "4. Anna hat studiert, weil ihr die Arbeit als Industriekauffrau keinen Spaß gemacht hat.",
+              "5. Anna findet, dass ein Studium für jeden Menschen der bessere Weg ist."
+            ],
+            "answers": [
+              "F",
+              "R",
+              "R",
+              "F",
+              "F"
+            ]
+          },
+          "listening_2": {
+            "title": "Ankündigung in einer Vorlesung",
+            "audioUrl": "https://firebasestorage.googleapis.com/v0/b/pocketdeutsch-7e465.firebasestorage.app/o/b2.1_ausbildung_listening_01.mp3?alt=media&token=40af1436-9638-4778-a89b-381d15d2f062",
+            "audio_type": "monologue",
+            "tts_instructions": "Speaker Professor: male ~55, formal academic tone, clear pronunciation, typical university lecture hall echo effect if possible. Standard Hochdeutsch.",
+            "transcript": "Guten Morgen, meine Damen und Herren. Bevor wir mit dem heutigen Thema starten, habe ich noch einige wichtige organisatorische Ankündigungen für Sie. In diesem Semester bieten wir für unser Modul 'Medienwissenschaften' nicht nur die klassischen Vorlesungen an, sondern wir haben auch das Angebot an praktischen Seminaren erweitert. Diese Seminare sind sowohl für unsere Bachelor- als auch für die Masterstudenten zugelassen. Die Leistungsnachweise können Sie flexibel erbringen: Entweder Sie schreiben eine Hausarbeit von etwa 15 Seiten am Ende des Semesters, oder Sie führen ein Praxisprojekt durch und präsentieren dieses im Kurs. Bitte entscheiden Sie sich bis zum 15. November für eine der beiden Optionen und schreiben Sie sich online im System ein. Noch ein kleiner Tipp: Je aktiver Sie in den Seminarsitzungen mitdiskutieren, desto mehr werden Sie von den praktischen Beispielen profitieren. Bei Fragen kommen Sie gerne in meine Sprechstunde, immer dienstags von 10 bis 12 Uhr.",
+            "exercise_type": "multiple_choice",
+            "instruction": "Hören Sie die Ansage des Professors und wählen Sie die richtige Antwort (A, B oder C).",
+            "items": [
+              {
+                "question": "1. Welche Neuerung gibt es in diesem Semester im Modul 'Medienwissenschaften'?",
+                "options": [
+                  "A) Es gibt keine klassischen Vorlesungen mehr.",
+                  "B) Das Angebot an praktischen Seminaren wurde vergrößert.",
+                  "C) Die Seminare sind jetzt nur noch für Masterstudenten zugänglich."
+                ],
+                "answer": "B"
+              },
+              {
+                "question": "2. Wer darf an den neuen Seminaren teilnehmen?",
+                "options": [
+                  "A) Nur Studenten im ersten Semester.",
+                  "B) Ausschließlich Bachelorstudenten.",
+                  "C) Sowohl Bachelor- als auch Masterstudenten."
+                ],
+                "answer": "C"
+              },
+              {
+                "question": "3. Welche Möglichkeiten gibt es für den Leistungsnachweis?",
+                "options": [
+                  "A) Man muss eine Klausur schreiben und ein Projekt präsentieren.",
+                  "B) Man wählt zwischen einer Hausarbeit oder einem Praxisprojekt.",
+                  "C) Man muss eine Hausarbeit von 25 Seiten schreiben."
+                ],
+                "answer": "B"
+              },
+              {
+                "question": "4. Bis wann müssen die Studenten ihre Entscheidung online eintragen?",
+                "options": [
+                  "A) Bis zum 15. November.",
+                  "B) Bis zum Ende des Semesters.",
+                  "C) Bis Dienstag um 12 Uhr."
+                ],
+                "answer": "A"
+              },
+              {
+                "question": "5. Was rät der Professor den Studenten?",
+                "options": [
+                  "A) Sie sollen sich nur auf die Hausarbeit konzentrieren.",
+                  "B) Sie sollen in den Sitzungen aktiv mitdiskutieren.",
+                  "C) Sie sollen seine Sprechstunde vermeiden."
+                ],
+                "answer": "B"
+              }
+            ]
+          }
+        },
+        "language_use": [
+          {
+            "subtype": "lexical_context",
+            "title": "Übung 1: Wortschatz im Kontext",
+            "instruction": "Lesen Sie den Text. Welches Wort passt am besten in die Lücke? Wählen Sie die richtige Antwort (A, B, C oder D).",
+            "text_with_gaps": "Viele junge Menschen in Deutschland stehen nach dem Abitur vor einer schwierigen Entscheidung. [1] sie beginnen eine duale [2], bei der sie Theorie und Praxis kombinieren, [3] sie entscheiden sich für ein akademisches [4] an einer Fachhochschule oder Universität. Wenn man sich für die Hochschule entscheidet, muss man sich für einen bestimmten [5] einschreiben. Das Leben auf dem Campus ist oft sehr [6], da man nicht nur in den [7] sitzen und zuhören muss, sondern auch viel Stoff zu Hause wiederholen muss. Am Ende jedes [8] gibt es eine intensive Prüfungsphase. Wer hier fleißig lernt und gute [9] bekommt, hat später hervorragende Chancen, seinen Traumjob zu finden. Deshalb ist es wichtig, [10] fokussiert als auch motiviert zu bleiben.",
+            "items": [
+              {
+                "gap_number": 1,
+                "options": [
+                  "A) Weder",
+                  "B) Zwar",
+                  "C) Sowohl",
+                  "D) Entweder"
+                ],
+                "answer": "D) Entweder",
+                "explanation": "Сполучник Entweder ... oder вказує на вибір між двома опціями."
+              },
+              {
+                "gap_number": 2,
+                "options": [
+                  "A) Vorlesung",
+                  "B) Ausbildung",
+                  "C) Prüfung",
+                  "D) Note"
+                ],
+                "answer": "B) Ausbildung",
+                "explanation": "Duale Ausbildung — дуальна професійна освіта (теорія + практика)."
+              },
+              {
+                "gap_number": 3,
+                "options": [
+                  "A) oder",
+                  "B) als",
+                  "C) noch",
+                  "D) aber"
+                ],
+                "answer": "A) oder",
+                "explanation": "Друга частина сполучника 'entweder ... oder'."
+              },
+              {
+                "gap_number": 4,
+                "options": [
+                  "A) Abitur",
+                  "B) Praktikum",
+                  "C) Studium",
+                  "D) Seminar"
+                ],
+                "answer": "C) Studium",
+                "explanation": "Академічне навчання в університеті — це 'Studium'."
+              },
+              {
+                "gap_number": 5,
+                "options": [
+                  "A) Klassenzimmer",
+                  "B) Studiengang",
+                  "C) Professor",
+                  "D) Stundenplan"
+                ],
+                "answer": "B) Studiengang",
+                "explanation": "Зараховуються на конкретний напрямок навчання (Studiengang)."
+              },
+              {
+                "gap_number": 6,
+                "options": [
+                  "A) einfach",
+                  "B) anspruchsvoll",
+                  "C) langweilig",
+                  "D) kostenlos"
+                ],
+                "answer": "B) anspruchsvoll",
+                "explanation": "Життя в кампусі є вимогливим, складним (anspruchsvoll), бо треба багато вчити."
+              },
+              {
+                "gap_number": 7,
+                "options": [
+                  "A) Vorlesungen",
+                  "B) Noten",
+                  "C) Praktika",
+                  "D) Ferien"
+                ],
+                "answer": "A) Vorlesungen",
+                "explanation": "Студенти сидять на лекціях (Vorlesungen)."
+              },
+              {
+                "gap_number": 8,
+                "options": [
+                  "A) Jahres",
+                  "B) Monats",
+                  "C) Semesters",
+                  "D) Praktikums"
+                ],
+                "answer": "C) Semesters",
+                "explanation": "Навчальний рік в університеті ділиться на семестри. Наприкінці кожного семестру є іспити."
+              },
+              {
+                "gap_number": 9,
+                "options": [
+                  "A) Bücher",
+                  "B) Noten",
+                  "C) Fehler",
+                  "D) Lehrer"
+                ],
+                "answer": "B) Noten",
+                "explanation": "Отримують хороші оцінки (gute Noten)."
+              },
+              {
+                "gap_number": 10,
+                "options": [
+                  "A) sowohl",
+                  "B) entweder",
+                  "C) weder",
+                  "D) nicht"
+                ],
+                "answer": "A) sowohl",
+                "explanation": "Перша частина сполучника 'sowohl ... als auch'."
+              }
+            ]
+          },
+          {
+            "subtype": "grammatical_form",
+            "title": "Übung 2: Grammatik im Fokus (B2-Mix)",
+            "instruction": "Lesen Sie den Text. Welche grammatikalische Form passt am besten in die Lücke? Wählen Sie A, B, C oder D.",
+            "text_with_gaps": "Markus hat letztes Jahr sein Abitur [1] und studiert nun im zweiten Semester Architektur. Das Fach, [2] er sich ausgesucht hat, ist sehr intensiv. Er interessiert sich nicht nur für modernes Design, [3] er lernt auch gerne die technischen Grundlagen. Letzte Woche [4] ihm von seinem Dozenten ein interessantes Praktikum angeboten. Wenn Markus dieses Praktikum bekommen [5], könnte er im Sommer in einem großen Architekturbüro arbeiten. Er bereitet gerade seine Bewerbung vor, [6] einen guten Eindruck zu machen. Je mehr Zeit er in sein Portfolio investiert, [7] besser werden seine Chancen sein. Ein Freund, mit [8] er oft zusammen lernt, hat ihm geholfen. Er sagte: '[9] ich du wäre, würde ich mich sofort bewerben.' Markus hofft nun, dass er bald zu einem Gespräch [10] wird.",
+            "items": [
+              {
+                "gap_number": 1,
+                "options": [
+                  "A) gemacht",
+                  "B) machen",
+                  "C) macht",
+                  "D) machte"
+                ],
+                "answer": "A) gemacht",
+                "explanation": "Perfekt: hat gemacht."
+              },
+              {
+                "gap_number": 2,
+                "options": [
+                  "A) der",
+                  "B) dem",
+                  "C) das",
+                  "D) den"
+                ],
+                "answer": "C) das",
+                "explanation": "Relativpronomen: Das Fach (Akkusativ) -> das."
+              },
+              {
+                "gap_number": 3,
+                "options": [
+                  "A) als auch",
+                  "B) sondern",
+                  "C) oder",
+                  "D) noch"
+                ],
+                "answer": "B) sondern",
+                "explanation": "Nicht nur ..., sondern auch (nicht nur ... sondern ... auch)."
+              },
+              {
+                "gap_number": 4,
+                "options": [
+                  "A) wurde",
+                  "B) hat",
+                  "C) wird",
+                  "D) ist"
+                ],
+                "answer": "A) wurde",
+                "explanation": "Passiv Präteritum: Praktikum wurde angeboten."
+              },
+              {
+                "gap_number": 5,
+                "options": [
+                  "A) würde",
+                  "B) wird",
+                  "C) wäre",
+                  "D) werden"
+                ],
+                "answer": "A) würde",
+                "explanation": "Konjunktiv II: Wenn er bekommen würde."
+              },
+              {
+                "gap_number": 6,
+                "options": [
+                  "A) damit",
+                  "B) weil",
+                  "C) um",
+                  "D) dass"
+                ],
+                "answer": "C) um",
+                "explanation": "Infinitivkonstruktion mit 'um ... zu': um einen Eindruck zu machen."
+              },
+              {
+                "gap_number": 7,
+                "options": [
+                  "A) umso",
+                  "B) desto",
+                  "C) wie",
+                  "D) als"
+                ],
+                "answer": "B) desto",
+                "explanation": "Zweiteiliger Konnektor: Je ..., desto ..."
+              },
+              {
+                "gap_number": 8,
+                "options": [
+                  "A) den",
+                  "B) der",
+                  "C) dem",
+                  "D) das"
+                ],
+                "answer": "C) dem",
+                "explanation": "Relativpronomen nach Dativ-Präposition 'mit': mit dem."
+              },
+              {
+                "gap_number": 9,
+                "options": [
+                  "A) Wann",
+                  "B) Als",
+                  "C) Dass",
+                  "D) Wenn"
+                ],
+                "answer": "D) Wenn",
+                "explanation": "Bedingungssatz: Wenn ich du wäre..."
+              },
+              {
+                "gap_number": 10,
+                "options": [
+                  "A) einladen",
+                  "B) eingeladen",
+                  "C) einlädt",
+                  "D) einlud"
+                ],
+                "answer": "B) eingeladen",
+                "explanation": "Passiv Präsens mit Modalverb/werden: dass er eingeladen wird."
+              }
+            ]
+          }
+        ],
+        "writing": {
+          "task_type": "formal_email",
+          "situation": "Sie haben Ihren Bachelor-Abschluss in Ihrem Heimatland gemacht und möchten sich nun für ein Masterstudium an einer deutschen Universität bewerben. Sie schreiben eine E-Mail an die Studienberatung der Universität. Beschreiben Sie Ihren bisherigen Bildungsweg und stellen Sie Fragen zu den genauen Voraussetzungen sowie den Bewerbungsfristen.",
+          "recipient": "Studienberatung (z.B. Zentrale Studienberatung der Uni Köln)",
+          "register": "formal",
+          "required_points": [
+            "Beschreiben Sie kurz Ihren bisherigen Bildungsweg (wo und was studiert).",
+            "Begründen Sie, warum Sie sich genau für diesen Masterstudiengang interessieren.",
+            "Fragen Sie nach konkreten Voraussetzungen (z.B. Sprachkenntnisse, Notenschnitt).",
+            "Fragen Sie nach der Bewerbungsfrist für das kommende Wintersemester."
+          ],
+          "word_count_target": 120,
+          "useful_phrases": [
+            "Sehr geehrte Damen und Herren,",
+            "ich wende mich an Sie, weil ich mich sehr für den Masterstudiengang ... interessiere.",
+            "In meinem Heimatland habe ich erfolgreich ein Bachelorstudium im Fach ... absolviert.",
+            "Dieser Studiengang fasziniert mich besonders, weil...",
+            "Sowohl die praktischen Module als auch die Theorie finde ich sehr ansprechend.",
+            "Ich hätte noch einige Fragen zum Bewerbungsprozess.",
+            "Könnten Sie mir bitte mitteilen, welche Sprachkenntnisse genau gefordert werden?",
+            "Außerdem wüsste ich gerne, bis wann die Bewerbungsfrist läuft.",
+            "Vielen Dank im Voraus für Ihre Unterstützung.",
+            "Mit freundlichen Grüßen"
+          ],
+          "model_answer": "Sehr geehrte Damen und Herren,\n\nich wende mich an Sie, weil ich großes Interesse an dem Masterstudiengang 'Internationale Betriebswirtschaft' an Ihrer Universität habe. \n\nZu meinem bisherigen Bildungsweg: Ich habe in der Ukraine ein Bachelorstudium im Fach Wirtschaftswissenschaften mit sehr guten Noten abgeschlossen. Nicht nur die Theorie hat mir Spaß gemacht, sondern auch ein sechsmonatiges Praktikum, das ich während des Studiums absolviert habe. \n\nIhr Masterprogramm fasziniert mich besonders, da es internationalen Fokus mit Praxisprojekten verbindet. Dazu hätte ich noch zwei kurze Fragen: Könnten Sie mir bitte mitteilen, welche genauen Voraussetzungen (z.B. Sprachzertifikate in Deutsch und Englisch) ich erfüllen muss? Außerdem wüsste ich gerne, bis zu welchem Datum die Bewerbungsfrist für das kommende Wintersemester läuft.\n\nVielen Dank im Voraus für Ihre Mühe und Ihre Antwort.\n\nMit freundlichen Grüßen,\n[Ihr Vorname] [Ihr Nachname]",
+          "scoring_criteria": [
+            "Inhalt: Alle vier Pflichtpunkte müssen ausreichend und verständlich bearbeitet werden.",
+            "Aufbau: Formeller Briefaufbau mit passender Anrede, Einleitung, Hauptteil und Schlussformel.",
+            "Sprache: Verwendung von B2-Strukturen (Konnektoren wie 'nicht nur... sondern auch', Nebensätze, indirekte Fragen).",
+            "Korrektheit: Grammatik (insbesondere Verbposition) und Rechtschreibung sind weitgehend fehlerfrei."
+          ]
+        },
+        "speaking": {
+          "task_types": [
+            {
+              "type": "monologue",
+              "title": "Präsentation: Mein Bildungsweg und das Bildungssystem",
+              "prompt": "Halten Sie eine kurze Präsentation (ca. 2-3 Minuten) über Ihren persönlichen Bildungsweg und das Schul-/Bildungssystem in Ihrem Heimatland. Vergleichen Sie es, wenn möglich, mit dem System in Deutschland.",
+              "required_points": [
+                "Ihre eigenen Schul- und Studienabschlüsse (was, wo, wie lange).",
+                "Vor- und Nachteile des Bildungssystems in Ihrem Heimatland.",
+                "Ein kurzer Vergleich mit dem deutschen Bildungssystem (z.B. Ausbildung vs. Studium).",
+                "Ihre persönlichen Pläne für die berufliche oder akademische Zukunft."
+              ],
+              "time_suggestion_seconds": 180,
+              "useful_phrases": [
+                "Ich möchte Ihnen heute kurz von meinem Bildungsweg berichten.",
+                "In meiner Heimat habe ich sowohl die Grundschule als auch das Gymnasium besucht.",
+                "Ein großer Vorteil unseres Systems ist, dass...",
+                "Ein Nachteil ist jedoch, dass...",
+                "Im Vergleich zu Deutschland gibt es bei uns (keine/weniger)...",
+                "Je besser die Ausbildung ist, desto leichter findet man einen Job.",
+                "In Zukunft möchte ich entweder ... oder ..."
+              ],
+              "example_response": "Guten Tag! Ich möchte heute kurz über meinen Bildungsweg und das Bildungssystem in der Ukraine sprechen. Ich bin in Kyjiw zur Schule gegangen. In der Ukraine dauert die Schule meistens 11 Jahre, und man macht danach einen Abschluss, der dem deutschen Abitur ähnlich ist. Danach habe ich mich an der Universität für ein Studium der Informatik eingeschrieben und dort meinen Bachelor gemacht.\nEin großer Vorteil unseres Systems ist, dass sowohl das Schulsystem als auch viele Studiengänge sehr theoriebasiert und gründlich sind. Ein Nachteil ist jedoch, dass oft die Praxis fehlt. Im Vergleich zu Deutschland gibt es bei uns das System der dualen Ausbildung nicht in dieser Form. Hier in Deutschland ist es toll, dass junge Leute nicht nur studieren, sondern auch eine sehr praktische Ausbildung im Betrieb machen können.\nFür meine Zukunft plane ich, einen Master in Deutschland zu machen. Entweder ich suche mir direkt einen Job in der IT-Branche, oder ich versuche, neben dem Studium als Werkstudent zu arbeiten. Je mehr Erfahrung ich sammle, desto besser sind später meine Chancen auf dem Arbeitsmarkt. Vielen Dank fürs Zuhören!",
+              "exam_tips": [
+                "Sprechen Sie frei und lesen Sie nicht nur von Ihren Notizen ab.",
+                "Versuchen Sie, Ihre Sätze mit Konnektoren (sowohl ... als auch, einerseits ... andererseits) zu verknüpfen, das zeigt Ihr B2-Niveau.",
+                "Wenn Ihnen ein Wort nicht einfällt, umschreiben Sie es einfach. Das ist ein wichtiges Kriterium im mündlichen Ausdruck."
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]

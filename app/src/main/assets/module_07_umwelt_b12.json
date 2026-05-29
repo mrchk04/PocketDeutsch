@@ -1,0 +1,946 @@
+  [
+    {
+      "module": {
+        "metadata": {
+          "id": "umwelt-b1-2",
+          "topic": "Umwelt und Naturschutz",
+          "topic_de": "Umwelt und Naturschutz",
+          "short_description": "У цьому модулі ви навчитеся обговорювати екологічні проблеми, говорити про захист природи, кліматичні зміни та свої дії для збереження довкілля.",
+          "detailed_description": "Тема «Umwelt und Naturschutz» охоплює обговорення екологічних проблем, таких як забруднення, зміна клімату, переробка відходів та сталий розвиток. Ця тема є надзвичайно важливою для рівня B1, оскільки дозволяє розвивати навички розгорнутої аргументації, висловлювання гіпотетичних ситуацій та обговорення глобальних рішень. Граматично модуль фокусується на Konjunktiv II для вираження умовних ситуацій, бажань та порад.",
+          "level": "B1.2",
+          "grammar_topic": "Konjunktiv II der Gegenwart (wäre, hätte, würde)",
+          "grammar_topic_connection": "Konjunktiv II ідеально підходить для висловлювання гіпотетичних ситуацій, побажань та м’яких порад у контексті екології, наприклад: 'Wenn ich mehr Zeit hätte, würde ich mehr recyceln.' або 'Es wäre besser, wenn wir weniger Plastik nutzen würden.'",
+          "exam_formats": [
+            "Goethe",
+            "ÖSD",
+            "Telc"
+          ],
+          "cefr_skills_covered": [
+            "reading",
+            "listening",
+            "writing",
+            "speaking",
+            "language_use"
+          ],
+          "estimated_minutes": 120,
+          "pronunciation_note": "Зверніть увагу на вимову: der Klimawandel (/ˈkliːmaˌvandəl/), recyceln (/ʁiˈsaɪkəln/), die Umwelt (/ˈʊmvɛlt/). Наголос у складних словах завжди падає на перший компонент."
+        },
+        "block1_vocabulary": {
+          "vocabulary_items": [
+            {
+              "word": "die Umwelt",
+              "article": "die",
+              "plural": "-en",
+              "word_class": "Nomen",
+              "ukrainian": "довкілля, навколишнє середовище",
+              "example_sentence": "Wir müssen die Umwelt besser schützen.",
+              "register": "neutral"
+            },
+            {
+              "word": "der Klimawandel",
+              "article": "der",
+              "plural": "-",
+              "word_class": "Nomen",
+              "ukrainian": "зміна клімату",
+              "example_sentence": "Der Klimawandel ist ein großes globales Problem.",
+              "register": "neutral"
+            },
+            {
+              "word": "recyceln",
+              "article": null,
+              "plural": null,
+              "word_class": "Verb",
+              "ukrainian": "переробляти (відходи)",
+              "example_sentence": "Ich recycel Plastik, Glas und Papier jeden Tag.",
+              "register": "neutral"
+            },
+            {
+              "word": "der Müll",
+              "article": "der",
+              "plural": "-",
+              "word_class": "Nomen",
+              "ukrainian": "сміття",
+              "example_sentence": "Bitte trennen Sie den Müll richtig.",
+              "register": "neutral"
+            },
+            {
+              "word": "die Nachhaltigkeit",
+              "article": "die",
+              "plural": "-en",
+              "word_class": "Nomen",
+              "ukrainian": "сталий розвиток, екологічність",
+              "example_sentence": "Nachhaltigkeit ist wichtig für unsere Zukunft.",
+              "register": "neutral"
+            },
+            {
+              "word": "verschmutzen",
+              "article": null,
+              "plural": null,
+              "word_class": "Verb",
+              "ukrainian": "забруднювати",
+              "example_sentence": "Die alten Fabriken verschmutzen die Flüsse.",
+              "register": "neutral"
+            },
+            {
+              "word": "die Energie",
+              "article": "die",
+              "plural": "-n",
+              "word_class": "Nomen",
+              "ukrainian": "енергія",
+              "example_sentence": "Wir brauchen mehr erneuerbare Energie.",
+              "register": "neutral"
+            },
+            {
+              "word": "der Naturschutz",
+              "article": "der",
+              "plural": "-",
+              "word_class": "Nomen",
+              "ukrainian": "захист природи",
+              "example_sentence": "Naturschutz ist die Aufgabe von allen Menschen.",
+              "register": "neutral"
+            },
+            {
+              "word": "der Wald",
+              "article": "der",
+              "plural": "Wälder",
+              "word_class": "Nomen",
+              "ukrainian": "ліс",
+              "example_sentence": "Der Wald produziert Sauerstoff und reinigt die Luft.",
+              "register": "neutral"
+            },
+            {
+              "word": "die Umweltverschmutzung",
+              "article": "die",
+              "plural": "-en",
+              "word_class": "Nomen",
+              "ukrainian": "забруднення довкілля",
+              "example_sentence": "Die Umweltverschmutzung in der Stadt nimmt leider zu.",
+              "register": "neutral"
+            },
+            {
+              "word": "nachhaltig",
+              "article": null,
+              "plural": null,
+              "word_class": "Adjektiv",
+              "ukrainian": "сталий, екологічний",
+              "example_sentence": "Wir brauchen nachhaltige Lösungen für den Verkehr.",
+              "register": "neutral"
+            },
+            {
+              "word": "einsparen",
+              "article": null,
+              "plural": null,
+              "word_class": "Verb (trennbar)",
+              "ukrainian": "економити",
+              "example_sentence": "Man sollte im Haushalt Wasser und Strom einsparen.",
+              "register": "neutral"
+            },
+            {
+              "word": "die Alternative",
+              "article": "die",
+              "plural": "-n",
+              "word_class": "Nomen",
+              "ukrainian": "альтернатива",
+              "example_sentence": "Es gibt viele gute Alternativen zum Auto.",
+              "register": "neutral"
+            },
+            {
+              "word": "die Erderwärmung",
+              "article": "die",
+              "plural": "-en",
+              "word_class": "Nomen",
+              "ukrainian": "глобальне потепління",
+              "example_sentence": "Die Erderwärmung führt zu extremem Wetter.",
+              "register": "neutral"
+            },
+            {
+              "word": "biologisch",
+              "article": null,
+              "plural": null,
+              "word_class": "Adjektiv",
+              "ukrainian": "біологічний, органічний",
+              "example_sentence": "Ich kaufe am liebsten biologische Produkte auf dem Markt.",
+              "register": "neutral"
+            },
+            {
+              "word": "der CO2-Ausstoß",
+              "article": "der",
+              "plural": "die CO2-Ausstöße",
+              "word_class": "Nomen",
+              "ukrainian": "викиди CO2",
+              "example_sentence": "Wir müssen den CO2-Ausstoß drastisch reduzieren.",
+              "register": "neutral"
+            },
+            {
+              "word": "schützen",
+              "article": null,
+              "plural": null,
+              "word_class": "Verb",
+              "ukrainian": "захищати",
+              "example_sentence": "Wir sollten die Tiere und Pflanzen schützen.",
+              "register": "neutral"
+            },
+            {
+              "word": "vermeiden",
+              "article": null,
+              "plural": null,
+              "word_class": "Verb",
+              "ukrainian": "уникати",
+              "example_sentence": "Man kann unnötiges Plastik beim Einkaufen vermeiden.",
+              "register": "neutral"
+            }
+          ],
+          "collocations": [
+            {
+              "phrase": "die Umwelt schützen",
+              "translation": "захищати довкілля",
+              "example": "Jeder kann mit kleinen Dingen die Umwelt schützen."
+            },
+            {
+              "phrase": "Müll trennen",
+              "translation": "сортувати сміття",
+              "example": "In Deutschland muss man den Müll streng trennen."
+            },
+            {
+              "phrase": "erneuerbare Energien",
+              "translation": "відновлювані джерела енергії",
+              "example": "Die Regierung setzt auf erneuerbare Energien wie Windkraft."
+            },
+            {
+              "phrase": "Klimawandel bekämpfen",
+              "translation": "боротися зі зміною клімату",
+              "example": "Die Länder müssen zusammenarbeiten, um den Klimawandel zu bekämpfen."
+            },
+            {
+              "phrase": "Wasser sparen",
+              "translation": "економити воду",
+              "example": "Es ist wichtig, im Alltag Wasser zu sparen."
+            },
+            {
+              "phrase": "nachhaltig leben",
+              "translation": "жити екологічно (стало)",
+              "example": "Viele junge Leute wollen heute nachhaltig leben."
+            },
+            {
+              "phrase": "Plastik vermeiden",
+              "translation": "уникати пластику",
+              "example": "Wir versuchen im Supermarkt, Plastik zu vermeiden."
+            }
+          ],
+          "words_in_context": [
+            {
+              "word": "schützen vs. vermeiden",
+              "sentences": [
+                "Wir schützen die Natur. (Ми захищаємо природу - позитивна дія)",
+                "Wir vermeiden Plastikmüll. (Ми уникаємо пластикового сміття - відмова від негативного)"
+              ]
+            }
+          ],
+          "exercises": [
+            {
+              "type": "matching",
+              "instruction": "Ordnen Sie zu: Welches Wort passt zu welcher Erklärung?",
+              "items": [
+                "1. der Klimawandel",
+                "2. recyceln",
+                "3. die Nachhaltigkeit",
+                "4. verschmutzen",
+                "5. einsparen",
+                "6. der Naturschutz",
+                "7. biologisch",
+                "8. vermeiden"
+              ],
+              "options": [
+                "a) alte Materialien wiederverwenden",
+                "b) die Veränderung des globalen Klimas",
+                "c) umweltfreundlich produzieren oder leben, mit Blick auf die Zukunft",
+                "d) etwas nicht benutzen oder tun, weil es schlecht ist",
+                "e) die Natur und die Tiere bewahren",
+                "f) Energie oder Ressourcen nicht verschwenden",
+                "g) die Umwelt durch giftige Stoffe schädigen",
+                "h) aus natürlichem, chemiefreiem Anbau"
+              ],
+              "answers": [
+                "1-b",
+                "2-a",
+                "3-c",
+                "4-g",
+                "5-f",
+                "6-e",
+                "7-h",
+                "8-d"
+              ]
+            },
+            {
+              "type": "gap_fill",
+              "instruction": "Ergänzen Sie die Lücken mit dem passenden Wort aus dem Kasten: Klimawandel | recyceln | Nachhaltigkeit | Müll | schützen | Energie | Wald | vermeiden",
+              "items": [
+                "1. Der schnelle ___ bedroht viele Tierarten auf der ganzen Welt.",
+                "2. Bitte den ___ richtig trennen: Papier, Glas und Restmüll.",
+                "3. Wir sollten beim Einkaufen mehr Plastiktüten ___ .",
+                "4. Der ___ produziert Sauerstoff und ist sehr wichtig für das Klima.",
+                "5. Die Regierung will die Umwelt besser ___ .",
+                "6. ___ ist das wichtigste Ziel für eine bessere und grüne Zukunft.",
+                "7. Man kann Strom und Wasser ___ , um unsere Ressourcen zu schonen.",
+                "8. Erneuerbare ___ aus Wind und Sonne sind die Zukunft."
+              ],
+              "answers": [
+                "1. Klimawandel",
+                "2. Müll",
+                "3. vermeiden",
+                "4. Wald",
+                "5. schützen",
+                "6. Nachhaltigkeit",
+                "7. einsparen",
+                "8. Energie"
+              ]
+            },
+            {
+              "type": "collocation_sort",
+              "instruction": "Was passt zusammen? Bilden Sie sinnvolle Kollokationen aus den Wörtern.",
+              "verbs": [
+                "schützen",
+                "trennen",
+                "bekämpfen",
+                "sparen",
+                "vermeiden",
+                "leben"
+              ],
+              "nouns": [
+                "die Umwelt",
+                "den Müll",
+                "den Klimawandel",
+                "Wasser",
+                "Plastik",
+                "nachhaltig"
+              ],
+              "answers": [
+                "die Umwelt schützen",
+                "den Müll trennen",
+                "den Klimawandel bekämpfen",
+                "Wasser sparen",
+                "Plastik vermeiden",
+                "nachhaltig leben"
+              ]
+            },
+            {
+              "type": "word_formation",
+              "instruction": "Bilden Sie zusammengesetzte Nomen (Komposita) und geben Sie den korrekten Artikel an.",
+              "items": [
+                "1. die Umwelt + die Verschmutzung = ___",
+                "2. die Natur + der Schutz = ___",
+                "3. das Klima + der Wandel = ___",
+                "4. die Erde + die Erwärmung = ___",
+                "5. das CO2 + der Ausstoß = ___",
+                "6. nach + haltig (Adjektiv zu Nomen) = ___"
+              ],
+              "answers": [
+                "1. die Umweltverschmutzung",
+                "2. der Naturschutz",
+                "3. der Klimawandel",
+                "4. die Erderwärmung",
+                "5. der CO2-Ausstoß",
+                "6. die Nachhaltigkeit"
+              ]
+            }
+          ]
+        },
+        "block2_grammar": {
+          "grammar_topic": "Konjunktiv II der Gegenwart (wäre, hätte, würde) — Кон'юнктив II теперішнього часу",
+          "explanation_ua": "Konjunktiv II використовується для вираження нереальних або гіпотетичних ситуацій, мрій, побажань, а також дуже ввічливих прохань чи порад. У теперішньому часі ми найчастіше використовуємо три форми: wäre (від sein), hätte (від haben) та würde + інфінітив у кінці речення (для всіх інших дієслів). Ця граматика ідеально підходить для обговорення екології: ми можемо говорити про те, що було б краще зробити, або як виглядав би світ за інших умов.",
+          "rules": [
+            {
+              "rule": "würde + Infinitiv — для більшості дієслів (Infinitiv завжди стоїть у кінці речення)",
+              "example": "Ich würde mehr mit dem Fahrrad fahren, wenn ich Zeit hätte."
+            },
+            {
+              "rule": "wäre (від sein) та hätte (від haben) — ці дієслова мають власні форми і НЕ потребують würde",
+              "example": "Wenn ich mehr Geld hätte, würde ich eine Solaranlage kaufen. / Es wäre viel besser, weniger Plastik zu verwenden."
+            },
+            {
+              "rule": "Умовні речення (wenn-Sätze) — порядок слів. Якщо речення починається з wenn, дієслово йде в кінець. У головному реченні після коми дієслово стоїть на першому місці.",
+              "example": "Wenn wir die Umwelt besser schützen würden, gäbe es weniger Probleme."
+            }
+          ],
+          "contractions_note": "Модальні дієслова також мають свої форми Konjunktiv II без würde: könnte (können), müsste (müssen), sollte (sollen), dürfte (dürfen), wollte (wollen). Наприклад: Man sollte mehr recyceln.",
+          "wo_wohin_contrast": null,
+          "forms_table": {
+            "title": "Утворення основних форм Konjunktiv II",
+            "columns": [
+              "Pronomen",
+              "sein (wäre)",
+              "haben (hätte)",
+              "werden (würde)"
+            ],
+            "rows": [
+              [
+                "ich",
+                "wäre",
+                "hätte",
+                "würde"
+              ],
+              [
+                "du",
+                "wärest (wärst)",
+                "hättest",
+                "würdest"
+              ],
+              [
+                "er/sie/es",
+                "wäre",
+                "hätte",
+                "würde"
+              ],
+              [
+                "wir",
+                "wären",
+                "hätten",
+                "würden"
+              ],
+              [
+                "ihr",
+                "wäret (wärt)",
+                "hättet",
+                "würdet"
+              ],
+              [
+                "sie / Sie",
+                "wären",
+                "hätten",
+                "würden"
+              ]
+            ]
+          },
+          "achtung": [
+            "Konjunktiv II використовується лише для гіпотетичних ситуацій. Якщо дія реальна, використовуйте звичайний Indikativ.",
+            "Форми würde та wäre/hätte не можна змішувати. Не кажіть: 'Ich würde Zeit haben.' Правильно: 'Ich hätte Zeit.'",
+            "Якщо в реченні вже є форма würde, друга частина складеного дієслова (Infinitiv) завжди йде в самий кінець речення."
+          ],
+          "topic_connection_examples": [
+            "Wenn ich Präsident wäre, würde ich viel mehr für den Klimaschutz tun.",
+            "Es wäre fantastisch, wenn alle Menschen ihren Müll trennen würden.",
+            "Hätte ich ein Elektroauto, würde ich keinen CO2-Ausstoß produzieren."
+          ],
+          "exercises": [
+            {
+              "type": "gap_fill",
+              "instruction": "Ergänzen Sie mit der richtigen Konjunktiv II-Form: wäre, hätte oder würde(n).",
+              "items": [
+                "1. Wenn es weniger Autos auf den Straßen gäbe, ___ es viel ruhiger in der Stadt.",
+                "2. Ich ___ sehr gerne mehr Zeit, um im eigenen Garten Gemüse anzubauen.",
+                "3. ___ du das Fahrrad benutzen, wenn das Wetter heute besser ___ ?",
+                "4. Es ___ extrem wichtig, mehr Bäume im Regenwald zu pflanzen.",
+                "5. Wir ___ den Müll besser trennen, wenn es im Büro einfacher ___ .",
+                "6. ___ Sie mir bitte helfen, diese schwere Solaranlage zu installieren?",
+                "7. Wenn er ein E-Auto ___, ___ er nie wieder an die Tankstelle fahren.",
+                "8. Die Luft ___ viel sauberer, wenn wir alle nachhaltiger leben ___ ."
+              ],
+              "answers": [
+                "1. wäre",
+                "2. hätte",
+                "3. Würdest / wäre",
+                "4. wäre",
+                "5. würden / wäre",
+                "6. Würden",
+                "7. hätte / würde",
+                "8. wäre / würden"
+              ]
+            },
+            {
+              "type": "error_correction",
+              "instruction": "Korrigieren Sie die Fehler in den Konjunktiv II-Sätzen.",
+              "items": [
+                "1. Wenn ich mehr Geld habe, würde ich ein teures E-Auto kaufen.",
+                "2. Es würde besser sein, wenn wir weniger mit dem Flugzeug fliegen.",
+                "3. Ich würde recyceln, wenn ich mehr Informationen wusste.",
+                "4. Hätte ich heute Zeit, ich würde bei der Umweltaktion helfen.",
+                "5. Wenn alle Menschen nachhaltig leben, wäre die Welt ein besserer Ort.",
+                "6. Wir würden weniger Plastik brauchen, wenn wir Stofftaschen nutzen werden."
+              ],
+              "answers": [
+                "1. Wenn ich mehr Geld hätte, würde ich ein teures E-Auto kaufen.",
+                "2. Es wäre besser, wenn wir weniger mit dem Flugzeug fliegen würden.",
+                "3. Ich würde recyceln, wenn ich mehr Informationen wüsste.",
+                "4. Hätte ich heute Zeit, würde ich bei der Umweltaktion helfen.",
+                "5. Wenn alle Menschen nachhaltig leben würden, wäre die Welt ein besserer Ort.",
+                "6. Wir würden weniger Plastik brauchen, wenn wir Stofftaschen nutzen würden."
+              ]
+            },
+            {
+              "type": "sentence_construction",
+              "instruction": "Bauen Sie Sätze mit dem Konjunktiv II. Achten Sie auf die Kommasetzung und die Verbposition.",
+              "items": [
+                "1. Wenn / ich / mehr Zeit / haben / , / ich / mehr / recyceln / .",
+                "2. Es / wäre / viel besser / , / wenn / alle Leute / Müll / trennen / würden / .",
+                "3. Ich / würde / das Auto / weniger / benutzen / , / wenn / es / gute Alternativen / geben / würde / .",
+                "4. Hätte / ich / ein gutes Fahrrad / , / ich / jeden Tag / zur Arbeit / fahren / würde / .",
+                "5. Wir / würden / weniger Plastik / verwenden / , / wenn / es / billiger / sein / würde / .",
+                "6. Wenn / wir / erneuerbare Energien / nutzen / würden / , / wir / das Klima / schützen / könnten / ."
+              ],
+              "answers": [
+                "1. Wenn ich mehr Zeit hätte, würde ich mehr recyceln.",
+                "2. Es wäre viel besser, wenn alle Leute Müll trennen würden.",
+                "3. Ich würde das Auto weniger benutzen, wenn es gute Alternativen geben würde (oder gäbe).",
+                "4. Hätte ich ein gutes Fahrrad, würde ich jeden Tag zur Arbeit fahren.",
+                "5. Wir würden weniger Plastik verwenden, wenn es billiger wäre.",
+                "6. Wenn wir erneuerbare Energien nutzen würden, könnten wir das Klima schützen."
+              ]
+            },
+            {
+              "type": "sentence_transformation",
+              "instruction": "Formulieren Sie die realen Sätze in hypothetische Wünsche (Konjunktiv II) um.",
+              "items": [
+                "1. Ich habe kein Elektroauto. (Ich hätte gerne ...)",
+                "2. Wir schützen die Umwelt nicht genug. (Wir sollten ... / Es wäre besser, wenn ...)",
+                "3. Es gibt zu viel Plastik im Meer. (Es wäre toll, wenn ...)",
+                "4. Du fährst jeden Tag mit dem Auto zur Arbeit. (Würdest du ...?)",
+                "5. Die Politiker machen nicht genug für das Klima. (Wenn die Politiker mehr tun würden, ...)"
+              ],
+              "answers": [
+                "1. Ich hätte gerne ein Elektroauto.",
+                "2. Wir sollten die Umwelt mehr schützen. / Es wäre besser, wenn wir die Umwelt mehr schützen würden.",
+                "3. Es wäre toll, wenn es weniger Plastik im Meer gäbe (geben würde).",
+                "4. Würdest du seltener mit dem Auto zur Arbeit fahren?",
+                "5. Wenn die Politiker mehr tun würden, wäre das Klima sicherer."
+              ]
+            },
+            {
+              "type": "free_production",
+              "instruction": "Schreiben Sie 6–8 Sätze zu dem Thema ‚Was wäre, wenn ich der Umweltminister wäre?‘. Verwenden Sie mindestens 6 verschiedene Formen von Konjunktiv II (wäre, hätte, würde, könnte, müsste). Beschreiben Sie Ihre hypothetischen Entscheidungen und Lösungen für den Naturschutz.",
+              "items": [],
+              "answers": [],
+              "example": "Wenn ich der Umweltminister wäre, würde ich sofort strengere Gesetze für Fabriken machen. Ich hätte ein großes Budget für erneuerbare Energien. Wir würden viel weniger CO2 produzieren, wenn wir mehr in Züge investieren würden. Es wäre verboten, Einwegplastik zu verkaufen. Jeder Bürger müsste seinen Müll noch besser trennen. Ich könnte auch mehr Geld für den Schutz der Wälder geben. Es wäre fantastisch, wenn wir die Erderwärmung stoppen könnten."
+            }
+          ]
+        },
+        "block3_skills": {
+          "reading": {
+            "exercise_1": {
+              "text_type": "advertisements",
+              "title": "Umweltaktionen und Projekte in der Stadt",
+              "instruction": "Lesen Sie die Kurztexte und entscheiden Sie: Welcher Text (A, B, C oder Keine) passt zu den Aussagen? Eine Aussage kann zu keiner Anzeige passen.",
+              "texts": {
+                "A": "Stadtaktion ‚Unsere saubere Stadt‘: Am kommenden Samstag, den 15. Juni, sammeln wir gemeinsam Müll im großen Stadtpark. Jeder kann mitmachen, vom Kind bis zum Rentner! Bringt bitte eigene Handschuhe mit. Ziel der Aktion: Mehr Bewusstsein für Umweltschutz im Alltag schaffen. Kontakt: umwelt@stadt.de",
+                "B": "Projekt ‚Schule für Nachhaltigkeit‘: Wir suchen dringend Schulen, die bei unserem neuen Programm mitmachen wollen. Themen sind: Klimawandel, Recycling und Energie sparen im Klassenzimmer. Wir bieten kostenloses Material und Workshops für Lehrer an. Anmeldung ist bis zum 30. April auf unserer Webseite möglich.",
+                "C": "Online-Kampagne: Reduziere deinen eigenen CO2-Fußabdruck! Teste auf unserer Seite deinen täglichen Verbrauch und bekomme personalisierte Tipps: Wie kann man weniger Fleisch essen, öffentliche Verkehrsmittel besser nutzen oder Plastik beim Einkaufen vermeiden? Mitmachen und lernen auf www.gruenleben.de"
+              },
+              "items": [
+                "1. Bei dieser Aktion kann man online teilnehmen und etwas lernen.",
+                "2. Hier geht es um eine gemeinsame Müll-Sammelaktion im Freien.",
+                "3. Dieses Angebot ist speziell für Lehrer und Schulen gedacht.",
+                "4. Man kann hier lernen, wie man ein altes Fahrrad selbst repariert.",
+                "5. Man bekommt hier Tipps, wie man im Alltag umweltfreundlicher leben kann.",
+                "6. Die Aktion findet an einem ganz bestimmten Datum am Wochenende statt."
+              ],
+              "answers": [
+                "C",
+                "A",
+                "B",
+                "Keine",
+                "C",
+                "A"
+              ]
+            },
+            "exercise_2": {
+              "text_type": "article",
+              "title": "Nachhaltigkeit im Alltag: Jeder Schritt zählt",
+              "instruction": "Lesen Sie den Text und beantworten Sie die Fragen auf Deutsch.",
+              "text": "Der Klimawandel ist eine der größten Herausforderungen unserer Zeit. Die Temperaturen auf der Erde steigen kontinuierlich, und extreme Wetterereignisse nehmen zu. Viele internationale Experten sind sich einig, dass wir sehr schnell handeln müssen, um die gefährliche Erderwärmung zu stoppen.\n\nDoch Nachhaltigkeit bedeutet nicht nur, dass Politiker neue Gesetze machen müssen. Es bedeutet vor allem, dass wir unseren eigenen, täglichen Lebensstil anpassen, damit auch zukünftige Generationen eine lebenswerte Umwelt haben. Was kann der Einzelne also tun? Es gibt viele Möglichkeiten im Alltag: Wir können den CO2-Ausstoß deutlich reduzieren, indem wir öfter öffentliche Verkehrsmittel nutzen oder für kurze Strecken mit dem Fahrrad fahren.\n\nAuch unser Konsumverhalten spielt eine extrem große Rolle. Wenn wir regionale und biologische Produkte kaufen, sparen wir lange Transportwege und unterstützen lokale Bauern. Außerdem ist es sehr wichtig, unnötige Plastikverpackungen zu vermeiden und unseren Müll zu Hause richtig zu trennen. Jeder Schritt, egal wie klein er uns manchmal scheint, ist ein wichtiger Beitrag zum globalen Naturschutz.",
+              "items": [
+                "1. Was ist laut dem Text eine der größten Herausforderungen unserer Zeit?",
+                "2. Was bedeutet Nachhaltigkeit im Bezug auf die Zukunft?",
+                "3. Wie kann man laut Text den CO2-Ausstoß im Alltag reduzieren?",
+                "4. Warum ist es gut, regionale und biologische Produkte zu kaufen?",
+                "5. Was wird über kleine Schritte im Alltag gesagt?"
+              ],
+              "answers": [
+                "1. Der Klimawandel ist eine der größten Herausforderungen.",
+                "2. Es bedeutet, dass wir unseren Lebensstil anpassen, damit zukünftige Generationen eine gute Umwelt haben.",
+                "3. Man soll öfter öffentliche Verkehrsmittel nutzen oder mit dem Fahrrad fahren.",
+                "4. Weil man dadurch lange Transportwege spart und lokale Bauern unterstützt.",
+                "5. Jeder noch so kleine Schritt ist ein wichtiger Beitrag zum globalen Naturschutz."
+              ]
+            }
+          },
+          "listening": {
+            "listening_1": {
+              "title": "Dialog: Umweltschutz im Alltag",
+              "audioUrl": "https://firebasestorage.googleapis.com/v0/b/pocketdeutsch-7e465.firebasestorage.app/o/b1.2_umwelt_listening_01.mp3?alt=media&token=c50bd630-ad3b-4da9-af9a-6f018ca83b64",
+              "audio_type": "dialogue",
+              "tts_instructions": "Speaker Anna: female ~35, enthusiastic and motivated tone. Speaker Max: male ~40, thoughtful and realistic tone. Clear Hochdeutsch, moderate pace for B1 level. Natural dialogue rhythm.",
+              "transcript": "Anna: Hallo Max! Sag mal, fährst du jetzt eigentlich jeden Tag mit dem Fahrrad zur Arbeit?\nMax: Hallo Anna! Ja, fast jeden Tag. Ich versuche, das Auto öfter stehen zu lassen. Der Klimawandel macht mir wirklich Sorgen.\nAnna: Das finde ich toll. Ich würde auch sehr gerne mit dem Rad fahren, aber mein Weg zur Arbeit ist einfach zu weit. Ich nehme deshalb meistens die U-Bahn.\nMax: Das ist doch auch sehr umweltfreundlich! Öffentliche Verkehrsmittel sind eine tolle Alternative. Achtest du sonst auch auf Nachhaltigkeit?\nAnna: Ja, schon. Beim Einkaufen versuche ich extrem, Plastik zu vermeiden. Ich nehme immer meine eigenen Stofftaschen mit und kaufe viel Gemüse frisch auf dem Markt.\nMax: Das sollte ich auch öfter tun. Ich trenne zwar meinen Müll zu Hause sehr genau, aber im Supermarkt kaufe ich oft noch in Plastik verpackte Sachen. Wenn ich mehr Zeit hätte, würde ich auch öfter auf den Markt gehen.\nAnna: Es ist natürlich nicht immer einfach im Stress. Aber wenn jeder ein bisschen was tut, wäre der Umwelt schon sehr geholfen.\nMax: Da hast du völlig recht!",
+              "exercise_type": "richtig_falsch",
+              "instruction": "Hören Sie den Dialog und entscheiden Sie: Ist die Aussage richtig (R) oder falsch (F) (правильно чи хибно)?",
+              "items": [
+                "1. Max fährt meistens mit dem Auto zur Arbeit.",
+                "2. Anna fährt mit der U-Bahn, weil ihr Weg zur Arbeit zu weit für das Fahrrad ist.",
+                "3. Anna kauft ihr Gemüse oft frisch auf dem Markt.",
+                "4. Max findet die Mülltrennung zu Hause nicht so wichtig.",
+                "5. Max hat viel Zeit, um auf dem Wochenmarkt einzukaufen."
+              ],
+              "answers": [
+                "F",
+                "R",
+                "R",
+                "F",
+                "F"
+              ]
+            },
+            "listening_2": {
+              "title": "Podcast: Ressourcen sparen im Haushalt",
+              "audioUrl": "https://firebasestorage.googleapis.com/v0/b/pocketdeutsch-7e465.firebasestorage.app/o/b1.2_umwelt_listening_02.mp3?alt=media&token=583b4024-d988-4552-ab69-de7680df41b3",
+              "audio_type": "monologue",
+              "tts_instructions": "Speaker Moderator: male ~45, expert tone, informative, clear and positive. Natural pauses between tips, clear pronunciation suitable for B1 comprehension.",
+              "transcript": "Moderator: Herzlich willkommen zu unserem Podcast 'Grüner Leben'. Heute sprechen wir darüber, wie man im eigenen Zuhause ganz einfach Energie und Ressourcen sparen kann. Oft sind es nämlich die kleinen Dinge, die einen großen Unterschied machen. Fangen wir beim Wasser an: Wenn Sie beim Zähneputzen das Wasser einfach abstellen, können Sie viele Liter am Tag sparen. Ein weiterer sehr wichtiger Punkt ist die Heizung im Winter. Es wäre deutlich besser, wenn Sie die Temperatur im Wohnzimmer um nur ein oder zwei Grad senken würden. Das spart nicht nur schädliches CO2, sondern auch viel Geld auf der Rechnung. Und wie sieht es mit dem Strom aus? Schalten Sie Geräte wie Fernseher oder Computer nach der Nutzung ganz aus und lassen Sie sie nicht im Standby-Modus. Wenn jeder Haushalt in Deutschland diese drei einfachen Tipps befolgen würde, hätten wir eine viel bessere Klimabilanz.",
+              "exercise_type": "multiple_choice",
+              "instruction": "Hören Sie den Podcast und wählen Sie die richtige Antwort (A, B oder C).",
+              "items": [
+                {
+                  "question": "1. Worüber spricht der Moderator in dieser Podcast-Folge?",
+                  "options": [
+                    "A) Über umweltfreundliche Autos",
+                    "B) Über das Sparen von Ressourcen zu Hause",
+                    "C) Über Mülltrennung im Büro"
+                  ],
+                  "answer": "B"
+                },
+                {
+                  "question": "2. Was soll man laut dem Podcast beim Zähneputzen machen?",
+                  "options": [
+                    "A) Kaltes Wasser benutzen",
+                    "B) Das Wasser abstellen",
+                    "C) Ein Glas benutzen"
+                  ],
+                  "answer": "B"
+                },
+                {
+                  "question": "3. Was ist ein Vorteil, wenn man die Heizung etwas kälter stellt?",
+                  "options": [
+                    "A) Man spart Geld und CO2.",
+                    "B) Man schläft nachts besser.",
+                    "C) Die Heizung geht nicht so schnell kaputt."
+                  ],
+                  "answer": "A"
+                },
+                {
+                  "question": "4. Wie soll man mit elektronischen Geräten wie dem Fernseher umgehen?",
+                  "options": [
+                    "A) Man soll sie immer im Standby-Modus lassen.",
+                    "B) Man soll sie komplett ausschalten.",
+                    "C) Man soll jeden Tag weniger fernsehen."
+                  ],
+                  "answer": "B"
+                },
+                {
+                  "question": "5. Was wäre die Folge, wenn alle diese Tipps befolgen würden?",
+                  "options": [
+                    "A) Der Strom würde viel teurer werden.",
+                    "B) Deutschland hätte eine bessere Klimabilanz.",
+                    "C) Man müsste keine Heizung mehr benutzen."
+                  ],
+                  "answer": "B"
+                }
+              ]
+            }
+          },
+          "language_use": [
+            {
+              "subtype": "lexical_context",
+              "title": "Übung 1: Wortschatz im Kontext",
+              "instruction": "Lesen Sie den Text. Welches Wort passt am besten in die Lücke? Wählen Sie die richtige Antwort (A, B, C oder D).",
+              "text_with_gaps": "Der [1] ist eine große Gefahr für unsere Erde. Deshalb ist der aktive [2] heute extrem wichtig. Wir müssen versuchen, die Natur zu [3]. Jeder kann im Alltag etwas tun, um [4] zu leben. Zum Beispiel sollte man [5] vermeiden, wenn man im Supermarkt einkaufen geht. Es ist auch wichtig, den [6] zu Hause richtig zu trennen, damit man ihn später [7] kann. Wer mit dem Fahrrad fährt statt mit dem Auto, hilft aktiv dabei, den schädlichen [8] zu reduzieren. Außerdem kann man zu Hause viel [9] sparen, wenn man das Licht ausschaltet, wenn man den Raum verlässt. Wenn wir alle mitmachen, haben wir eine echte [10] für eine grüne Zukunft.",
+              "items": [
+                {
+                  "gap_number": 1,
+                  "options": [
+                    "A) Urlaub",
+                    "B) Klimawandel",
+                    "C) Wald",
+                    "D) Müll"
+                  ],
+                  "answer": "B) Klimawandel",
+                  "explanation": "Глобальна проблема, яка загрожує Землі."
+                },
+                {
+                  "gap_number": 2,
+                  "options": [
+                    "A) Naturschutz",
+                    "B) Strom",
+                    "C) Ausflug",
+                    "D) Ausstoß"
+                  ],
+                  "answer": "A) Naturschutz",
+                  "explanation": "Захист природи є важливою відповіддю на загрози."
+                },
+                {
+                  "gap_number": 3,
+                  "options": [
+                    "A) verschmutzen",
+                    "B) trennen",
+                    "C) schützen",
+                    "D) fliegen"
+                  ],
+                  "answer": "C) schützen",
+                  "explanation": "Ми повинні захищати (schützen) природу."
+                },
+                {
+                  "gap_number": 4,
+                  "options": [
+                    "A) teuer",
+                    "B) nachhaltig",
+                    "C) laut",
+                    "D) schnell"
+                  ],
+                  "answer": "B) nachhaltig",
+                  "explanation": "Жити стало, екологічно (nachhaltig leben)."
+                },
+                {
+                  "gap_number": 5,
+                  "options": [
+                    "A) Gemüse",
+                    "B) Plastik",
+                    "C) Wasser",
+                    "D) Fahrrad"
+                  ],
+                  "answer": "B) Plastik",
+                  "explanation": "Уникати пластику (Plastik vermeiden)."
+                },
+                {
+                  "gap_number": 6,
+                  "options": [
+                    "A) Strom",
+                    "B) Baum",
+                    "C) Müll",
+                    "D) Wagen"
+                  ],
+                  "answer": "C) Müll",
+                  "explanation": "Сортувати сміття (Müll trennen)."
+                },
+                {
+                  "gap_number": 7,
+                  "options": [
+                    "A) recyceln",
+                    "B) essen",
+                    "C) verlieren",
+                    "D) lesen"
+                  ],
+                  "answer": "A) recyceln",
+                  "explanation": "Сміття сортують, щоб його переробляти (recyceln)."
+                },
+                {
+                  "gap_number": 8,
+                  "options": [
+                    "A) CO2-Ausstoß",
+                    "B) Lärm",
+                    "C) Regen",
+                    "D) Gewinn"
+                  ],
+                  "answer": "A) CO2-Ausstoß",
+                  "explanation": "Велосипед замість авто знижує викиди CO2."
+                },
+                {
+                  "gap_number": 9,
+                  "options": [
+                    "A) Zeit",
+                    "B) Energie",
+                    "C) Platz",
+                    "D) Liebe"
+                  ],
+                  "answer": "B) Energie",
+                  "explanation": "Вимикаючи світло, ми економимо енергію (Energie sparen)."
+                },
+                {
+                  "gap_number": 10,
+                  "options": [
+                    "A) Alternative",
+                    "B) Angst",
+                    "C) Krankheit",
+                    "D) Tasche"
+                  ],
+                  "answer": "A) Alternative",
+                  "explanation": "Альтернатива (Alternative) для зеленого майбутнього."
+                }
+              ]
+            },
+            {
+              "subtype": "grammatical_form",
+              "title": "Übung 2: Grammatik im Fokus (B1-Mix)",
+              "instruction": "Lesen Sie den Text. Welche grammatikalische Form passt in die Lücke? Wählen Sie A, B, C oder D.",
+              "text_with_gaps": "Mein Freund Lukas [1] gerne ein Elektroauto kaufen. Er sagt, es [2] viel besser für die Umwelt, wenn mehr Leute elektrisch fahren [3]. Gestern hat er ein Auto gesehen, [4] ihm sehr gut gefallen hat. Das Auto [5] in Deutschland produziert. Er hat den Verkäufer gefragt, [6] das Auto kostet. Lukas spart jetzt jeden Monat Geld, [7] sich das Auto nächstes Jahr zu kaufen. Er fährt im Moment einen alten Wagen, aber das neue E-Auto ist viel umweltfreundlicher [8] sein altes. [9] er einen besseren Job hätte, könnte er das Auto sofort bezahlen. Aber er freut sich, [10] er überhaupt die Möglichkeit hat, etwas Neues zu planen.",
+              "items": [
+                {
+                  "gap_number": 1,
+                  "options": [
+                    "A) würde",
+                    "B) wird",
+                    "C) wurde",
+                    "D) wäre"
+                  ],
+                  "answer": "A) würde",
+                  "explanation": "Konjunktiv II для бажання: würde gerne kaufen."
+                },
+                {
+                  "gap_number": 2,
+                  "options": [
+                    "A) war",
+                    "B) ist",
+                    "C) wäre",
+                    "D) wird"
+                  ],
+                  "answer": "C) wäre",
+                  "explanation": "Konjunktiv II для гіпотетичної ситуації: es wäre besser."
+                },
+                {
+                  "gap_number": 3,
+                  "options": [
+                    "A) würden",
+                    "B) werden",
+                    "C) wurden",
+                    "D) wird"
+                  ],
+                  "answer": "A) würden",
+                  "explanation": "Konjunktiv II: wenn Leute fahren würden."
+                },
+                {
+                  "gap_number": 4,
+                  "options": [
+                    "A) den",
+                    "B) das",
+                    "C) dem",
+                    "D) der"
+                  ],
+                  "answer": "B) das",
+                  "explanation": "Відносний займенник (Relativpronomen) для 'das Auto'."
+                },
+                {
+                  "gap_number": 5,
+                  "options": [
+                    "A) hat",
+                    "B) wird",
+                    "C) wurde",
+                    "D) ist"
+                  ],
+                  "answer": "C) wurde",
+                  "explanation": "Пасивний стан у минулому часі (Passiv Präteritum): wurde produziert."
+                },
+                {
+                  "gap_number": 6,
+                  "options": [
+                    "A) ob",
+                    "B) weil",
+                    "C) dass",
+                    "D) wie viel"
+                  ],
+                  "answer": "D) wie viel",
+                  "explanation": "Непряме питання: скільки коштує."
+                },
+                {
+                  "gap_number": 7,
+                  "options": [
+                    "A) damit",
+                    "B) um",
+                    "C) weil",
+                    "D) für"
+                  ],
+                  "answer": "B) um",
+                  "explanation": "Інфінітивна конструкція з метою: um ... zu kaufen."
+                },
+                {
+                  "gap_number": 8,
+                  "options": [
+                    "A) als",
+                    "B) wie",
+                    "C) so",
+                    "D) von"
+                  ],
+                  "answer": "A) als",
+                  "explanation": "Порівняння (Komparativ): umweltfreundlicher als."
+                },
+                {
+                  "gap_number": 9,
+                  "options": [
+                    "A) Wann",
+                    "B) Wenn",
+                    "C) Als",
+                    "D) Dass"
+                  ],
+                  "answer": "B) Wenn",
+                  "explanation": "Умовне речення: Wenn er einen besseren Job hätte."
+                },
+                {
+                  "gap_number": 10,
+                  "options": [
+                    "A) dass",
+                    "B) weil",
+                    "C) ob",
+                    "D) wenn"
+                  ],
+                  "answer": "A) dass",
+                  "explanation": "Підрядне речення (dass-Satz): er freut sich, dass..."
+                }
+              ]
+            }
+          ],
+          "writing": {
+            "task_type": "semi-formal_email",
+            "situation": "Sie haben im Internet die Webseite eines lokalen Umweltvereins gefunden. Schreiben Sie eine E-Mail an die Organisation. Beschreiben Sie, was Sie in Ihrem Alltag bereits für die Umwelt tun, was Sie vorschlagen würden, wenn Sie mehr Möglichkeiten hätten, und fragen Sie nach Möglichkeiten, wie Sie mithelfen können.",
+            "recipient": "Lokaler Umweltverein (z.B. 'Grüne Stadt e.V.')",
+            "register": "semi-formal",
+            "required_points": [
+              "Beschreiben Sie Ihre aktuellen umweltfreundlichen Aktivitäten im Alltag.",
+              "Schlagen Sie vor, was Sie tun würden, wenn Sie mehr Zeit oder Geld hätten (Konjunktiv II).",
+              "Fragen Sie nach konkreten Mitmachmöglichkeiten für Freiwillige."
+            ],
+            "word_count_target": 90,
+            "useful_phrases": [
+              "Sehr geehrte Damen und Herren,",
+              "ich habe Ihre Website gefunden und interessiere mich sehr für...",
+              "In meinem Alltag achte ich bereits auf...",
+              "Ich trenne..., verzichte auf... und fahre...",
+              "Wenn ich mehr Zeit/Geld hätte, würde ich...",
+              "Es wäre toll, wenn...",
+              "Könnten Sie mir bitte Informationen über aktuelle Aktionen schicken?",
+              "Gibt es Mitmachmöglichkeiten für Freiwillige?",
+              "Mit freundlichen Grüßen"
+            ],
+            "model_answer": "Sehr geehrte Damen und Herren,\n\nich habe Ihre Website im Internet gefunden und interessiere mich sehr für die Arbeit Ihres Umweltvereins. In meinem Alltag achte ich bereits sehr auf Nachhaltigkeit: Ich trenne meinen Müll genau, verzichte beim Einkaufen auf Plastiktüten und fahre fast jeden Tag mit dem Fahrrad zur Arbeit.\n\nWenn ich mehr Freizeit hätte, würde ich mich sehr gerne aktiv in einem lokalen Projekt engagieren. Es wäre toll, wenn Sie mir Informationen über aktuelle Aktionen in meiner Stadt schicken könnten. Gibt es konkrete Mitmachmöglichkeiten für Freiwillige am Wochenende?\n\nIch freue mich sehr auf Ihre Antwort.\n\nMit freundlichen Grüßen,\n[Ihr Name]",
+            "scoring_criteria": [
+              "Inhalt: Alle drei geforderten Punkte (Alltag, hypothetische Ideen, Frage nach Projekten) sind abgedeckt.",
+              "Grammatik: Korrekte Verwendung von Konjunktiv II (hätte, würde, wäre) und Nebensätzen.",
+              "Stil: Angemessener, höflicher semi-formaler Ton (korrekte Anrede und Grußformel)."
+            ]
+          },
+          "speaking": {
+            "task_types": [
+              {
+                "type": "monologue",
+                "title": "Monolog: Mein Beitrag zum Umweltschutz",
+                "prompt": "Halten Sie einen kurzen Vortrag (ca. 1,5 bis 2 Minuten) darüber, was Sie persönlich für die Umwelt tun und was Sie in der Politik ändern würden, wenn Sie könnten.",
+                "required_points": [
+                  "Ihre aktuellen Handlungen im Alltag (Verkehr, Müll, Einkaufen).",
+                  "Probleme in der Gesellschaft, die Sie aktuell sehen.",
+                  "Ihre hypothetischen Vorschläge, wenn Sie ein Politiker wären (Konjunktiv II).",
+                  "Ihre persönliche Zusammenfassung/Meinung."
+                ],
+                "time_suggestion_seconds": 120,
+                "useful_phrases": [
+                  "Ich versuche im Alltag, sehr auf die Umwelt zu achten.",
+                  "Zum Beispiel fahre ich meistens mit...",
+                  "Ein großes Problem, das ich sehe, ist...",
+                  "Wenn ich Politiker wäre, würde ich...",
+                  "Es wäre sehr wichtig, dass...",
+                  "Meiner Meinung nach kann jeder Einzelne etwas tun, aber..."
+                ],
+                "example_response": "Ich versuche im Alltag sehr auf die Umwelt zu achten. Zum Beispiel fahre ich meistens mit öffentlichen Verkehrsmitteln oder mit dem Fahrrad, um den CO2-Ausstoß zu reduzieren. Außerdem trenne ich meinen Müll streng und kaufe oft biologische Lebensmittel auf dem Markt.\nEin großes Problem, das ich momentan sehe, ist der viele Plastikmüll in den Supermärkten. Fast alles ist doppelt in Plastik verpackt.\nWenn ich Politiker wäre, würde ich Plastikverpackungen viel teurer machen. Außerdem würde ich deutlich mehr Geld in erneuerbare Energien investieren. Es wäre sehr wichtig, dass große Firmen strengere Regeln für den Umweltschutz bekommen.\nMeiner Meinung nach kann jeder Einzelne von uns etwas tun, aber die Politik muss die großen Entscheidungen treffen, damit wir den Klimawandel noch stoppen können.",
+                "exam_tips": [
+                  "Sprechen Sie ruhig und deutlich. Es ist besser, einfache und korrekte Sätze zu bilden, als sich in komplizierten Strukturen zu verlieren.",
+                  "Verwenden Sie den Konjunktiv II, wenn Sie über Ihre Ideen als Politiker sprechen, um Ihre Grammatikkenntnisse zu zeigen.",
+                  "Strukturieren Sie Ihren Vortrag mit Konnektoren (Außerdem, Zum Beispiel, Meiner Meinung nach)."
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]

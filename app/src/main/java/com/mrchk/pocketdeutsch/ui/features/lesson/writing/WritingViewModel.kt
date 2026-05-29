@@ -13,8 +13,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import com.mrchk.pocketdeutsch.data.repository.GeminiRepository
-import com.mrchk.pocketdeutsch.domain.model.Lesson
+import com.mrchk.pocketdeutsch.services.GeminiRepository
 import com.mrchk.pocketdeutsch.domain.repository.LessonRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -58,7 +57,6 @@ class WritingViewModel @Inject constructor(
                         title = jsonTask.format.replace("_", " ").replaceFirstChar { it.uppercase() },
                         promptText = promptText,
                         wordsTargetCount = jsonTask.wordsTargetCount,
-//                        minWords = if (lesson.level.contains("B1")) 80 else 40,
                         requiredPoints = bulletPoints.mapIndexed { index, text ->
                             TaskRequirement("${lessonId}_$index", text, false)
                         },

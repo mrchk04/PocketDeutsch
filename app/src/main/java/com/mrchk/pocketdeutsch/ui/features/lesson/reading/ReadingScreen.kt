@@ -15,8 +15,12 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -32,6 +36,9 @@ import com.mrchk.pocketdeutsch.domain.model.InteractiveExercise
 import com.mrchk.pocketdeutsch.ui.components.PdButton
 import com.mrchk.pocketdeutsch.ui.components.PdExerciseTopBar
 import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
+import com.mrchk.pocketdeutsch.utils.ExerciseReport
+import com.mrchk.pocketdeutsch.utils.TestAnalytics
+import kotlinx.coroutines.delay
 
 @Composable
 fun ReadingScreen(
@@ -39,6 +46,16 @@ fun ReadingScreen(
     onBackClick: () -> Unit,
     onComplete: () -> Unit,
 ) {
+
+    var timeSpentSeconds by remember { mutableIntStateOf(0) }
+
+    LaunchedEffect(Unit) {
+        while (true) {
+            delay(1000L)
+            timeSpentSeconds++
+        }
+    }
+
     val data by viewModel.readingData.collectAsState()
     val exerciseIndex by viewModel.currentExerciseIndex.collectAsState() // Індекс вправи (0 або 1)
     val currentIndex by viewModel.currentQuestionIndex.collectAsState() // Індекс питання всередині вправи
@@ -107,6 +124,21 @@ fun ReadingScreen(
                     PdButton(
                         text = if (isFinalStep) "Завершити" else "Далі",
                         onClick = {
+                            val isCorrect = when (currentExercise.type) {
+                                "article" -> userTextAnswer.trim().equals(correctAnswer.trim(), ignoreCase = true)
+                                "advertisements", "information_extraction" -> selectedAnswer != null && correctAnswer.contains(selectedAnswer!!)
+                                else -> selectedAnswer == correctAnswer
+                            }
+
+                            TestAnalytics.addReport(
+                                ExerciseReport(
+                                    exerciseName = "Читання (Вправа ${exerciseIndex + 1}, Питання ${currentIndex + 1})",
+                                    timeSpentSeconds = timeSpentSeconds,
+                                    correctAnswers = if (isCorrect) 1 else 0, // 1 бал, якщо правильно
+                                    totalQuestions = 1
+                                )
+                            )
+                            timeSpentSeconds = 0
                             if (isFinalStep) onComplete() else viewModel.nextQuestion()
                         },
                         modifier = Modifier.fillMaxWidth()

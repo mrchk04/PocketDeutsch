@@ -10,12 +10,22 @@
         "level": "A2.1",
         "grammar_topic": "Präpositionen mit Dativ (lokale Bedeutung)",
         "grammar_topic_connection": "Опис розташування предметів у квартирі (auf dem Tisch, neben dem Schrank, in der Küche) є основною комунікативною потребою теми «Wohnen». Прийменники місця з Dativ з'являються в усіх форматах іспитових завдань: у читанні оголошень, прослуховуванні діалогів, написанні листів орендодавцю та у завданнях на говоріння про кімнати.",
-        "exam_formats": ["Goethe", "ÖSD", "Telc", "DTZ"],
-        "cefr_skills_covered": ["reading", "listening", "writing", "speaking", "language_use"],
+        "exam_formats": [
+          "Goethe",
+          "ÖSD",
+          "Telc",
+          "DTZ"
+        ],
+        "cefr_skills_covered": [
+          "reading",
+          "listening",
+          "writing",
+          "speaking",
+          "language_use"
+        ],
         "estimated_minutes": 90,
         "pronunciation_note": "Зверніть увагу на довжину голосних у ключових словах: die Miéte (довге e), das Régal (коротке e). Поєднання -wohn- читається як /voːn/, а не /wɔn/. У складних словах — Wohnzimmer, Wohngemeinschaft — наголос завжди падає на перший склад."
       },
-
       "block1_vocabulary": {
         "vocabulary_items": [
           {
@@ -284,7 +294,14 @@
               "h) eine Wohnung anschauen, bevor man sie mietet"
             ],
             "answers": [
-              "1-b", "2-a", "3-c", "4-d", "5-e", "6-f", "7-g", "8-h"
+              "1-b",
+              "2-a",
+              "3-c",
+              "4-d",
+              "5-e",
+              "6-f",
+              "7-g",
+              "8-h"
             ]
           },
           {
@@ -309,21 +326,6 @@
               "6. Erdgeschoss",
               "7. gemütlich",
               "8. Nebenkosten"
-            ]
-          },
-          {
-            "type": "collocation_sort",
-            "instruction": "Was passt zusammen? Verbinden Sie die Verben mit den Nomen. Mehrere Kombinationen sind möglich.",
-            "verbs": ["mieten", "zahlen", "aufstellen", "besichtigen", "einziehen in", "kündigen", "wohnen in"],
-            "nouns": ["eine Wohnung", "Möbel", "die Miete", "eine WG", "die Kaution"],
-            "answers": [
-              "mieten → eine Wohnung",
-              "zahlen → die Miete, die Kaution",
-              "aufstellen → Möbel",
-              "besichtigen → eine Wohnung",
-              "einziehen in → eine Wohnung, eine WG",
-              "kündigen → eine Wohnung",
-              "wohnen in → eine Wohnung, einer WG"
             ]
           },
           {
@@ -358,7 +360,6 @@
           }
         ]
       },
-
       "block2_grammar": {
         "grammar_topic": "Präpositionen mit Dativ (lokale Bedeutung) — Прийменники місця з давальним відмінком",
         "explanation_ua": "В німецькій мові існують два типи просторових запитань: 'Wo?' (Де?) і 'Wohin?' (Куди?). Якщо ми описуємо статичне положення предмета (де він знаходиться зараз), ми використовуємо прийменники місця з давальним відмінком (Dativ). Якщо ж ми описуємо рух або напрямок (куди хтось або щось переміщається), ті самі прийменники вимагають знахідного відмінка (Akkusativ).\n\nНа рівні A2 головне — засвоїти зміну артикля в Dativ: der (чоловічий рід) → dem, die (жіночий рід) → der, das (середній рід) → dem, die Pl. (множина) → den + -n до іменника.",
@@ -404,17 +405,77 @@
         },
         "forms_table": {
           "title": "Відмінювання артикля після прийменників місця (Wo? = Dativ)",
-          "columns": ["Präposition", "maskulin (der → dem)", "feminin (die → der)", "neutral (das → dem)", "Plural (die → den + -n)"],
+          "columns": [
+            "Präposition",
+            "maskulin (der → dem)",
+            "feminin (die → der)",
+            "neutral (das → dem)",
+            "Plural (die → den + -n)"
+          ],
           "rows": [
-            ["in", "im Zimmer", "in der Küche", "im Bad", "in den Räumen"],
-            ["auf", "auf dem Tisch", "auf der Couch", "auf dem Bett", "auf den Stühlen"],
-            ["an", "am Fenster", "an der Wand", "am Regal", "an den Türen"],
-            ["unter", "unter dem Bett", "unter der Treppe", "unter dem Sofa", "unter den Regalen"],
-            ["über", "über dem Tisch", "über der Lampe", "über dem Bett", "über den Fenstern"],
-            ["neben", "neben dem Schrank", "neben der Tür", "neben dem Sofa", "neben den Regalen"],
-            ["zwischen", "zwischen dem Sofa und dem Tisch", "zwischen der Wand und der Tür", "zwischen dem Tisch und dem Regal", "zwischen den Möbeln"],
-            ["vor", "vor dem Haus", "vor der Tür", "vor dem Fenster", "vor den Stufen"],
-            ["hinter", "hinter dem Schrank", "hinter der Couch", "hinter dem Regal", "hinter den Möbeln"]
+            [
+              "in",
+              "im Zimmer",
+              "in der Küche",
+              "im Bad",
+              "in den Räumen"
+            ],
+            [
+              "auf",
+              "auf dem Tisch",
+              "auf der Couch",
+              "auf dem Bett",
+              "auf den Stühlen"
+            ],
+            [
+              "an",
+              "am Fenster",
+              "an der Wand",
+              "am Regal",
+              "an den Türen"
+            ],
+            [
+              "unter",
+              "unter dem Bett",
+              "unter der Treppe",
+              "unter dem Sofa",
+              "unter den Regalen"
+            ],
+            [
+              "über",
+              "über dem Tisch",
+              "über der Lampe",
+              "über dem Bett",
+              "über den Fenstern"
+            ],
+            [
+              "neben",
+              "neben dem Schrank",
+              "neben der Tür",
+              "neben dem Sofa",
+              "neben den Regalen"
+            ],
+            [
+              "zwischen",
+              "zwischen dem Sofa und dem Tisch",
+              "zwischen der Wand und der Tür",
+              "zwischen dem Tisch und dem Regal",
+              "zwischen den Möbeln"
+            ],
+            [
+              "vor",
+              "vor dem Haus",
+              "vor der Tür",
+              "vor dem Fenster",
+              "vor den Stufen"
+            ],
+            [
+              "hinter",
+              "hinter dem Schrank",
+              "hinter der Couch",
+              "hinter dem Regal",
+              "hinter den Möbeln"
+            ]
           ]
         },
         "achtung": [
@@ -443,8 +504,14 @@
               "8. Der Sessel steht zwischen ___ Schrank und ___ Regal. (der Schrank / das Regal)"
             ],
             "answers": [
-              "1. dem", "2. der", "3. der", "4. dem", "5. der",
-              "6. dem", "7. dem", "8. dem / dem"
+              "1. dem",
+              "2. der",
+              "3. der",
+              "4. dem",
+              "5. der",
+              "6. dem",
+              "7. dem",
+              "8. dem / dem"
             ]
           },
           {
@@ -504,7 +571,6 @@
           }
         ]
       },
-
       "block3_skills": {
         "reading": {
           "exercise_1": {
@@ -528,7 +594,18 @@
               "9. Rauchen ist in der Wohnung nicht erlaubt.",
               "10. Die Wohnung hat mehr als zwei Zimmer."
             ],
-            "answers": ["B", "B", "A und C", "B", "B", "C", "A", "C", "A", "C"]
+            "answers": [
+              "B",
+              "B",
+              "A und C",
+              "B",
+              "B",
+              "C",
+              "A",
+              "C",
+              "A",
+              "C"
+            ]
           },
           "exercise_2": {
             "text_type": "article",
@@ -551,7 +628,6 @@
             ]
           }
         },
-
         "listening": {
           "listening_1": {
             "title": "Dialog: Wohnungssuche",
@@ -568,7 +644,13 @@
               "4. Er braucht unter anderem einen Gehaltsnachweis für die Bewerbung.",
               "5. Er zahlt 780 Euro kalt für seine Wohnung."
             ],
-            "answers": ["R", "F", "R", "R", "F"]
+            "answers": [
+              "R",
+              "F",
+              "R",
+              "R",
+              "F"
+            ]
           },
           "listening_2": {
             "title": "Telefonansage: Wohnungsanzeige",
@@ -581,33 +663,52 @@
             "items": [
               {
                 "question": "1. Warum ruft Frau Müller an?",
-                "options": ["A) Sie möchte eine Wohnung verkaufen.", "B) Sie interessiert sich für eine Wohnung aus einer Anzeige.", "C) Sie sucht eine WG."],
+                "options": [
+                  "A) Sie möchte eine Wohnung verkaufen.",
+                  "B) Sie interessiert sich für eine Wohnung aus einer Anzeige.",
+                  "C) Sie sucht eine WG."
+                ],
                 "answer": "B"
               },
               {
                 "question": "2. Wie groß ist die Wohnung laut Anzeige?",
-                "options": ["A) 55 m²", "B) 75 m²", "C) 65 m²"],
+                "options": [
+                  "A) 55 m²",
+                  "B) 75 m²",
+                  "C) 65 m²"
+                ],
                 "answer": "C"
               },
               {
                 "question": "3. Frau Müller fragt, ob ...",
-                "options": ["A) die Wohnung möbliert ist.", "B) Haustiere erlaubt sind.", "C) die Küche neu renoviert ist."],
+                "options": [
+                  "A) die Wohnung möbliert ist.",
+                  "B) Haustiere erlaubt sind.",
+                  "C) die Küche neu renoviert ist."
+                ],
                 "answer": "B"
               },
               {
                 "question": "4. Warum fragt Frau Müller nach öffentlichen Verkehrsmitteln?",
-                "options": ["A) Sie hat kein Auto.", "B) Sie fährt gerne Bus.", "C) Die U-Bahn-Station ist sehr weit."],
+                "options": [
+                  "A) Sie hat kein Auto.",
+                  "B) Sie fährt gerne Bus.",
+                  "C) Die U-Bahn-Station ist sehr weit."
+                ],
                 "answer": "A"
               },
               {
                 "question": "5. Wann möchte Frau Müller die Wohnung besichtigen?",
-                "options": ["A) Am Montag Morgen.", "B) Am Freitag Abend.", "C) Am Samstag Nachmittag."],
+                "options": [
+                  "A) Am Montag Morgen.",
+                  "B) Am Freitag Abend.",
+                  "C) Am Samstag Nachmittag."
+                ],
                 "answer": "C"
               }
             ]
           }
         },
-
         "language_use": [
           {
             "subtype": "lexical_context",
@@ -617,49 +718,89 @@
             "items": [
               {
                 "gap_number": 1,
-                "options": ["A) wohne", "B) miete", "C) ziehe", "D) suche"],
+                "options": [
+                  "A) wohne",
+                  "B) miete",
+                  "C) ziehe",
+                  "D) suche"
+                ],
                 "answer": "A) wohne",
                 "explanation": "'Wohnen' означає 'проживати' — правильне дієслово для опису поточного місця проживання."
               },
               {
                 "gap_number": 2,
-                "options": ["A) einziehen", "B) ausziehen", "C) besichtigen", "D) renovieren"],
+                "options": [
+                  "A) einziehen",
+                  "B) ausziehen",
+                  "C) besichtigen",
+                  "D) renovieren"
+                ],
                 "answer": "B) ausziehen",
                 "explanation": "'Ausziehen' — виїхати, покинути квартиру. Саме це планує людина в тексті."
               },
               {
                 "gap_number": 3,
-                "options": ["A) gezahlt", "B) vermietet", "C) gefunden", "D) gebaut"],
+                "options": [
+                  "A) gezahlt",
+                  "B) vermietet",
+                  "C) gefunden",
+                  "D) gebaut"
+                ],
                 "answer": "C) gefunden",
                 "explanation": "'eine Wohnung finden' — знайти квартиру. Потрібен Partizip II: gefunden."
               },
               {
                 "gap_number": 4,
-                "options": ["A) Kaution", "B) Miete", "C) Nebenkosten", "D) Wohnung"],
+                "options": [
+                  "A) Kaution",
+                  "B) Miete",
+                  "C) Nebenkosten",
+                  "D) Wohnung"
+                ],
                 "answer": "B) Miete",
                 "explanation": "Місячна орендна плата у розмірі 850 євро — це 'die Miete'."
               },
               {
                 "gap_number": 5,
-                "options": ["A) Nachbar", "B) Mieter", "C) Vermieter", "D) Makler"],
+                "options": [
+                  "A) Nachbar",
+                  "B) Mieter",
+                  "C) Vermieter",
+                  "D) Makler"
+                ],
                 "answer": "C) Vermieter",
                 "explanation": "'Der Vermieter' — орендодавець, людина, яка здає квартиру."
               },
               {
                 "gap_number": 6,
-                "options": ["A) ausziehen", "B) besichtigen", "C) renovieren", "D) einziehen"],
+                "options": [
+                  "A) ausziehen",
+                  "B) besichtigen",
+                  "C) renovieren",
+                  "D) einziehen"
+                ],
                 "answer": "D) einziehen",
                 "explanation": "'Einziehen' — в'їхати до нової квартири. Логічний висновок після знаходження квартири."
               },
               {
                 "gap_number": 7,
-                "options": ["A) Miete", "B) Nebenkosten", "C) Kaution", "D) Heizung"],
+                "options": [
+                  "A) Miete",
+                  "B) Nebenkosten",
+                  "C) Kaution",
+                  "D) Heizung"
+                ],
                 "answer": "C) Kaution",
                 "explanation": "'Die Kaution' — заставна сума, яку платять перед в'їздом. Тут — у розмірі двох місячних орендних плат."
               },
               {
                 "gap_number": 8,
-                "options": ["A) Zimmer", "B) Etage", "C) Stockwerk", "D) Erdgeschoss"],
+                "options": [
+                  "A) Zimmer",
+                  "B) Etage",
+                  "C) Stockwerk",
+                  "D) Erdgeschoss"
+                ],
                 "answer": "C) Stockwerk",
                 "explanation": "'Das Stockwerk' або 'der Stock' — поверх будівлі. 'Der zweite Stock' = третій поверх за українською системою."
               }
@@ -673,68 +814,117 @@
             "items": [
               {
                 "gap_number": 1,
-                "options": ["A) dem", "B) der", "C) den", "D) des"],
+                "options": [
+                  "A) dem",
+                  "B) der",
+                  "C) den",
+                  "D) des"
+                ],
                 "answer": "A) dem",
                 "explanation": "'das Wohnzimmer' — середній рід → Dativ: dem. 'In + Dativ' для місця."
               },
               {
                 "gap_number": 2,
-                "options": ["A) der", "B) dem", "C) den", "D) das"],
+                "options": [
+                  "A) der",
+                  "B) dem",
+                  "C) den",
+                  "D) das"
+                ],
                 "answer": "B) dem",
                 "explanation": "'das Fenster' — середній рід → Dativ: dem. 'Vor + Dativ' для місця."
               },
               {
                 "gap_number": 3,
-                "options": ["A) der", "B) den", "C) dem", "D) das"],
+                "options": [
+                  "A) der",
+                  "B) den",
+                  "C) dem",
+                  "D) das"
+                ],
                 "answer": "C) dem",
                 "explanation": "'der Tisch' — чоловічий рід → Dativ: dem. 'Auf + Dativ' для статичного положення."
               },
               {
                 "gap_number": 4,
-                "options": ["A) dem", "B) den", "C) der", "D) die"],
+                "options": [
+                  "A) dem",
+                  "B) den",
+                  "C) der",
+                  "D) die"
+                ],
                 "answer": "C) der",
                 "explanation": "'die Wand' — жіночий рід → Dativ: der. 'An + Dativ' для вертикальних поверхонь."
               },
               {
                 "gap_number": 5,
-                "options": ["A) dem", "B) den", "C) das", "D) der"],
+                "options": [
+                  "A) dem",
+                  "B) den",
+                  "C) das",
+                  "D) der"
+                ],
                 "answer": "D) der",
                 "explanation": "'die Tür' — жіночий рід → Dativ: der. 'Neben + Dativ'."
               },
               {
                 "gap_number": 6,
-                "options": ["A) dem", "B) der", "C) den", "D) das"],
+                "options": [
+                  "A) dem",
+                  "B) der",
+                  "C) den",
+                  "D) das"
+                ],
                 "answer": "B) der",
                 "explanation": "'die Küche' — жіночий рід → Dativ: der. 'In + Dativ'."
               },
               {
                 "gap_number": 7,
-                "options": ["A) gefunden", "B) finde", "C) findet", "D) fand"],
+                "options": [
+                  "A) gefunden",
+                  "B) finde",
+                  "C) findet",
+                  "D) fand"
+                ],
                 "answer": "A) gefunden",
                 "explanation": "Perfekt від 'finden': habe gefunden. Перфект використовується для опису минулих подій у розмовній мові."
               },
               {
                 "gap_number": 8,
-                "options": ["A) hilft", "B) helft", "C) helfen", "D) helfe"],
+                "options": [
+                  "A) hilft",
+                  "B) helft",
+                  "C) helfen",
+                  "D) helfe"
+                ],
                 "answer": "A) hilft",
                 "explanation": "'helfen' — дієслово зі зміною кореневого голосного: er/sie/es hilft. Теперішній час, 3 особа однини."
               },
               {
                 "gap_number": 9,
-                "options": ["A) sind", "B) haben", "C) waren", "D) hatten"],
+                "options": [
+                  "A) sind",
+                  "B) haben",
+                  "C) waren",
+                  "D) hatten"
+                ],
                 "answer": "B) haben",
                 "explanation": "Перфект дієслова 'aufstellen' (акційне дієслово) утворюється з допоміжним дієсловом 'haben'."
               },
               {
                 "gap_number": 10,
-                "options": ["A) sitze", "B) sitzen", "C) sitzt", "D) gesessen"],
+                "options": [
+                  "A) sitze",
+                  "B) sitzen",
+                  "C) sitzt",
+                  "D) gesessen"
+                ],
                 "answer": "A) sitze",
                 "explanation": "Теперішній час, 1 особа однини: ich sitze."
               }
             ]
           }
         ],
-
         "writing": {
           "task_type": "semi_formal_email",
           "situation": "Sie haben eine Wohnungsanzeige gelesen und interessieren sich für die Wohnung. Schreiben Sie eine E-Mail an den Vermieter Herrn Bauer. Fragen Sie nach der monatlichen Miete (inkl. Nebenkosten), der Größe der Wohnung und dem frühestmöglichen Einzugstermin. Schlagen Sie auch einen Besichtigungstermin vor.",
@@ -767,7 +957,6 @@
             "Wortschatz: Geeignete Ausdrücke für semi-formale Korrespondenz (Könnten Sie mir mitteilen...?, Ich würde gerne wissen...)."
           ]
         },
-
         "speaking": {
           "task_types": [
             {

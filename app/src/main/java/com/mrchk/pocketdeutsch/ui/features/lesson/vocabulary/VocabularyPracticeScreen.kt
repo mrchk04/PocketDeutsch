@@ -7,6 +7,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
@@ -25,6 +26,7 @@ import com.mrchk.pocketdeutsch.domain.model.VocabExercise
 import com.mrchk.pocketdeutsch.ui.components.BrutalistCard
 import com.mrchk.pocketdeutsch.ui.components.PdExerciseTopBar
 import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
+import kotlinx.coroutines.delay
 
 @Composable
 fun VocabularyPracticeScreen(
@@ -32,6 +34,16 @@ fun VocabularyPracticeScreen(
     onBackClick: () -> Unit,
     onComplete: () -> Unit // Викликається, коли всі вправи пройдені
 ) {
+
+    var timeSpentSeconds by remember { mutableIntStateOf(0) }
+
+    LaunchedEffect(Unit) {
+        while (true) {
+            delay(1000L)
+            timeSpentSeconds++
+        }
+    }
+
     val exercises by viewModel.exercises.collectAsState()
     val currentIndex by viewModel.currentIndex.collectAsState()
     val progress = viewModel.getProgress()
@@ -61,6 +73,29 @@ fun VocabularyPracticeScreen(
                 .fillMaxSize()
                 .padding(16.dp)
         ) {
+
+            // 1. СТВОРЮЄМО УНІВЕРСАЛЬНИЙ ОБРОБНИК КРОКУ
+            val handleNextStep = { exerciseType: String ->
+                // Зберігаємо звіт
+                com.mrchk.pocketdeutsch.utils.TestAnalytics.addReport(
+                    com.mrchk.pocketdeutsch.utils.ExerciseReport(
+                        exerciseName = "Лексика Практика ($exerciseType, Вправа ${currentIndex + 1})",
+                        timeSpentSeconds = timeSpentSeconds,
+                        correctAnswers = 0, // Бали тут ставимо 0 (або якщо зможеш витягнути зсередини UI - передавай сюди)
+                        totalQuestions = 0
+                    )
+                )
+
+                // Обнуляємо таймер
+                timeSpentSeconds = 0
+
+                // Йдемо далі або завершуємо
+                if (currentIndex == exercises.size - 1) {
+                    showCompletionDialog = true
+                } else {
+                    viewModel.nextExercise()
+                }
+            }
             key(currentIndex, restartKey) {
                 when (currentExercise) {
                     is VocabExercise.Matching -> {

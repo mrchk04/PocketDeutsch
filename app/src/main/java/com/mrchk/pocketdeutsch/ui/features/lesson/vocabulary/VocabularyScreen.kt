@@ -19,8 +19,12 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
@@ -38,6 +42,7 @@ import com.mrchk.pocketdeutsch.ui.components.PdButton
 import com.mrchk.pocketdeutsch.ui.components.PdExerciseTopBar
 import com.mrchk.pocketdeutsch.ui.components.PdTitleTopBar
 import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
+import kotlinx.coroutines.delay
 
 @Composable
 fun VocabularyScreen(
@@ -45,6 +50,15 @@ fun VocabularyScreen(
     onBackClick: () -> Unit,
     onNextClick: () -> Unit // Перехід до вправ після вивчення слів
 ) {
+
+    var timeSpentSeconds by remember { mutableIntStateOf(0) }
+
+    LaunchedEffect(Unit) {
+        while (true) {
+            delay(1000L)
+            timeSpentSeconds++
+        }
+    }
     val vocabulary by viewModel.vocabData.collectAsState()
 
     if (vocabulary == null) {
@@ -84,7 +98,20 @@ fun VocabularyScreen(
             ) {
                 PdButton(
                     text = "Перейти до вправ",
-                    onClick = onNextClick,
+                    onClick = {
+                        // 1. ЗБЕРІГАЄМО ЗВІТ ПРО ЧАС ВИВЧЕННЯ СЛІВ
+                        com.mrchk.pocketdeutsch.utils.TestAnalytics.addReport(
+                            com.mrchk.pocketdeutsch.utils.ExerciseReport(
+                                exerciseName = "Лексика (Ознайомлення зі словами)",
+                                timeSpentSeconds = timeSpentSeconds,
+                                correctAnswers = 0, // Немає автоперевірки
+                                totalQuestions = 0
+                            )
+                        )
+
+                        // 2. ЙДЕМО ДАЛІ
+                        onNextClick()
+                    },
                     modifier = Modifier.fillMaxWidth()
                 )
             }

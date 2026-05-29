@@ -25,6 +25,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -45,6 +46,9 @@ import com.mrchk.pocketdeutsch.ui.components.PdButton
 import com.mrchk.pocketdeutsch.ui.components.PdTitleTopBar
 import com.mrchk.pocketdeutsch.ui.components.pdStyle
 import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
+import com.mrchk.pocketdeutsch.utils.ExerciseReport
+import com.mrchk.pocketdeutsch.utils.TestAnalytics
+import kotlinx.coroutines.delay
 
 @Composable
 fun GrammarPracticeScreen(
@@ -52,6 +56,16 @@ fun GrammarPracticeScreen(
     onComplete: () -> Unit,
     viewModel: GrammarPracticeViewModel = hiltViewModel()
 ) {
+
+    var timeSpentSeconds by remember { mutableIntStateOf(0) }
+
+    LaunchedEffect(Unit) {
+        while (true) {
+            delay(1000L)
+            timeSpentSeconds++
+        }
+    }
+
     val uiState by viewModel.uiState.collectAsState()
     val currentExercise = uiState.currentExercise
 
@@ -81,7 +95,26 @@ fun GrammarPracticeScreen(
                     PdButton(
                         text = if (uiState.isChecked) "Далі" else "Перевірити",
                         onClick = {
-                            if (uiState.isChecked) viewModel.nextExercise() else viewModel.checkAnswers()
+                            if (uiState.isChecked) {
+                                val correctCount = uiState.evaluationResults.values.count { it == true }
+
+                                val totalQ = (currentExercise as? InteractiveExercise.Standard)?.items?.size ?: 1
+
+                                TestAnalytics.addReport(
+                                    ExerciseReport(
+                                        exerciseName = "Граматика (Вправа ${uiState.currentIndex + 1})",
+                                        timeSpentSeconds = timeSpentSeconds,
+                                        correctAnswers = correctCount,
+                                        totalQuestions = totalQ
+                                    )
+                                )
+
+                                timeSpentSeconds = 0
+
+                                viewModel.nextExercise()
+                            } else {
+                                viewModel.checkAnswers()
+                            }
                         },
                         modifier = Modifier.fillMaxWidth()
                     )

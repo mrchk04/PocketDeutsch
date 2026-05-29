@@ -13,8 +13,10 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -38,6 +40,7 @@ import com.mrchk.pocketdeutsch.ui.components.PdButton // Твоя фірмова
 import com.mrchk.pocketdeutsch.ui.components.PdStickyNote
 import com.mrchk.pocketdeutsch.ui.components.PdTitleTopBar // Твій верхній бар
 import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
+import kotlinx.coroutines.delay
 
 @Composable
 fun TheoryScreen(
@@ -45,6 +48,16 @@ fun TheoryScreen(
     onNextClick: () -> Unit,
     viewModel: TheoryViewModel = hiltViewModel(),
 ) {
+
+    var timeSpentSeconds by remember { mutableIntStateOf(0) }
+
+    LaunchedEffect(Unit) {
+        while (true) {
+            delay(1000L)
+            timeSpentSeconds++
+        }
+    }
+
     val uiState by viewModel.uiState.collectAsState()
     val ink: Color = PocketTheme.colors.ink
 
@@ -78,7 +91,23 @@ fun TheoryScreen(
                 ) {
                     PdButton(
                         text = "Перейти до вправ",
-                        onClick = onNextClick,
+                        onClick = {
+                            // 1. Безпечно витягуємо назву прямо перед збереженням
+                            val currentTopic = (uiState as? TheoryUiState.Success)?.grammar?.topic ?: "Загальна"
+
+                            // 2. ЗБЕРІГАЄМО ЗВІТ
+                            com.mrchk.pocketdeutsch.utils.TestAnalytics.addReport(
+                                com.mrchk.pocketdeutsch.utils.ExerciseReport(
+                                    exerciseName = "Теорія ($currentTopic)",
+                                    timeSpentSeconds = timeSpentSeconds,
+                                    correctAnswers = 0,
+                                    totalQuestions = 0
+                                )
+                            )
+
+                            // 3. ЙДЕМО ДАЛІ
+                            onNextClick()
+                        },
                         modifier = Modifier.fillMaxWidth()
                     )
                 }

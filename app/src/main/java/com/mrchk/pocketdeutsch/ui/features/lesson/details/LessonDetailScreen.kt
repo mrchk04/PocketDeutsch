@@ -1,8 +1,11 @@
 package com.mrchk.pocketdeutsch.ui.features.lesson.details
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -28,6 +31,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
@@ -35,9 +41,13 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.Dialog
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.mrchk.pocketdeutsch.R
 import com.mrchk.pocketdeutsch.domain.model.Lesson
@@ -110,6 +120,16 @@ private fun PathwayContent(
 ) {
     val ink: Color = PocketTheme.colors.ink
 
+    val context = LocalContext.current
+
+    val totalLessons = nodes.size
+    val completedLessons = nodes.count { it.state == NodeState.COMPLETED }
+    val currentProgress = if (totalLessons > 0) completedLessons.toFloat() / totalLessons.toFloat() else 0f
+
+    val isAllCompleted = totalLessons > 0 && completedLessons == totalLessons
+
+    var showTestingMenu by remember { mutableStateOf(false) }
+
     Scaffold(
         containerColor = PocketTheme.colors.paper,
         topBar = {
@@ -149,10 +169,16 @@ private fun PathwayContent(
 
             ) {
                 PdButton(
-                    text = "Продовжити Розділ",
-                    onClick = onContinueClick,
+                    text = if (isAllCompleted) "Завершити тестування" else "Продовжити Розділ",
+                    onClick = {
+                        if (isAllCompleted) {
+                            showTestingMenu = true
+                        } else {
+                            onContinueClick()
+                        }
+                    },
                     backgroundColor = PocketTheme.colors.ink,
-                    iconRes = R.drawable.ic_arrow_right_bold, // Стрілка вправо
+                    iconRes = if (isAllCompleted) null else R.drawable.ic_arrow_right_bold,
                     modifier = Modifier.fillMaxWidth()
                 )
             }
@@ -210,6 +236,95 @@ private fun PathwayContent(
                             onClick = { onNodeClick(node.id, node.type) }
                         )
                     }
+                }
+            }
+        }
+    }
+
+    if (showTestingMenu) {
+        Dialog(onDismissRequest = { showTestingMenu = false }) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .drawBehind {
+                        drawRoundRect(
+                            color = ink,
+                            topLeft = Offset(4.dp.toPx(), 4.dp.toPx()),
+                            size = size,
+                            cornerRadius = androidx.compose.ui.geometry.CornerRadius(24.dp.toPx(), 24.dp.toPx())
+                        )
+                    }
+                    .background(Color.White, RoundedCornerShape(24.dp))
+                    .border(2.dp, ink, RoundedCornerShape(24.dp))
+                    .padding(24.dp)
+            ) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = "Розділ пройдено!",
+                        style = PocketTheme.typography.titleLarge,
+                        color = PocketTheme.colors.ink,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+
+                    Text(
+                        text = "Дякую за участь у тестуванні застосунку PocketDeutsch.",
+                        style = PocketTheme.typography.bodyMedium,
+                        color = PocketTheme.colors.ink,
+                        modifier = Modifier.padding(bottom = 24.dp),
+                        textAlign = TextAlign.Center
+                    )
+
+                    PdButton(
+                        text = "1. Надіслати звіт (CSV)",
+                        onClick = {
+                            // === ОСЬ ТУТ МАГІЯ! Витягуємо всі дані з нашої утиліти ===
+                            // (Перевір, чи правильний пакет до TestAnalytics)
+                            val fullCsvContent = com.mrchk.pocketdeutsch.utils.TestAnalytics.generateCsv(
+                                moduleName = lesson.title,
+                                userName = "Тестувальник" // Якщо в тебе на цьому екрані є справжнє ім'я користувача, підстав його сюди
+                            )
+
+                            val intent = Intent(Intent.ACTION_SENDTO).apply {
+                                data = Uri.parse("mailto:")
+                                putExtra(Intent.EXTRA_EMAIL, arrayOf("mashadema04@gmail.com"))
+                                putExtra(Intent.EXTRA_SUBJECT, "Детальний звіт PocketDeutsch: ${lesson.title}")
+                                // Вставляємо наш великий згенерований CSV у тіло листа
+                                putExtra(Intent.EXTRA_TEXT, "Привіт!\nОсь мій детальний результат тестування по кожній вправі:\n\n$fullCsvContent")
+                            }
+                            context.startActivity(intent)
+                        },
+                        modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp)
+                    )
+
+                    PdButton(
+                        text = "2. Завантажити PDF тест",
+                        onClick = {
+                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/drive/folders/1my4gxIdyudQt64YLz4nJQfbfSFr05N1C?usp=sharing"))
+                            context.startActivity(intent)
+                        },
+                        modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp)
+                    )
+
+                    // 3. ФОРМА ВІДГУКУ
+                    PdButton(
+                        text = "3. Форма відгуку",
+                        onClick = {
+                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/s3Sy47cZB9tcchndA"))
+                            context.startActivity(intent)
+                        },
+                        modifier = Modifier.fillMaxWidth().padding(bottom = 24.dp)
+                    )
+
+                    Text(
+                        text = "Повернутися",
+                        style = PocketTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold),
+                        color = PocketTheme.colors.error,
+                        modifier = Modifier
+                            .clickable { showTestingMenu = false }
+                            .padding(8.dp)
+                    )
                 }
             }
         }

@@ -15,7 +15,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
-import okhttp3.Dispatcher
 import javax.inject.Inject
 
 class LocalLessonRepositoryImpl @Inject constructor(
@@ -26,17 +25,50 @@ class LocalLessonRepositoryImpl @Inject constructor(
     private val json = Json { ignoreUnknownKeys = true }
 
     override suspend fun getLessons(): List<Lesson> = withContext(Dispatchers.IO) {
+        // Обертаємо весь блок у загальний try-catch на випадок глобальних помилок
         try {
-            val jsonString = context.assets.open("pocket_deutsch_module.json")
-                .bufferedReader()
-                .use { it.readText() }
-            val dtoList = json.decodeFromString<List<ModuleResponse>>(jsonString)
-            val lessons = dtoList.map { it.module.toDomainModel() }
+            val assetManager = context.assets
+            // Якщо твої файли лежать прямо в папці assets, залишаємо ""
+            // Якщо ти поклала їх у підпапку, наприклад assets/json, напиши list("json")
+            val allFiles = assetManager.list("") ?: emptyArray()
 
-            seedDatabaseIfNeeded(lessons)
-            lessons
+            val moduleFiles = allFiles
+                .filter { it.startsWith("module_") && it.endsWith(".json") }
+                .sorted()
+
+            android.util.Log.d("DEBUG_REPO", "Знайдено файлів: ${moduleFiles.size} -> $moduleFiles")
+
+            val allLessons = mutableListOf<Lesson>()
+
+            for (fileName in moduleFiles) {
+                // Окремий try-catch ДЛЯ КОЖНОГО ФАЙЛУ
+                try {
+                    android.util.Log.d("DEBUG_REPO", "Читаємо файл: $fileName")
+
+                    val jsonString = assetManager.open(fileName)
+                        .bufferedReader()
+                        .use { it.readText() }
+
+                    val dtoList = json.decodeFromString<List<ModuleResponse>>(jsonString)
+                    val lessons = dtoList.map { it.module.toDomainModel() }
+
+                    allLessons.addAll(lessons)
+                    android.util.Log.d("DEBUG_REPO", "✅ Успішно розпарсено: $fileName")
+
+                } catch (e: Exception) {
+                    // Якщо в JSON помилка, ми побачимо це в логах, але інші файли продовжать вантажитись
+                    android.util.Log.e("DEBUG_REPO", "❌ Помилка парсингу у файлі $fileName: ${e.message}")
+                    e.printStackTrace()
+                }
+            }
+
+            // Записуємо в базу те, що вдалося успішно прочитати
+            seedDatabaseIfNeeded(allLessons)
+
+            allLessons
 
         } catch (e: Exception) {
+            android.util.Log.e("DEBUG_REPO", "Глобальна помилка: ${e.message}")
             e.printStackTrace()
             emptyList()
         }
@@ -83,14 +115,16 @@ class LocalLessonRepositoryImpl @Inject constructor(
     }
 
     private suspend fun seedDatabaseIfNeeded(lessons: List<Lesson>) {
-        val nodesCount = courseNodeDao.countAllNodes()
+        lessons.forEach { lesson ->
+            val lessonId = lesson.lessonId
 
-        if (nodesCount == 0) {
-            val nodesToInsert = mutableListOf<CourseNodeEntity>()
+            val existingNodesCount = courseNodeDao.getCompletedNodesCount(lessonId)
 
-            lessons.forEach { lesson ->
+            if (existingNodesCount == 0) {
+                val nodesToInsert = mutableListOf<CourseNodeEntity>()
                 var currentIndex = 0
-                val lessonId = lesson.lessonId
+
+                android.util.Log.d("DEBUG_REPO", "🌱 Створюємо структуру в базі для модуля: $lessonId")
 
                 nodesToInsert.add(
                     CourseNodeEntity(
@@ -149,7 +183,6 @@ class LocalLessonRepositoryImpl @Inject constructor(
                     )
                 }
 
-                // 6. Письмо
                 nodesToInsert.add(
                     CourseNodeEntity(
                         id = "${lessonId}_writing",
@@ -161,7 +194,6 @@ class LocalLessonRepositoryImpl @Inject constructor(
                     )
                 )
 
-                // 7. Говоріння
                 nodesToInsert.add(
                     CourseNodeEntity(
                         id = "${lessonId}_speaking",
@@ -172,9 +204,12 @@ class LocalLessonRepositoryImpl @Inject constructor(
                         isCompleted = false
                     )
                 )
-            }
 
-            courseNodeDao.insertNodes(nodesToInsert)
+                courseNodeDao.insertNodes(nodesToInsert)
+                android.util.Log.d("DEBUG_REPO", "✅ Модуль $lessonId успішно додано до бази")
+            } else {
+                android.util.Log.d("DEBUG_REPO", "⏩ Модуль $lessonId вже існує в базі, пропускаємо")
+            }
         }
     }
 }

@@ -166,7 +166,7 @@ fun NavGraph(navController: NavHostController) {
                 }
                 is CourseUnitsUiState.Success -> {
                     CourseUnitsScreen(
-                        userName = "Mariia",
+                        userName = "Pocket Deutsch",
                         units = state.units,
                         availableLevels = state.availableLevels,
                         selectedLevel = selectedLevel,

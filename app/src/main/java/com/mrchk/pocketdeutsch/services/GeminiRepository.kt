@@ -1,17 +1,16 @@
-package com.mrchk.pocketdeutsch.data.repository
+package com.mrchk.pocketdeutsch.services
 
 import com.google.ai.client.generativeai.GenerativeModel
-import com.google.ai.client.generativeai.type.generationConfig
-import com.mrchk.pocketdeutsch.BuildConfig
-import kotlinx.serialization.json.Json
 import com.google.ai.client.generativeai.type.content
 import com.google.ai.client.generativeai.type.generationConfig
+import com.mrchk.pocketdeutsch.BuildConfig
 import com.mrchk.pocketdeutsch.data.local.WrittenTaskDao
 import com.mrchk.pocketdeutsch.data.local.WrittenTaskResultEntity
 import com.mrchk.pocketdeutsch.domain.model.AiEvaluationResult
 import com.mrchk.pocketdeutsch.domain.model.WritingTask
 import kotlinx.coroutines.flow.Flow
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
 import javax.inject.Inject
 
 class GeminiRepository @Inject constructor(

@@ -40,6 +40,8 @@ import com.mrchk.pocketdeutsch.domain.model.InteractiveExercise
 import com.mrchk.pocketdeutsch.ui.components.PdButton
 import com.mrchk.pocketdeutsch.ui.components.PdExerciseTopBar
 import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
+import com.mrchk.pocketdeutsch.utils.ExerciseReport
+import com.mrchk.pocketdeutsch.utils.TestAnalytics
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -50,6 +52,16 @@ fun ListeningScreen(
     onBackClick: () -> Unit,
     onComplete: () -> Unit,
 ) {
+
+    var timeSpentSeconds by remember { mutableIntStateOf(0) }
+
+    LaunchedEffect(Unit) {
+        while (true) {
+            delay(1000L)
+            timeSpentSeconds++
+        }
+    }
+
     val state by viewModel.state.collectAsState()
     var showTranscript by remember { mutableStateOf(false) }
     val snackbarHostState = remember { SnackbarHostState() }
@@ -107,7 +119,8 @@ fun ListeningScreen(
                     .padding(bottom = 8.dp)
             ) {
                 if (isChecked) {
-                    val isLastExercise = state.currentExerciseIndex == (state.practice?.exercises?.lastIndex ?: 0)
+                    val isLastExercise =
+                        state.currentExerciseIndex == (state.practice?.exercises?.lastIndex ?: 0)
 
                     PdButton(
                         text = when {
@@ -117,9 +130,42 @@ fun ListeningScreen(
                         },
                         onClick = {
                             if (isLastQuestion) {
+                                var correctCount = 0
+                                when (currentExercise) {
+                                    is InteractiveExercise.MultipleChoice -> {
+                                        currentExercise.questions.forEachIndexed { i, q ->
+                                            val userAns = state.userAnswers[i] ?: ""
+                                            if (userAns.startsWith(
+                                                    q.answer,
+                                                    ignoreCase = true
+                                                )
+                                            ) correctCount++
+                                        }
+                                    }
+                                    is InteractiveExercise.RichtigFalsch -> {
+                                        currentExercise.items.forEachIndexed { i, _ ->
+                                            val userAns = state.userAnswers[i] ?: ""
+                                            val correctLetter =
+                                                currentExercise.answers.getOrNull(i) ?: ""
+                                            if (userAns.take(1)
+                                                    .equals(correctLetter, ignoreCase = true)
+                                            ) correctCount++
+                                        }
+                                    }
+                                    else -> {}
+                                }
+                                TestAnalytics.addReport(
+                                    ExerciseReport(
+                                        exerciseName = "Аудіювання (Частина ${state.currentExerciseIndex + 1})",
+                                        timeSpentSeconds = timeSpentSeconds,
+                                        correctAnswers = correctCount,
+                                        totalQuestions = totalItems
+                                    )
+                                )
                                 if (isLastExercise) {
                                     onComplete()
                                 } else {
+                                    timeSpentSeconds = 0
                                     viewModel.nextExercise()
                                     coroutineScope.launch { pagerState.scrollToPage(0) }
                                 }
@@ -134,7 +180,7 @@ fun ListeningScreen(
                 } else {
                     PdButton(
                         text = "Перевірити",
-                        onClick ={
+                        onClick = {
                             if (state.userAnswers.isEmpty()) {
                                 coroutineScope.launch {
                                     snackbarHostState.showSnackbar("Будь ласка, оберіть хоча б одну відповідь")
@@ -161,7 +207,7 @@ fun ListeningScreen(
                         .border(2.dp, PocketTheme.colors.ink)
                         .padding(vertical = 12.dp, horizontal = 16.dp),
                     contentAlignment = Alignment.Center,
-                ){
+                ) {
                     Text(
                         text = data.visuals.message,
                         color = PocketTheme.colors.ink,
@@ -184,7 +230,9 @@ fun ListeningScreen(
                 text = currentExercise.instruction,
                 style = PocketTheme.typography.titleLarge,
                 color = ink,
-                modifier = Modifier.padding(horizontal = 20.dp).padding(bottom = 16.dp)
+                modifier = Modifier
+                    .padding(horizontal = 20.dp)
+                    .padding(bottom = 16.dp)
             )
 
             // Аудіоплеєр
@@ -229,7 +277,11 @@ fun ListeningScreen(
                             .padding(16.dp)
                     ) {
                         Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-                            Text(text = currentTranscript, style = PocketTheme.typography.bodyMedium, color = ink)
+                            Text(
+                                text = currentTranscript,
+                                style = PocketTheme.typography.bodyMedium,
+                                color = ink
+                            )
                         }
                     }
                 }
@@ -264,7 +316,8 @@ fun ListeningScreen(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 repeat(totalItems) { iteration ->
-                    val color = if (pagerState.currentPage == iteration) ink else PocketTheme.colors.gray400
+                    val color =
+                        if (pagerState.currentPage == iteration) ink else PocketTheme.colors.gray400
                     Box(
                         modifier = Modifier
                             .padding(4.dp)
@@ -284,7 +337,7 @@ fun QuestionCard(
     index: Int,
     selectedAnswer: String?,
     isChecked: Boolean,
-    onAnswerSelected: (String) -> Unit
+    onAnswerSelected: (String) -> Unit,
 ) {
     val ink = PocketTheme.colors.ink
 
@@ -326,6 +379,7 @@ fun QuestionCard(
                     }
                 }
             }
+
             is InteractiveExercise.MultipleChoice -> {
                 val q = exercise.questions[index]
                 Text(text = q.question, style = PocketTheme.typography.titleLarge, color = ink)
@@ -343,7 +397,10 @@ fun QuestionCard(
                     }
                 }
             }
-            else -> { Text("Тип не підтримується") }
+
+            else -> {
+                Text("Тип не підтримується")
+            }
         }
     }
 }
@@ -417,7 +474,9 @@ fun AudioPlayerCard(audioUrl: String, isSeekable: Boolean = true) {
             .padding(16.dp)
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 12.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -486,9 +545,20 @@ fun AudioPlayerCard(audioUrl: String, isSeekable: Boolean = true) {
                     ),
                     modifier = Modifier.height(24.dp)
                 )
-                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                    Text(text = formatTime(currentPosition), style = PocketTheme.typography.labelSmall, color = ink)
-                    Text(text = formatTime(duration), style = PocketTheme.typography.labelSmall, color = ink)
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(
+                        text = formatTime(currentPosition),
+                        style = PocketTheme.typography.labelSmall,
+                        color = ink
+                    )
+                    Text(
+                        text = formatTime(duration),
+                        style = PocketTheme.typography.labelSmall,
+                        color = ink
+                    )
                 }
             }
         }

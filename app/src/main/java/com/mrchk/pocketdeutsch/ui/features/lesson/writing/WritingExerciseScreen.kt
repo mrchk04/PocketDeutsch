@@ -28,7 +28,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
@@ -43,6 +45,7 @@ import com.mrchk.pocketdeutsch.ui.components.PdPhraseChip
 import com.mrchk.pocketdeutsch.ui.components.PdPinnedCard
 import com.mrchk.pocketdeutsch.ui.components.PdTitleTopBar
 import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
+import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -93,6 +96,16 @@ fun WritingContent(
     onErrorDismiss: () -> Unit,
     onHistoryClick: () -> Unit,
 ) {
+
+    var timeSpentSeconds by remember { mutableIntStateOf(0) }
+
+    LaunchedEffect(Unit) {
+        while (true) {
+            delay(1000L)
+            timeSpentSeconds++
+        }
+    }
+
     val imeVisible = WindowInsets.ime.getBottom(LocalDensity.current) > 0
 
     val snackbarHostState = remember { SnackbarHostState() }
@@ -122,7 +135,21 @@ fun WritingContent(
                 PdBottomActionBar(
                     mainButtonText = if (state.isLoading) "Завантаження..." else "Надіслати",
                     isMainButtonEnabled = !state.isLoading && state.textInput.isNotBlank(),
-                    onMainButtonClick = onSubmit,
+                    onMainButtonClick = {
+                        // 1. ЗБЕРІГАЄМО ЗВІТ ПРО ПИСЬМО
+                        com.mrchk.pocketdeutsch.utils.TestAnalytics.addReport(
+                            com.mrchk.pocketdeutsch.utils.ExerciseReport(
+                                // Якщо є назва завдання - використовуємо її, якщо ні - дефолтну
+                                exerciseName = "Письмо (${state.task?.title ?: "Твір"})",
+                                timeSpentSeconds = timeSpentSeconds,
+                                correctAnswers = 0, // Балів немає
+                                totalQuestions = 0
+                            )
+                        )
+
+                        // 2. ЙДЕМО ДАЛІ (відправляємо на AI)
+                        onSubmit()
+                    },
                     secondaryIconRes = R.drawable.ic_pencil_simple_bold, // Або іконка годинника/історії
                     onSecondaryButtonClick = onHistoryClick,
                 )

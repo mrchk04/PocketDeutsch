@@ -14,8 +14,10 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -36,6 +38,9 @@ import com.mrchk.pocketdeutsch.ui.components.PdButton
 import com.mrchk.pocketdeutsch.ui.components.PdIconButton
 import com.mrchk.pocketdeutsch.ui.components.PdTitleTopBar
 import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
+import com.mrchk.pocketdeutsch.utils.ExerciseReport
+import com.mrchk.pocketdeutsch.utils.TestAnalytics
+import kotlinx.coroutines.delay
 
 @Composable
 fun SpeakingScreen(
@@ -43,6 +48,16 @@ fun SpeakingScreen(
     onBackClick: () -> Unit,
     onComplete: () -> Unit
 ) {
+
+    var timeSpentSeconds by remember { mutableIntStateOf(0) }
+
+    LaunchedEffect(Unit) {
+        while (true) {
+            delay(1000L)
+            timeSpentSeconds++
+        }
+    }
+
     val data by viewModel.speakingData.collectAsState()
     val timeLeft by viewModel.timeLeft.collectAsState()
 
@@ -146,7 +161,17 @@ fun SpeakingScreen(
             // --- ТЕМНА ЗОНА ПІДГОТОВКИ (Bottom Area) ---
             PrepZone(
                 timeString = viewModel.formatTime(timeLeft),
-                onComplete = onComplete
+                onComplete = {
+                    TestAnalytics.addReport(
+                        ExerciseReport(
+                            exerciseName = "Говоріння (${speaking.taskType})",
+                            timeSpentSeconds = timeSpentSeconds,
+                            correctAnswers = 0,
+                            totalQuestions = 0
+                        )
+                    )
+                    onComplete()
+                }
             )
         }
     }

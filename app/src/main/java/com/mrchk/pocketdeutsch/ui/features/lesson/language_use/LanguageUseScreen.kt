@@ -24,8 +24,12 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
@@ -39,6 +43,9 @@ import com.mrchk.pocketdeutsch.ui.components.PdExerciseTopBar
 import com.mrchk.pocketdeutsch.ui.components.pdClickable
 import com.mrchk.pocketdeutsch.ui.components.pdStyle
 import com.mrchk.pocketdeutsch.ui.theme.PocketTheme
+import com.mrchk.pocketdeutsch.utils.ExerciseReport
+import com.mrchk.pocketdeutsch.utils.TestAnalytics
+import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -47,6 +54,16 @@ fun LanguageUseScreen(
     onComplete: () -> Unit,
     onBackClick: () -> Unit,
 ) {
+
+    var timeSpentSeconds by remember { mutableIntStateOf(0) }
+
+    LaunchedEffect(Unit) {
+        while (true) {
+            delay(1000L)
+            timeSpentSeconds++
+        }
+    }
+
     val allExercises by viewModel.allExercises.collectAsState()
     val currentIndex by viewModel.currentIndex.collectAsState()
     val selectedAnswers by viewModel.selectedAnswers.collectAsState()
@@ -126,6 +143,21 @@ fun LanguageUseScreen(
                         if (!isChecked) {
                             viewModel.checkAnswers()
                         } else {
+                            val correctCount = currentExercise.gaps.count { gap ->
+                                selectedAnswers[gap.gapNumber] == gap.correctAnswer
+                            }
+
+                            TestAnalytics.addReport(
+                                ExerciseReport(
+                                    exerciseName = "Вживання мови (Частина ${currentIndex + 1})",
+                                    timeSpentSeconds = timeSpentSeconds,
+                                    correctAnswers = correctCount,
+                                    totalQuestions = currentExercise.gaps.size
+                                )
+                            )
+                            if (currentIndex < exercisesList.size - 1) {
+                                timeSpentSeconds = 0
+                            }
                             viewModel.moveToNextStep(onAllFinished = onComplete)
                         }
                     },

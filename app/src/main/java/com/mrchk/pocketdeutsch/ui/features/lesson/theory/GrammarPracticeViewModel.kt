@@ -3,7 +3,7 @@ package com.mrchk.pocketdeutsch.ui.features.lesson.theory
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mrchk.pocketdeutsch.data.repository.GeminiRepository
+import com.mrchk.pocketdeutsch.services.GeminiRepository
 import com.mrchk.pocketdeutsch.domain.model.InteractiveExercise
 import com.mrchk.pocketdeutsch.domain.repository.LessonRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
